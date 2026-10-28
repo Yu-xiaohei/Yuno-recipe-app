@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 2,
+  "id": "man-dun-lao-ya-tang",
+  "name": "慢炖老鸭汤",
+  "type": "soup",
+  "serving": 1,
+  "standard": "CN_CFCT",
+  "totals": {
+    "weight": 143.0,
+    "energy": 195.1,
+    "carb": 8.5,
+    "protein": 12.6,
+    "fat": 12.4,
+    "vitaminC": 9.3,
+    "fiber": 0.9,
+    "sodium": 448.9
+  },
+  "targets": {
+    "energyMax": 300,
+    "energyBest": 250,
+    "weightMax": 400,
+    "weightBest": 350,
+    "energyOk": true,
+    "weightOk": true,
+    "doseStatus": "BELOW_RANGE",
+    "energyRange": [
+      220,
+      280
+    ],
+    "weightRange": [
+      320,
+      380
+    ]
+  },
+  "macroRatio": {
+    "carbPct": 17.3,
+    "proteinPct": 25.7,
+    "fatPct": 56.9
+  },
+  "items": [
+    {
+      "name": "鸭胸脯肉",
+      "weight": 50.0,
+      "energy": 45.0,
+      "carb": 2.0,
+      "protein": 7.5,
+      "fat": 0.8,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 30.1,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 90,
+        "carb": 4,
+        "protein": 15,
+        "fat": 1.5,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 60.2
+      },
+      "healthWeight": 0.92,
+      "locked": false
+    },
+    {
+      "name": "鸭皮",
+      "weight": 20.0,
+      "energy": 107.6,
+      "carb": 3.0,
+      "protein": 1.3,
+      "fat": 10.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 5.2,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 538,
+        "carb": 15.1,
+        "protein": 6.5,
+        "fat": 50.2,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 26.2
+      },
+      "healthWeight": 0.4,
+      "locked": false
+    },
+    {
+      "name": "豆腐",
+      "weight": 40.0,
+      "energy": 32.4,
+      "carb": 1.5,
+      "protein": 3.2,
+      "fat": 1.5,
+      "vitaminC": 0.0,
+      "fiber": 0.2,
+      "sodium": 2.9,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 81,
+        "carb": 3.8,
+        "protein": 8.1,
+        "fat": 3.7,
+        "vitaminC": 0,
+        "fiber": 0.4,
+        "sodium": 7.2
+      },
+      "healthWeight": 0.85,
+      "locked": false
+    },
+    {
+      "name": "白菜",
+      "weight": 30.0,
+      "energy": 5.1,
+      "carb": 0.7,
+      "protein": 0.4,
+      "fat": 0.0,
+      "vitaminC": 9.3,
+      "fiber": 0.2,
+      "sodium": 17.2,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 17,
+        "carb": 2.4,
+        "protein": 1.5,
+        "fat": 0.1,
+        "vitaminC": 31,
+        "fiber": 0.8,
+        "sodium": 57.5
+      },
+      "healthWeight": 0.8,
+      "locked": false
+    },
+    {
+      "name": "黑胡椒",
+      "weight": 2.0,
+      "energy": 5.0,
+      "carb": 1.3,
+      "protein": 0.2,
+      "fat": 0.1,
+      "vitaminC": 0.0,
+      "fiber": 0.5,
+      "sodium": 0.4,
+      "source": "USDA",
+      "per100": {
+        "energy": 251,
+        "carb": 63.95,
+        "protein": 10.39,
+        "fat": 3.26,
+        "vitaminC": 0,
+        "fiber": 25.3,
+        "sodium": 20
+      },
+      "healthWeight": 0.2,
+      "locked": false
+    },
+    {
+      "name": "盐",
+      "weight": 1.0,
+      "energy": 0.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 393.1,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 0,
+        "carb": 0,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 39311
+      },
+      "healthWeight": 0.01,
+      "locked": true
+    }
+  ],
+  "notes": [
+    "本谱与「清炒小包菜」「凉拌芹菜」同餐食用",
+    "三样合计 576 g / 472.7 kcal（热量超用户自定 440 线 32.7，系用户确认原量）",
+    "鸭肉（瘦）按鸭胸脯肉 50 g、鸭皮 20 g（用户确认）",
+    "炖汤漂油后鸭皮实际油脂可低于表值",
+    "黑胡椒用 USDA black pepper",
+    "豆腐按均值",
+    "剂量状态 BELOW_RANGE（单菜口径；保留既有用量，未擅自改克数）。"
+  ],
+  "sources": [
+    {
+      "name": "鸭胸脯肉",
+      "url": "https://healthchina2030.com/Nutr/nNmdpu.html"
+    },
+    {
+      "name": "鸭皮",
+      "url": "https://healthchina2030.com/Nutr/nNmdzu.html"
+    },
+    {
+      "name": "豆腐(均值)",
+      "url": "https://healthchina2030.com/Nutr/ndm8=u.html"
+    },
+    {
+      "name": "大白菜(均值)",
+      "url": "https://healthchina2030.com/Nutr/nMjI2u.html"
+    },
+    {
+      "name": "黑胡椒",
+      "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170931/nutrients"
+    },
+    {
+      "name": "精盐",
+      "url": "https://healthchina2030.com/Nutr/nYjdtu.html"
+    }
+  ],
+  "generatedAt": "2026-10-07T22:36:50",
+  "generatedBy": "Xiaomi MIMO 2.6 Pro",
+  "user": "Yu_xiaohei"
+}

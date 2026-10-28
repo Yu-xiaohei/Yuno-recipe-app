@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 2,
+  "id": "liang-ban-qin-cai",
+  "name": "凉拌芹菜",
+  "type": "dish",
+  "serving": 1,
+  "standard": "CN_CFCT",
+  "totals": {
+    "weight": 91.0,
+    "energy": 45.2,
+    "carb": 3.9,
+    "protein": 2.7,
+    "fat": 2.2,
+    "vitaminC": 3.3,
+    "fiber": 1.5,
+    "sodium": 57.3
+  },
+  "targets": {
+    "energyMax": 300,
+    "energyBest": 250,
+    "weightMax": 400,
+    "weightBest": 350,
+    "energyOk": true,
+    "weightOk": true,
+    "doseStatus": "BELOW_RANGE",
+    "energyRange": [
+      220,
+      280
+    ],
+    "weightRange": [
+      320,
+      380
+    ]
+  },
+  "macroRatio": {
+    "carbPct": 33.8,
+    "proteinPct": 23.4,
+    "fatPct": 42.9
+  },
+  "items": [
+    {
+      "name": "胡麻油",
+      "weight": 1.0,
+      "energy": 9.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 1.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 0.0,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 900,
+        "carb": 0,
+        "protein": 0,
+        "fat": 100,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 0.6
+      },
+      "healthWeight": 0.15,
+      "locked": false
+    },
+    {
+      "name": "芹菜",
+      "weight": 60.0,
+      "energy": 8.4,
+      "carb": 1.8,
+      "protein": 0.4,
+      "fat": 0.1,
+      "vitaminC": 1.9,
+      "fiber": 1.0,
+      "sodium": 48.0,
+      "source": "USDA",
+      "per100": {
+        "energy": 14,
+        "carb": 3.0,
+        "protein": 0.7,
+        "fat": 0.2,
+        "vitaminC": 3.1,
+        "fiber": 1.6,
+        "sodium": 80
+      },
+      "healthWeight": 0.95,
+      "locked": false
+    },
+    {
+      "name": "胡萝卜",
+      "weight": 10.0,
+      "energy": 3.7,
+      "carb": 0.8,
+      "protein": 0.1,
+      "fat": 0.0,
+      "vitaminC": 1.3,
+      "fiber": 0.1,
+      "sodium": 7.1,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 37,
+        "carb": 7.7,
+        "protein": 1.0,
+        "fat": 0.2,
+        "vitaminC": 13,
+        "fiber": 1.1,
+        "sodium": 71.4
+      },
+      "healthWeight": 0.75,
+      "locked": false
+    },
+    {
+      "name": "鲜腐竹",
+      "weight": 10.0,
+      "energy": 22.0,
+      "carb": 1.0,
+      "protein": 2.0,
+      "fat": 1.1,
+      "vitaminC": 0.0,
+      "fiber": 0.1,
+      "sodium": 1.3,
+      "source": "estimated",
+      "per100": {
+        "energy": 220,
+        "carb": 10,
+        "protein": 20,
+        "fat": 11,
+        "vitaminC": 0,
+        "fiber": 0.5,
+        "sodium": 13
+      },
+      "healthWeight": 0.85,
+      "locked": false
+    },
+    {
+      "name": "鲜木耳",
+      "weight": 10.0,
+      "energy": 2.1,
+      "carb": 0.3,
+      "protein": 0.2,
+      "fat": 0.0,
+      "vitaminC": 0.1,
+      "fiber": 0.3,
+      "sodium": 0.9,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 21,
+        "carb": 3.4,
+        "protein": 1.5,
+        "fat": 0.2,
+        "vitaminC": 1,
+        "fiber": 2.6,
+        "sodium": 8.5
+      },
+      "healthWeight": 0.8,
+      "locked": false
+    }
+  ],
+  "notes": [
+    "本谱与「清炒小包菜」「慢炖老鸭汤」同餐食用",
+    "三样合计 576 g / 472.7 kcal",
+    "油按用户确认胡麻油 1 g",
+    "鲜腐竹 CFCT 无独立条目，按含水量自干腐竹折算取约 220 kcal/100g（估算）",
+    "剂量状态 BELOW_RANGE（单菜口径；保留既有用量，未擅自改克数）。"
+  ],
+  "sources": [
+    {
+      "name": "胡麻油",
+      "url": "https://healthchina2030.com/Nutr/nYWYwu.html"
+    },
+    {
+      "name": "芹菜",
+      "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169988/nutrients"
+    },
+    {
+      "name": "胡萝卜(红)",
+      "url": "https://healthchina2030.com/Nutr/nMWc4u.html"
+    },
+    {
+      "name": "木耳(水发)",
+      "url": "https://healthchina2030.com/Nutr/nM2Ztu.html"
+    }
+  ],
+  "generatedAt": "2026-10-07T22:36:49",
+  "generatedBy": "Xiaomi MIMO 2.6 Pro",
+  "user": "Yu_xiaohei"
+}

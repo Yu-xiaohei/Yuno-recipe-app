@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "jsonParsing": "passed",
+  "originalCopiedSourcesUnchanged": 45,
+  "localMarkdownLinks": "passed",
+  "aarHashAndEmbeddedMetadataRecheck": [
+    "miuix-blur-android.aar",
+    "miuix-shader-android.aar",
+    "miuix-ui-android.aar"
+  ],
+  "recipeCheck": {
+    "files": 13,
+    "uniqueIds": 11,
+    "errors": 0,
+    "warnings": 28,
+    "warningCodes": {
+      "food_state_unverified": 13,
+      "new_fields_missing": 13,
+      "duplicate_id": 2
+    }
+  },
+  "limits": [
+    "No Android build, installation, emulator boot or WebDAV account test."
+  ],
+  "environmentScriptInvocation": "powershell -NoProfile -File scripts/check_android_environment.ps1",
+  "environmentScriptExitCode": 0,
+  "licensePreservedByteForByte": true,
+  "baselineAndLocalLinks": "passed",
+  "originalSourcesFinalHashCheck": "passed",
+  "credentialFilesCopied": false
+}

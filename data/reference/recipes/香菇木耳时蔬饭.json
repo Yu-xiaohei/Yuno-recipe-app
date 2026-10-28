@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 2,
+  "id": "xiang-gu-mu-er-shi-shu-fan",
+  "name": "香菇木耳时蔬饭",
+  "type": "dish",
+  "serving": 1,
+  "standard": "CN_CFCT",
+  "totals": {
+    "weight": 373.5,
+    "energy": 181.3,
+    "carb": 27.7,
+    "protein": 5.6,
+    "fat": 5.1,
+    "vitaminC": 90.5,
+    "fiber": 4.9,
+    "sodium": 1196.3
+  },
+  "targets": {
+    "energyMax": 300,
+    "energyBest": 250,
+    "weightMax": 400,
+    "weightBest": 350,
+    "energyOk": true,
+    "weightOk": true,
+    "doseStatus": "BELOW_RANGE",
+    "energyRange": [
+      220,
+      280
+    ],
+    "weightRange": [
+      320,
+      380
+    ]
+  },
+  "macroRatio": {
+    "carbPct": 61.9,
+    "proteinPct": 12.5,
+    "fatPct": 25.6
+  },
+  "items": [
+    {
+      "name": "胡麻油",
+      "weight": 4.0,
+      "energy": 36.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 4.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 0.0,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 900,
+        "carb": 0,
+        "protein": 0,
+        "fat": 100,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 0.6
+      },
+      "healthWeight": 0.12,
+      "locked": false
+    },
+    {
+      "name": "小白菜",
+      "weight": 80.0,
+      "energy": 12.0,
+      "carb": 1.3,
+      "protein": 1.2,
+      "fat": 0.2,
+      "vitaminC": 22.4,
+      "fiber": 0.9,
+      "sodium": 58.8,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 15,
+        "carb": 1.6,
+        "protein": 1.5,
+        "fat": 0.3,
+        "vitaminC": 28,
+        "fiber": 1.1,
+        "sodium": 73.5
+      },
+      "healthWeight": 0.85,
+      "locked": false
+    },
+    {
+      "name": "胡萝卜",
+      "weight": 20.0,
+      "energy": 7.4,
+      "carb": 1.5,
+      "protein": 0.2,
+      "fat": 0.0,
+      "vitaminC": 2.6,
+      "fiber": 0.2,
+      "sodium": 14.3,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 37,
+        "carb": 7.7,
+        "protein": 1.0,
+        "fat": 0.2,
+        "vitaminC": 13,
+        "fiber": 1.1,
+        "sodium": 71.4
+      },
+      "healthWeight": 0.75,
+      "locked": false
+    },
+    {
+      "name": "木耳",
+      "weight": 30.0,
+      "energy": 6.3,
+      "carb": 1.0,
+      "protein": 0.4,
+      "fat": 0.1,
+      "vitaminC": 0.3,
+      "fiber": 0.8,
+      "sodium": 2.5,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 21,
+        "carb": 3.4,
+        "protein": 1.5,
+        "fat": 0.2,
+        "vitaminC": 1,
+        "fiber": 2.6,
+        "sodium": 8.5
+      },
+      "healthWeight": 0.85,
+      "locked": false
+    },
+    {
+      "name": "油菜",
+      "weight": 120.0,
+      "energy": 27.6,
+      "carb": 3.2,
+      "protein": 2.2,
+      "fat": 0.6,
+      "vitaminC": 43.2,
+      "fiber": 1.3,
+      "sodium": 67.0,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 23,
+        "carb": 2.7,
+        "protein": 1.8,
+        "fat": 0.5,
+        "vitaminC": 36,
+        "fiber": 1.1,
+        "sodium": 55.8
+      },
+      "healthWeight": 0.8,
+      "locked": false
+    },
+    {
+      "name": "彩椒",
+      "weight": 30.0,
+      "energy": 6.6,
+      "carb": 1.2,
+      "protein": 0.3,
+      "fat": 0.1,
+      "vitaminC": 21.6,
+      "fiber": 0.4,
+      "sodium": 1.0,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 22,
+        "carb": 4.0,
+        "protein": 1.0,
+        "fat": 0.2,
+        "vitaminC": 72,
+        "fiber": 1.4,
+        "sodium": 3.3
+      },
+      "healthWeight": 0.6,
+      "locked": false
+    },
+    {
+      "name": "香菇",
+      "weight": 40.0,
+      "energy": 7.6,
+      "carb": 0.8,
+      "protein": 0.9,
+      "fat": 0.1,
+      "vitaminC": 0.4,
+      "fiber": 1.3,
+      "sodium": 0.6,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 19,
+        "carb": 1.9,
+        "protein": 2.2,
+        "fat": 0.3,
+        "vitaminC": 1,
+        "fiber": 3.3,
+        "sodium": 1.4
+      },
+      "healthWeight": 0.9,
+      "locked": false
+    },
+    {
+      "name": "粉丝(泡发)",
+      "weight": 40.0,
+      "energy": 72.8,
+      "carb": 17.9,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 1.8,
+      "source": "product_label",
+      "per100": {
+        "energy": 181.9,
+        "carb": 44.8,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 4.5
+      },
+      "healthWeight": 0.45,
+      "locked": false
+    },
+    {
+      "name": "精盐",
+      "weight": 1.5,
+      "energy": 0.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 589.7,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 0,
+        "carb": 0,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 39311
+      },
+      "healthWeight": 0.01,
+      "locked": true
+    },
+    {
+      "name": "酱油",
+      "weight": 8.0,
+      "energy": 5.0,
+      "carb": 0.8,
+      "protein": 0.4,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 460.6,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 63,
+        "carb": 9.9,
+        "protein": 5.6,
+        "fat": 0.1,
+        "vitaminC": 0,
+        "fiber": 0.2,
+        "sodium": 5757
+      },
+      "healthWeight": 0.08,
+      "locked": false
+    }
+  ],
+  "notes": [
+    "已剔除主食（熟米饭），由 App 后期拼餐计入总热量。",
+    "调味按淡口估算：精盐1.5g+酱油8g",
+    "木耳按水发口径",
+    "粉丝为山姆龙口干粉丝20g泡发后约40g湿重",
+    "熏鸡不计入本餐谱，另表",
+    "系用户确认按本量生成",
+    "剂量状态 BELOW_RANGE（单菜口径；保留既有用量，未擅自改克数）。"
+  ],
+  "sources": [
+    {
+      "name": "胡麻油",
+      "url": "https://healthchina2030.com/Nutr/nYWYwu.html"
+    },
+    {
+      "name": "米饭(蒸)(均值)",
+      "url": "https://healthchina2030.com/Nutr/nZms=u.html"
+    },
+    {
+      "name": "小白菜",
+      "url": "https://healthchina2030.com/Nutr/nMjN1u.html"
+    },
+    {
+      "name": "胡萝卜(红)",
+      "url": "https://healthchina2030.com/Nutr/nMWc4u.html"
+    },
+    {
+      "name": "木耳(水发)",
+      "url": "https://healthchina2030.com/Nutr/nM2Ztu.html"
+    },
+    {
+      "name": "油菜",
+      "url": "https://healthchina2030.com/Nutr/nMjU4u.html"
+    },
+    {
+      "name": "甜椒[灯笼椒，柿子椒]",
+      "url": "https://healthchina2030.com/Nutr/nMXB5u.html"
+    },
+    {
+      "name": "香菇",
+      "url": "https://healthchina2030.com/Nutr/nM2gwu.html"
+    },
+    {
+      "name": "精盐",
+      "url": "https://healthchina2030.com/Nutr/nYjdtu.html"
+    },
+    {
+      "name": "酱油(均值)",
+      "url": "https://healthchina2030.com/Nutr/nYWltu.html"
+    }
+  ],
+  "generatedAt": "2026-10-12T20:57:47",
+  "generatedBy": "Xiaomi MIMO 2.6 Pro",
+  "user": "Yu_xiaohei"
+}

@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "id": "mo-yu-zi-cai-tang",
+  "name": "魔芋紫菜汤",
+  "type": "soup",
+  "serving": 1,
+  "standard": "MIXED",
+  "totals": {
+    "weight": 243.0,
+    "energy": 23.7,
+    "carb": 3.1,
+    "protein": 2.7,
+    "fat": 0.1,
+    "vitaminC": 0.2,
+    "fiber": 3.0,
+    "sodium": 1254.9
+  },
+  "targets": {
+    "energyMax": 300,
+    "energyBest": 250,
+    "weightMax": 400,
+    "weightBest": 350,
+    "energyOk": true,
+    "weightOk": true,
+    "energyRange": [
+      220,
+      280
+    ],
+    "weightRange": [
+      320,
+      380
+    ],
+    "doseStatus": "BELOW_RANGE"
+  },
+  "macroRatio": {
+    "carbPct": 51.5,
+    "proteinPct": 44.8,
+    "fatPct": 3.7
+  },
+  "items": [
+    {
+      "name": "干紫菜",
+      "weight": 10,
+      "energy": 20.7,
+      "carb": 2.3,
+      "protein": 2.7,
+      "fat": 0.1,
+      "vitaminC": 0.2,
+      "fiber": 2.2,
+      "sodium": 71.1,
+      "source": "CN_CFCT 紫菜(干)",
+      "per100": {
+        "energy": 207,
+        "carb": 22.5,
+        "protein": 26.7,
+        "fat": 1.1,
+        "vitaminC": 2,
+        "fiber": 21.6,
+        "sodium": 710.5
+      },
+      "healthWeight": 0.92,
+      "locked": false
+    },
+    {
+      "name": "魔芋丝",
+      "weight": 30,
+      "energy": 3.0,
+      "carb": 0.8,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.8,
+      "sodium": 4.5,
+      "source": "USDA shirataki/konjac",
+      "per100": {
+        "energy": 10,
+        "carb": 2.7,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 2.7,
+        "sodium": 15
+      },
+      "healthWeight": 0.85,
+      "locked": false
+    },
+    {
+      "name": "盐",
+      "weight": 3,
+      "energy": 0.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 1179.3,
+      "source": "CN_CFCT 精盐",
+      "per100": {
+        "energy": 0,
+        "carb": 0,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 39311
+      },
+      "healthWeight": 0.01,
+      "locked": true
+    },
+    {
+      "name": "水",
+      "weight": 200,
+      "energy": 0.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 0.0,
+      "source": "水",
+      "per100": {
+        "energy": 0,
+        "carb": 0,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 0
+      },
+      "healthWeight": 1.0,
+      "locked": false
+    }
+  ],
+  "notes": [
+    "维生素列以维生素C(mg)计",
+    "魔芋丝成分表无独立条目，用USDA shirataki口径",
+    "钠主要来自3g盐(1179.3mg)",
+    "剂量状态 BELOW_RANGE（单菜口径；保留既有用量，未擅自改克数）。"
+  ],
+  "sources": [
+    {
+      "name": "干紫菜",
+      "url": "https://healthchina2030.com/Nutr/nM2xnu.html"
+    },
+    {
+      "name": "盐",
+      "url": "https://healthchina2030.com/Nutr/nYjdtu.html"
+    },
+    {
+      "name": "魔芋丝",
+      "url": "https://fdc.nal.usda.gov/"
+    }
+  ],
+  "generatedAt": "2026-10-02T14:05:00",
+  "generatedBy": "Xiaomi MIMO 2.6 Pro",
+  "user": "Yu_xiaohei"
+}

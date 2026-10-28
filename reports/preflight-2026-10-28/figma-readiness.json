@@ -1,0 +1,27 @@
+{
+  "checkedDate": "2026-10-28",
+  "fileKey": "gdAAv31ho4RNFgANaMOJl0",
+  "productPageId": "0:1",
+  "inspection": "Figma file context read during this audit",
+  "topLevelFrames": 34,
+  "nodeReactionsReturned": 5,
+  "variableCollections": [
+    {"name": "YUNO / 基础值", "variables": 58, "modes": ["Mode 1"]},
+    {"name": "YUNO / 设计变量", "variables": 126, "modes": ["Mode 1"]}
+  ],
+  "fontFamiliesReturned": ["MiSans", "MiSans VF", "Inter", "SF Pro"],
+  "requiresWork": [
+    "Miuix component and motion mapping",
+    "consistent sample data and totals",
+    "goal mode editor and unreachable feedback",
+    "recipe/ingredient selection and import preview",
+    "conflict handling flow",
+    "light/dark modes, large fonts and keyboard",
+    "complete prototype flow verification"
+  ],
+  "limits": [
+    "Reaction count does not prove all tap destinations or inherited interactions are wired.",
+    "This inventory is not a complete design export or screenshot archive.",
+    "No bulk Figma redesign or Android runtime validation in this preflight consolidation."
+  ]
+}

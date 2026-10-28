@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "updatedDate": "2026-10-28",
+  "status": "requirements-and-preflight-only",
+  "canonicalWorkspace": "F:/Yuno-Develop/YUNO-recipe-app",
+  "application": {
+    "name": "于の食谱",
+    "platform": "Android",
+    "audience": "public",
+    "locale": "zh-Hans",
+    "proposedApplicationId": "com.yunobase.recipe",
+    "inAppAI": false,
+    "analyticsSdk": false,
+    "advertisingSdk": false
+  },
+  "ui": {
+    "system": "Miuix",
+    "repository": "https://github.com/compose-miuix-ui/miuix",
+    "interactiveReference": "https://compose-miuix-ui.github.io/miuix-jsCanvas/",
+    "auditedMainCommit": "bb7bde3109605b4c98065b53030ba429c39baea9",
+    "auditedRelease": "0.9.4",
+    "dependencyVersionLocked": false,
+    "android12Material": "clear-simplified-surface-with-miuix-motion",
+    "enhancedShaderMinApi": 33,
+    "packagingPreference": "single-apk-with-runtime-material-selection",
+    "packagingFallback": "separate-compatible-and-enhanced-apks-after-validation-failure",
+    "runtimeValidationComplete": false
+  },
+  "android": {
+    "legacyMinSdkCandidate": 29,
+    "minSdkLocked": null,
+    "compileSdkLocked": null,
+    "targetSdkLocked": null,
+    "requiredCompatibilityApis": [31, 32, 33],
+    "observed094AarMinCompileSdk": 37,
+    "userTestDevice": {
+      "manufacturer": "vivo",
+      "androidVersion": "12",
+      "model": null,
+      "vendorOsVersion": null,
+      "tested": false
+    }
+  },
+  "data": {
+    "publicRecipesAndImages": {
+      "provider": "Aliyun OSS",
+      "clientAccess": "published-public-https-resources",
+      "configuredBaseUrl": null,
+      "privateMealUpload": false,
+      "publisherCredentialsInApk": false,
+      "repositoryMirrors": ["GitHub", "Gitee"]
+    },
+    "privateMealSync": {
+      "protocol": "WebDAV",
+      "priorityProvider": "123云盘",
+      "localSaveFirst": true,
+      "preserveHistoricalSnapshots": true,
+      "preserveConflictCopies": true,
+      "conditionalWriteSupportVerified": false,
+      "directOssSyncInVersion1": false
+    },
+    "recipeAdjustment": "bounded-healthWeight-redistribution",
+    "goalModes": ["target", "range", "max"],
+    "unlockMealSupported": true,
+    "customMealSlots": true,
+    "jsonImportExport": true
+  },
+  "distribution": {
+    "artifact": "APK",
+    "channels": ["GitHub", "Gitee"],
+    "githubRepository": "https://github.com/Yu-xiaohei/Yuno-recipe-app",
+    "giteeRepository": "https://gitee.com/Yu_xiaohei/yuno-recipe-app",
+    "releaseSigningReady": false,
+    "licenseDecision": "preserve-existing-license-and-review-before-public-release"
+  }
+}

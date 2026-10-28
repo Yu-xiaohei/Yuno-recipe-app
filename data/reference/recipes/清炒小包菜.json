@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 2,
+  "id": "qing-chao-xiao-bao-cai",
+  "name": "清炒小包菜",
+  "type": "dish",
+  "serving": 1,
+  "standard": "CN_CFCT",
+  "totals": {
+    "weight": 212.0,
+    "energy": 81.6,
+    "carb": 8.9,
+    "protein": 3.5,
+    "fat": 3.4,
+    "vitaminC": 76.7,
+    "fiber": 2.0,
+    "sodium": 1337.1
+  },
+  "targets": {
+    "energyMax": 300,
+    "energyBest": 250,
+    "weightMax": 400,
+    "weightBest": 350,
+    "energyOk": true,
+    "weightOk": true,
+    "doseStatus": "BELOW_RANGE",
+    "energyRange": [
+      220,
+      280
+    ],
+    "weightRange": [
+      320,
+      380
+    ]
+  },
+  "macroRatio": {
+    "carbPct": 44.4,
+    "proteinPct": 17.5,
+    "fatPct": 38.2
+  },
+  "items": [
+    {
+      "name": "包菜",
+      "weight": 170.0,
+      "energy": 37.4,
+      "carb": 6.1,
+      "protein": 2.5,
+      "fat": 0.3,
+      "vitaminC": 68.0,
+      "fiber": 1.7,
+      "sodium": 46.2,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 22,
+        "carb": 3.6,
+        "protein": 1.5,
+        "fat": 0.2,
+        "vitaminC": 40,
+        "fiber": 1,
+        "sodium": 27.2
+      },
+      "healthWeight": 0.95,
+      "locked": false
+    },
+    {
+      "name": "西红柿",
+      "weight": 20.0,
+      "energy": 3.8,
+      "carb": 0.7,
+      "protein": 0.2,
+      "fat": 0.0,
+      "vitaminC": 3.8,
+      "fiber": 0.1,
+      "sodium": 1.0,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 19,
+        "carb": 3.5,
+        "protein": 0.9,
+        "fat": 0.2,
+        "vitaminC": 19,
+        "fiber": 0.5,
+        "sodium": 5
+      },
+      "healthWeight": 0.7,
+      "locked": false
+    },
+    {
+      "name": "葱",
+      "weight": 3.0,
+      "energy": 0.9,
+      "carb": 0.2,
+      "protein": 0.1,
+      "fat": 0.0,
+      "vitaminC": 0.5,
+      "fiber": 0.0,
+      "sodium": 0.1,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 30,
+        "carb": 5.2,
+        "protein": 1.7,
+        "fat": 0.3,
+        "vitaminC": 17,
+        "fiber": 1.3,
+        "sodium": 4.8
+      },
+      "healthWeight": 0.3,
+      "locked": false
+    },
+    {
+      "name": "蒜",
+      "weight": 2.0,
+      "energy": 2.5,
+      "carb": 0.5,
+      "protein": 0.1,
+      "fat": 0.0,
+      "vitaminC": 0.1,
+      "fiber": 0.0,
+      "sodium": 0.4,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 126,
+        "carb": 26.5,
+        "protein": 4.5,
+        "fat": 0.2,
+        "vitaminC": 7,
+        "fiber": 1.1,
+        "sodium": 19.6
+      },
+      "healthWeight": 0.3,
+      "locked": false
+    },
+    {
+      "name": "小米辣",
+      "weight": 3.0,
+      "energy": 1.0,
+      "carb": 0.2,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 4.3,
+      "fiber": 0.1,
+      "sodium": 0.1,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 32,
+        "carb": 5.7,
+        "protein": 1.3,
+        "fat": 0.4,
+        "vitaminC": 144,
+        "fiber": 3.2,
+        "sodium": 2.6
+      },
+      "healthWeight": 0.5,
+      "locked": false
+    },
+    {
+      "name": "花椒",
+      "weight": 0.5,
+      "energy": 1.3,
+      "carb": 0.2,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.1,
+      "sodium": 0.2,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 258,
+        "carb": 37.8,
+        "protein": 6.7,
+        "fat": 8.9,
+        "vitaminC": 0,
+        "fiber": 28.7,
+        "sodium": 47.4
+      },
+      "healthWeight": 0.1,
+      "locked": false
+    },
+    {
+      "name": "盐",
+      "weight": 1.5,
+      "energy": 0.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 589.7,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 0,
+        "carb": 0,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 39311
+      },
+      "healthWeight": 0.01,
+      "locked": true
+    },
+    {
+      "name": "酱油",
+      "weight": 8.0,
+      "energy": 5.0,
+      "carb": 0.8,
+      "protein": 0.4,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 460.6,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 63,
+        "carb": 9.9,
+        "protein": 5.6,
+        "fat": 0.1,
+        "vitaminC": 0,
+        "fiber": 0.2,
+        "sodium": 5757
+      },
+      "healthWeight": 0.08,
+      "locked": false
+    },
+    {
+      "name": "鸡精",
+      "weight": 1.0,
+      "energy": 2.7,
+      "carb": 0.2,
+      "protein": 0.2,
+      "fat": 0.1,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 238.8,
+      "source": "USDA",
+      "per100": {
+        "energy": 267,
+        "carb": 18.01,
+        "protein": 16.66,
+        "fat": 13.88,
+        "vitaminC": 1.1,
+        "fiber": 0,
+        "sodium": 23875
+      },
+      "healthWeight": 0.02,
+      "locked": true
+    },
+    {
+      "name": "胡麻油",
+      "weight": 3.0,
+      "energy": 27.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 3.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 0.0,
+      "source": "CN_CFCT",
+      "per100": {
+        "energy": 900,
+        "carb": 0,
+        "protein": 0,
+        "fat": 100,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 0.6
+      },
+      "healthWeight": 0.12,
+      "locked": false
+    }
+  ],
+  "notes": [
+    "已剔除主食（米饭），由 App 后期拼餐计入总热量。",
+    "本谱与「凉拌芹菜」「慢炖老鸭汤」同餐食用",
+    "三样合计 576 g / 472.7 kcal",
+    "调味按淡口估算（盐1.5g+酱油8g），小米辣3g、花椒0.5g、鸡精1g、清炒用油3g均为估算",
+    "清炒用油按胡麻油计",
+    "剂量状态 BELOW_RANGE（单菜口径；保留既有用量，未擅自改克数）。"
+  ],
+  "sources": [
+    {
+      "name": "米饭(蒸)(均值)",
+      "url": "https://healthchina2030.com/Nutr/nZms=u.html"
+    },
+    {
+      "name": "甘蓝[圆白菜，卷心菜]",
+      "url": "https://healthchina2030.com/Nutr/nMjZtu.html"
+    },
+    {
+      "name": "番茄[西红柿]",
+      "url": "https://healthchina2030.com/Nutr/nMW9hu.html"
+    },
+    {
+      "name": "大葱",
+      "url": "https://healthchina2030.com/Nutr/nMXlru.html"
+    },
+    {
+      "name": "大蒜",
+      "url": "https://healthchina2030.com/Nutr/nMXdtu.html"
+    },
+    {
+      "name": "辣椒(红，小)",
+      "url": "https://healthchina2030.com/Nutr/nMXBlu.html"
+    },
+    {
+      "name": "花椒",
+      "url": "https://healthchina2030.com/Nutr/nYjU0u.html"
+    },
+    {
+      "name": "精盐",
+      "url": "https://healthchina2030.com/Nutr/nYjdtu.html"
+    },
+    {
+      "name": "酱油(均值)",
+      "url": "https://healthchina2030.com/Nutr/nYWltu.html"
+    },
+    {
+      "name": "鸡精",
+      "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171562/nutrients"
+    },
+    {
+      "name": "胡麻油",
+      "url": "https://healthchina2030.com/Nutr/nYWYwu.html"
+    }
+  ],
+  "generatedAt": "2026-10-07T22:36:49",
+  "generatedBy": "Xiaomi MIMO 2.6 Pro",
+  "user": "Yu_xiaohei"
+}

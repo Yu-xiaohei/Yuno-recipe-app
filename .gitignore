@@ -1,0 +1,53 @@
+# === Android / Gradle ===
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+.gradle/
+local.properties
+.cxx/
+*.hprof
+.externalNativeBuild/
+captures/
+.navigation/
+*.iml
+.idea/
+.DS_Store
+*.log
+
+# 密钥 / 本地配置（严禁提交）
+*.keystore
+*.jks
+*.key
+secrets.properties
+token.txt
+.github-token
+.gitee-token
+.env
+.env.*
+
+# === 本项目 ===
+# 一次性测试缓存
+cache/*
+!cache/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 打包/临时产物
+dist/
+tmp/
+*.tmp
+*.bak
+
+# 系统
+Thumbs.db
+desktop.ini

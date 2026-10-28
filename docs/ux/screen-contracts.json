@@ -1,0 +1,3193 @@
+{
+  "schemaVersion": 1,
+  "documentKind": "ux-handoff-contract",
+  "date": "2026-10-28",
+  "scope": "design-planning-only",
+  "reviewStatus": {
+    "authorSelfCheck": "passed-structural-and-contract-review-only-2026-10-28",
+    "managerReview": "passed-B00-candidate-8-2026-10-28",
+    "userReview": "pending-batch-review"
+  },
+  "routePolicy": "Logical internal identifiers, not an implemented navigation graph or public API.",
+  "namingPolicy": "Existing referenced labels retained; all new user-visible names require user approval; internal IDs are implementation names.",
+  "fontPolicy": {
+    "singleFamilyRequired": true,
+    "selectedFamily": "MiSans",
+    "decisionId": "D10",
+    "status": "selected-by-user-2026-10-28; engineering-verification-required"
+  },
+  "sources": [
+    "../于の食谱 UX.md",
+    "../于の食谱-完整方案.md",
+    "../接口与字段清单.md",
+    "../UI设计稿需求.md",
+    "../Miuix-UI与液态玻璃基线.md",
+    "../Android兼容与验证方案.md",
+    "../存储与分发接入基线.md",
+    "../../config/development-baseline.json",
+    "../附录A-视觉与动效设计.md"
+  ],
+  "componentRoles": [
+    {
+      "id": "app_shell",
+      "meaning": "三Tab与页面外壳",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "loading_feedback",
+      "meaning": "骨架/进度与重试",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "recipe_card",
+      "meaning": "食谱摘要卡片",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "status_feedback",
+      "meaning": "空/错/离线/同步与状态提示",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "search_input",
+      "meaning": "搜索输入及IME组合态",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "history_chip",
+      "meaning": "搜索历史胶囊",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "confirm_dialog",
+      "meaning": "确认与草稿离开对话框",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "filter_group",
+      "meaning": "筛选分组",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "choice_control",
+      "meaning": "单/多选、模式选择",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "modal_surface",
+      "meaning": "菜单/弹层表面",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "detail_image",
+      "meaning": "详情顶图和统一占位",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "nutrition_summary",
+      "meaning": "营养总览",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "ingredient_row",
+      "meaning": "可展开食材行",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "primary_action",
+      "meaning": "主要操作按钮",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "day_summary",
+      "meaning": "当日保存餐次合计",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "meal_slot_card",
+      "meaning": "餐次卡",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "calendar_control",
+      "meaning": "日历日期选择",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "context_readonly",
+      "meaning": "只读日期餐次上下文",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "nutrition_table",
+      "meaning": "实际/目标/状态行组合",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "entry_card",
+      "meaning": "配餐条目",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "weight_control",
+      "meaning": "相对原始单份乘当前份数的固定±100g重量滑块；首版不提供直接输入；0–9g保留红框无效状态，可用滑块修正，所有条目至少10g才满足保存重量条件",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "toggle_control",
+      "meaning": "锁定与同步开关",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "sticky_action",
+      "meaning": "避键盘固定保存区",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "form_input",
+      "meaning": "带单位与错误的表单",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "ingredient_diff",
+      "meaning": "调整前后食材差异",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "more_menu",
+      "meaning": "更多菜单",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "settings_group",
+      "meaning": "设置分组",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "settings_row",
+      "meaning": "设置行",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "comparison_panel",
+      "meaning": "冲突/预览差异",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "import_summary",
+      "meaning": "导入计数、版本与错误",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "progress_feedback",
+      "meaning": "可取消进度",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "release_summary",
+      "meaning": "版本与发布说明",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    },
+    {
+      "id": "context_picker",
+      "meaning": "目标日期餐次选择",
+      "designBasis": "Miuix对应基础组件/示例及本项目业务组合",
+      "upstreamApi": null,
+      "apiStatus": "implementation-version-mapping-required",
+      "fontPolicy": "one-approved-family-with-verified-weights",
+      "materialPolicy": "API31/32 simplified; API33+ enhanced only after validation"
+    }
+  ],
+  "flows": [
+    {
+      "id": "F01",
+      "referenceName": "启动与全局导航",
+      "screenIds": [
+        "S01",
+        "S02",
+        "S03",
+        "S05",
+        "S06",
+        "S07",
+        "S11",
+        "S14",
+        "S17",
+        "S18",
+        "S21",
+        "S22",
+        "S27"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F02",
+      "referenceName": "搜索与筛选",
+      "screenIds": [
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F03",
+      "referenceName": "加入与保存配餐",
+      "screenIds": [
+        "S05",
+        "S06",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S27",
+        "M02"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F04",
+      "referenceName": "日期与历史",
+      "screenIds": [
+        "S06",
+        "S07",
+        "S13",
+        "S28",
+        "M01"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F05",
+      "referenceName": "目标与餐次",
+      "screenIds": [
+        "S14",
+        "S15",
+        "S16"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F06",
+      "referenceName": "导入与导出",
+      "screenIds": [
+        "S17",
+        "S21",
+        "S22"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F07",
+      "referenceName": "WebDAV与冲突",
+      "screenIds": [
+        "S18",
+        "S19",
+        "S20",
+        "S21"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F08",
+      "referenceName": "公共食谱更新",
+      "screenIds": [
+        "S02",
+        "S23",
+        "S27"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F09",
+      "referenceName": "应用更新",
+      "screenIds": [
+        "S17",
+        "S24"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F10",
+      "referenceName": "显示与数据管理",
+      "screenIds": [
+        "S25",
+        "M01"
+      ],
+      "status": "specified-not-implemented"
+    },
+    {
+      "id": "F11",
+      "referenceName": "开发者诊断",
+      "screenIds": [
+        "S17",
+        "S26"
+      ],
+      "status": "specified-not-implemented"
+    }
+  ],
+  "pendingDecisions": [
+    {
+      "id": "D01",
+      "topic": "筛选重量/热量分档、边界与“全部”选项交互",
+      "scope": "S04",
+      "handling": "已按用户确认的 Figma 弹出菜单冻结：热量=全部热量、<100 Kcal、100~200 Kcal、200~300 Kcal、300~400 Kcal、>400 Kcal；重量=全部重量、<100 g、100~200 g、200~300 g、300~400 g、400~500 g、500~600 g、>600 g；分类=全部分类、热菜、凉菜、熟食、生鲜、主食、荤菜、素菜、其它。同维度 OR，跨维度与搜索 AND。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D02",
+      "topic": "搜索历史底层条数上限",
+      "scope": "S03",
+      "handling": "应用不设搜索历史条数上限；当前 UI 最多显示 5 行；超出显示窗口的历史由设备清理策略清除。有效提交去重并按最近使用排序，清除全部需确认。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D03",
+      "topic": "选择日期餐次已有配餐时加入哪个记录/草稿",
+      "scope": "S08",
+      "handling": "同日期+餐次仅一份配餐，继续添加时编辑已有；锁定状态保留并需显式解锁",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "parent-asks-one-at-a-time; do-not-bury-open-questions-in-documents"
+    },
+    {
+      "id": "D04",
+      "topic": "重复聚合、固定滑块与原始单份扣减（主体已确认）",
+      "scope": "S10",
+      "handling": "相同食谱/食材合并显示xN，保留原始单份和source count，展示聚合总量且微调不再乘N；固定±100g锚点为原始单份乘当前份数，不反复累加；减份扣原始单份，最后一份再删才移除，负值归零。300g×2=600g，+100g=700g，删一份剩400g×1。0–9g保留红框无效状态，可用滑块修正；保存时定位并阻止提交，所有条目至少10g才满足重量有效条件，不自动改为10g或移除。identity与独立食材原始份量来源归D12契约设计。",
+      "status": "resolved-user-confirmed-core-behavior-2026-10-28",
+      "questionDelivery": "parent-asks-one-at-a-time; do-not-bury-open-questions-in-documents"
+    },
+    {
+      "id": "D05",
+      "topic": "独立食材来源与同库标签（已确认）；具体schema仍由P0设计",
+      "scope": "S02,S11,S27",
+      "handling": "用户单独编写每100g详细信息的Ingredient JSON，与食谱共库，使用已确认的“食材”标签；允许选取加入配餐。公共Recipe来源以100g起步，但不作为配餐UI最低重量；首版不增加App手工营养录入，不从食谱推定食材营养，具体Ingredient schema在P0设计后复核。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D06",
+      "topic": "复制/移动目标已存在记录的处理及同步语义",
+      "scope": "S28",
+      "handling": "首版不提供复制/移动配餐；后续版本可扩展为复制配餐配置。S28 仅保留候选，不进入 v1。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D07",
+      "topic": "首次餐次模板的默认数量与名称",
+      "scope": "S16",
+      "handling": "默认创建早餐、午餐、晚餐三餐；用户可在设置增删或改名；新用户可见名称仍由用户确认，历史快照不改。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D08",
+      "topic": "导入大小/条目限制、部分无效条目是否可选择性提交",
+      "scope": "S21",
+      "handling": "先预览并逐条列出无效原因；确认时只提交有效记录。例如10条中2条错误时只导入8条，2条错误保留原因；有效条目为0时禁止提交。任一提交失败仍回滚，预览和取消不写本地，未知高版本明确拒绝。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D09",
+      "topic": "清全部本地数据对未同步记录、队列与远端删除的影响",
+      "scope": "S25",
+      "handling": "清除本地数据分类处理：配餐采用用户选项 2，本地与云端配餐一并删除，使用 tombstone/同步队列并展示远端结果；食谱本地不能主动删除，只能在云端删除，云端删除后本地同步删除；清食谱本地缓存后按云端权威重新同步。食谱和配餐均需显示实时同步状态，不静默丢失未同步操作。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D10",
+      "topic": "统一字体的具体家族、授权和缺字回退方案",
+      "scope": "GLOBAL",
+      "handling": "用户已确认统一字体家族为 MiSans；字体文件、分发许可、语义字重和缺字回退仍待工程核验。不得沿用 Figma 混用字体。",
+      "status": "partially-resolved-user-confirmed-2026-10-28; engineering-scope-pending",
+      "questionDelivery": "parent-asks-one-at-a-time; do-not-bury-open-questions-in-documents"
+    },
+    {
+      "id": "D11",
+      "topic": "任何新增用户可见名称与文案",
+      "scope": "GLOBAL",
+      "handling": "已有用户可见名称沿用确认版本；任何新增用户可见名称由用户确认，内部 ID 可先使用 Sxx/ST-xx/内部规范。",
+      "status": "resolved-user-confirmed-2026-10-28",
+      "questionDelivery": "resolved; do-not-ask-again"
+    },
+    {
+      "id": "D12",
+      "topic": "调配控件与聚合技术边界",
+      "scope": "S09,S10,S11,S12",
+      "handling": "已确认并冻结：首版不提供直接输入，仅使用相对原始单份乘当前份数的固定±100g滑块；份数变化后按剩余份数对应原始叠加量计算范围，不以实际总量重锚。0–9g保留红框无效状态，允许滑块修正；保存时定位并阻止提交，所有条目至少10g才满足重量有效条件，不自动改为10g或移除。仍待P0冻结不同revision/foodState的identity与独立食材原始份量来源；Ingredient每100g营养口径不自动定义加入原始单份。已确认部分不得重复询问。",
+      "status": "partially-resolved-user-confirmed-2026-10-28; remaining-schema-scope-pending",
+      "questionDelivery": "parent-asks-one-at-a-time-in-corresponding-batch; do-not-bury-open-questions-in-documents"
+    }
+  ],
+  "screens": [
+    {
+      "id": "M01",
+      "referenceName": "确认弹窗",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "overlay/confirm",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "operation",
+        "affectedScope",
+        "consequences",
+        "origin"
+      ],
+      "states": [
+        {
+          "id": "ST-M01-ready",
+          "key": "ready"
+        },
+        {
+          "id": "ST-M01-confirming",
+          "key": "confirming"
+        },
+        {
+          "id": "ST-M01-failed",
+          "key": "failed"
+        }
+      ],
+      "actions": [
+        {
+          "event": "confirm",
+          "guard": "范围与后果明确，必要前置选择已完成",
+          "destination": "RETURN",
+          "sideEffects": "只执行被确认的操作"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "RETURN",
+          "sideEffects": "零副作用"
+        }
+      ],
+      "dataInterfaces": [
+        "调用方提供的命令边界；不得直接持有广域删除权限"
+      ],
+      "componentRoles": [
+        "confirm_dialog"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-M01-01",
+          "scenario": "清历史、移除、删除、清缓存、清数据的范围各自明确",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-M01-02",
+          "scenario": "重复点击/取消不重复执行副作用",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "M02",
+      "referenceName": "离开编辑",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "overlay/dirty-exit",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "draftId",
+        "pendingNavigation"
+      ],
+      "states": [
+        {
+          "id": "ST-M02-ready",
+          "key": "ready"
+        },
+        {
+          "id": "ST-M02-saving",
+          "key": "saving"
+        },
+        {
+          "id": "ST-M02-save_failed",
+          "key": "save_failed"
+        }
+      ],
+      "actions": [
+        {
+          "event": "continue_editing",
+          "guard": "始终",
+          "destination": "S09",
+          "sideEffects": "保留草稿与当前位置"
+        },
+        {
+          "event": "save_and_leave",
+          "guard": "草稿非空且所有条目至少10g、其他字段有效，用户选择保存后离开",
+          "destination": "RETURN",
+          "sideEffects": "本地事务成功后才执行待导航；失败留在编辑"
+        },
+        {
+          "event": "discard",
+          "guard": "用户明确放弃",
+          "destination": "RETURN",
+          "sideEffects": "仅放弃本次草稿，不回退已保存历史"
+        },
+        {
+          "event": "save_invalid",
+          "guard": "用户选择保存后离开，但任一条目0–9g或其他字段无效",
+          "destination": "S09",
+          "sideEffects": "返回编辑草稿并定位无效条目红框，阻止本地提交、同步与离开，不丢失草稿"
+        }
+      ],
+      "dataInterfaces": [
+        "MealRepository: 草稿与保存事务"
+      ],
+      "componentRoles": [
+        "confirm_dialog"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-M02-01",
+          "scenario": "系统返回/顶部返回/跨Tab离开统一受保护",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-M02-02",
+          "scenario": "保存失败不能退出并丢草稿",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S01",
+      "referenceName": "启动",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "app/start",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "localDataAvailability",
+        "startupRestoreContext"
+      ],
+      "states": [
+        {
+          "id": "ST-S01-loading",
+          "key": "loading"
+        },
+        {
+          "id": "ST-S01-ready",
+          "key": "ready"
+        },
+        {
+          "id": "ST-S01-empty",
+          "key": "empty"
+        },
+        {
+          "id": "ST-S01-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "local_store_ready",
+          "guard": "本地存储初始化完成，食谱可以为空",
+          "destination": "S02",
+          "sideEffects": "始终进入默认食谱Tab；空库显示空态；后台更新不得阻塞"
+        },
+        {
+          "event": "local_read_failed",
+          "guard": "本地读取失败",
+          "destination": "S02",
+          "sideEffects": "食谱显示可重试错误；保留全局导航；不无限阻塞在启动"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: 本地可用食谱",
+        "SettingsRepository: 主题与恢复状态"
+      ],
+      "componentRoles": [
+        "app_shell",
+        "loading_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S01-01",
+          "scenario": "离线且有数据时进入食谱首页",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S01-02",
+          "scenario": "无数据加载失败可重试，不能陷入永久启动页",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S02",
+      "referenceName": "食谱",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "tabs/recipes",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "savedScroll",
+        "savedFilters",
+        "libraryKind=recipe|ingredient"
+      ],
+      "states": [
+        {
+          "id": "ST-S02-loading",
+          "key": "loading"
+        },
+        {
+          "id": "ST-S02-content",
+          "key": "content"
+        },
+        {
+          "id": "ST-S02-refreshing",
+          "key": "refreshing"
+        },
+        {
+          "id": "ST-S02-empty",
+          "key": "empty"
+        },
+        {
+          "id": "ST-S02-offline",
+          "key": "offline"
+        },
+        {
+          "id": "ST-S02-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "open_search",
+          "guard": "始终",
+          "destination": "S03",
+          "sideEffects": "保持当前列表上下文"
+        },
+        {
+          "event": "open_filter",
+          "guard": "始终",
+          "destination": "S04",
+          "sideEffects": "传入当前筛选"
+        },
+        {
+          "event": "open_recipe",
+          "guard": "条目有效",
+          "destination": "S05",
+          "sideEffects": "传 recipeId/revision；不写配方"
+        },
+        {
+          "event": "switch_meals",
+          "guard": "始终",
+          "destination": "S06",
+          "sideEffects": "保存食谱 Tab 上下文"
+        },
+        {
+          "event": "switch_settings",
+          "guard": "始终",
+          "destination": "S17",
+          "sideEffects": "保存食谱 Tab 上下文"
+        },
+        {
+          "event": "select_ingredient_label",
+          "guard": "用户选择已确认“食材”标签",
+          "destination": "S27",
+          "sideEffects": "切换同一食谱库的条目类别；不增加全局Tab"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: Recipe摘要、publishedAt、revision、image",
+        "SyncRepository: 公共库更新状态",
+        "RecipeRepository: 同库Recipe/Ingredient definitions；Ingredient具体schema待P0设计",
+        "默认publishedAt倒序；卡片图片或碗叶占位、名称、总重/热量、2–3分类标签"
+      ],
+      "componentRoles": [
+        "app_shell",
+        "recipe_card",
+        "status_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S02-01",
+          "scenario": "启动默认本页，搜索不是第四个Tab",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S02-02",
+          "scenario": "已有内容刷新失败仍保留旧内容、列表位置及筛选",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S03",
+      "referenceName": "搜索",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "recipes/search",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "query",
+        "imeComposition",
+        "filters",
+        "originContext"
+      ],
+      "states": [
+        {
+          "id": "ST-S03-idle",
+          "key": "idle"
+        },
+        {
+          "id": "ST-S03-composing",
+          "key": "composing"
+        },
+        {
+          "id": "ST-S03-insufficient",
+          "key": "insufficient"
+        },
+        {
+          "id": "ST-S03-searching",
+          "key": "searching"
+        },
+        {
+          "id": "ST-S03-results",
+          "key": "results"
+        },
+        {
+          "id": "ST-S03-empty",
+          "key": "empty"
+        },
+        {
+          "id": "ST-S03-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "input_changed",
+          "guard": "组合输入中",
+          "destination": "S03",
+          "sideEffects": "只更新输入，不触发查询或写历史"
+        },
+        {
+          "event": "submit",
+          "guard": "trim后至少2有效字符且无未提交组合输入",
+          "destination": "S03",
+          "sideEffects": "按契约查询，提交有效查询才写去重历史"
+        },
+        {
+          "event": "open_recipe",
+          "guard": "结果有效",
+          "destination": "S05",
+          "sideEffects": "保留查询和滚动"
+        },
+        {
+          "event": "clear_history",
+          "guard": "确认后",
+          "destination": "S03",
+          "sideEffects": "仅清搜索历史"
+        },
+        {
+          "event": "close",
+          "guard": "始终",
+          "destination": "S02",
+          "sideEffects": "恢复原列表，不清筛选"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: 名称/食材/拼音搜索",
+        "SettingsRepository: 去重历史"
+      ],
+      "componentRoles": [
+        "search_input",
+        "history_chip",
+        "recipe_card",
+        "confirm_dialog"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S03-01",
+          "scenario": "空白或1有效字符不查且不入历史",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S03-02",
+          "scenario": "IME组合阶段不查；提交后按相关度展示",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S03-03",
+          "scenario": "历史应用不设条数上限，UI 最多显示 5 行，超出显示窗口的历史按设备策略清理",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S04",
+      "referenceName": "筛选菜单",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "recipes/filter",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "currentFilters",
+        "originScreen"
+      ],
+      "states": [
+        {
+          "id": "ST-S04-default",
+          "key": "default"
+        },
+        {
+          "id": "ST-S04-selected",
+          "key": "selected"
+        },
+        {
+          "id": "ST-S04-empty_result",
+          "key": "empty_result"
+        }
+      ],
+      "actions": [
+        {
+          "event": "toggle_value",
+          "guard": "Figma 弹出菜单的已确认分档与全部规则",
+          "destination": "S04",
+          "sideEffects": "仅改当前筛选草案"
+        },
+        {
+          "event": "apply",
+          "guard": "筛选有效",
+          "destination": "RETURN",
+          "sideEffects": "同维度OR、跨维度及搜索AND；回传筛选"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "RETURN",
+          "sideEffects": "不提交筛选草案"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: 重量/热量/分类筛选"
+      ],
+      "componentRoles": [
+        "filter_group",
+        "choice_control",
+        "modal_surface"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S04-01",
+          "scenario": "同类多选为OR，跨类为AND",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S04-02",
+          "scenario": "热量/重量/分类三组 Figma 弹出选项与全部行为按确认内容展示，无结果可清筛选",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S05",
+      "referenceName": "食谱详情",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "recipes/{recipeId}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "recipeId",
+        "requestedRevision",
+        "originContext"
+      ],
+      "states": [
+        {
+          "id": "ST-S05-loading",
+          "key": "loading"
+        },
+        {
+          "id": "ST-S05-content",
+          "key": "content"
+        },
+        {
+          "id": "ST-S05-nutrition_unknown",
+          "key": "nutrition_unknown"
+        },
+        {
+          "id": "ST-S05-missing_image",
+          "key": "missing_image"
+        },
+        {
+          "id": "ST-S05-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "expand_ingredient",
+          "guard": "条目存在",
+          "destination": "S05",
+          "sideEffects": "仅展开营养与来源"
+        },
+        {
+          "event": "add_to_meal",
+          "guard": "食谱可用",
+          "destination": "S08",
+          "sideEffects": "仅创建加入意图，不改变公共配方"
+        },
+        {
+          "event": "back",
+          "guard": "始终",
+          "destination": "RETURN",
+          "sideEffects": "还原原列表或配餐上下文"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: Recipe、items/per100/foodState/sourceRef",
+        "MealRepository: 加入意图的草稿来源",
+        "展示范围includesStaple、16:9顶图、当前配方notes；手机食材先名称/克数/热量，展开营养/每100g/来源"
+      ],
+      "componentRoles": [
+        "detail_image",
+        "nutrition_summary",
+        "ingredient_row",
+        "primary_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S05-01",
+          "scenario": "纤维g、钠与维生素C用mg；缺失保持未知",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S05-02",
+          "scenario": "公共详情查看不改变配方；无图统一碗叶占位",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S06",
+      "referenceName": "配餐",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "tabs/meals?date={localDate}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "localDate",
+        "mealSlotTemplate"
+      ],
+      "states": [
+        {
+          "id": "ST-S06-loading",
+          "key": "loading"
+        },
+        {
+          "id": "ST-S06-content",
+          "key": "content"
+        },
+        {
+          "id": "ST-S06-empty_day",
+          "key": "empty_day"
+        },
+        {
+          "id": "ST-S06-no_goals",
+          "key": "no_goals"
+        },
+        {
+          "id": "ST-S06-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "open_calendar",
+          "guard": "始终",
+          "destination": "S07",
+          "sideEffects": "保留当前日期"
+        },
+        {
+          "event": "open_saved_meal",
+          "guard": "有记录",
+          "destination": "S13",
+          "sideEffects": "传mealId读取快照"
+        },
+        {
+          "event": "new_meal",
+          "guard": "所选日期餐次尚无记录；同日期餐次仅一份",
+          "destination": "S09",
+          "sideEffects": "传只读日期餐次上下文"
+        },
+        {
+          "event": "continue_existing",
+          "guard": "所选日期餐次已有记录",
+          "destination": "S13",
+          "sideEffects": "展示同一记录；编辑时复用已有记录，不另建一份"
+        }
+      ],
+      "dataInterfaces": [
+        "MealRepository: 日期记录与快照合计",
+        "GoalRepository: 当前餐次模板与目标"
+      ],
+      "componentRoles": [
+        "app_shell",
+        "day_summary",
+        "meal_slot_card",
+        "status_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S06-01",
+          "scenario": "无配餐日期仍可打开并新建",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S06-02",
+          "scenario": "全天合计来自已保存记录，不含未保存草稿",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S07",
+      "referenceName": "日历",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "meals/calendar",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "selectedDate",
+        "today",
+        "savedDates"
+      ],
+      "states": [
+        {
+          "id": "ST-S07-default",
+          "key": "default"
+        },
+        {
+          "id": "ST-S07-selected",
+          "key": "selected"
+        },
+        {
+          "id": "ST-S07-empty_date",
+          "key": "empty_date"
+        }
+      ],
+      "actions": [
+        {
+          "event": "select_date",
+          "guard": "合法本地日历日期",
+          "destination": "S07",
+          "sideEffects": "更新选择与星期"
+        },
+        {
+          "event": "query",
+          "guard": "已选日期",
+          "destination": "S06",
+          "sideEffects": "无餐日期同样可返回当日视图"
+        }
+      ],
+      "dataInterfaces": [
+        "MealRepository: 有餐日期索引"
+      ],
+      "componentRoles": [
+        "calendar_control",
+        "primary_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S07-01",
+          "scenario": "今天/选中/有餐标识可叠加",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S07-02",
+          "scenario": "跨月和无餐日期均可选择，不能因UTC换日",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S08",
+      "referenceName": "日期与餐次选择",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "meal/context",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "entryIntent=recipe|ingredient",
+        "originDraftId",
+        "localDateCandidate"
+      ],
+      "states": [
+        {
+          "id": "ST-S08-default",
+          "key": "default"
+        },
+        {
+          "id": "ST-S08-selected",
+          "key": "selected"
+        },
+        {
+          "id": "ST-S08-invalid",
+          "key": "invalid"
+        }
+      ],
+      "actions": [
+        {
+          "event": "confirm",
+          "guard": "合法日期与已启用餐次",
+          "destination": "S09",
+          "sideEffects": "同日期餐次仅一份；无记录创建草稿，有记录继续编辑已有；锁定记录先走S13显式解锁，不静默解锁"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "RETURN",
+          "sideEffects": "不写MealRecord；保留原草稿"
+        }
+      ],
+      "dataInterfaces": [
+        "GoalRepository: MealSlot稳定id与名称",
+        "MealRepository: 草稿和现有记录"
+      ],
+      "componentRoles": [
+        "calendar_control",
+        "choice_control",
+        "modal_surface"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S08-01",
+          "scenario": "加入配餐先明确日期餐次",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S08-02",
+          "scenario": "取消不改变已有记录；已有同日餐次的合并不得猜测",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S09",
+      "referenceName": "新建/编辑配餐",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "meals/editor?draftId={draftId}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "draftId",
+        "localDate",
+        "mealSlotId",
+        "sourceMealId",
+        "sourceSnapshot",
+        "draftLockPreference=false",
+        "draftSyncPreference=available-only-if-configured"
+      ],
+      "states": [
+        {
+          "id": "ST-S09-clean",
+          "key": "clean"
+        },
+        {
+          "id": "ST-S09-dirty",
+          "key": "dirty"
+        },
+        {
+          "id": "ST-S09-empty",
+          "key": "empty"
+        },
+        {
+          "id": "ST-S09-calculating",
+          "key": "calculating"
+        },
+        {
+          "id": "ST-S09-invalid",
+          "key": "invalid"
+        },
+        {
+          "id": "ST-S09-saving",
+          "key": "saving"
+        },
+        {
+          "id": "ST-S09-save_failed",
+          "key": "save_failed"
+        },
+        {
+          "id": "ST-S09-saved",
+          "key": "saved"
+        }
+      ],
+      "actions": [
+        {
+          "event": "add_entry",
+          "guard": "草稿可编辑",
+          "destination": "S10",
+          "sideEffects": "保留未保存输入与计算基准"
+        },
+        {
+          "event": "adjust_entry",
+          "guard": "权重与边界可验证",
+          "destination": "S12",
+          "sideEffects": "传原始快照，不累乘已舍入结果"
+        },
+        {
+          "event": "save",
+          "guard": "至少一个条目，且所有条目重量至少10g、字段校验通过；缺失目标/部分营养保持中性/不完整提示；记录未锁定",
+          "destination": "S13",
+          "sideEffects": "本地事务写快照、锁定选择与revision；每记录syncEnabled仅在已配置WebDAV时启用；成功后才排同步队列"
+        },
+        {
+          "event": "save_invalid",
+          "guard": "至少一个条目重量处于0–9g，或其他字段校验未通过",
+          "destination": "S09",
+          "sideEffects": "保留草稿，定位并展示无效条目红框，阻止本地事务和同步入队；允许用滑块修正至至少10g后重试"
+        },
+        {
+          "event": "save_failed",
+          "guard": "本地事务失败",
+          "destination": "S09",
+          "sideEffects": "回滚、保留草稿，不能报告成功"
+        },
+        {
+          "event": "back",
+          "guard": "dirty",
+          "destination": "M02",
+          "sideEffects": "不先丢草稿"
+        },
+        {
+          "event": "back",
+          "guard": "clean",
+          "destination": "RETURN",
+          "sideEffects": "恢复来源上下文"
+        },
+        {
+          "event": "decrement_source",
+          "guard": "用户主动减一份；原始单份与份数已验证；D12相关边界经P0复核",
+          "destination": "S09",
+          "sideEffects": "份数减一且总量扣原始单份；最后一份移除整条；负值归零；0–9g保留红框无效状态并可用滑块修正，不能保存；按剩余份数计算固定范围，不自动平均或clamp"
+        }
+      ],
+      "dataInterfaces": [
+        "MealRepository: 草稿、MealRecord事务与历史快照",
+        "GoalRepository: goalSnapshot",
+        "AdjustmentContract: 计算版本与结果",
+        "SyncRepository: 本地成功后入队",
+        "同date+mealSlotId唯一；originalPortion/sourceCount/aggregateTarget在P0版本化；锚点为原始单份乘当前份数，固定±100g且不累加；减份扣原始单份，负值归零；0–9g红框无效并可用滑块修正；所有条目至少10g才满足保存重量条件；首版不提供直接输入；identity与独立食材原始份量来源受D12约束"
+      ],
+      "componentRoles": [
+        "context_readonly",
+        "nutrition_table",
+        "entry_card",
+        "weight_control",
+        "toggle_control",
+        "sticky_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S09-01",
+          "scenario": "日期餐次只读；保存区避开键盘",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S09-02",
+          "scenario": "本地保存失败不丢草稿，成功才显示已保存",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S09-03",
+          "scenario": "锁定与同步开关默认/可用性按既有规则；不依赖联网才能保存",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S09-05",
+          "scenario": "未配置目标或部分营养未知不阻止有效配餐本地保存；未知值不补0",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S09-06",
+          "scenario": "300g×2=600g，滑块范围500~700g，调整至700后减一份为400g×1；不平均、不再乘count",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S09-07",
+          "scenario": "删除负值归零；0g、1g、9g均保留红框无效状态且可用滑块修正，点击保存时定位并阻止提交；有另一有效条目也不能绕过；修正至10g且其他条件通过才可保存，不自动clamp或移除",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": [
+        "D12"
+      ]
+    },
+    {
+      "id": "S10",
+      "referenceName": "添加食谱/食材",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "meals/entries/select?draftId={draftId}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "draftId",
+        "selectedEntries",
+        "entryKind"
+      ],
+      "states": [
+        {
+          "id": "ST-S10-default",
+          "key": "default"
+        },
+        {
+          "id": "ST-S10-selected",
+          "key": "selected"
+        },
+        {
+          "id": "ST-S10-empty",
+          "key": "empty"
+        },
+        {
+          "id": "ST-S10-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "select_recipe",
+          "guard": "存在食谱",
+          "destination": "S10",
+          "sideEffects": "仅暂存选择"
+        },
+        {
+          "event": "add_ingredient",
+          "guard": "选择公共库中已校验的Ingredient JSON；重量可调整",
+          "destination": "S11",
+          "sideEffects": "读取用户编写的每100g定义；不显示手工营养录入"
+        },
+        {
+          "event": "confirm",
+          "guard": "选择有效；同一定义按已确认份数聚合；identity技术保护D12经P0复核",
+          "destination": "S09",
+          "sideEffects": "回传快照，不直接保存配餐"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "S09",
+          "sideEffects": "恢复原草稿；不提交新选择"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: 公共及导入食谱",
+        "MealRepository: 当前entries",
+        "重复同一食谱/食材聚合显示份数，重量热量为总量；不猜不同版本/计量状态可合并"
+      ],
+      "componentRoles": [
+        "search_input",
+        "choice_control",
+        "recipe_card",
+        "sticky_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S10-01",
+          "scenario": "重复同一定义食谱/食材按份数聚合一条；不同版本/计量状态的identity未P0复核前不猜合并",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S10-02",
+          "scenario": "重复食谱必须先明确合并或独立条目规则",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": [
+        "D12"
+      ]
+    },
+    {
+      "id": "S11",
+      "referenceName": "独立食材详情/加入",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "library/ingredients/{ingredientId}?draftId={draftIdOptional}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "ingredientId",
+        "publishedIngredientSnapshot",
+        "draftIdOptional",
+        "weight"
+      ],
+      "states": [
+        {
+          "id": "ST-S11-loading",
+          "key": "loading"
+        },
+        {
+          "id": "ST-S11-content",
+          "key": "content"
+        },
+        {
+          "id": "ST-S11-unknown_nutrients",
+          "key": "unknown_nutrients"
+        },
+        {
+          "id": "ST-S11-invalid",
+          "key": "invalid"
+        }
+      ],
+      "actions": [
+        {
+          "event": "apply_to_draft",
+          "guard": "有draftId且Ingredient JSON/schema/重量已验证",
+          "destination": "S09",
+          "sideEffects": "以定义的每100g口径生成IngredientSnapshot；null保持未知"
+        },
+        {
+          "event": "join_from_library",
+          "guard": "无draftId且Ingredient JSON与所选正重量有效",
+          "destination": "S08",
+          "sideEffects": "先选择日期餐次，再将已选Ingredient候选交给草稿"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "RETURN",
+          "sideEffects": "不改配餐草稿或公共库"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: 用户编写并发布的Ingredient JSON，与食谱同库；具体schema待P0设计",
+        "MealRepository: 独立IngredientSnapshot，与RecipeSnapshot条目分开",
+        "字段契约: weight/foodState/per100/sourceRef由P0与Ingredient schema对齐"
+      ],
+      "componentRoles": [
+        "detail_image",
+        "nutrition_summary",
+        "ingredient_row",
+        "form_input",
+        "primary_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S11-01",
+          "scenario": "缺失营养不能补0；按定义每100g口径与用户所选重量计算快照",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S11-02",
+          "scenario": "只从已发布Ingredient JSON选取，首版无App手工营养录入，不从食谱猜测营养真值",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S11-03",
+          "scenario": "来自库详情先选日期餐次；来自草稿返回同一草稿且取消零副作用",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": [
+        "D12"
+      ]
+    },
+    {
+      "id": "S12",
+      "referenceName": "食谱用量调整",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "meals/entry/{entryId}/adjust",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "entryId",
+        "originalSnapshot",
+        "mode",
+        "requestedTarget",
+        "bounds",
+        "lockedItems",
+        "originalPortion",
+        "sourceCount",
+        "relativeWeightDelta"
+      ],
+      "states": [
+        {
+          "id": "ST-S12-ready",
+          "key": "ready"
+        },
+        {
+          "id": "ST-S12-calculating",
+          "key": "calculating"
+        },
+        {
+          "id": "ST-S12-exact",
+          "key": "exact"
+        },
+        {
+          "id": "ST-S12-approximate",
+          "key": "approximate"
+        },
+        {
+          "id": "ST-S12-unreachable",
+          "key": "unreachable"
+        },
+        {
+          "id": "ST-S12-invalid",
+          "key": "invalid"
+        }
+      ],
+      "actions": [
+        {
+          "event": "change_target",
+          "guard": "非负有限重量位于相对原始单份乘当前份数的固定±100g范围内；0–9g允许作为无效编辑状态，≥10g才满足保存重量条件；原始份量与identity契约遵循D12",
+          "destination": "S12",
+          "sideEffects": "保留当前编辑重量；0–9g显示红框无效状态并允许继续拖动修正，不自动补到10g或移除；有效调配按原始快照和healthWeight有界重算，锁定与不可达规则保持"
+        },
+        {
+          "event": "reset",
+          "guard": "原快照可用",
+          "destination": "S12",
+          "sideEffects": "恢复基准；不使用连续舍入反算"
+        },
+        {
+          "event": "apply",
+          "guard": "有效调配结果可执行；不可达时用户已确认实际值；0–9g仅允许保留无效编辑值返回草稿，不生成有效配餐快照",
+          "destination": "S09",
+          "sideEffects": "有效结果写回实际食材克数、差异及计算版本；0–9g仅保留无效编辑值与红框，允许返回后继续用滑块修正，保存仍被阻止，不自动补至10g或移除"
+        },
+        {
+          "event": "decrement_source",
+          "guard": "用户主动减一份；原始单份与份数已验证；D12相关边界经P0复核",
+          "destination": "S09",
+          "sideEffects": "份数减一且总量扣原始单份；最后一份移除整条；负值归零；0–9g保留红框无效状态并可用滑块修正，不能保存；按剩余份数计算固定范围，不自动平均或clamp"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "S09",
+          "sideEffects": "不应用预览"
+        }
+      ],
+      "dataInterfaces": [
+        "AdjustmentContract: requestedTarget/actualTarget/reachableMin/Max/status/warnings",
+        "MealRepository: RecipeSnapshot",
+        "Multiplicity提案：originalPortion/sourceCount/aggregateTarget在P0冻结；固定±100g锚点为原始单份乘当前份数；0–9g是可保留、可用滑块修正的红框无效状态，所有条目至少10g才满足保存重量条件；减份扣原始单份，负值归零，最后一份再删才移除；首版不提供直接输入；D12仅保留identity与独立食材原始份量来源等契约设计"
+      ],
+      "componentRoles": [
+        "weight_control",
+        "ingredient_diff",
+        "status_feedback",
+        "modal_surface"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S12-01",
+          "scenario": "locked克数不变；不可达不伪装成功",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S12-02",
+          "scenario": "未知能量禁用热量求解；重量求解标不完整营养",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S12-03",
+          "scenario": "案例A：300g×2原始总600g，滑块仅500~700g且不累加。独立案例B：原始100g×1，非负滑块范围0~200g，0g、1g、9g保留红框无效状态且可拖动修正，10g达到重量有效门槛；首版不提供直接输入，不自动改为10g或移除",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": [
+        "D12"
+      ]
+    },
+    {
+      "id": "S13",
+      "referenceName": "配餐详情",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "meals/{mealId}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "mealId",
+        "conflictIdOptional"
+      ],
+      "states": [
+        {
+          "id": "ST-S13-loading",
+          "key": "loading"
+        },
+        {
+          "id": "ST-S13-unlocked",
+          "key": "unlocked"
+        },
+        {
+          "id": "ST-S13-locked",
+          "key": "locked"
+        },
+        {
+          "id": "ST-S13-deleted",
+          "key": "deleted"
+        },
+        {
+          "id": "ST-S13-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "edit",
+          "guard": "未锁定",
+          "destination": "S09",
+          "sideEffects": "复制历史快照到编辑草稿，不自动升级来源"
+        },
+        {
+          "event": "unlock",
+          "guard": "用户主动选择",
+          "destination": "S13",
+          "sideEffects": "事务保存isLocked=false及新revision；失败仍保持锁定；不自动编辑"
+        },
+        {
+          "event": "export",
+          "guard": "记录存在",
+          "destination": "S22",
+          "sideEffects": "生成导出意图"
+        },
+        {
+          "event": "sync_status",
+          "guard": "记录存在",
+          "destination": "S19",
+          "sideEffects": "只读同步状态"
+        },
+        {
+          "event": "delete",
+          "guard": "用户确认",
+          "destination": "M01",
+          "sideEffects": "确认后事务写tombstone，不直接云端无痕删除"
+        },
+        {
+          "event": "copy_move",
+          "guard": "首版范围及D06复制/移动规则均经用户确认后才开放",
+          "destination": "S28",
+          "sideEffects": "传源快照；不改原日期餐次",
+          "requiredDecisionIds": [
+            "D06"
+          ],
+          "capabilityStatus": "candidate-not-committed-to-v1"
+        },
+        {
+          "event": "lock",
+          "guard": "用户主动选择且记录未锁定",
+          "destination": "S13",
+          "sideEffects": "事务保存isLocked=true及新revision；失败仍保持原状态"
+        }
+      ],
+      "dataInterfaces": [
+        "MealRepository: MealRecord与Recipe/IngredientSnapshot",
+        "SyncRepository: 记录状态"
+      ],
+      "componentRoles": [
+        "nutrition_summary",
+        "entry_card",
+        "more_menu",
+        "status_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S13-01",
+          "scenario": "公共食谱/目标更新不改历史数值",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S13-02",
+          "scenario": "锁定仍可导出同步；编辑需显式解锁",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S13-03",
+          "scenario": "删除需确认；离线删除后同步不使旧记录复活",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S13-04",
+          "scenario": "锁定与解锁写入失败不先改变界面最终状态；锁定记录加入食物先显式解锁",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S14",
+      "referenceName": "营养目标",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/goals",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "profileId",
+        "selectedScope"
+      ],
+      "states": [
+        {
+          "id": "ST-S14-unconfigured",
+          "key": "unconfigured"
+        },
+        {
+          "id": "ST-S14-configured",
+          "key": "configured"
+        },
+        {
+          "id": "ST-S14-manual_override",
+          "key": "manual_override"
+        },
+        {
+          "id": "ST-S14-allocation_difference",
+          "key": "allocation_difference"
+        },
+        {
+          "id": "ST-S14-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "edit_nutrient",
+          "guard": "选定指标与日/餐范围",
+          "destination": "S15",
+          "sideEffects": "传当前目标草案"
+        },
+        {
+          "event": "edit_slots",
+          "guard": "始终",
+          "destination": "S16",
+          "sideEffects": "传模板草案"
+        },
+        {
+          "event": "reallocate",
+          "guard": "用户主动选择且比例有效",
+          "destination": "S14",
+          "sideEffects": "预览重分配，提交后新配餐使用新版本"
+        }
+      ],
+      "dataInterfaces": [
+        "GoalRepository: GoalProfile/dailyGoals/mealSlots"
+      ],
+      "componentRoles": [
+        "settings_group",
+        "nutrition_table",
+        "status_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S14-01",
+          "scenario": "未配置不标红；目标数字不来自Figma默认推荐",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S14-02",
+          "scenario": "手动单餐覆盖有标记；与日合计差额可见",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S15",
+      "referenceName": "目标类型编辑",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/goals/{nutrient}/{scope}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "nutrient",
+        "unit",
+        "scope",
+        "currentGoal"
+      ],
+      "states": [
+        {
+          "id": "ST-S15-default",
+          "key": "default"
+        },
+        {
+          "id": "ST-S15-target",
+          "key": "target"
+        },
+        {
+          "id": "ST-S15-range",
+          "key": "range"
+        },
+        {
+          "id": "ST-S15-max",
+          "key": "max"
+        },
+        {
+          "id": "ST-S15-invalid",
+          "key": "invalid"
+        }
+      ],
+      "actions": [
+        {
+          "event": "select_mode",
+          "guard": "target/range/max",
+          "destination": "S15",
+          "sideEffects": "仅切编辑字段，不覆盖历史快照"
+        },
+        {
+          "event": "save",
+          "guard": "target>0或0≤lower<upper或upper≥0；单位正确",
+          "destination": "S14",
+          "sideEffects": "保存新profile revision"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "S14",
+          "sideEffects": "不提交修改"
+        }
+      ],
+      "dataInterfaces": [
+        "GoalRepository: NutrientGoal mode/unit/target/lower/upper/warningFraction"
+      ],
+      "componentRoles": [
+        "choice_control",
+        "form_input",
+        "primary_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S15-01",
+          "scenario": "max=0且actual>0判超限，无除0",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S15-02",
+          "scenario": "钠低于上限不报缺少；无目标与实际未知中性",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S16",
+      "referenceName": "餐次设置",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/meal-slots",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "mealSlots",
+        "allocationWeights"
+      ],
+      "states": [
+        {
+          "id": "ST-S16-default",
+          "key": "default"
+        },
+        {
+          "id": "ST-S16-editing",
+          "key": "editing"
+        },
+        {
+          "id": "ST-S16-invalid",
+          "key": "invalid"
+        },
+        {
+          "id": "ST-S16-difference",
+          "key": "difference"
+        }
+      ],
+      "actions": [
+        {
+          "event": "rename",
+          "guard": "名称由用户填写/确认",
+          "destination": "S16",
+          "sideEffects": "稳定id不变；不改历史快照"
+        },
+        {
+          "event": "reorder",
+          "guard": "模板有效",
+          "destination": "S16",
+          "sideEffects": "改变模板顺序"
+        },
+        {
+          "event": "disable",
+          "guard": "用户确认",
+          "destination": "S16",
+          "sideEffects": "停用模板，保留历史名称和ID"
+        },
+        {
+          "event": "save",
+          "guard": "比例与模板有效；新名称经用户决定",
+          "destination": "S14",
+          "sideEffects": "保存模板revision"
+        }
+      ],
+      "dataInterfaces": [
+        "GoalRepository: MealSlot id/name/order/enabled/allocationWeight/mealGoals"
+      ],
+      "componentRoles": [
+        "settings_group",
+        "form_input",
+        "choice_control"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S16-01",
+          "scenario": "重命名或停用不破坏历史",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S16-02",
+          "scenario": "分配比例与三大营养供能比不混淆",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S17",
+      "referenceName": "设置",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "tabs/settings",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "settingsSnapshot"
+      ],
+      "states": [
+        {
+          "id": "ST-S17-ready",
+          "key": "ready"
+        },
+        {
+          "id": "ST-S17-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "open_goals",
+          "guard": "始终",
+          "destination": "S14",
+          "sideEffects": "不自动设推荐目标"
+        },
+        {
+          "event": "open_webdav",
+          "guard": "始终",
+          "destination": "S18",
+          "sideEffects": "不请求凭据到聊天"
+        },
+        {
+          "event": "import",
+          "guard": "用户选择",
+          "destination": "S21",
+          "sideEffects": "调用系统文档选择器后校验"
+        },
+        {
+          "event": "export",
+          "guard": "用户选择",
+          "destination": "S22",
+          "sideEffects": "传范围，不含凭据"
+        },
+        {
+          "event": "public_update",
+          "guard": "始终",
+          "destination": "S23",
+          "sideEffects": "读公共源状态"
+        },
+        {
+          "event": "app_update",
+          "guard": "用户选择",
+          "destination": "S24",
+          "sideEffects": "用户主动检查"
+        },
+        {
+          "event": "general",
+          "guard": "始终",
+          "destination": "S25",
+          "sideEffects": "主题、缓存等"
+        },
+        {
+          "event": "unlock_developer",
+          "guard": "版本号连续10次",
+          "destination": "S26",
+          "sideEffects": "正式默认隐藏"
+        }
+      ],
+      "dataInterfaces": [
+        "SettingsRepository: 主题/源/更新/频率",
+        "各Repository只读摘要"
+      ],
+      "componentRoles": [
+        "app_shell",
+        "settings_group",
+        "settings_row"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S17-01",
+          "scenario": "食谱更新源与APK更新源分开表达",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S17-02",
+          "scenario": "首版无AI入口、广告或统计SDK配置",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S18",
+      "referenceName": "WebDAV",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/webdav",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "enabled",
+        "serverEndpoint",
+        "credentialHandle",
+        "syncPreferences"
+      ],
+      "states": [
+        {
+          "id": "ST-S18-unconfigured",
+          "key": "unconfigured"
+        },
+        {
+          "id": "ST-S18-editing",
+          "key": "editing"
+        },
+        {
+          "id": "ST-S18-testing",
+          "key": "testing"
+        },
+        {
+          "id": "ST-S18-available",
+          "key": "available"
+        },
+        {
+          "id": "ST-S18-auth_failed",
+          "key": "auth_failed"
+        },
+        {
+          "id": "ST-S18-offline",
+          "key": "offline"
+        },
+        {
+          "id": "ST-S18-unsupported",
+          "key": "unsupported"
+        }
+      ],
+      "actions": [
+        {
+          "event": "test_connection",
+          "guard": "用户本地已填配置",
+          "destination": "S18",
+          "sideEffects": "只在专用测试目录探测能力，凭据不入日志"
+        },
+        {
+          "event": "save_config",
+          "guard": "配置校验通过",
+          "destination": "S18",
+          "sideEffects": "安全保存凭据引用，不在JSON备份中保存密码"
+        },
+        {
+          "event": "sync_now",
+          "guard": "已启用、配置可用",
+          "destination": "S19",
+          "sideEffects": "排入同步队列，不阻塞本地配餐"
+        },
+        {
+          "event": "disable",
+          "guard": "用户选择",
+          "destination": "S18",
+          "sideEffects": "停用自动同步，不删除远端配餐"
+        }
+      ],
+      "dataInterfaces": [
+        "SettingsRepository: 非秘密设置与credentialHandle",
+        "SyncRepository: 授权/读写/ETag/条件写入能力"
+      ],
+      "componentRoles": [
+        "settings_group",
+        "form_input",
+        "toggle_control",
+        "status_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S18-01",
+          "scenario": "测试成功后才显示可用；读成功不代表写或条件写入支持",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S18-02",
+          "scenario": "123为优先服务，OSS域名不能当WebDAV",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S18-03",
+          "scenario": "凭据仅对应环节用户在本地配置，当前不索取",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S19",
+      "referenceName": "同步状态",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "sync/status?mealId={mealId}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "mealIdOptional",
+        "queueSnapshot",
+        "capabilities"
+      ],
+      "states": [
+        {
+          "id": "ST-S19-disabled",
+          "key": "disabled"
+        },
+        {
+          "id": "ST-S19-pending",
+          "key": "pending"
+        },
+        {
+          "id": "ST-S19-syncing",
+          "key": "syncing"
+        },
+        {
+          "id": "ST-S19-synced",
+          "key": "synced"
+        },
+        {
+          "id": "ST-S19-failed",
+          "key": "failed"
+        },
+        {
+          "id": "ST-S19-conflict",
+          "key": "conflict"
+        },
+        {
+          "id": "ST-S19-backup_only",
+          "key": "backup_only"
+        }
+      ],
+      "actions": [
+        {
+          "event": "retry",
+          "guard": "可重试失败且有配置",
+          "destination": "S19",
+          "sideEffects": "重试队列，保留本地与远端副本"
+        },
+        {
+          "event": "resolve_conflict",
+          "guard": "存在冲突",
+          "destination": "S20",
+          "sideEffects": "传双方快照及共同基线"
+        },
+        {
+          "event": "backup_restore",
+          "guard": "无可靠条件写入",
+          "destination": "S21",
+          "sideEffects": "仅显式备份/恢复路径，不自动覆盖"
+        },
+        {
+          "event": "configure",
+          "guard": "无有效配置",
+          "destination": "S18",
+          "sideEffects": "保留待同步队列"
+        }
+      ],
+      "dataInterfaces": [
+        "SyncRepository: revision/parentRevision/lastSyncedRevision/ETag/tombstone/queue"
+      ],
+      "componentRoles": [
+        "status_feedback",
+        "settings_row",
+        "primary_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S19-01",
+          "scenario": "本地已保存与云端已同步分开",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S19-02",
+          "scenario": "读取失败不能解释为远端不存在；时间戳不决定胜负",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S20",
+      "referenceName": "冲突处理",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "sync/conflicts/{conflictId}",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "conflictId",
+        "baseRevision",
+        "localSnapshot",
+        "remoteSnapshot"
+      ],
+      "states": [
+        {
+          "id": "ST-S20-comparing",
+          "key": "comparing"
+        },
+        {
+          "id": "ST-S20-choice_pending",
+          "key": "choice_pending"
+        },
+        {
+          "id": "ST-S20-resolving",
+          "key": "resolving"
+        },
+        {
+          "id": "ST-S20-resolved",
+          "key": "resolved"
+        },
+        {
+          "id": "ST-S20-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "choose_resolution",
+          "guard": "用户选本机/远端/两份保留",
+          "destination": "S20",
+          "sideEffects": "仅暂存选择并保留双方"
+        },
+        {
+          "event": "confirm",
+          "guard": "选择明确且对比基线未变",
+          "destination": "S19",
+          "sideEffects": "生成新revision，再清理已处理冲突；失败保留双方"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "S19",
+          "sideEffects": "冲突继续可见，双方不丢"
+        }
+      ],
+      "dataInterfaces": [
+        "SyncRepository: 冲突副本、baseRevision、条件提交",
+        "MealRepository: 记录事务"
+      ],
+      "componentRoles": [
+        "comparison_panel",
+        "choice_control",
+        "confirm_dialog"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S20-01",
+          "scenario": "双方快照可查看，不能默认最后时间覆盖",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S20-02",
+          "scenario": "解决过程中远端再次变化需重新比较，不按旧选择盲写",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S21",
+      "referenceName": "导入预览",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "backup/import",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "systemSelectedDocument",
+        "kind",
+        "schemaVersion"
+      ],
+      "states": [
+        {
+          "id": "ST-S21-selecting",
+          "key": "selecting"
+        },
+        {
+          "id": "ST-S21-validating",
+          "key": "validating"
+        },
+        {
+          "id": "ST-S21-preview",
+          "key": "preview"
+        },
+        {
+          "id": "ST-S21-duplicates",
+          "key": "duplicates"
+        },
+        {
+          "id": "ST-S21-incompatible",
+          "key": "incompatible"
+        },
+        {
+          "id": "ST-S21-invalid",
+          "key": "invalid"
+        },
+        {
+          "id": "ST-S21-committing",
+          "key": "committing"
+        },
+        {
+          "id": "ST-S21-success",
+          "key": "success"
+        },
+        {
+          "id": "ST-S21-rolled_back",
+          "key": "rolled_back"
+        }
+      ],
+      "actions": [
+        {
+          "event": "select_document",
+          "guard": "用户主动选择文件",
+          "destination": "S21",
+          "sideEffects": "使用系统文档访问，不默认全部存储权限"
+        },
+        {
+          "event": "preview",
+          "guard": "支持kind/schema",
+          "destination": "S21",
+          "sideEffects": "只读校验数量、日期、重复ID、冲突和错误"
+        },
+        {
+          "event": "confirm",
+          "guard": "预览完成、至少 1 条有效记录、冲突选择完成；只提交有效记录",
+          "destination": "RETURN",
+          "sideEffects": "事务写入有效记录；无效记录不写入并在结果页列出原因；任何提交失败回滚"
+        },
+        {
+          "event": "cancel",
+          "guard": "提交前",
+          "destination": "RETURN",
+          "sideEffects": "零本地写入"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository/MealRepository/GoalRepository: 按kind导入边界",
+        "导入envelope: schemaVersion/kind/records/goalProfiles"
+      ],
+      "componentRoles": [
+        "import_summary",
+        "comparison_panel",
+        "sticky_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S21-01",
+          "scenario": "未知高版本拒绝；预览/取消不写本地",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S21-02",
+          "scenario": "损坏/超限/重复/提交中失败有明确结果，不丢原数据",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S21-03",
+          "scenario": "10 条中 2 条错误时，预览列出 2 条原因，确认后只导入 8 条有效记录",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S22",
+      "referenceName": "导出",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "backup/export",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "exportScope",
+        "recordIdsOptional"
+      ],
+      "states": [
+        {
+          "id": "ST-S22-selecting",
+          "key": "selecting"
+        },
+        {
+          "id": "ST-S22-generating",
+          "key": "generating"
+        },
+        {
+          "id": "ST-S22-ready",
+          "key": "ready"
+        },
+        {
+          "id": "ST-S22-success",
+          "key": "success"
+        },
+        {
+          "id": "ST-S22-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "export",
+          "guard": "用户选范围",
+          "destination": "S22",
+          "sideEffects": "从快照生成JSON；系统文档写出成功才确认"
+        },
+        {
+          "event": "cancel",
+          "guard": "生成或选择阶段",
+          "destination": "RETURN",
+          "sideEffects": "不改源数据"
+        }
+      ],
+      "dataInterfaces": [
+        "MealRepository: 快照",
+        "GoalRepository: 可选goalProfiles",
+        "导出envelope: mealBackup/records/exportedAt"
+      ],
+      "componentRoles": [
+        "choice_control",
+        "status_feedback",
+        "primary_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S22-01",
+          "scenario": "导出往返保留快照与单位",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S22-02",
+          "scenario": "文件不包含密码/token/设备私钥/日志；用户取消保存不报成功",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S23",
+      "referenceName": "食谱数据更新",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/public-data",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "currentLibraryRevision",
+        "appliedRevisions",
+        "sourceConfig"
+      ],
+      "states": [
+        {
+          "id": "ST-S23-idle",
+          "key": "idle"
+        },
+        {
+          "id": "ST-S23-checking",
+          "key": "checking"
+        },
+        {
+          "id": "ST-S23-downloading",
+          "key": "downloading"
+        },
+        {
+          "id": "ST-S23-partial",
+          "key": "partial"
+        },
+        {
+          "id": "ST-S23-success",
+          "key": "success"
+        },
+        {
+          "id": "ST-S23-offline",
+          "key": "offline"
+        },
+        {
+          "id": "ST-S23-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "check",
+          "guard": "源按环境配置",
+          "destination": "S23",
+          "sideEffects": "OSS公共HTTPS只读，按部署启用仓库镜像"
+        },
+        {
+          "event": "apply_item",
+          "guard": "kind/schema与全文/版本/hash校验通过；Ingredient具体schema需P0复核",
+          "destination": "S23",
+          "sideEffects": "逐条事务更新索引和全文；不触碰个人快照"
+        },
+        {
+          "event": "retry_failed",
+          "guard": "存在失败条目",
+          "destination": "S23",
+          "sideEffects": "仅重试失败，保留可用旧版本"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: 公共库manifest与逐条revision",
+        "SyncRepository: 公共更新状态",
+        "同库Ingredient公开JSON更新；Ingredient schema与manifest扩展由P0冻结后接入"
+      ],
+      "componentRoles": [
+        "settings_group",
+        "status_feedback",
+        "progress_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S23-01",
+          "scenario": "部分失败不显示全量最新",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S23-02",
+          "scenario": "未部署404在开发0%正常；运行时不可用仍保留离线数据",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S23-03",
+          "scenario": "不上传私人配餐，不嵌OSS发布密钥",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S24",
+      "referenceName": "应用更新",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/app-update",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "installedVersionCode",
+        "releaseMetadata"
+      ],
+      "states": [
+        {
+          "id": "ST-S24-idle",
+          "key": "idle"
+        },
+        {
+          "id": "ST-S24-checking",
+          "key": "checking"
+        },
+        {
+          "id": "ST-S24-available",
+          "key": "available"
+        },
+        {
+          "id": "ST-S24-downloading",
+          "key": "downloading"
+        },
+        {
+          "id": "ST-S24-cancelled",
+          "key": "cancelled"
+        },
+        {
+          "id": "ST-S24-invalid_package",
+          "key": "invalid_package"
+        },
+        {
+          "id": "ST-S24-ready_install",
+          "key": "ready_install"
+        },
+        {
+          "id": "ST-S24-installer_return",
+          "key": "installer_return"
+        },
+        {
+          "id": "ST-S24-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "check",
+          "guard": "用户主动选择",
+          "destination": "S24",
+          "sideEffects": "读取GitHub/Gitee版本入口，整数比较versionCode"
+        },
+        {
+          "event": "download",
+          "guard": "用户确认版本",
+          "destination": "S24",
+          "sideEffects": "下载到受控临时位置，允许取消"
+        },
+        {
+          "event": "install",
+          "guard": "完整性与签名兼容检查通过、用户主动",
+          "destination": "SYSTEM",
+          "sideEffects": "调用系统安装器；返回后复核实际已装版本"
+        },
+        {
+          "event": "cancel",
+          "guard": "下载/安装前可取消",
+          "destination": "S24",
+          "sideEffects": "不改变本地配餐"
+        }
+      ],
+      "dataInterfaces": [
+        "SettingsRepository: 应用版本源",
+        "发布元数据: apk/hash/versionCode/versionName"
+      ],
+      "componentRoles": [
+        "release_summary",
+        "progress_feedback",
+        "primary_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S24-01",
+          "scenario": "校验或签名失败不得启动安装",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S24-02",
+          "scenario": "安装器返回不等于升级成功；源故障不阻断离线使用",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S25",
+      "referenceName": "通用设置",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/general",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "themePreference",
+        "reduceMotion",
+        "cacheSummary"
+      ],
+      "states": [
+        {
+          "id": "ST-S25-default",
+          "key": "default"
+        },
+        {
+          "id": "ST-S25-editing",
+          "key": "editing"
+        },
+        {
+          "id": "ST-S25-confirming",
+          "key": "confirming"
+        },
+        {
+          "id": "ST-S25-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "change_display",
+          "guard": "用户选择",
+          "destination": "S25",
+          "sideEffects": "切换主题/减弱动画，不改变业务数据"
+        },
+        {
+          "event": "clear_images",
+          "guard": "用户确认范围",
+          "destination": "M01",
+          "sideEffects": "仅删图片缓存，不删配餐"
+        },
+        {
+          "event": "clear_local_data",
+          "guard": "列明范围、先导出入口和二次确认",
+          "destination": "M01",
+          "sideEffects": "配餐按选项 2 创建远端删除 tombstone 并同步删除；食谱仅清本地缓存并按云端重新同步，云端删除后才同步移除食谱；两者均显示同步结果，失败不静默丢失"
+        }
+      ],
+      "dataInterfaces": [
+        "SettingsRepository: 主题/省流/动画",
+        "RecipeRepository: 图片缓存边界",
+        "MealRepository: 清数据范围"
+      ],
+      "componentRoles": [
+        "settings_group",
+        "choice_control",
+        "confirm_dialog"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S25-01",
+          "scenario": "亮暗统一字体；字体放大与减弱动态不丢操作",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S25-02",
+          "scenario": "清缓存与清全部数据不可混淆",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S25-03",
+          "scenario": "配餐本地清除与远端删除同步；食谱只能云端删除，云端删除后本地同步移除",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S26",
+      "referenceName": "开发者模式",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "settings/developer",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "unlocked",
+        "redactedDiagnostics"
+      ],
+      "states": [
+        {
+          "id": "ST-S26-hidden",
+          "key": "hidden"
+        },
+        {
+          "id": "ST-S26-ready",
+          "key": "ready"
+        },
+        {
+          "id": "ST-S26-running",
+          "key": "running"
+        },
+        {
+          "id": "ST-S26-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "open",
+          "guard": "已通过10次版本号解锁",
+          "destination": "S26",
+          "sideEffects": "读取脱敏诊断"
+        },
+        {
+          "event": "run_validation",
+          "guard": "用户主动且限定范围",
+          "destination": "S26",
+          "sideEffects": "执行只读校验，日志脱敏"
+        }
+      ],
+      "dataInterfaces": [
+        "SettingsRepository: 隐藏入口状态",
+        "Repository诊断边界"
+      ],
+      "componentRoles": [
+        "settings_group",
+        "status_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S26-01",
+          "scenario": "正式默认隐藏",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S26-02",
+          "scenario": "日志/导出诊断不含秘密，不以诊断入口绕过授权",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S27",
+      "referenceName": "食材",
+      "visibleNameStatus": "user-confirmed-2026-10-28",
+      "route": {
+        "pattern": "tabs/recipes?kind=ingredient",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "libraryKind=ingredient",
+        "localLibraryRevision",
+        "selectedContextOptional"
+      ],
+      "states": [
+        {
+          "id": "ST-S27-loading",
+          "key": "loading"
+        },
+        {
+          "id": "ST-S27-content",
+          "key": "content"
+        },
+        {
+          "id": "ST-S27-refreshing",
+          "key": "refreshing"
+        },
+        {
+          "id": "ST-S27-empty",
+          "key": "empty"
+        },
+        {
+          "id": "ST-S27-offline",
+          "key": "offline"
+        },
+        {
+          "id": "ST-S27-error",
+          "key": "error"
+        }
+      ],
+      "actions": [
+        {
+          "event": "select_recipe_label",
+          "guard": "始终",
+          "destination": "S02",
+          "sideEffects": "切回同一库Recipe类别；保留各类别浏览上下文"
+        },
+        {
+          "event": "open_ingredient",
+          "guard": "Ingredient条目可用",
+          "destination": "S11",
+          "sideEffects": "只读读取完整Ingredient JSON"
+        },
+        {
+          "event": "add_to_meal",
+          "guard": "Ingredient完整定义已验证",
+          "destination": "S11",
+          "sideEffects": "先确认Ingredient定义及正重量；保留originDraftId，无草稿时随后选择日期餐次"
+        }
+      ],
+      "dataInterfaces": [
+        "RecipeRepository: 同一食谱库条目类别Ingredient；公共OSS JSON只读",
+        "Ingredient per100g schema: P0设计与复核后冻结，当前无假造格式"
+      ],
+      "componentRoles": [
+        "app_shell",
+        "choice_control",
+        "recipe_card",
+        "status_feedback"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S27-01",
+          "scenario": "“食材”是食谱库内的类别标签，底部仍仅配餐/食谱/设置三个Tab",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S27-02",
+          "scenario": "每项读取用户单独发布的每100g JSON，无营养手工录入入口",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S27-03",
+          "scenario": "断网可浏览已缓存Ingredient；数据错误不推定为0或从食谱替代",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": []
+    },
+    {
+      "id": "S28",
+      "referenceName": "复制/移动配餐",
+      "visibleNameStatus": "existing-reference-or-no-title; new wording requires user approval",
+      "route": {
+        "pattern": "meals/{mealId}/transfer",
+        "status": "logical-contract-not-implemented"
+      },
+      "inputs": [
+        "mealId",
+        "operation",
+        "targetDate",
+        "targetSlot"
+      ],
+      "states": [
+        {
+          "id": "ST-S28-draft",
+          "key": "draft"
+        },
+        {
+          "id": "ST-S28-destination_conflict",
+          "key": "destination_conflict"
+        },
+        {
+          "id": "ST-S28-preview",
+          "key": "preview"
+        },
+        {
+          "id": "ST-S28-invalid",
+          "key": "invalid"
+        }
+      ],
+      "actions": [
+        {
+          "event": "preview",
+          "guard": "首版不开放；仅作后续版本候选流程",
+          "destination": "S28",
+          "sideEffects": "预览源/目标变化，不先改原记录"
+        },
+        {
+          "event": "confirm",
+          "guard": "首版不开放",
+          "destination": "S13",
+          "sideEffects": "按确认的事务与同步规则提交"
+        },
+        {
+          "event": "cancel",
+          "guard": "始终",
+          "destination": "S13",
+          "sideEffects": "原记录及目标均不变"
+        }
+      ],
+      "dataInterfaces": [
+        "MealRepository: 源目标快照与事务",
+        "SyncRepository: revision/tombstone"
+      ],
+      "componentRoles": [
+        "context_picker",
+        "comparison_panel",
+        "sticky_action"
+      ],
+      "acceptanceCases": [
+        {
+          "id": "AC-S28-01",
+          "scenario": "目标有记录时不得猜测覆盖或合并",
+          "executionStatus": "not-run"
+        },
+        {
+          "id": "AC-S28-02",
+          "scenario": "取消无副作用；跨日按本地日期",
+          "executionStatus": "not-run"
+        }
+      ],
+      "pendingDecisionIds": [],
+      "capabilityStatus": "deferred-after-v1-user-confirmed-2026-10-28"
+    }
+  ],
+  "qualityGates": [
+    "author-self-check",
+    "manager-integration-review",
+    "user-manual-review"
+  ],
+  "globalInvariants": [
+    "local-save-before-sync",
+    "private-meals-never-public-oss",
+    "historical-snapshots-never-silently-recomputed",
+    "unknown-nutrients-never-coerced-to-zero",
+    "two-character-search-after-ime-commit",
+    "unreachable-adjustment-never-reported-exact",
+    "runtime-material-does-not-change-business-data",
+    "no-ai-entry-in-v1",
+    "new-visible-names-require-user",
+    "all-supported-displays-share-one-approved-font-family",
+    "0–9g保留红框无效状态，允许用滑块修正；任何条目低于10g时保存必须定位并阻止提交，所有条目至少10g才满足重量有效条件；不得自动改为10g或移除",
+    "search-history-no-app-count-limit-ui-max-5-device-cleans-overflow",
+    "partial-import-valid-only-with-error-report",
+    "meal-clear-deletes-local-and-cloud-via-tombstone",
+    "recipe-delete-cloud-only-local-follows-cloud-authority"
+  ],
+  "reviewPolicy": "By reviewable batch: author self-check -> manager integration review -> explicit user approval. Dependent batches must not start implementation before approval.",
+  "pendingPolicy": "用户可见名称与未冻结的技术契约仍需闸门；D01/D02/D06/D07/D08/D09/D11 已按用户回答冻结，不得重复追问。",
+  "selfCheckEvidence": {
+    "scope": "planning-documents-only",
+    "method": "inline Python validation plus manual contract cross-review; no persisted temporary script",
+    "checked": [
+      "JSON parse and required fields",
+      "unique screen/state/acceptance/flow IDs",
+      "route destinations and role/decision/flow references",
+      "Markdown link targets and fence balance",
+      "UTF-8 replacement-character scan",
+      "normal/failure/cancel paths and local-save-before-sync",
+      "latest user decisions and candidate capability gates"
+    ],
+    "notChecked": [
+      "Mermaid rendering",
+      "Miuix API/version mapping",
+      "Android build/install/runtime",
+      "vivo Android12 device",
+      "WebDAV/OSS/APK real service validation"
+    ],
+    "issues": [
+      "Mermaid 尚未渲染",
+      "D10 字体文件/许可/字重/缺字回退与 D12 identity/独立食材原始份量来源仍待 P0 工程核验与契约设计"
+    ],
+    "managerReview": "passed-B00-candidate-8-2026-10-28",
+    "userReview": "pending-batch-review"
+  }
+}

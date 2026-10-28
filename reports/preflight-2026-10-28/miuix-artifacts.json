@@ -1,0 +1,20 @@
+[
+  {
+    "artifact": "miuix-blur-android.aar",
+    "sha256": "11b68beb90e7a2a6a2b86d4fd0a345c81ba42a3e2ef10bd013ff1c76112cf2f6",
+    "manifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"top.yukonga.miuix.kmp.blur\" >\n\n    <uses-sdk android:minSdkVersion=\"33\" />\n\n</manifest>",
+    "aarMetadata": "aarFormatVersion=1.0\naarMetadataVersion=1.0\nminCompileSdk=37\nminCompileMinorSdk=0\nminCompileSdkExtension=0\nminAndroidGradlePluginVersion=1.0.0\ncoreLibraryDesugaringEnabled=false\n"
+  },
+  {
+    "artifact": "miuix-shader-android.aar",
+    "sha256": "a2febd9b7246db07b93cabc82afc26d1b5c1350e90e613fa9560cbff808cf787",
+    "manifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"top.yukonga.miuix.kmp.shader\" >\n\n    <uses-sdk android:minSdkVersion=\"24\" />\n\n</manifest>",
+    "aarMetadata": "aarFormatVersion=1.0\naarMetadataVersion=1.0\nminCompileSdk=37\nminCompileMinorSdk=0\nminCompileSdkExtension=0\nminAndroidGradlePluginVersion=1.0.0\ncoreLibraryDesugaringEnabled=false\n"
+  },
+  {
+    "artifact": "miuix-ui-android.aar",
+    "sha256": "3d40628c043c3cf880029ffda689e1b123d9082b4bc8d2907e9437a42e2eb2a9",
+    "manifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"top.yukonga.miuix.kmp.ui\" >\n\n    <uses-sdk android:minSdkVersion=\"24\" />\n\n</manifest>",
+    "aarMetadata": "aarFormatVersion=1.0\naarMetadataVersion=1.0\nminCompileSdk=37\nminCompileMinorSdk=0\nminCompileSdkExtension=0\nminAndroidGradlePluginVersion=1.0.0\ncoreLibraryDesugaringEnabled=false\n"
+  }
+]

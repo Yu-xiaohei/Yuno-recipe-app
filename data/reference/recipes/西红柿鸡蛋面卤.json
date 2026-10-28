@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 2,
+  "id": "xihongshi-jidan-mian",
+  "name": "西红柿鸡蛋面卤",
+  "type": "dish",
+  "serving": 1,
+  "standard": "CN_CFCT",
+  "totals": {
+    "weight": 400.5,
+    "energy": 186.6,
+    "carb": 14.5,
+    "protein": 11.3,
+    "fat": 9.3,
+    "vitaminC": 74.9,
+    "fiber": 3.5,
+    "sodium": 1155.8
+  },
+  "targets": {
+    "energyMax": 300,
+    "energyBest": 250,
+    "weightMax": 400,
+    "weightBest": 350,
+    "energyOk": true,
+    "weightOk": false,
+    "energyBestOk": false,
+    "weightBestOk": false,
+    "warning": "总热量 339.2 kcal 低于最佳目标 400 kcal（硬上限 ≤420）；总重量 540.5 g 在硬上限内但高于最佳 500 g。按用户确认保持用量不变。",
+    "energyRange": [
+      220,
+      280
+    ],
+    "weightRange": [
+      320,
+      380
+    ],
+    "doseStatus": "OUT_OF_RANGE"
+  },
+  "macroRatio": {
+    "carbPct": 31.0,
+    "proteinPct": 24.2,
+    "fatPct": 44.8
+  },
+  "items": [
+    {
+      "name": "胡麻油",
+      "weight": 4,
+      "energy": 36.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 4.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 0.0,
+      "source": "CN_CFCT 胡麻油",
+      "per100": {
+        "energy": 900,
+        "carb": 0,
+        "protein": 0,
+        "fat": 100,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 0.6
+      },
+      "healthWeight": 0.12,
+      "locked": false
+    },
+    {
+      "name": "鸡蛋",
+      "weight": 50,
+      "energy": 72.0,
+      "carb": 1.4,
+      "protein": 6.7,
+      "fat": 4.4,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 65.8,
+      "source": "CN_CFCT 鸡蛋(均值)",
+      "per100": {
+        "energy": 144,
+        "carb": 2.8,
+        "protein": 13.3,
+        "fat": 8.8,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 131.5
+      },
+      "healthWeight": 0.95,
+      "locked": false
+    },
+    {
+      "name": "西红柿",
+      "weight": 200,
+      "energy": 38.0,
+      "carb": 7.0,
+      "protein": 1.8,
+      "fat": 0.4,
+      "vitaminC": 38.0,
+      "fiber": 1.0,
+      "sodium": 10.0,
+      "source": "CN_CFCT 番茄[西红柿]",
+      "per100": {
+        "energy": 19,
+        "carb": 3.5,
+        "protein": 0.9,
+        "fat": 0.2,
+        "vitaminC": 19,
+        "fiber": 0.5,
+        "sodium": 5
+      },
+      "healthWeight": 0.92,
+      "locked": false
+    },
+    {
+      "name": "青椒",
+      "weight": 30,
+      "energy": 6.6,
+      "carb": 1.2,
+      "protein": 0.3,
+      "fat": 0.1,
+      "vitaminC": 21.6,
+      "fiber": 0.4,
+      "sodium": 1.0,
+      "source": "CN_CFCT 甜椒[灯笼椒，柿子椒]",
+      "per100": {
+        "energy": 22,
+        "carb": 4.0,
+        "protein": 1.0,
+        "fat": 0.2,
+        "vitaminC": 72,
+        "fiber": 1.4,
+        "sodium": 3.3
+      },
+      "healthWeight": 0.55,
+      "locked": false
+    },
+    {
+      "name": "油菜",
+      "weight": 40,
+      "energy": 9.2,
+      "carb": 1.1,
+      "protein": 0.7,
+      "fat": 0.2,
+      "vitaminC": 14.4,
+      "fiber": 0.4,
+      "sodium": 22.3,
+      "source": "CN_CFCT 油菜",
+      "per100": {
+        "energy": 23,
+        "carb": 2.7,
+        "protein": 1.8,
+        "fat": 0.5,
+        "vitaminC": 36,
+        "fiber": 1.1,
+        "sodium": 55.8
+      },
+      "healthWeight": 0.8,
+      "locked": false
+    },
+    {
+      "name": "鲜木耳",
+      "weight": 30,
+      "energy": 6.3,
+      "carb": 1.0,
+      "protein": 0.4,
+      "fat": 0.1,
+      "vitaminC": 0.3,
+      "fiber": 0.8,
+      "sodium": 2.5,
+      "source": "CN_CFCT 木耳(水发)[黑木耳，云耳]",
+      "per100": {
+        "energy": 21,
+        "carb": 3.4,
+        "protein": 1.5,
+        "fat": 0.2,
+        "vitaminC": 1,
+        "fiber": 2.6,
+        "sodium": 8.5
+      },
+      "healthWeight": 0.78,
+      "locked": false
+    },
+    {
+      "name": "金针菇",
+      "weight": 30,
+      "energy": 7.8,
+      "carb": 1.0,
+      "protein": 0.7,
+      "fat": 0.1,
+      "vitaminC": 0.6,
+      "fiber": 0.8,
+      "sodium": 1.3,
+      "source": "CN_CFCT 金针菇[智力菇]",
+      "per100": {
+        "energy": 26,
+        "carb": 3.3,
+        "protein": 2.4,
+        "fat": 0.4,
+        "vitaminC": 2,
+        "fiber": 2.7,
+        "sodium": 4.3
+      },
+      "healthWeight": 0.72,
+      "locked": false
+    },
+    {
+      "name": "番茄酱",
+      "weight": 7,
+      "energy": 5.7,
+      "carb": 1.0,
+      "protein": 0.3,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.1,
+      "sodium": 2.6,
+      "source": "CN_CFCT 番茄酱",
+      "per100": {
+        "energy": 81,
+        "carb": 14.8,
+        "protein": 4.9,
+        "fat": 0.2,
+        "vitaminC": 0,
+        "fiber": 2.1,
+        "sodium": 37.1
+      },
+      "healthWeight": 0.28,
+      "locked": false
+    },
+    {
+      "name": "精盐",
+      "weight": 1.5,
+      "energy": 0.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 589.7,
+      "source": "CN_CFCT 精盐（淡口估算）",
+      "per100": {
+        "energy": 0,
+        "carb": 0,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 39311
+      },
+      "healthWeight": 0.01,
+      "locked": true
+    },
+    {
+      "name": "酱油",
+      "weight": 8,
+      "energy": 5.0,
+      "carb": 0.8,
+      "protein": 0.4,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 460.6,
+      "source": "CN_CFCT 酱油(均值)（淡口估算）",
+      "per100": {
+        "energy": 63,
+        "carb": 9.9,
+        "protein": 5.6,
+        "fat": 0.1,
+        "vitaminC": 0,
+        "fiber": 0.2,
+        "sodium": 5757
+      },
+      "healthWeight": 0.08,
+      "locked": false
+    }
+  ],
+  "notes": [
+    "已剔除主食面条，改为面卤单独计量，由 App 与主食拼餐。",
+    "维生素列以维生素C(mg)计",
+    "胡麻油另含维生素E 389.9 mg/100g，4 g 约合 15.6 mg，表内维C列为0",
+    "青椒按甜椒[灯笼椒，柿子椒]口径，非尖椒",
+    "鲜木耳无独立条目，按「木耳(水发)」计算",
+    "番茄酱为浓缩番茄酱，非番茄沙司",
+    "精盐 1.5 g、酱油 8 g 按常规餐饮淡口估算",
+    "总热量 339.2 kcal 低于最佳目标 400 kcal，按用户确认保持用量不变，已在 md 文首提醒",
+    "剂量状态 OUT_OF_RANGE（单菜口径；保留既有用量，未擅自改克数）。",
+    "单菜门槛：≤300 kcal（推荐 250±30）· ≤400 g（推荐 350±30）；当前 186.6 kcal / 400.5 g。状态 OUT_OF_RANGE。"
+  ],
+  "sources": [
+    {
+      "name": "胡麻油",
+      "url": "https://healthchina2030.com/Nutr/nYWYwu.html"
+    },
+    {
+      "name": "熟面条",
+      "url": "https://healthchina2030.com/Nutr/nNGc=u.html"
+    },
+    {
+      "name": "鸡蛋",
+      "url": "https://healthchina2030.com/Nutr/nNzA4u.html"
+    },
+    {
+      "name": "西红柿",
+      "url": "https://healthchina2030.com/Nutr/nMW9hu.html"
+    },
+    {
+      "name": "青椒",
+      "url": "https://healthchina2030.com/Nutr/nMXB5u.html"
+    },
+    {
+      "name": "油菜",
+      "url": "https://healthchina2030.com/Nutr/nMjU4u.html"
+    },
+    {
+      "name": "鲜木耳",
+      "url": "https://healthchina2030.com/Nutr/nM2Ztu.html"
+    },
+    {
+      "name": "金针菇",
+      "url": "https://healthchina2030.com/Nutr/nM2R5u.html"
+    },
+    {
+      "name": "番茄酱",
+      "url": "https://healthchina2030.com/Nutr/nYXMyu.html"
+    },
+    {
+      "name": "精盐",
+      "url": "https://healthchina2030.com/Nutr/nYjdtu.html"
+    },
+    {
+      "name": "酱油",
+      "url": "https://healthchina2030.com/Nutr/nYWltu.html"
+    }
+  ],
+  "generatedAt": "2026-10-04T01:25:00",
+  "generatedBy": "Xiaomi MiMo",
+  "user": "Yu_xiaohei"
+}

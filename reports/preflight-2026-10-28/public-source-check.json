@@ -1,0 +1,16 @@
+[
+  {
+    "source": "github",
+    "url": "https://raw.githubusercontent.com/Yu-xiaohei/Yuno-recipe-app/main/version.json",
+    "status": 404,
+    "validJson": false,
+    "error": "响应状态代码未指示成功: 404 (Not Found)。"
+  },
+  {
+    "source": "gitee",
+    "url": "https://gitee.com/Yu_xiaohei/yuno-recipe-app/raw/main/version.json",
+    "status": 404,
+    "validJson": false,
+    "error": "响应状态代码未指示成功: 404 (Not Found)。"
+  }
+]

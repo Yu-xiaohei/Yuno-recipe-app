@@ -1,0 +1,1130 @@
+{
+  "source": "data\\reference\\recipes",
+  "filesFound": 13,
+  "filesParsed": 13,
+  "uniqueIds": 11,
+  "errorCount": 0,
+  "warningCount": 28,
+  "duplicateIds": [
+    {
+      "id": "dan-chaofan",
+      "identical": true,
+      "files": [
+        {
+          "file": "dan-chaofan.json",
+          "sha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952"
+        },
+        {
+          "file": "蛋炒饭.json",
+          "sha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952"
+        }
+      ]
+    },
+    {
+      "id": "mo-yu-zi-cai-tang",
+      "identical": true,
+      "files": [
+        {
+          "file": "mo-yu-zi-cai-tang.json",
+          "sha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482"
+        },
+        {
+          "file": "魔芋紫菜汤.json",
+          "sha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482"
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "file": "dan-chaofan.json",
+      "id": "dan-chaofan",
+      "name": "蛋炒饭",
+      "sha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952",
+      "schemaVersion": 2,
+      "itemCount": 7,
+      "missingFoodState": 7,
+      "missingItemId": 7,
+      "missingWeightBounds": 7,
+      "totalsCheck": {
+        "weight": {
+          "declared": 342.0,
+          "summed": 342,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 283.5,
+          "summed": 283.5,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 19.4,
+          "summed": 19.4,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 15.5,
+          "summed": 15.5,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 15.8,
+          "summed": 15.8,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 47.2,
+          "summed": 47.2,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 2.8,
+          "summed": 2.8,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 578.6,
+          "summed": 578.6,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "mo-yu-zi-cai-tang.json",
+      "id": "mo-yu-zi-cai-tang",
+      "name": "魔芋紫菜汤",
+      "sha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482",
+      "schemaVersion": 2,
+      "itemCount": 4,
+      "missingFoodState": 4,
+      "missingItemId": 4,
+      "missingWeightBounds": 4,
+      "totalsCheck": {
+        "weight": {
+          "declared": 243.0,
+          "summed": 243,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 23.7,
+          "summed": 23.7,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 3.1,
+          "summed": 3.1,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 2.7,
+          "summed": 2.7,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 0.1,
+          "summed": 0.1,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 0.2,
+          "summed": 0.2,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 3.0,
+          "summed": 3.0,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1254.9,
+          "summed": 1254.9,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "冬瓜茄子面卤.json",
+      "id": "dong-gua-qie-zi-mian",
+      "name": "冬瓜茄子面卤",
+      "sha256": "7ed2c40bc9485af150e24a1d7a470b569a5eaab31193d8fe90247139e293aab6",
+      "schemaVersion": 2,
+      "itemCount": 10,
+      "missingFoodState": 10,
+      "missingItemId": 10,
+      "missingWeightBounds": 10,
+      "totalsCheck": {
+        "weight": {
+          "declared": 401.9,
+          "summed": 401.9,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 258.9,
+          "summed": 258.9,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 11.4,
+          "summed": 11.4,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 8.9,
+          "summed": 8.9,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 19.6,
+          "summed": 19.6,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 66.2,
+          "summed": 66.2,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 4.1,
+          "summed": 4.1,
+          "delta": -0.0
+        },
+        "sodium": {
+          "declared": 1027.6,
+          "summed": 1027.6,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "凉拌芹菜.json",
+      "id": "liang-ban-qin-cai",
+      "name": "凉拌芹菜",
+      "sha256": "65a3fe6c7a6a02a90ba024a86a93a7cf5668b02d661b13cb2cee4cfec1b26643",
+      "schemaVersion": 2,
+      "itemCount": 5,
+      "missingFoodState": 5,
+      "missingItemId": 5,
+      "missingWeightBounds": 5,
+      "totalsCheck": {
+        "weight": {
+          "declared": 91.0,
+          "summed": 91.0,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 45.2,
+          "summed": 45.2,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 3.9,
+          "summed": 3.9,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 2.7,
+          "summed": 2.7,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 2.2,
+          "summed": 2.2,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 3.3,
+          "summed": 3.3,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 1.5,
+          "summed": 1.5,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 57.3,
+          "summed": 57.3,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "大闸蟹配清炒小包菜.json",
+      "id": "da-zha-xie-qing-chao-xiao-bao-cai",
+      "name": "大闸蟹配清炒小包菜",
+      "sha256": "7d1bd3a24aa0c007bcf33eaa03d8c37a42aa32d982a1b017dd176ee13792c446",
+      "schemaVersion": 2,
+      "itemCount": 11,
+      "missingFoodState": 11,
+      "missingItemId": 11,
+      "missingWeightBounds": 11,
+      "totalsCheck": {
+        "weight": {
+          "declared": 333.0,
+          "summed": 333.0,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 257.2,
+          "summed": 257.2,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 12.5,
+          "summed": 12.5,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 20.5,
+          "summed": 20.5,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 13.9,
+          "summed": 13.9,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 88.7,
+          "summed": 88.7,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 2.3,
+          "summed": 2.3,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1827.7,
+          "summed": 1827.7,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "慢炖老鸭汤.json",
+      "id": "man-dun-lao-ya-tang",
+      "name": "慢炖老鸭汤",
+      "sha256": "2cdcebb342345b2922fd0bb6c43fefa6b7e59f6da26bac840472a2aa30266af0",
+      "schemaVersion": 2,
+      "itemCount": 6,
+      "missingFoodState": 6,
+      "missingItemId": 6,
+      "missingWeightBounds": 6,
+      "totalsCheck": {
+        "weight": {
+          "declared": 143.0,
+          "summed": 143.0,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 195.1,
+          "summed": 195.1,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 8.5,
+          "summed": 8.5,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 12.6,
+          "summed": 12.6,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 12.4,
+          "summed": 12.4,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 9.3,
+          "summed": 9.3,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 0.9,
+          "summed": 0.9,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 448.9,
+          "summed": 448.9,
+          "delta": -0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "清炒小包菜.json",
+      "id": "qing-chao-xiao-bao-cai",
+      "name": "清炒小包菜",
+      "sha256": "8ce2d128688ede1d85e19910275151f1cb88dbcc0ccc541ebe8e81cb10fb0e7e",
+      "schemaVersion": 2,
+      "itemCount": 10,
+      "missingFoodState": 10,
+      "missingItemId": 10,
+      "missingWeightBounds": 10,
+      "totalsCheck": {
+        "weight": {
+          "declared": 212.0,
+          "summed": 212.0,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 81.6,
+          "summed": 81.6,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 8.9,
+          "summed": 8.9,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 3.5,
+          "summed": 3.5,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 3.4,
+          "summed": 3.4,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 76.7,
+          "summed": 76.7,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 2.0,
+          "summed": 2.0,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1337.1,
+          "summed": 1337.1,
+          "delta": -0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "炒芹菜配熏鸡.json",
+      "id": "chao-qin-cai-pei-xun-ji",
+      "name": "炒芹菜配熏鸡",
+      "sha256": "91447a40fac09c3d3d34dee65166fb91c4713c6d33b90cb9da49dce07681d76d",
+      "schemaVersion": 2,
+      "itemCount": 10,
+      "missingFoodState": 10,
+      "missingItemId": 10,
+      "missingWeightBounds": 10,
+      "totalsCheck": {
+        "weight": {
+          "declared": 392.5,
+          "summed": 392.5,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 294.1,
+          "summed": 294.1,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 11.6,
+          "summed": 11.6,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 17.0,
+          "summed": 17.0,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 20.3,
+          "summed": 20.3,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 41.9,
+          "summed": 41.9,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 5.1,
+          "summed": 5.1,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1280.7,
+          "summed": 1280.7,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "纯肉炒芹菜.json",
+      "id": "chun-rou-chao-qin-cai",
+      "name": "纯肉炒芹菜",
+      "sha256": "c3af460496ee0b3cc615ed86f2cfa917fb141a2438810b6922e1b72438e2b17e",
+      "schemaVersion": 2,
+      "itemCount": 9,
+      "missingFoodState": 9,
+      "missingItemId": 9,
+      "missingWeightBounds": 9,
+      "totalsCheck": {
+        "weight": {
+          "declared": 387.5,
+          "summed": 387.5,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 267.0,
+          "summed": 267.0,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 12.6,
+          "summed": 12.6,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 9.5,
+          "summed": 9.5,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 20.5,
+          "summed": 20.5,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 42.5,
+          "summed": 42.5,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 5.5,
+          "summed": 5.5,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1276.4,
+          "summed": 1276.4,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "蛋炒饭.json",
+      "id": "dan-chaofan",
+      "name": "蛋炒饭",
+      "sha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952",
+      "schemaVersion": 2,
+      "itemCount": 7,
+      "missingFoodState": 7,
+      "missingItemId": 7,
+      "missingWeightBounds": 7,
+      "totalsCheck": {
+        "weight": {
+          "declared": 342.0,
+          "summed": 342,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 283.5,
+          "summed": 283.5,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 19.4,
+          "summed": 19.4,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 15.5,
+          "summed": 15.5,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 15.8,
+          "summed": 15.8,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 47.2,
+          "summed": 47.2,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 2.8,
+          "summed": 2.8,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 578.6,
+          "summed": 578.6,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "西红柿鸡蛋面卤.json",
+      "id": "xihongshi-jidan-mian",
+      "name": "西红柿鸡蛋面卤",
+      "sha256": "670844639a0ad7cc051697a37ab9345bf92530eba99fc4dd1be9bcc1151ea5c4",
+      "schemaVersion": 2,
+      "itemCount": 10,
+      "missingFoodState": 10,
+      "missingItemId": 10,
+      "missingWeightBounds": 10,
+      "totalsCheck": {
+        "weight": {
+          "declared": 400.5,
+          "summed": 400.5,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 186.6,
+          "summed": 186.6,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 14.5,
+          "summed": 14.5,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 11.3,
+          "summed": 11.3,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 9.3,
+          "summed": 9.3,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 74.9,
+          "summed": 74.9,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 3.5,
+          "summed": 3.5,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1155.8,
+          "summed": 1155.8,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "香菇木耳时蔬饭.json",
+      "id": "xiang-gu-mu-er-shi-shu-fan",
+      "name": "香菇木耳时蔬饭",
+      "sha256": "b887af20c5119bac547377cc140be73f988920c4c04b75ff712ebd23dd202a8c",
+      "schemaVersion": 2,
+      "itemCount": 10,
+      "missingFoodState": 10,
+      "missingItemId": 10,
+      "missingWeightBounds": 10,
+      "totalsCheck": {
+        "weight": {
+          "declared": 373.5,
+          "summed": 373.5,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 181.3,
+          "summed": 181.3,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 27.7,
+          "summed": 27.7,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 5.6,
+          "summed": 5.6,
+          "delta": -0.0
+        },
+        "fat": {
+          "declared": 5.1,
+          "summed": 5.1,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 90.5,
+          "summed": 90.5,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 4.9,
+          "summed": 4.9,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1196.3,
+          "summed": 1196.3,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "file": "魔芋紫菜汤.json",
+      "id": "mo-yu-zi-cai-tang",
+      "name": "魔芋紫菜汤",
+      "sha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482",
+      "schemaVersion": 2,
+      "itemCount": 4,
+      "missingFoodState": 4,
+      "missingItemId": 4,
+      "missingWeightBounds": 4,
+      "totalsCheck": {
+        "weight": {
+          "declared": 243.0,
+          "summed": 243,
+          "delta": 0.0
+        },
+        "energy": {
+          "declared": 23.7,
+          "summed": 23.7,
+          "delta": 0.0
+        },
+        "carb": {
+          "declared": 3.1,
+          "summed": 3.1,
+          "delta": 0.0
+        },
+        "protein": {
+          "declared": 2.7,
+          "summed": 2.7,
+          "delta": 0.0
+        },
+        "fat": {
+          "declared": 0.1,
+          "summed": 0.1,
+          "delta": 0.0
+        },
+        "vitaminC": {
+          "declared": 0.2,
+          "summed": 0.2,
+          "delta": 0.0
+        },
+        "fiber": {
+          "declared": 3.0,
+          "summed": 3.0,
+          "delta": 0.0
+        },
+        "sodium": {
+          "declared": 1254.9,
+          "summed": 1254.9,
+          "delta": 0.0
+        }
+      },
+      "missingDisplayFields": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "dan-chaofan.json",
+      "detail": {
+        "count": 7
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "dan-chaofan.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "mo-yu-zi-cai-tang.json",
+      "detail": {
+        "count": 4
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "mo-yu-zi-cai-tang.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "冬瓜茄子面卤.json",
+      "detail": {
+        "count": 10
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "冬瓜茄子面卤.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "凉拌芹菜.json",
+      "detail": {
+        "count": 5
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "凉拌芹菜.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "大闸蟹配清炒小包菜.json",
+      "detail": {
+        "count": 11
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "大闸蟹配清炒小包菜.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "慢炖老鸭汤.json",
+      "detail": {
+        "count": 6
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "慢炖老鸭汤.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "清炒小包菜.json",
+      "detail": {
+        "count": 10
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "清炒小包菜.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "炒芹菜配熏鸡.json",
+      "detail": {
+        "count": 10
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "炒芹菜配熏鸡.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "纯肉炒芹菜.json",
+      "detail": {
+        "count": 9
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "纯肉炒芹菜.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "蛋炒饭.json",
+      "detail": {
+        "count": 7
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "蛋炒饭.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "西红柿鸡蛋面卤.json",
+      "detail": {
+        "count": 10
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "西红柿鸡蛋面卤.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "香菇木耳时蔬饭.json",
+      "detail": {
+        "count": 10
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "香菇木耳时蔬饭.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "food_state_unverified",
+      "file": "魔芋紫菜汤.json",
+      "detail": {
+        "count": 4
+      }
+    },
+    {
+      "level": "warning",
+      "code": "new_fields_missing",
+      "file": "魔芋紫菜汤.json",
+      "detail": [
+        "dishType",
+        "tags",
+        "summary",
+        "image",
+        "revision",
+        "includesStaple"
+      ]
+    },
+    {
+      "level": "warning",
+      "code": "duplicate_id",
+      "file": "dan-chaofan.json, 蛋炒饭.json",
+      "detail": {
+        "id": "dan-chaofan",
+        "identical": true
+      }
+    },
+    {
+      "level": "warning",
+      "code": "duplicate_id",
+      "file": "mo-yu-zi-cai-tang.json, 魔芋紫菜汤.json",
+      "detail": {
+        "id": "mo-yu-zi-cai-tang",
+        "identical": true
+      }
+    }
+  ],
+  "limits": [
+    "Structural and arithmetic checks only; nutrition provenance, licensing, food state and naming require review.",
+    "Original files are read only; no migration or automatic correction performed."
+  ]
+}

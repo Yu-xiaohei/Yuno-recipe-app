@@ -1,0 +1,2760 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-28",
+  "kind": "project-work-breakdown-and-gated-agent-plan",
+  "scope": "本轮仅规划与UX交接；尚未授权实施P0或发布",
+  "candidate": "B00-candidate-8",
+  "maxConcurrentAgentsIncludingManager": 4,
+  "developmentProgressPercent": 0,
+  "statusEnums": [
+    "planned",
+    "ready",
+    "in_progress",
+    "self_check",
+    "integration_check",
+    "human_review",
+    "accepted",
+    "changes_requested",
+    "blocked",
+    "cancelled"
+  ],
+  "checkEnums": [
+    "pass",
+    "fail",
+    "not_run"
+  ],
+  "dependencyPolicy": {
+    "batch": "前置批次必须人工accepted；不相关批次可并行",
+    "taskWithinBatch": "同批后续任务可消费G1通过且MAIN允许的固定内部候选，整批仍未accepted",
+    "taskAcrossBatches": "被依赖任务所在批次人工accepted后才可实现依赖任务；B03部分纯数据工作可先于B02完成，Kotlin实现等待B02人工通过",
+    "uncertainty": "未决产品/数据/兼容语义只阻塞受影响任务，由MAIN逐项直接问用户；不得猜测",
+    "stateGate": "G1自检→G2主总检→G3人工；修改候选使受影响签核失效"
+  },
+  "roles": {
+    "MAIN": "总负责人/集成/共享文件写入/用户沟通",
+    "UX": "UX及UI契约与资产设计",
+    "PLATFORM": "工具链与Android兼容",
+    "DATA": "schema/数据/纯计算",
+    "CATALOG": "食谱食材浏览搜索",
+    "MEAL": "配餐编辑历史",
+    "GOALS": "目标餐次",
+    "TRANSFER": "JSON导入导出",
+    "PUBLIC": "公共源与APK更新",
+    "SYNC": "私人WebDAV",
+    "QA": "独立验证与证据复核",
+    "RELEASE": "签名与分发资料"
+  },
+  "batches": [
+    {
+      "id": "B00",
+      "phase": "PLAN",
+      "title": "本轮规划与UX交接",
+      "dependsOn": [],
+      "roles": [
+        "MAIN",
+        "UX",
+        "QA"
+      ],
+      "proposedWriteScope": [
+        "docs/ux/",
+        "docs/planning/",
+        "AGENTS.md"
+      ],
+      "exitCriteria": "本轮图文、任务依赖与项目规则三检；用户接受后才启动P0",
+      "uxFlowIds": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11"
+      ],
+      "status": "human_review",
+      "checks": {
+        "self": "pass",
+        "manager": "pass",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B01",
+      "phase": "P0",
+      "title": "产品边界与共享契约冻结",
+      "dependsOn": [
+        "B00"
+      ],
+      "roles": [
+        "MAIN",
+        "DATA",
+        "UX"
+      ],
+      "proposedWriteScope": [
+        "schemas/",
+        "docs/contracts/",
+        "docs/ux/"
+      ],
+      "exitCriteria": "关键产品决定、Ingredient/数量/仓储/路由契约经用户复核",
+      "uxFlowIds": [
+        "F01",
+        "F03",
+        "F04",
+        "F05"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B02",
+      "phase": "P0",
+      "title": "工具链与Android兼容原型",
+      "dependsOn": [
+        "B01"
+      ],
+      "roles": [
+        "PLATFORM"
+      ],
+      "proposedWriteScope": [
+        "app/",
+        "gradle/",
+        "build-logic/"
+      ],
+      "exitCriteria": "固定工具链，同一APK完成API31/32/33安装冷启动或批准拆包",
+      "uxFlowIds": [
+        "F01",
+        "F10"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B03",
+      "phase": "P0",
+      "title": "数据校验与核心计算",
+      "dependsOn": [
+        "B01"
+      ],
+      "roles": [
+        "DATA"
+      ],
+      "proposedWriteScope": [
+        "core/model/",
+        "core/calculation/",
+        "schemas/",
+        "tests/"
+      ],
+      "exitCriteria": "数据可追溯、缺失传播、有界算法和数量专项证据通过",
+      "uxFlowIds": [
+        "F03",
+        "F05"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B04",
+      "phase": "P1",
+      "title": "本地基础与Miuix组件母版",
+      "dependsOn": [
+        "B02",
+        "B03"
+      ],
+      "roles": [
+        "MAIN",
+        "DATA",
+        "UX"
+      ],
+      "proposedWriteScope": [
+        "core/data/",
+        "core/design/",
+        "app/navigation/"
+      ],
+      "exitCriteria": "事务、草稿、三Tab壳与统一字体/状态母版可独立验证",
+      "uxFlowIds": [
+        "F01",
+        "F10"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B05",
+      "phase": "P1",
+      "title": "食谱食材库浏览与搜索",
+      "dependsOn": [
+        "B04"
+      ],
+      "roles": [
+        "CATALOG"
+      ],
+      "proposedWriteScope": [
+        "feature/catalog/"
+      ],
+      "exitCriteria": "混合库类型、搜索筛选、详情及加入上下文通过",
+      "uxFlowIds": [
+        "F01",
+        "F02",
+        "F03"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B06",
+      "phase": "P1",
+      "title": "配餐编辑与历史",
+      "dependsOn": [
+        "B04"
+      ],
+      "roles": [
+        "MEAL"
+      ],
+      "proposedWriteScope": [
+        "feature/meal/"
+      ],
+      "exitCriteria": "唯一日期餐次、数量/重量编辑、保存/锁定/历史快照通过",
+      "uxFlowIds": [
+        "F03",
+        "F04"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B07",
+      "phase": "P1",
+      "title": "离线核心闭环集成",
+      "dependsOn": [
+        "B05",
+        "B06"
+      ],
+      "roles": [
+        "MAIN",
+        "QA"
+      ],
+      "proposedWriteScope": [
+        "app/",
+        "tests/integration/"
+      ],
+      "exitCriteria": "断网浏览→搜索→添加→保存→重启完整闭环人工通过",
+      "uxFlowIds": [
+        "F01",
+        "F02",
+        "F03",
+        "F04"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B08",
+      "phase": "P2",
+      "title": "目标与餐次设置",
+      "dependsOn": [
+        "B07"
+      ],
+      "roles": [
+        "GOALS"
+      ],
+      "proposedWriteScope": [
+        "feature/goals/"
+      ],
+      "exitCriteria": "三类目标、餐次分配/停用、手动覆盖及历史不变通过",
+      "uxFlowIds": [
+        "F05"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B09",
+      "phase": "P2",
+      "title": "JSON导入导出",
+      "dependsOn": [
+        "B07"
+      ],
+      "roles": [
+        "TRANSFER"
+      ],
+      "proposedWriteScope": [
+        "feature/transfer/"
+      ],
+      "exitCriteria": "食谱/食材/配餐预览、冲突、原子回滚和往返通过",
+      "uxFlowIds": [
+        "F06"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B10",
+      "phase": "P2",
+      "title": "公共数据与应用更新",
+      "dependsOn": [
+        "B07"
+      ],
+      "roles": [
+        "PUBLIC"
+      ],
+      "proposedWriteScope": [
+        "feature/publicdata/",
+        "feature/update/"
+      ],
+      "exitCriteria": "OSS公共资源与APK版本入口可测，部分失败不丢本地内容",
+      "uxFlowIds": [
+        "F08",
+        "F09"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B11",
+      "phase": "P2",
+      "title": "123WebDAV与双端冲突",
+      "dependsOn": [
+        "B07",
+        "B09"
+      ],
+      "roles": [
+        "SYNC",
+        "QA"
+      ],
+      "proposedWriteScope": [
+        "feature/sync/"
+      ],
+      "exitCriteria": "条件写入、冲突副本/tombstone/恢复及真实服务联调通过",
+      "uxFlowIds": [
+        "F07"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B12",
+      "phase": "P3",
+      "title": "发布资产与交付准备",
+      "dependsOn": [
+        "B07"
+      ],
+      "roles": [
+        "UX",
+        "RELEASE"
+      ],
+      "proposedWriteScope": [
+        "assets/branding/",
+        "docs/release/"
+      ],
+      "exitCriteria": "图标、文案、隐私/许可和签名保管方案人工接受",
+      "uxFlowIds": [
+        "F10",
+        "F11"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B13",
+      "phase": "P3",
+      "title": "发布候选总回归",
+      "dependsOn": [
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12"
+      ],
+      "roles": [
+        "MAIN",
+        "QA",
+        "RELEASE"
+      ],
+      "proposedWriteScope": [
+        "docs/release/",
+        "tests/",
+        "release/"
+      ],
+      "exitCriteria": "同一签名候选的构建/安装/升级/恢复/性能总回归及人工接受",
+      "uxFlowIds": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    },
+    {
+      "id": "B14",
+      "phase": "P3",
+      "title": "正式分发与发布后核验",
+      "dependsOn": [
+        "B13"
+      ],
+      "roles": [
+        "MAIN",
+        "RELEASE"
+      ],
+      "proposedWriteScope": [
+        "docs/release/",
+        "release/"
+      ],
+      "exitCriteria": "取得明确公开发布授权、双渠道核验并交付恢复步骤",
+      "uxFlowIds": [
+        "F09"
+      ],
+      "status": "planned",
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "humanAcceptance": null
+    }
+  ],
+  "tasks": [
+    {
+      "id": "PLAN-01",
+      "batch": "B00",
+      "phase": "PLAN",
+      "ownerRole": "UX",
+      "title": "绘制UX流程/状态与页面契约",
+      "dependsOn": [],
+      "outputs": [
+        "docs/ux/"
+      ],
+      "acceptance": "图文与机器screen ID对应，正常/失败/取消/离线覆盖且未决行为有门控",
+      "status": "human_review",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "pass",
+        "manager": "pass",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "PLAN-02",
+      "batch": "B00",
+      "phase": "PLAN",
+      "ownerRole": "MAIN",
+      "title": "细化P0～P3任务与安全并行",
+      "dependsOn": [],
+      "outputs": [
+        "config/project-plan.json",
+        "docs/planning/P0-P3实施计划.md"
+      ],
+      "acceptance": "任务唯一、依赖无环、批次人工关卡和职责可执行",
+      "status": "human_review",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "pass",
+        "manager": "pass",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "PLAN-03",
+      "batch": "B00",
+      "phase": "PLAN",
+      "ownerRole": "QA",
+      "title": "设计三检和交接方案",
+      "dependsOn": [],
+      "outputs": [
+        "docs/planning/质量与复核方案.md"
+      ],
+      "acceptance": "自检/总检/人工职责、退回、证据失效与4槽容量明确",
+      "status": "human_review",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "pass",
+        "manager": "pass",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "PLAN-04",
+      "batch": "B00",
+      "phase": "PLAN",
+      "ownerRole": "MAIN",
+      "title": "统一项目规则并总检交付",
+      "dependsOn": [
+        "PLAN-01",
+        "PLAN-02",
+        "PLAN-03"
+      ],
+      "outputs": [
+        "AGENTS.md",
+        "docs/planning/规划总检报告.md"
+      ],
+      "acceptance": "无未处置阻断问题，候选清单和人工入口固定",
+      "status": "human_review",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "pass",
+        "manager": "pass",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-01",
+      "batch": "B01",
+      "phase": "P0",
+      "ownerRole": "MAIN",
+      "title": "裁定调配控件与聚合剩余边界",
+      "dependsOn": [],
+      "outputs": [
+        "docs/contracts/quantity-policy.md"
+      ],
+      "acceptance": "记录已确认固定±100g、0–9g红框可滑块修正、所有条目至少10g才可保存；只对未决原始份量来源与必要identity产品语义逐项询问，不重复询问已确认规则",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.2",
+        "T2.3"
+      ],
+      "decisionIds": [
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-02",
+      "batch": "B01",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "定义Recipe/Ingredient与混合库索引",
+      "dependsOn": [],
+      "outputs": [
+        "schemas/recipe.schema.json",
+        "schemas/ingredient.schema.json",
+        "schemas/catalog.schema.json"
+      ],
+      "acceptance": "明确类型判别、每100g/foodState/source/null、版本与旧schema兼容",
+      "status": "planned",
+      "legacyRefs": [
+        "T0.2",
+        "T3.2"
+      ],
+      "decisionIds": [
+        "D05"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-03",
+      "batch": "B01",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "定义配餐快照和数量分组契约",
+      "dependsOn": [
+        "P0-01",
+        "P0-02"
+      ],
+      "outputs": [
+        "schemas/meal.schema.json",
+        "docs/contracts/quantity-policy.md"
+      ],
+      "acceptance": "单日期餐次唯一；count/原始单份/调整总量/锁定/冲突副本可恢复",
+      "status": "planned",
+      "legacyRefs": [
+        "T0.2",
+        "T1.5",
+        "T2.5"
+      ],
+      "decisionIds": [
+        "D03",
+        "D04",
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-04",
+      "batch": "B01",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "定义目标/导入/同步版本与事务边界",
+      "dependsOn": [
+        "P0-02",
+        "P0-03"
+      ],
+      "outputs": [
+        "schemas/goal.schema.json",
+        "schemas/transfer.schema.json",
+        "docs/contracts/sync-policy.md"
+      ],
+      "acceptance": "三类目标、导入类型、revision/ETag/tombstone与凭据排除明确",
+      "status": "planned",
+      "legacyRefs": [
+        "T0.2",
+        "T2.1",
+        "T3.1",
+        "T3.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-05",
+      "batch": "B01",
+      "phase": "P0",
+      "ownerRole": "MAIN",
+      "title": "冻结仓储接口和模块写入所有权",
+      "dependsOn": [
+        "P0-02",
+        "P0-03",
+        "P0-04"
+      ],
+      "outputs": [
+        "docs/contracts/repositories.md",
+        "docs/contracts/module-ownership.md"
+      ],
+      "acceptance": "接口输入输出、并发事务、异常和唯一性写入边界可供多角色独立实现",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.1",
+        "T1.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-06",
+      "batch": "B01",
+      "phase": "P0",
+      "ownerRole": "UX",
+      "title": "补齐组件映射/字体和文案确认入口",
+      "dependsOn": [],
+      "outputs": [
+        "docs/ux/",
+        "docs/contracts/ui-baseline.md"
+      ],
+      "acceptance": "统一字体家族已由用户确认使用 MiSans；记录字体文件、分发许可、语义字重和缺字回退的工程核验项；新用户可见名称逐项确认，不把角色名当上游API",
+      "status": "planned",
+      "legacyRefs": [
+        "T4.2",
+        "T4.4"
+      ],
+      "decisionIds": [
+        "D10",
+        "D11"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-07",
+      "batch": "B01",
+      "phase": "P0",
+      "ownerRole": "MAIN",
+      "title": "冻结契约候选并提交人工复核",
+      "dependsOn": [
+        "P0-01",
+        "P0-02",
+        "P0-03",
+        "P0-04",
+        "P0-05",
+        "P0-06"
+      ],
+      "outputs": [
+        "docs/reviews/B01/"
+      ],
+      "acceptance": "所有实现所需关键决定已答，版本/hash绑定，不将缺失资料当已通过",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-08",
+      "batch": "B02",
+      "phase": "P0",
+      "ownerRole": "PLATFORM",
+      "title": "初始化Git与Gradle工程边界",
+      "dependsOn": [
+        "P0-07"
+      ],
+      "outputs": [
+        "gradlew",
+        "gradlew.bat",
+        "settings.gradle.kts"
+      ],
+      "acceptance": "保留当前文件/旧仓库；Wrapper可复现，远端/应用身份核对，不自动推送",
+      "status": "planned",
+      "legacyRefs": [
+        "P0.1",
+        "T1.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-09",
+      "batch": "B02",
+      "phase": "P0",
+      "ownerRole": "PLATFORM",
+      "title": "解析并锁定完整工具链和SDK",
+      "dependsOn": [
+        "P0-08"
+      ],
+      "outputs": [
+        "gradle/libs.versions.toml",
+        "docs/build.md"
+      ],
+      "acceptance": "按实际AAR核验compile/min/target/JDK/AGP/Kotlin，完成最小构建",
+      "status": "planned",
+      "legacyRefs": [
+        "P0.2",
+        "T1.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-10",
+      "batch": "B02",
+      "phase": "P0",
+      "ownerRole": "PLATFORM",
+      "title": "构建基础Miuix与简化材质验证页",
+      "dependsOn": [
+        "P0-09"
+      ],
+      "outputs": [
+        "app/src/",
+        "docs/reviews/B02/material-baseline.md"
+      ],
+      "acceptance": "导航/搜索/菜单/弹层/滑块及真实滚动背景在低版本基础路径运行",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.1a",
+        "T4.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-11",
+      "batch": "B02",
+      "phase": "P0",
+      "ownerRole": "PLATFORM",
+      "title": "隔离API33增强材质依赖与初始化",
+      "dependsOn": [
+        "P0-10"
+      ],
+      "outputs": [
+        "app/src/",
+        "docs/reviews/B02/api-audit.md"
+      ],
+      "acceptance": "源码/传递依赖/Manifest/Lint/类初始化核查；不能仅overrideLibrary宣称支持",
+      "status": "planned",
+      "legacyRefs": [
+        "P0.3",
+        "T1.1a"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-12",
+      "batch": "B02",
+      "phase": "P0",
+      "ownerRole": "PLATFORM",
+      "title": "建立API31/32/33安装与release压缩验证",
+      "dependsOn": [
+        "P0-11"
+      ],
+      "outputs": [
+        "docs/reviews/B02/device-matrix.md"
+      ],
+      "acceptance": "同一候选APK安装冷启动与材质分支有证据；失败执行已批准拆包后备",
+      "status": "planned",
+      "legacyRefs": [
+        "P0.3",
+        "T1.1a"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-13",
+      "batch": "B02",
+      "phase": "P0",
+      "ownerRole": "MAIN",
+      "title": "记录vivo真机与兼容候选总检",
+      "dependsOn": [
+        "P0-12"
+      ],
+      "outputs": [
+        "docs/reviews/B02/"
+      ],
+      "acceptance": "相应环节补型号并真机安装；不以模拟器替代实际体验，G3通过后冻结",
+      "status": "planned",
+      "legacyRefs": [
+        "P0.4",
+        "T4.6"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-14",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "参考数据盘点去重与来源审核",
+      "dependsOn": [
+        "P0-07"
+      ],
+      "outputs": [
+        "data/curated/",
+        "reports/data/"
+      ],
+      "acceptance": "原件不改；11ID去重有diff；生熟和来源不能编造，未核实条目隔离",
+      "status": "planned",
+      "legacyRefs": [
+        "T0.1",
+        "T0.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-15",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "实现无副作用schema与迁移预览",
+      "dependsOn": [
+        "P0-14"
+      ],
+      "outputs": [
+        "scripts/validate_catalog.py",
+        "tests/data/"
+      ],
+      "acceptance": "Recipe/Ingredient/目标/配餐/导入正反例；高版本拒绝、原件hash不变",
+      "status": "planned",
+      "legacyRefs": [
+        "T0.2",
+        "T0.3",
+        "T0.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-16",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "整理计算与数量黄金测试向量",
+      "dependsOn": [
+        "P0-07"
+      ],
+      "outputs": [
+        "tests/fixtures/"
+      ],
+      "acceptance": "单位/null、锁定、边界、600→700→400及零值、固定范围样例由契约导出",
+      "status": "planned",
+      "legacyRefs": [
+        "T0.5",
+        "T2.3"
+      ],
+      "decisionIds": [
+        "D04",
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-17",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "实现营养计算和目标判定纯模块",
+      "dependsOn": [
+        "P0-09",
+        "P0-15",
+        "P0-16"
+      ],
+      "outputs": [
+        "core/calculation/"
+      ],
+      "acceptance": "per100重算、缺失传播、三类目标/0上限/舍入测试通过",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.1",
+        "T0.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-18",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "实现有界healthWeight求解",
+      "dependsOn": [
+        "P0-17"
+      ],
+      "outputs": [
+        "core/calculation/"
+      ],
+      "acceptance": "可达区间/锁定/缺失与零能量/量化残差/往返不漂移测试通过",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.2",
+        "T2.3",
+        "T2.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-19",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "实现数量聚合和逐份删除计算",
+      "dependsOn": [
+        "P0-18"
+      ],
+      "outputs": [
+        "core/calculation/"
+      ],
+      "acceptance": "微调只作用总量；扣原始单份；重新打开稳定；异常归零无负数；无静默clamp",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.2",
+        "T2.3"
+      ],
+      "decisionIds": [
+        "D03",
+        "D04",
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-20",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "DATA",
+      "title": "改造食谱生成交接与核验样例",
+      "dependsOn": [
+        "P0-15"
+      ],
+      "outputs": [
+        "docs/data-generation/",
+        "data/curated/"
+      ],
+      "acceptance": "先发现技能再改造；新样例来源可追溯、差异可看、无编造权重/生熟",
+      "status": "planned",
+      "legacyRefs": [
+        "T0.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P0-21",
+      "batch": "B03",
+      "phase": "P0",
+      "ownerRole": "MAIN",
+      "title": "总检数据/计算并冻结版本",
+      "dependsOn": [
+        "P0-17",
+        "P0-18",
+        "P0-19",
+        "P0-20"
+      ],
+      "outputs": [
+        "docs/reviews/B03/"
+      ],
+      "acceptance": "数据与算法版本及失败证据齐全，G3通过，不把校验当营养来源证明",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-01",
+      "batch": "B04",
+      "phase": "P1",
+      "ownerRole": "DATA",
+      "title": "实现数据库和单餐唯一事务",
+      "dependsOn": [
+        "P0-13",
+        "P0-21"
+      ],
+      "outputs": [
+        "core/data/local/"
+      ],
+      "acceptance": "唯一日期+餐次及重复保存幂等；损坏/失败可回滚，不重算历史",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-02",
+      "batch": "B04",
+      "phase": "P1",
+      "ownerRole": "DATA",
+      "title": "实现草稿持久化与恢复",
+      "dependsOn": [
+        "P1-01"
+      ],
+      "outputs": [
+        "core/data/draft/"
+      ],
+      "acceptance": "编辑状态与原快照/count保留，杀进程恢复不重复保存",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-03",
+      "batch": "B04",
+      "phase": "P1",
+      "ownerRole": "UX",
+      "title": "实现统一字体主题与基础状态组件",
+      "dependsOn": [
+        "P0-13",
+        "P0-21"
+      ],
+      "outputs": [
+        "core/design/"
+      ],
+      "acceptance": "以MiSans为统一字体；完成字体文件/许可/字重/缺字回退核验后，亮暗/字号/减少动画/空错加载采用Miuix",
+      "status": "planned",
+      "legacyRefs": [
+        "T4.2",
+        "T4.4",
+        "T4.6"
+      ],
+      "decisionIds": [
+        "D10",
+        "D11"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-04",
+      "batch": "B04",
+      "phase": "P1",
+      "ownerRole": "MAIN",
+      "title": "整合三Tab和路由边界",
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "outputs": [
+        "app/navigation/"
+      ],
+      "acceptance": "默认食谱、空库仍可进入；返回/切Tab状态保持，键盘安全区正确",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.2"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-05",
+      "batch": "B04",
+      "phase": "P1",
+      "ownerRole": "MAIN",
+      "title": "公开Mock仓储与并行组件契约",
+      "dependsOn": [
+        "P1-02",
+        "P1-04"
+      ],
+      "outputs": [
+        "docs/reviews/B04/",
+        "tests/fixtures/"
+      ],
+      "acceptance": "目录精确分配，CATALOG与MEAL可独立开发；未批准文案不进交付",
+      "status": "planned",
+      "legacyRefs": [
+        "T4.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-06",
+      "batch": "B04",
+      "phase": "P1",
+      "ownerRole": "QA",
+      "title": "验证本地基础故障与组件母版",
+      "dependsOn": [
+        "P1-05"
+      ],
+      "outputs": [
+        "tests/local/",
+        "docs/reviews/B04/"
+      ],
+      "acceptance": "初始化失败/进程死亡/亮暗放大/三键手势证据齐全",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-07",
+      "batch": "B05",
+      "phase": "P1",
+      "ownerRole": "CATALOG",
+      "title": "实现食谱食材同库列表与标签",
+      "dependsOn": [
+        "P1-06"
+      ],
+      "outputs": [
+        "feature/catalog/"
+      ],
+      "acceptance": "Recipe与Ingredient类型可分辨，食材标签不增第四Tab，图片缺失占位",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.3"
+      ],
+      "decisionIds": [
+        "D05"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-08",
+      "batch": "B05",
+      "phase": "P1",
+      "ownerRole": "CATALOG",
+      "title": "实现有效查询与IME状态",
+      "dependsOn": [
+        "P1-07"
+      ],
+      "outputs": [
+        "feature/catalog/search/"
+      ],
+      "acceptance": "至少2字符、trim、输入法未提交不搜索，不记录中间态",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-09",
+      "batch": "B05",
+      "phase": "P1",
+      "ownerRole": "CATALOG",
+      "title": "实现中文/拼音匹配排序",
+      "dependsOn": [
+        "P1-08"
+      ],
+      "outputs": [
+        "feature/catalog/search/"
+      ],
+      "acceptance": "完整名/连续/跨字/全拼简拼相关度用固定样例验证",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-10",
+      "batch": "B05",
+      "phase": "P1",
+      "ownerRole": "CATALOG",
+      "title": "实现筛选与历史查询",
+      "dependsOn": [
+        "P1-09"
+      ],
+      "outputs": [
+        "feature/catalog/search/"
+      ],
+      "acceptance": "三组 Figma 弹出菜单按已确认选项实现；同维 OR、跨维与搜索 AND；搜索历史不设应用条数上限，UI 最多 5 行，超出由设备策略清理，清历可取消",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.3"
+      ],
+      "decisionIds": [
+        "D01",
+        "D02"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-11",
+      "batch": "B05",
+      "phase": "P1",
+      "ownerRole": "CATALOG",
+      "title": "实现食谱/食材详情与明细展开",
+      "dependsOn": [
+        "P1-07"
+      ],
+      "outputs": [
+        "feature/catalog/detail/"
+      ],
+      "acceptance": "每100g、实际范围、单位/来源/null明示，不把图中主食当已计入",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.3",
+        "T4.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-12",
+      "batch": "B05",
+      "phase": "P1",
+      "ownerRole": "CATALOG",
+      "title": "接入日期餐次与加入上下文",
+      "dependsOn": [
+        "P1-11"
+      ],
+      "outputs": [
+        "feature/catalog/"
+      ],
+      "acceptance": "新/已有配餐返回草稿，锁定不被添加操作绕过",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.4"
+      ],
+      "decisionIds": [
+        "D03",
+        "D05"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-13",
+      "batch": "B05",
+      "phase": "P1",
+      "ownerRole": "QA",
+      "title": "检查目录流程与状态回归",
+      "dependsOn": [
+        "P1-10",
+        "P1-12"
+      ],
+      "outputs": [
+        "tests/catalog/",
+        "docs/reviews/B05/"
+      ],
+      "acceptance": "空/错/离线/返回位置/字体放大/新文案检查并人工复核",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-14",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "MEAL",
+      "title": "实现日期餐次列表和日历",
+      "dependsOn": [
+        "P1-06"
+      ],
+      "outputs": [
+        "feature/meal/calendar/"
+      ],
+      "acceptance": "有餐无餐均能进入；本地日历不移日；同餐只进已有记录",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.4"
+      ],
+      "decisionIds": [
+        "D03"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-15",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "MEAL",
+      "title": "实现添加与数量聚合展示",
+      "dependsOn": [
+        "P1-14"
+      ],
+      "outputs": [
+        "feature/meal/editor/"
+      ],
+      "acceptance": "同identity合并xN，完整保留单份/总量，食材与食谱类型不混",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.4"
+      ],
+      "decisionIds": [
+        "D04",
+        "D05",
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-16",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "MEAL",
+      "title": "实现固定±100g重量滑块",
+      "dependsOn": [
+        "P1-15"
+      ],
+      "outputs": [
+        "feature/meal/editor/"
+      ],
+      "acceptance": "首版不提供直接输入；锚点为原始单份乘当前份数且范围不累加；0–9g红框无效并允许滑块修正，保存时定位阻止提交；所有条目至少10g才满足重量有效条件，总量不再乘N",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.2"
+      ],
+      "decisionIds": [
+        "D04",
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-17",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "MEAL",
+      "title": "实现不可达/未知营养和零值处理",
+      "dependsOn": [
+        "P1-16"
+      ],
+      "outputs": [
+        "feature/meal/editor/"
+      ],
+      "acceptance": "实际/目标/状态可读；不可达不假报命中；任一条目0–9g均红框且定位阻止保存，不能被另一有效条目绕过；修正至至少10g后重新校验",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.3",
+        "T2.4",
+        "T4.3"
+      ],
+      "decisionIds": [
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-18",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "MEAL",
+      "title": "实现逐份删除与保存事务",
+      "dependsOn": [
+        "P1-17"
+      ],
+      "outputs": [
+        "feature/meal/editor/"
+      ],
+      "acceptance": "700x2删原300剩400x1；再次删除移除；重复保存幂等且总量一致",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.5"
+      ],
+      "decisionIds": [
+        "D04",
+        "D12"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-19",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "MEAL",
+      "title": "实现草稿离开和锁定/解锁",
+      "dependsOn": [
+        "P1-18"
+      ],
+      "outputs": [
+        "feature/meal/"
+      ],
+      "acceptance": "保存/放弃/继续选项、锁定事务和解锁显式生效；外部加入不可绕过",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-20",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "MEAL",
+      "title": "实现历史详情与删除标记",
+      "dependsOn": [
+        "P1-19"
+      ],
+      "outputs": [
+        "feature/meal/history/"
+      ],
+      "acceptance": "快照冻结、来源版本明确，删除确认/tombstone 预留；首版不提供复制/移动配餐，后续版本再扩展",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.5",
+        "T2.5"
+      ],
+      "decisionIds": [
+        "D06"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-21",
+      "batch": "B06",
+      "phase": "P1",
+      "ownerRole": "QA",
+      "title": "检查配餐异常和恢复",
+      "dependsOn": [
+        "P1-20"
+      ],
+      "outputs": [
+        "tests/meal/",
+        "docs/reviews/B06/"
+      ],
+      "acceptance": "锁定/不可达/count/杀进程/日期唯一案例齐全；覆盖0g、1g、9g、10g、有效无效混合条目、滑块修正与保存阻止",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-22",
+      "batch": "B07",
+      "phase": "P1",
+      "ownerRole": "MAIN",
+      "title": "整合目录与配餐真实仓储",
+      "dependsOn": [
+        "P1-13",
+        "P1-21"
+      ],
+      "outputs": [
+        "app/"
+      ],
+      "acceptance": "删除Mock连线，加入/返回/重复/解锁不丢草稿，真实计算与列表一致",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.2",
+        "T1.3",
+        "T1.4",
+        "T1.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-23",
+      "batch": "B07",
+      "phase": "P1",
+      "ownerRole": "QA",
+      "title": "回归离线保存重启和历史不变",
+      "dependsOn": [
+        "P1-22"
+      ],
+      "outputs": [
+        "tests/integration/"
+      ],
+      "acceptance": "断网全流程、食谱/目标版本变化不改变旧记录、失败无部分落库",
+      "status": "planned",
+      "legacyRefs": [
+        "T1.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-24",
+      "batch": "B07",
+      "phase": "P1",
+      "ownerRole": "QA",
+      "title": "回归API边界与可访问性",
+      "dependsOn": [
+        "P1-22"
+      ],
+      "outputs": [
+        "docs/reviews/B07/"
+      ],
+      "acceptance": "API31/32/33、vivo、暗色大字体键盘返回及动效有证据",
+      "status": "planned",
+      "legacyRefs": [
+        "T4.6"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P1-25",
+      "batch": "B07",
+      "phase": "P1",
+      "ownerRole": "MAIN",
+      "title": "提交本地闭环人工复核包",
+      "dependsOn": [
+        "P1-23",
+        "P1-24"
+      ],
+      "outputs": [
+        "docs/reviews/B07/"
+      ],
+      "acceptance": "可安装候选固定，演示真实数值/份数/状态，用户明确接受才进入P2",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-01",
+      "batch": "B08",
+      "phase": "P2",
+      "ownerRole": "GOALS",
+      "title": "实现日目标三类型编辑",
+      "dependsOn": [
+        "P1-25"
+      ],
+      "outputs": [
+        "feature/goals/"
+      ],
+      "acceptance": "指定/区间/上限边界、0上限、未知/未配置，中性状态不误导",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-02",
+      "batch": "B08",
+      "phase": "P2",
+      "ownerRole": "GOALS",
+      "title": "实现餐次模板与比例分配",
+      "dependsOn": [
+        "P2-01"
+      ],
+      "outputs": [
+        "feature/goals/"
+      ],
+      "acceptance": "默认创建早餐、午餐、晚餐三餐；用户可增删/改名，重命名 ID 不变、停用不删历史",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.1",
+        "T2.5"
+      ],
+      "decisionIds": [
+        "D07"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-03",
+      "batch": "B08",
+      "phase": "P2",
+      "ownerRole": "GOALS",
+      "title": "实现单餐覆盖与差额反馈",
+      "dependsOn": [
+        "P2-02"
+      ],
+      "outputs": [
+        "feature/goals/"
+      ],
+      "acceptance": "手动覆盖不被静默重置，合计差额与主动重分配可解释",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-04",
+      "batch": "B08",
+      "phase": "P2",
+      "ownerRole": "MAIN",
+      "title": "接入目标快照与配餐状态",
+      "dependsOn": [
+        "P2-03"
+      ],
+      "outputs": [
+        "app/",
+        "core/data/"
+      ],
+      "acceptance": "新配餐用当前配置、旧配餐保留快照，自动计算不伪改历史",
+      "status": "planned",
+      "legacyRefs": [
+        "T2.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-05",
+      "batch": "B08",
+      "phase": "P2",
+      "ownerRole": "QA",
+      "title": "总检目标及模板并人工复核",
+      "dependsOn": [
+        "P2-04"
+      ],
+      "outputs": [
+        "tests/goals/",
+        "docs/reviews/B08/"
+      ],
+      "acceptance": "三类状态边界、停用重名/改名、快照不变覆盖",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-06",
+      "batch": "B09",
+      "phase": "P2",
+      "ownerRole": "TRANSFER",
+      "title": "实现系统文件选择与入口识别",
+      "dependsOn": [
+        "P1-25"
+      ],
+      "outputs": [
+        "feature/transfer/"
+      ],
+      "acceptance": "Recipe/Ingredient/mealBackup版本识别；不要求全部存储权限",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-07",
+      "batch": "B09",
+      "phase": "P2",
+      "ownerRole": "TRANSFER",
+      "title": "实现无副作用导入预览",
+      "dependsOn": [
+        "P2-06"
+      ],
+      "outputs": [
+        "feature/transfer/"
+      ],
+      "acceptance": "预览显示数量/日期/重复/错误；无效条目按原因列出并不导入，有效记录可原子提交；10 条中 2 错误只导入 8 条；取消零写入，任一提交失败回滚",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.1"
+      ],
+      "decisionIds": [
+        "D08"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-08",
+      "batch": "B09",
+      "phase": "P2",
+      "ownerRole": "TRANSFER",
+      "title": "实现冲突选择与原子提交",
+      "dependsOn": [
+        "P2-07"
+      ],
+      "outputs": [
+        "feature/transfer/"
+      ],
+      "acceptance": "同ID不同版本/同日餐唯一/count冲突明示，失败回滚，未知高版本拒绝",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-09",
+      "batch": "B09",
+      "phase": "P2",
+      "ownerRole": "TRANSFER",
+      "title": "实现配餐导出与凭据排除",
+      "dependsOn": [
+        "P2-06"
+      ],
+      "outputs": [
+        "feature/transfer/"
+      ],
+      "acceptance": "快照/数量/目标完整，JSON不含WebDAV/token/私钥",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-10",
+      "batch": "B09",
+      "phase": "P2",
+      "ownerRole": "QA",
+      "title": "验证导出往返与损坏输入",
+      "dependsOn": [
+        "P2-08",
+        "P2-09"
+      ],
+      "outputs": [
+        "tests/transfer/",
+        "docs/reviews/B09/"
+      ],
+      "acceptance": "往返值一致，超限/损坏/IO中断/重复提交不丢本地记录",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-11",
+      "batch": "B10",
+      "phase": "P2",
+      "ownerRole": "PUBLIC",
+      "title": "生成公共数据索引和发布验证工具",
+      "dependsOn": [
+        "P1-25"
+      ],
+      "outputs": [
+        "scripts/publish_catalog.py",
+        "docs/public-data/"
+      ],
+      "acceptance": "Recipe/Ingredient同构索引、相对图路径、hash/revision、本地预演无密钥",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.2"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-12",
+      "batch": "B10",
+      "phase": "P2",
+      "ownerRole": "PUBLIC",
+      "title": "实现OSS只读资源更新与缓存",
+      "dependsOn": [
+        "P2-11"
+      ],
+      "outputs": [
+        "feature/publicdata/"
+      ],
+      "acceptance": "暂存校验后提交、单项失败旧版保留，404未部署不影响离线",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.2",
+        "T3.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-13",
+      "batch": "B10",
+      "phase": "P2",
+      "ownerRole": "PUBLIC",
+      "title": "实现源回退与部分失败重试",
+      "dependsOn": [
+        "P2-12"
+      ],
+      "outputs": [
+        "feature/publicdata/"
+      ],
+      "acceptance": "切源重新解析相对路径；appliedRevision独立库版本，图片失败独立处理",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.2",
+        "T3.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-14",
+      "batch": "B10",
+      "phase": "P2",
+      "ownerRole": "PUBLIC",
+      "title": "实现APK版本与下载安装入口",
+      "dependsOn": [
+        "P2-11"
+      ],
+      "outputs": [
+        "feature/update/"
+      ],
+      "acceptance": "整数versionCode、完整性/签名兼容、用户触发安装且拒绝不阻断本地",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-15",
+      "batch": "B10",
+      "phase": "P2",
+      "ownerRole": "QA",
+      "title": "联调公共OSS和APK发布入口",
+      "dependsOn": [
+        "P2-13",
+        "P2-14"
+      ],
+      "outputs": [
+        "docs/reviews/B10/"
+      ],
+      "acceptance": "对应阶段才索取公开地址；本地HTTP故障注入+真实公开源访问，未部署不标通过",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.6"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-16",
+      "batch": "B11",
+      "phase": "P2",
+      "ownerRole": "SYNC",
+      "title": "实现WebDAV配置和安全存储",
+      "dependsOn": [
+        "P1-25",
+        "P2-10"
+      ],
+      "outputs": [
+        "feature/sync/"
+      ],
+      "acceptance": "启用主动配置123专用授权，日志/导出不含凭据，关闭不删本地",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-17",
+      "batch": "B11",
+      "phase": "P2",
+      "ownerRole": "SYNC",
+      "title": "探测读写ETag与条件写能力",
+      "dependsOn": [
+        "P2-16"
+      ],
+      "outputs": [
+        "feature/sync/"
+      ],
+      "acceptance": "测试目录验证GET/PUT/PROPFIND/DELETE及If-Match/If-None-Match；401不当不存在",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.4",
+        "T3.6"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-18",
+      "batch": "B11",
+      "phase": "P2",
+      "ownerRole": "SYNC",
+      "title": "实现持久队列和本地保存优先",
+      "dependsOn": [
+        "P2-17"
+      ],
+      "outputs": [
+        "feature/sync/"
+      ],
+      "acceptance": "重试幂等、断网/杀进程可恢复，本地成功与云同步成功分别显示",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-19",
+      "batch": "B11",
+      "phase": "P2",
+      "ownerRole": "SYNC",
+      "title": "实现冲突副本与删除tombstone",
+      "dependsOn": [
+        "P2-18"
+      ],
+      "outputs": [
+        "feature/sync/"
+      ],
+      "acceptance": "同记录双改、同日期餐次不同ID冲突、delete-vs-edit、count修改均保留双方",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-20",
+      "batch": "B11",
+      "phase": "P2",
+      "ownerRole": "SYNC",
+      "title": "实现冲突解决与条件写不支持降级",
+      "dependsOn": [
+        "P2-19"
+      ],
+      "outputs": [
+        "feature/sync/"
+      ],
+      "acceptance": "结果产生新revision；不支持条件写禁无人值守覆盖，显式备份恢复",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-21",
+      "batch": "B11",
+      "phase": "P2",
+      "ownerRole": "QA",
+      "title": "执行双端故障注入与123真实联调",
+      "dependsOn": [
+        "P2-20"
+      ],
+      "outputs": [
+        "tests/sync/",
+        "docs/reviews/B11/"
+      ],
+      "acceptance": "401/403/404/超时/损坏/并发/删除后旧端上线无数据丢失；实际能力有证据",
+      "status": "planned",
+      "legacyRefs": [
+        "T3.6"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P2-22",
+      "batch": "B11",
+      "phase": "P2",
+      "ownerRole": "MAIN",
+      "title": "总检私人数据边界与恢复演示",
+      "dependsOn": [
+        "P2-21"
+      ],
+      "outputs": [
+        "docs/reviews/B11/"
+      ],
+      "acceptance": "私人配餐不进OSS/GitHub；恢复与冲突人工可审，未获授权不清远端",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.1"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-01",
+      "batch": "B12",
+      "phase": "P3",
+      "ownerRole": "UX",
+      "title": "完成发布图标和统一展示资产",
+      "dependsOn": [
+        "P1-25"
+      ],
+      "outputs": [
+        "assets/branding/",
+        "docs/release/"
+      ],
+      "acceptance": "自适应/单色/深浅/启动适配可审，新名称由用户确认",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.3"
+      ],
+      "decisionIds": [
+        "D11"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-02",
+      "batch": "B12",
+      "phase": "P3",
+      "ownerRole": "RELEASE",
+      "title": "完成隐私数据流和第三方许可清单",
+      "dependsOn": [
+        "P1-25"
+      ],
+      "outputs": [
+        "docs/release/privacy.md",
+        "docs/release/licenses.md"
+      ],
+      "acceptance": "无广告统计，123/OSS/日志/备份边界准确；用户最终许可决定后才能公开",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.1",
+        "T5.2"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-03",
+      "batch": "B12",
+      "phase": "P3",
+      "ownerRole": "RELEASE",
+      "title": "制定签名版本和双包后备升级方案",
+      "dependsOn": [
+        "P0-13"
+      ],
+      "outputs": [
+        "docs/release/signing.md"
+      ],
+      "acceptance": "稳定applicationId/versionCode/签名保管恢复，正式密钥不入仓库",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.3"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-04",
+      "batch": "B12",
+      "phase": "P3",
+      "ownerRole": "MAIN",
+      "title": "核对设置诊断缓存和清数据范围",
+      "dependsOn": [
+        "P1-25"
+      ],
+      "outputs": [
+        "feature/settings/",
+        "docs/release/"
+      ],
+      "acceptance": "10 次版本入口/脱敏诊断/减弱动画；清配餐按用户选项 2 同步删除远端副本；清食谱只清本地缓存，只有云端删除才同步移除食谱；两者均显示同步失败与重试状态",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.1",
+        "T4.6"
+      ],
+      "decisionIds": [
+        "D09",
+        "D11"
+      ],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-05",
+      "batch": "B12",
+      "phase": "P3",
+      "ownerRole": "MAIN",
+      "title": "总检发布资料并提交人工复核",
+      "dependsOn": [
+        "P3-01",
+        "P3-02",
+        "P3-03",
+        "P3-04"
+      ],
+      "outputs": [
+        "docs/reviews/B12/"
+      ],
+      "acceptance": "资产与真实行为吻合，许可签名待决直接问，不把资料通过当发布授权",
+      "status": "planned",
+      "legacyRefs": [],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-06",
+      "batch": "B13",
+      "phase": "P3",
+      "ownerRole": "RELEASE",
+      "title": "生成可复现正式签名候选",
+      "dependsOn": [
+        "P2-05",
+        "P2-10",
+        "P2-15",
+        "P2-22",
+        "P3-05"
+      ],
+      "outputs": [
+        "release/",
+        "docs/release/build-record.md"
+      ],
+      "acceptance": "工具链/数据/文案固定，hash与签名可核验；压缩优化已开启的真实包",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.3",
+        "T5.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-07",
+      "batch": "B13",
+      "phase": "P3",
+      "ownerRole": "QA",
+      "title": "执行完整功能与离线回归",
+      "dependsOn": [
+        "P3-06"
+      ],
+      "outputs": [
+        "docs/reviews/B13/"
+      ],
+      "acceptance": "P0~P2全部必要验收、三类数据、数量/目标/快照/冲突/恢复齐全",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-08",
+      "batch": "B13",
+      "phase": "P3",
+      "ownerRole": "QA",
+      "title": "执行安装覆盖升级和恢复回归",
+      "dependsOn": [
+        "P3-06"
+      ],
+      "outputs": [
+        "docs/reviews/B13/"
+      ],
+      "acceptance": "API31/32/33与vivo及新系统，正式签名旧包覆盖保留数据、失败恢复",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-09",
+      "batch": "B13",
+      "phase": "P3",
+      "ownerRole": "QA",
+      "title": "执行性能与无障碍实测",
+      "dependsOn": [
+        "P3-06"
+      ],
+      "outputs": [
+        "docs/reviews/B13/"
+      ],
+      "acceptance": "按原型测得预算审查滚动/拖动/内存/发热，暗色大字体/动画键盘通过",
+      "status": "planned",
+      "legacyRefs": [
+        "T4.6",
+        "T5.4"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-10",
+      "batch": "B13",
+      "phase": "P3",
+      "ownerRole": "MAIN",
+      "title": "审核候选及用户人工验收",
+      "dependsOn": [
+        "P3-07",
+        "P3-08",
+        "P3-09"
+      ],
+      "outputs": [
+        "docs/reviews/B13/"
+      ],
+      "acceptance": "无S0/S1未处置；S2/S3延期由用户明确接受，同候选三检证据齐全",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-11",
+      "batch": "B14",
+      "phase": "P3",
+      "ownerRole": "MAIN",
+      "title": "取得正式公开发布授权",
+      "dependsOn": [
+        "P3-10"
+      ],
+      "outputs": [
+        "docs/release/approval.md"
+      ],
+      "acceptance": "用户明确授权具体候选/渠道/许可，不以B13接受替代公开授权",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-12",
+      "batch": "B14",
+      "phase": "P3",
+      "ownerRole": "RELEASE",
+      "title": "分发APK与版本索引",
+      "dependsOn": [
+        "P3-11"
+      ],
+      "outputs": [
+        "docs/release/publish-record.md"
+      ],
+      "acceptance": "GitHub/Gitee包/说明/hash对应；公共资源与私人目录隔离，远端写入限授权",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    },
+    {
+      "id": "P3-13",
+      "batch": "B14",
+      "phase": "P3",
+      "ownerRole": "MAIN",
+      "title": "核验公开下载安装并交接恢复",
+      "dependsOn": [
+        "P3-12"
+      ],
+      "outputs": [
+        "docs/reviews/B14/",
+        "docs/release/handoff.md"
+      ],
+      "acceptance": "双渠道下载/完整性/安装检查，交付源码/构建/数据schema/已知项/回滚方法",
+      "status": "planned",
+      "legacyRefs": [
+        "T5.5"
+      ],
+      "decisionIds": [],
+      "checks": {
+        "self": "not_run",
+        "manager": "not_run",
+        "human": "not_run"
+      },
+      "handoffRequired": true
+    }
+  ],
+  "managerReview": {
+    "status": "pass",
+    "candidate": "B00-candidate-8",
+    "checkedAt": "2026-10-28",
+    "evidence": [
+      "用户已确认统一字体家族为MiSans；字体文件、许可、字重和缺字回退保留为P0工程核验项",
+      "UX与机器台账已同步0–9g红框无效、可用滑块修正、所有条目至少10g才满足保存重量条件；S09/S12/M02路径均保留编辑态并在保存或保存后离开时定位阻止",
+      "固定±100g锚点冻结为原始单份×当前份数，份数变化不以实际量重锚；300g×2案例与100g×1的0/1/9/10g边界分离",
+      "公共Recipe来源100g基准、Ingredient每100g营养单位和配餐10g保存门槛已分离",
+      "15批次/85任务、30页面/152状态/74验收、11流程/33角色；ID、引用、依赖无环、本地链接、UTF-8及控制字符检查通过",
+      "已同步用户新决定：Figma 筛选选项、历史 5 行显示与设备清理、JSON 部分导入、配餐与食谱删除同步语义、食谱云端权威"
+    ],
+    "limitations": [
+      "Mermaid尚未渲染",
+      "Android/Miuix API、vivo Android 12、OSS、123 WebDAV、APK与公开发布未验证",
+      "字体文件/许可/字重/缺字回退、identity与独立食材原始份量来源仍待P0工程与契约设计；B00用户人工复核尚未完成",
+      "用户已确认的导入与清除同步语义尚未在 Android/123 WebDAV 真机上验证"
+    ]
+  }
+}

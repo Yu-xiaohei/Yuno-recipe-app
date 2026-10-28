@@ -1,0 +1,237 @@
+{
+  "date": "2026-10-28",
+  "method": "copy, originals retained",
+  "copiedFiles": [
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-miuix-baseline\\UI设计稿需求.md",
+      "target": "docs/_archive/2026-10-28-before-miuix-baseline/UI设计稿需求.md",
+      "sha256": "4c094ecbe1222c1a259d47b589193325bbd0ed2dfc3a12de5fb4f363b4c31422"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-miuix-baseline\\于の食谱 UX.md",
+      "target": "docs/_archive/2026-10-28-before-miuix-baseline/于の食谱 UX.md",
+      "sha256": "fe938e0671c5c2dea9521471d8c2dcb8831da8bec7f886e3f677b806e185561a"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-miuix-baseline\\于の食谱-完整方案.md",
+      "target": "docs/_archive/2026-10-28-before-miuix-baseline/于の食谱-完整方案.md",
+      "sha256": "afd9b9314f15f26afbf7c60b01209e2d8e6f9687529230d914866cdf76efb963"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-miuix-baseline\\任务清单.md",
+      "target": "docs/_archive/2026-10-28-before-miuix-baseline/任务清单.md",
+      "sha256": "20b822d6bc4f812d2fc032b2b34260defae0be9319a074605e638ecab40b3838"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-miuix-baseline\\附录A-视觉与动效设计.md",
+      "target": "docs/_archive/2026-10-28-before-miuix-baseline/附录A-视觉与动效设计.md",
+      "sha256": "6ec9e27578d6d9963f348b3bf03b4a151794fd2ac594c44a4a86289f1503c1dc"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-review\\skill改造说明.md",
+      "target": "docs/_archive/2026-10-28-before-review/skill改造说明.md",
+      "sha256": "07a76d2f759ea44f7120e53be945445363ee0abca66bdcc268372bdd9dafbf3b"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-review\\UI设计稿需求.md",
+      "target": "docs/_archive/2026-10-28-before-review/UI设计稿需求.md",
+      "sha256": "a65d95f79582d3243f51ebc7cacd6020eda41c82b55dfb37045170a5980500e1"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-review\\于の食谱 UX.md",
+      "target": "docs/_archive/2026-10-28-before-review/于の食谱 UX.md",
+      "sha256": "04fe3e9a921783cfa1b123376cc97f7c30e973b531d355ed28a263e0601c61b5"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-review\\于の食谱-完整方案.md",
+      "target": "docs/_archive/2026-10-28-before-review/于の食谱-完整方案.md",
+      "sha256": "a24fd0e2557fcb41d4b96e7c4e3983e3cf8419da28ec8aa34a0aa407bb56ca71"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-review\\任务清单.md",
+      "target": "docs/_archive/2026-10-28-before-review/任务清单.md",
+      "sha256": "8c36e9174ae842d7253ac0924cfb155b9b55cfcf14556977505b3a584e1e0045"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-review\\接口与字段清单.md",
+      "target": "docs/_archive/2026-10-28-before-review/接口与字段清单.md",
+      "sha256": "4f22aaa7381974a30f484c33cd7860c0e92013f997959e28102adf9590da17a2"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\_archive\\2026-10-28-before-review\\附录A-视觉与动效设计.md",
+      "target": "docs/_archive/2026-10-28-before-review/附录A-视觉与动效设计.md",
+      "sha256": "0d225d6dd233188a017730fc3b69406c59455b8e55f92b2ce143371e51274465"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\Miuix-UI与液态玻璃基线.md",
+      "target": "docs/Miuix-UI与液态玻璃基线.md",
+      "sha256": "aa954cf214c4c4cbd6134756aba57a70c73eb31c386da0b1dd815a6a52c80b16"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\skill改造说明.md",
+      "target": "docs/skill改造说明.md",
+      "sha256": "d401b0dc373efbb19398ba2a4a09c3fe8a560e4be93b640db68024c9a8b77c84"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\UI设计稿需求.md",
+      "target": "docs/UI设计稿需求.md",
+      "sha256": "56a659ef81186c8186af6bf7a5883c5e55738884bf8db023435d9bb4bbc03996"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\于の食谱 UX.md",
+      "target": "docs/于の食谱 UX.md",
+      "sha256": "d146b3c0860c47a1f47597dd002a7c66af3d679a2701dd66aeeca4570ad92a6e"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\于の食谱-完整方案.md",
+      "target": "docs/于の食谱-完整方案.md",
+      "sha256": "83ebf1b6b0471e1642a07484612db651b959dcb10ddfe4ff686fe5157f46ead7"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\任务清单.md",
+      "target": "docs/任务清单.md",
+      "sha256": "ae1b492fc890ed96ec4ab250177e01408d906fda94b454311d60fde0f362dc0b"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\审阅与调整记录-2026-10-28.md",
+      "target": "docs/审阅与调整记录-2026-10-28.md",
+      "sha256": "e23d63febeb4e3fe802e4a43c29d205536c20e4591ca26969c909e5b45f70f64"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\接口与字段清单.md",
+      "target": "docs/接口与字段清单.md",
+      "sha256": "fd8c963e16462a1fe046fafcad5e5fae6be86264200a31ef44a5f93bf571819c"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\docs\\附录A-视觉与动效设计.md",
+      "target": "docs/附录A-视觉与动效设计.md",
+      "sha256": "976a4b1260c774b0fd7b3238b8da39aa673411e1155f91332659aff682875c80"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\reports\\preflight-2026-10-28\\miuix-artifacts.json",
+      "target": "reports/preflight-2026-10-28/miuix-artifacts.json",
+      "sha256": "1228d6cd86f459528c62a18b8697db8acaec4ac9af1236ad4d3a00734db840ca"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\reports\\preflight-2026-10-28\\public-source-check.json",
+      "target": "reports/preflight-2026-10-28/public-source-check.json",
+      "sha256": "be2f3042e1c328542a56f6cdfb0b6a06c2d6d42e118f7cfc034ebff18d51a181"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\reports\\preflight-2026-10-28\\recipe-audit.json",
+      "target": "reports/preflight-2026-10-28/recipe-audit.json",
+      "sha256": "c26371fdf1e123b2b9123561084e8af07b4fe09d379fae1bbf5452a59578535c"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\scripts\\check_recipe_preflight.py",
+      "target": "scripts/check_recipe_preflight.py",
+      "sha256": "809a7e372f9d912bda7c3a89aad0561965fd0fcf1e08bfb6ed8b6cfda09d79f8"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\LICENSE",
+      "target": "LICENSE",
+      "sha256": "bd0ac162ed554935a04c4e13a995f46a682af904767a0493179f1b67f720bbc3"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\.gitignore",
+      "target": ".gitignore",
+      "sha256": "9d2161ae02e246fe068707b2e457e12d031092c780eca9ec994bed3b481a31d1"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\logo.svg",
+      "target": "assets/branding/logo.svg",
+      "sha256": "91a5c036add377c8f680538a0c463c741fca7662fdb74356555761f58156c916"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\YUNO-RECIPE.svg",
+      "target": "assets/branding/wordmark.svg",
+      "sha256": "d7e6154af1f0ef4c1278fda899d721f71efb3b04fc86ef85b6dc7be7250a974e"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\YUNO-RECIPE-white.svg",
+      "target": "assets/branding/wordmark-white.svg",
+      "sha256": "828f65742112333306dedac6134161459792522aba49e9201eb12cc71d10323e"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\YUNO-recipe\\占位图.jpg",
+      "target": "assets/images/recipe-placeholder.jpg",
+      "sha256": "d6304ff549c73ff53b0447e89028004f49b8fcff62a1d7f292cda9b0b198463a"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\香菇木耳时蔬饭.md",
+      "target": "data/reference/香菇木耳时蔬饭.md",
+      "sha256": "85d44de42be89bd25126f58cfbcca43913d396c785ebe993adeb1f27435f3e2b"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\dan-chaofan.json",
+      "target": "data/reference/recipes/dan-chaofan.json",
+      "sha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\mo-yu-zi-cai-tang.json",
+      "target": "data/reference/recipes/mo-yu-zi-cai-tang.json",
+      "sha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\冬瓜茄子面卤.json",
+      "target": "data/reference/recipes/冬瓜茄子面卤.json",
+      "sha256": "7ed2c40bc9485af150e24a1d7a470b569a5eaab31193d8fe90247139e293aab6"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\凉拌芹菜.json",
+      "target": "data/reference/recipes/凉拌芹菜.json",
+      "sha256": "65a3fe6c7a6a02a90ba024a86a93a7cf5668b02d661b13cb2cee4cfec1b26643"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\大闸蟹配清炒小包菜.json",
+      "target": "data/reference/recipes/大闸蟹配清炒小包菜.json",
+      "sha256": "7d1bd3a24aa0c007bcf33eaa03d8c37a42aa32d982a1b017dd176ee13792c446"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\慢炖老鸭汤.json",
+      "target": "data/reference/recipes/慢炖老鸭汤.json",
+      "sha256": "2cdcebb342345b2922fd0bb6c43fefa6b7e59f6da26bac840472a2aa30266af0"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\清炒小包菜.json",
+      "target": "data/reference/recipes/清炒小包菜.json",
+      "sha256": "8ce2d128688ede1d85e19910275151f1cb88dbcc0ccc541ebe8e81cb10fb0e7e"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\炒芹菜配熏鸡.json",
+      "target": "data/reference/recipes/炒芹菜配熏鸡.json",
+      "sha256": "91447a40fac09c3d3d34dee65166fb91c4713c6d33b90cb9da49dce07681d76d"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\纯肉炒芹菜.json",
+      "target": "data/reference/recipes/纯肉炒芹菜.json",
+      "sha256": "c3af460496ee0b3cc615ed86f2cfa917fb141a2438810b6922e1b72438e2b17e"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\蛋炒饭.json",
+      "target": "data/reference/recipes/蛋炒饭.json",
+      "sha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\西红柿鸡蛋面卤.json",
+      "target": "data/reference/recipes/西红柿鸡蛋面卤.json",
+      "sha256": "670844639a0ad7cc051697a37ab9345bf92530eba99fc4dd1be9bcc1151ea5c4"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\香菇木耳时蔬饭.json",
+      "target": "data/reference/recipes/香菇木耳时蔬饭.json",
+      "sha256": "b887af20c5119bac547377cc140be73f988920c4c04b75ff712ebd23dd202a8c"
+    },
+    {
+      "source": "F:\\Yuno-Develop\\餐谱\\json\\魔芋紫菜汤.json",
+      "target": "data/reference/recipes/魔芋紫菜汤.json",
+      "sha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482"
+    }
+  ],
+  "excluded": [
+    "credentials",
+    "tokens",
+    ".git",
+    "_repos"
+  ]
+}

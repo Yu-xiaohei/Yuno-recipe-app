@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 2,
+  "id": "dong-gua-qie-zi-mian",
+  "name": "冬瓜茄子面卤",
+  "type": "dish",
+  "serving": 1,
+  "standard": "CN_CFCT",
+  "totals": {
+    "weight": 401.9,
+    "energy": 258.9,
+    "carb": 11.4,
+    "protein": 8.9,
+    "fat": 19.6,
+    "vitaminC": 66.2,
+    "fiber": 4.1,
+    "sodium": 1027.6
+  },
+  "targets": {
+    "energyMax": 300,
+    "energyBest": 250,
+    "weightMax": 400,
+    "weightBest": 350,
+    "energyOk": true,
+    "weightOk": false,
+    "energyRange": [
+      220,
+      280
+    ],
+    "weightRange": [
+      320,
+      380
+    ],
+    "doseStatus": "OUT_OF_RANGE"
+  },
+  "macroRatio": {
+    "carbPct": 17.7,
+    "proteinPct": 13.8,
+    "fatPct": 68.5
+  },
+  "items": [
+    {
+      "name": "胡麻油",
+      "weight": 4,
+      "energy": 36.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 4.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 0.0,
+      "source": "CN_CFCT 胡麻油",
+      "per100": {
+        "energy": 900,
+        "carb": 0,
+        "protein": 0,
+        "fat": 100,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 0.6
+      },
+      "healthWeight": 0.12,
+      "locked": false
+    },
+    {
+      "name": "猪肉",
+      "weight": 40,
+      "energy": 158.0,
+      "carb": 1.0,
+      "protein": 5.3,
+      "fat": 14.8,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 23.8,
+      "source": "CN_CFCT 猪肉(肥瘦)(均值)",
+      "per100": {
+        "energy": 395,
+        "carb": 2.4,
+        "protein": 13.2,
+        "fat": 37,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 59.4
+      },
+      "healthWeight": 0.92,
+      "locked": false
+    },
+    {
+      "name": "冬瓜",
+      "weight": 120,
+      "energy": 13.2,
+      "carb": 2.3,
+      "protein": 0.5,
+      "fat": 0.2,
+      "vitaminC": 21.6,
+      "fiber": 0.8,
+      "sodium": 2.2,
+      "source": "CN_CFCT 冬瓜",
+      "per100": {
+        "energy": 11,
+        "carb": 1.9,
+        "protein": 0.4,
+        "fat": 0.2,
+        "vitaminC": 18,
+        "fiber": 0.7,
+        "sodium": 1.8
+      },
+      "healthWeight": 0.9,
+      "locked": false
+    },
+    {
+      "name": "茄子",
+      "weight": 120,
+      "energy": 25.2,
+      "carb": 4.3,
+      "protein": 1.3,
+      "fat": 0.2,
+      "vitaminC": 6.0,
+      "fiber": 1.6,
+      "sodium": 6.5,
+      "source": "CN_CFCT 茄子(均值)",
+      "per100": {
+        "energy": 21,
+        "carb": 3.6,
+        "protein": 1.1,
+        "fat": 0.2,
+        "vitaminC": 5,
+        "fiber": 1.3,
+        "sodium": 5.4
+      },
+      "healthWeight": 0.9,
+      "locked": false
+    },
+    {
+      "name": "油菜",
+      "weight": 35,
+      "energy": 8.0,
+      "carb": 0.9,
+      "protein": 0.6,
+      "fat": 0.2,
+      "vitaminC": 12.6,
+      "fiber": 0.4,
+      "sodium": 19.5,
+      "source": "CN_CFCT 油菜",
+      "per100": {
+        "energy": 23,
+        "carb": 2.7,
+        "protein": 1.8,
+        "fat": 0.5,
+        "vitaminC": 36,
+        "fiber": 1.1,
+        "sodium": 55.8
+      },
+      "healthWeight": 0.8,
+      "locked": false
+    },
+    {
+      "name": "青椒",
+      "weight": 30,
+      "energy": 6.6,
+      "carb": 1.2,
+      "protein": 0.3,
+      "fat": 0.1,
+      "vitaminC": 21.6,
+      "fiber": 0.4,
+      "sodium": 1.0,
+      "source": "CN_CFCT 甜椒",
+      "per100": {
+        "energy": 22,
+        "carb": 4.0,
+        "protein": 1.0,
+        "fat": 0.2,
+        "vitaminC": 72,
+        "fiber": 1.4,
+        "sodium": 3.3
+      },
+      "healthWeight": 0.55,
+      "locked": false
+    },
+    {
+      "name": "西红柿",
+      "weight": 20,
+      "energy": 3.8,
+      "carb": 0.7,
+      "protein": 0.2,
+      "fat": 0.0,
+      "vitaminC": 3.8,
+      "fiber": 0.1,
+      "sodium": 1.0,
+      "source": "CN_CFCT 番茄[西红柿]",
+      "per100": {
+        "energy": 19,
+        "carb": 3.5,
+        "protein": 0.9,
+        "fat": 0.2,
+        "vitaminC": 19,
+        "fiber": 0.5,
+        "sodium": 5
+      },
+      "healthWeight": 0.55,
+      "locked": false
+    },
+    {
+      "name": "金针菇",
+      "weight": 30,
+      "energy": 7.8,
+      "carb": 1.0,
+      "protein": 0.7,
+      "fat": 0.1,
+      "vitaminC": 0.6,
+      "fiber": 0.8,
+      "sodium": 1.3,
+      "source": "CN_CFCT 金针菇[智力菇]",
+      "per100": {
+        "energy": 26,
+        "carb": 3.3,
+        "protein": 2.4,
+        "fat": 0.4,
+        "vitaminC": 2,
+        "fiber": 2.7,
+        "sodium": 4.3
+      },
+      "healthWeight": 0.75,
+      "locked": false
+    },
+    {
+      "name": "盐",
+      "weight": 2.4,
+      "energy": 0.0,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 943.5,
+      "source": "CN_CFCT 精盐",
+      "per100": {
+        "energy": 0,
+        "carb": 0,
+        "protein": 0,
+        "fat": 0,
+        "vitaminC": 0,
+        "fiber": 0,
+        "sodium": 39311
+      },
+      "healthWeight": 0.01,
+      "locked": true
+    },
+    {
+      "name": "酱油",
+      "weight": 0.5,
+      "energy": 0.3,
+      "carb": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "vitaminC": 0.0,
+      "fiber": 0.0,
+      "sodium": 28.8,
+      "source": "CN_CFCT 酱油(均值)",
+      "per100": {
+        "energy": 63,
+        "carb": 9.9,
+        "protein": 5.6,
+        "fat": 0.1,
+        "vitaminC": 0,
+        "fiber": 0.2,
+        "sodium": 5757
+      },
+      "healthWeight": 0.08,
+      "locked": false
+    }
+  ],
+  "notes": [
+    "已剔除主食面条，改为面卤单独计量，由 App 与主食拼餐。",
+    "维生素列以维生素C(mg)计",
+    "胡麻油另含维生素E 389.9mg/100g（4g约15.6mg）",
+    "猪肉按「猪肉(肥瘦)(均值)」口径，经用户确认不换瘦肉",
+    "青椒按「甜椒[灯笼椒，柿子椒]」口径，与尖椒差异可忽略（用户确认）",
+    "含盐2.4g、酱油0.5g，钠约89%来自盐",
+    "脂肪供能比43.6%高于常见区间，为用户确认保持肥瘦猪肉的最终稿",
+    "剂量状态 OUT_OF_RANGE（单菜口径；保留既有用量，未擅自改克数）。",
+    "单菜门槛：≤300 kcal（推荐 250±30）· ≤400 g（推荐 350±30）；当前 258.9 kcal / 401.9 g。状态 OUT_OF_RANGE。"
+  ],
+  "sources": [
+    {
+      "name": "胡麻油",
+      "url": "https://healthchina2030.com/Nutr/nYWYwu.html"
+    },
+    {
+      "name": "熟面条",
+      "url": "https://healthchina2030.com/Nutr/nNGc=u.html"
+    },
+    {
+      "name": "猪肉",
+      "url": "https://healthchina2030.com/Nutr/nNTZ5u.html"
+    },
+    {
+      "name": "冬瓜",
+      "url": "https://healthchina2030.com/Nutr/nMXJtu.html"
+    },
+    {
+      "name": "茄子",
+      "url": "https://healthchina2030.com/Nutr/nMW42u.html"
+    },
+    {
+      "name": "油菜",
+      "url": "https://healthchina2030.com/Nutr/nMjU4u.html"
+    },
+    {
+      "name": "青椒",
+      "url": "https://healthchina2030.com/Nutr/nMXB5u.html"
+    },
+    {
+      "name": "西红柿",
+      "url": "https://healthchina2030.com/Nutr/nMW9hu.html"
+    },
+    {
+      "name": "金针菇",
+      "url": "https://healthchina2030.com/Nutr/nM2R5u.html"
+    },
+    {
+      "name": "盐",
+      "url": "https://healthchina2030.com/Nutr/nYjdtu.html"
+    },
+    {
+      "name": "酱油",
+      "url": "https://healthchina2030.com/Nutr/nYWltu.html"
+    }
+  ],
+  "generatedAt": "2026-10-04T01:14:00",
+  "generatedBy": "Xiaomi MIMO 2.6 Pro",
+  "user": "Yu_xiaohei"
+}
