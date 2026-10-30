@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/common.schema.json",
+  "title": "Shared contract definitions",
+  "$comment": "B01 candidate. The .invalid identifiers are offline schema identifiers, not deployed endpoints. Validators must enable format assertions and reject non-finite JSON numbers.",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "not": { "pattern": "[\\u0000-\\u001f\\u007f]" }
+    },
+    "revision": {
+      "$ref": "#/$defs/id",
+      "description": "Opaque revision identity; do not sort revisions lexicographically or by device time."
+    },
+    "contentHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "not": { "pattern": "[\\u0000-\\u001f\\u007f]" },
+      "description": "Lowercase SHA-256 of the exact UTF-8 payload file bytes; stored outside that file."
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "dateTime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "not": { "pattern": "[\\u0000-\\u001f\\u007f]" }
+    },
+    "timestamp": {
+      "$ref": "#/$defs/dateTime"
+    },
+    "localDate": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "not": { "pattern": "[\\u0000-\\u001f\\u007f]" }
+    },
+    "safeRelativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[A-Za-z0-9_-][A-Za-z0-9._-]*(?:/[A-Za-z0-9_-][A-Za-z0-9._-]*)*$",
+      "not": { "pattern": "[\\u0000-\\u001f\\u007f]" },
+      "description": "Relative ASCII publication path. Absolute URLs, backslashes, dot segments, encoded paths, query strings and fragments are rejected."
+    },
+    "nonNegativeNumber": {
+      "type": "number",
+      "minimum": 0
+    },
+    "positiveNumber": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "nutrientValue": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "nutrients": {
+      "type": "object",
+      "required": ["energy", "carb", "protein", "fat", "vitaminC", "fiber", "sodium"],
+      "properties": {
+        "energy": { "$ref": "#/$defs/nutrientValue" },
+        "carb": { "$ref": "#/$defs/nutrientValue" },
+        "protein": { "$ref": "#/$defs/nutrientValue" },
+        "fat": { "$ref": "#/$defs/nutrientValue" },
+        "vitaminC": { "$ref": "#/$defs/nutrientValue" },
+        "fiber": { "$ref": "#/$defs/nutrientValue" },
+        "sodium": { "$ref": "#/$defs/nutrientValue" }
+      },
+      "additionalProperties": false,
+      "description": "energy: kcal; carb/protein/fat/fiber: g; vitaminC/sodium: mg. null means unknown, not zero."
+    },
+    "totals": {
+      "type": "object",
+      "required": ["weight", "energy", "carb", "protein", "fat", "vitaminC", "fiber", "sodium"],
+      "properties": {
+        "weight": { "$ref": "#/$defs/nonNegativeNumber" },
+        "energy": { "$ref": "#/$defs/nutrientValue" },
+        "carb": { "$ref": "#/$defs/nutrientValue" },
+        "protein": { "$ref": "#/$defs/nutrientValue" },
+        "fat": { "$ref": "#/$defs/nutrientValue" },
+        "vitaminC": { "$ref": "#/$defs/nutrientValue" },
+        "fiber": { "$ref": "#/$defs/nutrientValue" },
+        "sodium": { "$ref": "#/$defs/nutrientValue" }
+      },
+      "additionalProperties": false
+    },
+    "foodState": {
+      "type": "string",
+      "enum": ["raw", "cooked", "rehydrated", "unknown"],
+      "description": "unknown is an explicit unverified state; a food name is not evidence of measurement state."
+    },
+    "healthWeight": {
+      "type": "number",
+      "minimum": 0.01,
+      "maximum": 1,
+      "multipleOf": 0.01
+    },
+    "sourceRef": {
+      "type": "object",
+      "required": ["id", "title", "url", "locator", "verification"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": ["string", "null"], "minLength": 1 },
+        "url": { "type": ["string", "null"], "format": "uri" },
+        "locator": { "type": ["string", "null"], "minLength": 1 },
+        "verification": { "enum": ["unverified", "verified"] }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "verification": { "const": "verified" } },
+            "required": ["verification"]
+          },
+          "then": {
+            "properties": { "title": { "$ref": "#/$defs/text" } },
+            "anyOf": [
+              { "properties": { "url": { "type": "string", "format": "uri" } } },
+              { "properties": { "locator": { "$ref": "#/$defs/text" } } }
+            ]
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "license": {
+      "type": "object",
+      "required": ["identifier", "url", "attribution", "verification"],
+      "properties": {
+        "identifier": { "type": ["string", "null"], "minLength": 1 },
+        "url": { "type": ["string", "null"], "format": "uri" },
+        "attribution": { "type": ["string", "null"], "minLength": 1 },
+        "verification": { "enum": ["unverified", "verified"] }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "verification": { "const": "verified" } },
+            "required": ["verification"]
+          },
+          "then": { "properties": { "identifier": { "$ref": "#/$defs/text" } } }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "stringList": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/text" },
+      "uniqueItems": true
+    }
+  }
+}

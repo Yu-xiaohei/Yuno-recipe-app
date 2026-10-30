@@ -1,0 +1,109 @@
+{
+  "description": "Synthetic structure fixtures only. Nutritional values, hashes and source identifiers are test data, not recipes or source verification.",
+  "recipe": {
+    "schemaVersion": 2,
+    "profile": "canonical-v1",
+    "kind": "recipe",
+    "id": "test_recipe",
+    "revision": "test_r1",
+    "name": "TEST recipe",
+    "serving": 0.5,
+    "dishType": "test",
+    "tags": ["test"],
+    "summary": "",
+    "image": null,
+    "publishedAt": "2026-10-28T12:00:00+08:00",
+    "includesStaple": "unknown",
+    "items": [
+      {
+        "itemId": "test_item",
+        "name": "TEST ingredient",
+        "weight": 100,
+        "foodState": "unknown",
+        "category": null,
+        "per100": {
+          "energy": null,
+          "carb": 0,
+          "protein": 0,
+          "fat": 0,
+          "vitaminC": null,
+          "fiber": 0,
+          "sodium": 0
+        },
+        "sourceRef": {
+          "id": "test_unverified_source",
+          "title": null,
+          "url": null,
+          "locator": null,
+          "verification": "unverified"
+        },
+        "healthWeight": 0.07,
+        "locked": false
+      }
+    ],
+    "totals": {
+      "weight": 100,
+      "energy": null,
+      "carb": 0,
+      "protein": 0,
+      "fat": 0,
+      "vitaminC": null,
+      "fiber": 0,
+      "sodium": 0
+    },
+    "notes": ["Synthetic structural fixture; not approved for publication."],
+    "sources": [
+      {
+        "id": "test_unverified_source",
+        "title": null,
+        "url": null,
+        "locator": null,
+        "verification": "unverified"
+      }
+    ],
+    "license": {
+      "identifier": null,
+      "url": null,
+      "attribution": null,
+      "verification": "unverified"
+    }
+  },
+  "ingredient": {
+    "schemaVersion": 1,
+    "profile": "canonical-v1",
+    "kind": "ingredient",
+    "id": "test_ingredient",
+    "revision": "test_r1",
+    "name": "TEST ingredient",
+    "foodState": "unknown",
+    "nutritionBasisWeight": 100,
+    "defaultPortionWeight": 100,
+    "per100": {
+      "energy": null,
+      "carb": 0,
+      "protein": 0,
+      "fat": 0,
+      "vitaminC": null,
+      "fiber": 0,
+      "sodium": 0
+    },
+    "sourceRef": {
+      "id": "test_unverified_source",
+      "title": null,
+      "url": null,
+      "locator": null,
+      "verification": "unverified"
+    },
+    "license": {
+      "identifier": null,
+      "url": null,
+      "attribution": null,
+      "verification": "unverified"
+    },
+    "tags": ["test"],
+    "summary": "",
+    "image": null,
+    "publishedAt": "2026-10-28T12:00:00Z",
+    "notes": ["Synthetic fixture."]
+  }
+}

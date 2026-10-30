@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "batch": "B01",
+  "candidate": "B01-candidate-7",
+  "reviewDate": "2026-10-30",
+  "timezone": "Asia/Shanghai",
+  "scope": "B01共享契约及公共食谱发布哈希工具已获用户明确接受；当前仅补齐接受后的交接记录与Git预览，不启动后续批次，不代表App或云端运行通过",
+  "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+  "candidateFiles": "docs/reviews/B01/candidate-manifest.json",
+  "gates": {
+    "G1": "pass",
+    "G2": "pass",
+    "G3": "pass"
+  },
+  "environment": {
+    "os": "Windows",
+    "shell": "PowerShell",
+    "python": "3.14.2",
+    "pythonPath": ".venv/Scripts/python.exe",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0",
+    "requiredFormatCheckers": [
+      "date",
+      "date-time",
+      "uri"
+    ],
+    "schemaDialect": "JSON Schema Draft 2020-12",
+    "schemaResolution": "本地Registry；缺失引用不自动联网",
+    "dependencyLock": "tests/test_contract_deps/requirements.txt"
+  },
+  "checks": [
+    {
+      "name": "full-contract-and-publication-regression",
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p \"test_*.py\" -v",
+      "result": "pass",
+      "testsRun": 51,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "managerRunSeconds": 16.084,
+      "contractTests": 29,
+      "publicationTests": 22
+    },
+    {
+      "name": "public-catalog-and-git-staged-integrity",
+      "command": ".venv/Scripts/python.exe scripts/catalog_integrity.py verify --git-mode staged --baseline-ref HEAD",
+      "result": "pass",
+      "commandsRun": [
+        "python scripts/catalog_integrity.py build --baseline-ref HEAD",
+        "python scripts/catalog_integrity.py verify --baseline-ref HEAD",
+        "python scripts/catalog_integrity.py verify --git-mode staged --baseline-ref HEAD"
+      ],
+      "entries": 0,
+      "gitMode": "staged",
+      "note": "空bootstrap仅证明工具链；非正式食谱上线。19项新回归后补至22项，实际非空合成边界由正式测试覆盖"
+    },
+    {
+      "name": "handoff-and-secret-scan",
+      "command": "严格UTF-8/JSON、Markdown、候选清单及凭据特征只读检查",
+      "result": "pass",
+      "filesChecked": 61,
+      "jsonFiles": 19,
+      "localMarkdownLinks": 80,
+      "credentialPatternMatches": 0,
+      "referenceJsonUnchanged": 13,
+      "archivedAcceptanceHash": "match",
+      "checks": "UTF-8/JSON/controls/Markdown/qualified-acceptance/downstream-gates; no production runtime claim",
+      "scopeNote": "本项保留原candidate-7接受前的检查证据；接受后59份文件的针对性复核另见post-acceptance-state-and-handoff。",
+      "finalStagedFiles": 59,
+      "manifestBoundFiles": 58,
+      "workingTreeWhitespace": "pass; exact CRLF archive has explicit cr-at-eol plus regular whitespace checks"
+    },
+    {
+      "name": "independent-read-only-review",
+      "reviewer": "b01_identity_weight_review",
+      "result": "pass",
+      "filesWritten": 0,
+      "testsRerun": 0,
+      "scope": "工具/工作流/字节属性/上传文档只读复核；原4项及后续3项边界全部闭环",
+      "unresolvedBlockers": 0,
+      "notRun": "云端CI/真实推送/OSS/Android"
+    },
+    {
+      "name": "post-acceptance-state-and-handoff",
+      "reviewDate": "2026-10-30",
+      "result": "pass",
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p \"test_contract_schema.py\" -k \"test_plan_dependencies_and_accepted_batch_evidence\" -v",
+      "testsRun": 1,
+      "failures": 0,
+      "errors": 0,
+      "managerRunSeconds": 0.011,
+      "filesChecked": 59,
+      "jsonFiles": 20,
+      "localMarkdownLinks": 79,
+      "credentialPatternMatches": 0,
+      "referenceJsonUnchanged": 13,
+      "administrativeChangesSinceAcceptance": 13,
+      "archivedCandidate7Sha256": "25037cf3e91b747cdf4a02ab14d77209a34e23bb31c21bd5268b58a82ce17bb2",
+      "runtimeAndHashImplementationUnchanged": true,
+      "testChangeLimitedToAcceptanceGate": true,
+      "acceptedB01Tasks": 7,
+      "downstreamBatchesPlanned": 13,
+      "independentReview": {
+        "reviewer": "b01_resume_audit",
+        "result": "pass",
+        "filesWritten": 0,
+        "testsRerun": 0,
+        "unresolvedBlockers": 0,
+        "scope": "原接受清单hash、B01与后续闸门、运行证明边界、旧scope修复、状态测试差异及Git确认边界；最终暂存字节由总负责人核验"
+      },
+      "stagedFiles": 59,
+      "manifestBoundFiles": 58,
+      "allBoundHashesAndStagedBytes": "pass",
+      "gitWhitespace": "pass",
+      "scope": "恢复后核对实际工作树、接受证据、Git差异、UTF-8/严格JSON/Markdown及原参考字节；当前交接清单另行刷新，原已审阅清单不变。沿用原51项回归的未变实现证据，不新增App或云端运行结论。"
+    }
+  ],
+  "pendingHumanDecisions": [],
+  "notRun": [
+    "B03生产数值计算、App源hash校验、xN聚合、portionBasisHash确定性编码、迁移及语义校验",
+    "Recipe/Ingredient自动替换及上下限调整的生产实现、重量意图映射、草稿并发/预览失效、锁定维护、逐记录原子性、队列恢复及故障运行测试",
+    "Goal自动分配、状态计算与非法分配保留原配置的运行测试",
+    "数据库事务、唯一索引、幂等、并发和故障注入",
+    "实际JSON导入原子提交、取消、回滚和导出往返",
+    "Android工程初始化、构建、API31/32/33安装与冷启动、vivo真机",
+    "MiSans字体二进制、随附具体条款、字重、字符覆盖与回退",
+    "Mermaid渲染及79个UX运行验收场景",
+    "123 WebDAV实际授权、强ETag/条件写入与双端冲突、OSS公共地址",
+    "sourceAvailability实际持久化/恢复/横幅，libraryImport正式入口/深链/提交拦截和不可删除；Figma比例的实际分配/切换",
+    "GitHub/Gitee真实推送、云端Actions运行/分支保护、OSS部署、APK/签名/公开产品发布",
+    "Linux/Windows云端矩阵未执行；当前只有本机Windows检查"
+  ],
+  "issueRecords": [
+    "ISSUE-20261028-06",
+    "ISSUE-20261028-07",
+    "ISSUE-20261028-08",
+    "ISSUE-20261028-09",
+    "ISSUE-20261029-10",
+    "ISSUE-20261029-11",
+    "ISSUE-20261029-12",
+    "ISSUE-20261029-13",
+    "ISSUE-20261029-14",
+    "ISSUE-20261029-15",
+    "ISSUE-20261030-16",
+    "ISSUE-20261030-17",
+    "ISSUE-20261030-18",
+    "ISSUE-20261030-19",
+    "ISSUE-20261030-20"
+  ],
+  "rollback": "本批只有可审阅工作树差异；原B00证据保留commit/hash。需要回退时先核实归属，逐文件保留用户及其他协作者改动；不使用清空工作区或删除测试作为恢复方式。",
+  "nextBatchGate": "B01已accepted，但后续最早2026-10-31且需新的开工指令；实际提交/推送等待当前方案第二次确认",
+  "supersedes": {
+    "candidate": "B01-candidate-6",
+    "reason": "建立用户新增要求的哈希生成/核验/上传检查；原接受及原manifest另行保留",
+    "priorHumanAcceptance": "accepted-except-new-hash-supplement"
+  },
+  "resolvedUserDecisions": [
+    {
+      "id": "D12",
+      "date": "2026-10-29",
+      "statements": [
+        "是的",
+        "自动替换"
+      ],
+      "scope": "公共Recipe更新自动替换库当前正文、已保存配餐及活动草稿的对应配方并重算营养，无逐份确认；不保留可浏览旧版"
+    },
+    {
+      "id": "D13",
+      "date": "2026-10-30",
+      "statement": "是 还有其他问题依次问问完 我",
+      "answeredQuestion": "更新后保持配餐当前已接受的实际总重不变，以新版配方重算",
+      "scope": "正式记录和草稿已接受实际总重保留；不取旧requested或原锚点差值，未接受预览/无效编辑不自动消费"
+    },
+    {
+      "id": "D14",
+      "date": "2026-10-30",
+      "scope": "来源更新超过新版有效上限降至上限，低于下限升至下限，自动重算"
+    },
+    {
+      "id": "D15",
+      "date": "2026-10-30",
+      "scope": "独立Ingredient新版自动更新已有配餐及草稿，保重量线性重算"
+    },
+    {
+      "id": "D16",
+      "date": "2026-10-30",
+      "scope": "公共库下架保留私人条目最后数据，详情顶部横幅提醒"
+    },
+    {
+      "id": "D17",
+      "date": "2026-10-30",
+      "scope": "首版库导入仅开发者测试，导入后暂不能删；mealBackup保留"
+    },
+    {
+      "id": "D18",
+      "date": "2026-10-30",
+      "scope": "餐次比例沿用Figma两/三/四/五餐预设及自定义，当前三餐2:4:4"
+    },
+    {
+      "id": "D19",
+      "date": "2026-10-30",
+      "statement": "部分食谱已删除，已保留原有数据",
+      "scope": "S13公共下架提醒横幅固定文字；不代表B01整批G3接受"
+    }
+  ],
+  "previousEvidence": {
+    "candidate": "B01-candidate-6",
+    "reviewedManifest": "docs/reviews/B01/reviewed-candidate-6-manifest.json",
+    "partialAcceptance": "docs/reviews/B01/acceptance.json",
+    "localSnapshot": "见acceptance.json localBackup，忽略且不上传"
+  },
+  "humanReview": "用户明确接受B01-candidate-7，原审阅清单另行归档；未通过未运行的App/云端检查",
+  "gitPreparation": {
+    "localBranch": "main",
+    "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+    "remoteMainAtInspection": {
+      "github": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+      "gitee": "cb2f74864618d2facd0b330bbf1f1914e382d7dc"
+    },
+    "remoteVisibility": {
+      "github": "public",
+      "gitee": "public"
+    },
+    "proposedCommitSubject": "完善B01共享契约与公共食谱哈希校验",
+    "status": "staged-preview-awaiting-second-confirmation",
+    "commitCreated": false,
+    "pushed": false,
+    "confirmationsForThisPlan": 1,
+    "plan": "docs/reviews/B01/git-sync-plan.md",
+    "stagedFileCount": 59,
+    "allStagedBytesMatchWorkingTree": true,
+    "firstConfirmation": {
+      "date": "2026-10-30",
+      "userStatement": "接受哈希补充方案，并按上述范围提交、同步两个远端"
+    }
+  },
+  "acceptanceEvidence": "docs/reviews/B01/acceptance.json"
+}

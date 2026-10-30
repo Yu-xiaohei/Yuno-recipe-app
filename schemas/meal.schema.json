@@ -1,0 +1,544 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/meal.schema.json",
+  "title": "Saved private meals and deletion tombstones",
+  "$comment": "B01 candidate 3. Recipe source snapshots follow automatic source updates in a new record revision; goal and slot snapshots remain preserved. The root admits saved records and tombstones only. Drafts are validated through #/$defs/draft and must never be exported or synchronized as saved records.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/record"
+    },
+    {
+      "$ref": "#/$defs/tombstone"
+    }
+  ],
+  "$defs": {
+    "slotSnapshot": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "order"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "name": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "goalSnapshot": {
+      "type": "object",
+      "required": [
+        "profileId",
+        "profileRevision",
+        "rulesVersion",
+        "goals"
+      ],
+      "properties": {
+        "profileId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "profileRevision": {
+          "$ref": "common.schema.json#/$defs/revision"
+        },
+        "rulesVersion": {
+          "const": "goal-status-v1"
+        },
+        "goals": {
+          "$ref": "goal.schema.json#/$defs/goalMap"
+        }
+      },
+      "additionalProperties": false
+    },
+    "adjustedItem": {
+      "type": "object",
+      "required": [
+        "itemId",
+        "weight"
+      ],
+      "properties": {
+        "itemId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "weight": {
+          "$ref": "common.schema.json#/$defs/nonNegativeNumber"
+        }
+      },
+      "additionalProperties": false,
+      "description": "References an itemId in the source snapshot applied to this record revision, or the original ingredient id. A successful automatic Recipe update replaces source and derived results together in a new record revision."
+    },
+    "adjustment": {
+      "type": "object",
+      "required": [
+        "mode",
+        "requestedTarget",
+        "actualTarget",
+        "reachableMin",
+        "reachableMax",
+        "status",
+        "actualValueAccepted",
+        "warnings"
+      ],
+      "properties": {
+        "mode": {
+          "const": "weight"
+        },
+        "requestedTarget": {
+          "type": "number",
+          "minimum": 1
+        },
+        "actualTarget": {
+          "type": "number",
+          "minimum": 1
+        },
+        "reachableMin": {
+          "$ref": "common.schema.json#/$defs/nonNegativeNumber"
+        },
+        "reachableMax": {
+          "$ref": "common.schema.json#/$defs/nonNegativeNumber"
+        },
+        "status": {
+          "enum": [
+            "exact",
+            "approximate",
+            "unreachable"
+          ]
+        },
+        "actualValueAccepted": {
+          "type": "boolean"
+        },
+        "warnings": {
+          "$ref": "common.schema.json#/$defs/stringList"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "approximate",
+                  "unreachable"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "actualValueAccepted": {
+                "const": true
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "entryBase": {
+      "type": "object",
+      "required": [
+        "entryId",
+        "originNamespace",
+        "libraryEntryId",
+        "sourceKind",
+        "sourceId",
+        "sourceRevision",
+        "sourceContentHash",
+        "portionBasisHash",
+        "originalPortionWeight",
+        "sourceCount",
+        "requestedWeight",
+        "originalSnapshot"
+      ],
+      "properties": {
+        "entryId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "originNamespace": {
+          "$ref": "common.schema.json#/$defs/id",
+          "description": "Stable logical library namespace; changing OSS/GitHub/Gitee transport mirrors does not change it."
+        },
+        "libraryEntryId": {
+          "$ref": "common.schema.json#/$defs/id",
+          "description": "One independent library record. Distinct records remain distinct even if sourceId and sourceContentHash are identical."
+        },
+        "sourceKind": {
+          "enum": [
+            "recipe",
+            "ingredient"
+          ]
+        },
+        "sourceId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "sourceRevision": {
+          "$ref": "common.schema.json#/$defs/revision"
+        },
+        "sourceContentHash": {
+          "$ref": "common.schema.json#/$defs/contentHash"
+        },
+        "portionBasisHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "not": {
+            "pattern": "[\\u0000-\\u001f\\u007f]"
+          },
+          "description": "Versioned deterministic calculation-basis identity, distinct from the original file-byte hash. Its encoder is specified before B03 implementation."
+        },
+        "originalPortionWeight": {
+          "$ref": "common.schema.json#/$defs/positiveNumber"
+        },
+        "sourceCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "requestedWeight": {
+          "$ref": "common.schema.json#/$defs/nonNegativeNumber"
+        },
+        "actualWeight": {
+          "$ref": "common.schema.json#/$defs/nonNegativeNumber"
+        },
+        "originalSnapshot": {
+          "type": "object"
+        },
+        "adjustedItems": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/adjustedItem"
+          }
+        },
+        "totals": {
+          "$ref": "common.schema.json#/$defs/totals"
+        },
+        "adjustment": {
+          "$ref": "#/$defs/adjustment"
+        },
+        "sourceAvailability": {
+          "$ref": "#/$defs/sourceAvailability"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sourceKind": {
+                "const": "recipe"
+              }
+            },
+            "required": [
+              "sourceKind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "originalSnapshot": {
+                "$ref": "recipe.schema.json#/$defs/canonical"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "originalPortionWeight": {
+                "const": 100
+              },
+              "originalSnapshot": {
+                "$ref": "ingredient.schema.json"
+              },
+              "adjustedItems": {
+                "maxItems": 1
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "savedEntry": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/entryBase"
+        },
+        {
+          "required": [
+            "actualWeight",
+            "adjustedItems",
+            "totals",
+            "adjustment"
+          ],
+          "properties": {
+            "requestedWeight": {
+              "type": "number",
+              "minimum": 1
+            },
+            "actualWeight": {
+              "type": "number",
+              "minimum": 1
+            },
+            "totals": {
+              "properties": {
+                "weight": {
+                  "type": "number",
+                  "minimum": 1
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "record": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "kind",
+        "id",
+        "revision",
+        "parentRevision",
+        "deviceId",
+        "date",
+        "mealSlotSnapshot",
+        "goalSnapshot",
+        "entries",
+        "totals",
+        "calculationVersion",
+        "isLocked",
+        "syncEnabled",
+        "createdAt",
+        "updatedAt",
+        "deletedAt"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "mealRecord"
+        },
+        "id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "revision": {
+          "$ref": "common.schema.json#/$defs/revision"
+        },
+        "parentRevision": {
+          "oneOf": [
+            {
+              "$ref": "common.schema.json#/$defs/revision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deviceId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "date": {
+          "$ref": "common.schema.json#/$defs/localDate"
+        },
+        "mealSlotSnapshot": {
+          "$ref": "#/$defs/slotSnapshot"
+        },
+        "goalSnapshot": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/goalSnapshot"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/savedEntry"
+          }
+        },
+        "totals": {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/totals"
+            },
+            {
+              "properties": {
+                "weight": {
+                  "type": "number",
+                  "minimum": 1
+                }
+              }
+            }
+          ]
+        },
+        "calculationVersion": {
+          "const": "bounded-healthweight-v1"
+        },
+        "isLocked": {
+          "type": "boolean"
+        },
+        "syncEnabled": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "$ref": "common.schema.json#/$defs/dateTime"
+        },
+        "updatedAt": {
+          "$ref": "common.schema.json#/$defs/dateTime"
+        },
+        "deletedAt": {
+          "type": "null"
+        }
+      },
+      "additionalProperties": false
+    },
+    "tombstone": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "kind",
+        "id",
+        "revision",
+        "parentRevision",
+        "deviceId",
+        "date",
+        "mealSlotId",
+        "deletedAt"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "mealTombstone"
+        },
+        "id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "revision": {
+          "$ref": "common.schema.json#/$defs/revision"
+        },
+        "parentRevision": {
+          "oneOf": [
+            {
+              "$ref": "common.schema.json#/$defs/revision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deviceId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "date": {
+          "$ref": "common.schema.json#/$defs/localDate"
+        },
+        "mealSlotId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "deletedAt": {
+          "$ref": "common.schema.json#/$defs/dateTime"
+        }
+      },
+      "additionalProperties": false
+    },
+    "draft": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "kind",
+        "draftId",
+        "sourceMealId",
+        "expectedRevision",
+        "date",
+        "mealSlotId",
+        "entries"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "mealDraft"
+        },
+        "draftId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "sourceMealId": {
+          "oneOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "expectedRevision": {
+          "oneOf": [
+            {
+              "$ref": "common.schema.json#/$defs/revision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "date": {
+          "$ref": "common.schema.json#/$defs/localDate"
+        },
+        "mealSlotId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entryBase"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceAvailability": {
+      "type": "object",
+      "required": [
+        "status",
+        "catalogRevision",
+        "deletionRevision",
+        "deletedAt",
+        "observedAt"
+      ],
+      "properties": {
+        "status": {
+          "const": "withdrawn"
+        },
+        "catalogRevision": {
+          "$ref": "common.schema.json#/$defs/revision"
+        },
+        "deletionRevision": {
+          "$ref": "common.schema.json#/$defs/revision"
+        },
+        "deletedAt": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        },
+        "observedAt": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Verified explicit catalog deletion evidence for the enclosing independent library identity. Retain last source snapshot and nutrition. Absence means no confirmed withdrawal, not verified availability. Not a private meal tombstone."
+    }
+  }
+}

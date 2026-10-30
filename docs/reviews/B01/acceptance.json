@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "batch": "B01",
+  "candidate": "B01-candidate-7",
+  "status": "accepted",
+  "acceptedDate": "2026-10-30",
+  "userStatement": "接受哈希补充方案，并按上述范围提交、同步两个远端",
+  "scope": "接受共享契约及发布哈希工具补充；不是Android/云端CI运行结论，不启动后续批次。此消息也是当前Git同步方案第一次确认，第二次确认尚未取得。",
+  "reviewedManifest": "docs/reviews/B01/reviewed-candidate-7-manifest.json",
+  "reviewedManifestSha256": "25037cf3e91b747cdf4a02ab14d77209a34e23bb31c21bd5268b58a82ce17bb2",
+  "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+  "priorPartialAcceptance": {
+    "schemaVersion": 1,
+    "batch": "B01",
+    "candidate": "B01-candidate-6",
+    "status": "accepted-except-new-hash-supplement",
+    "acceptedDate": "2026-10-30",
+    "userStatement": "B01 其他方面通过审核，可以准备提交 Git，并上传至云端同步，待明日开启后续步骤",
+    "scope": "已审阅candidate-6其余契约通过；本轮新增发布哈希工具补充仍需自检/总检/人工复核。不是云端推送双次确认，也不启动后续批次。",
+    "reviewedManifest": "docs/reviews/B01/reviewed-candidate-6-manifest.json",
+    "reviewedManifestSha256": "87f339e682be8fd393dcf1f026a257dc3aa9bd5abfcd1a58aebc861b190f73c0",
+    "localBackup": ".agent-tmp/b01_hash/tmp_b01_pre_hash_snapshot_20261030_014803.zip",
+    "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc"
+  }
+}

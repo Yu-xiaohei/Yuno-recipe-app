@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "batch": "B01",
+  "candidate": "B01-candidate-6",
+  "generatedAt": "2026-10-30T01:36:47+08:00",
+  "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+  "status": "human_review",
+  "hashPolicy": "SHA-256 of exact current working-tree file bytes; manifest excludes itself to avoid self-reference. verification.json is included. Any listed file mutation invalidates this snapshot.",
+  "fileCount": 49,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 530,
+      "sha256": "148efa1ee2717901323ff8953b5e8845b13b149a8ec805301fd405233d4c226f"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 10543,
+      "sha256": "387304ed9b66ca9f4762f95df548816b942463ec838cfe93f118fcd3ea97bfae"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3573,
+      "sha256": "365e7c541789daf1ffd9ea96b568235bb79801e5090d13bb20d14bca545a2db8"
+    },
+    {
+      "path": "config/development-baseline.json",
+      "bytes": 7594,
+      "sha256": "3935a123222f70bac896874bfab9317d11f189da98fb5dcd32ff62467f26f7ef"
+    },
+    {
+      "path": "config/project-plan.json",
+      "bytes": 75935,
+      "sha256": "dca1d04c17a42cf4bbd7fcb2435d87d843f2807773e5165b0fa9b21b004341ae"
+    },
+    {
+      "path": "docs/Miuix-UI与液态玻璃基线.md",
+      "bytes": 7676,
+      "sha256": "8153d444e8298302c721daebf70a3e47a4bb58b2428ca250b2a13c00850fedaf"
+    },
+    {
+      "path": "docs/UI设计稿需求.md",
+      "bytes": 8562,
+      "sha256": "07fb8cdf9e46b7404e7a5050516134b816c4cb8fff0b6a08335c0c37e14557ac"
+    },
+    {
+      "path": "docs/agent-files.md",
+      "bytes": 2162,
+      "sha256": "ccfd90ab930650b72e465c931b82fae097a8d655e5505e13b5477d2e960fed3a"
+    },
+    {
+      "path": "docs/contracts/catalog-data.md",
+      "bytes": 9467,
+      "sha256": "1552a85ed0b01ed8417ae620e3ff4544a3c244b65b3bd1984e26efdae17ad727"
+    },
+    {
+      "path": "docs/contracts/goal-transfer-policy.md",
+      "bytes": 9943,
+      "sha256": "91a5f2a9794261ae94462e4bbf16a616a3eda8ae7f11a1a0da6adba3302896a4"
+    },
+    {
+      "path": "docs/contracts/module-ownership.md",
+      "bytes": 2154,
+      "sha256": "58c7cc4bbc9d257a20609cbfea2f621b01f106856ac58970f32b78d4678a00a4"
+    },
+    {
+      "path": "docs/contracts/quantity-policy.md",
+      "bytes": 9089,
+      "sha256": "00febf45f589822a8bc87098912e18710ed2dd0ba71303da8d2d1f6ab704e296"
+    },
+    {
+      "path": "docs/contracts/repositories.md",
+      "bytes": 10940,
+      "sha256": "9e5a8e8921321ec68fe906bb890af572c51da4eec5c3e7ff8e86d1ba58bc6dfb"
+    },
+    {
+      "path": "docs/contracts/sync-policy.md",
+      "bytes": 9051,
+      "sha256": "5cf67777699b800165bec60fffdc0f7c4f9632d960265756716e91fcf2af353a"
+    },
+    {
+      "path": "docs/contracts/ui-baseline.md",
+      "bytes": 16691,
+      "sha256": "48ccd8bc65825f2fbb624219e28a219f0a5689a1c70509ba66ee42e834974800"
+    },
+    {
+      "path": "docs/log.md",
+      "bytes": 6752,
+      "sha256": "65d8fce1383d9fcde2a3edee2880b894dc13e4859892d24cb6d5ee1b8e68de9c"
+    },
+    {
+      "path": "docs/planning/P0-P3实施计划.md",
+      "bytes": 7277,
+      "sha256": "3ae850b4371b0530458695056133d7f1e5039cc955a13f646de92826355ddb08"
+    },
+    {
+      "path": "docs/planning/命名与决策登记.md",
+      "bytes": 5571,
+      "sha256": "e21f75a88526c60a2cbe74240d90982e5d10f38537df964233472e7298a8dab2"
+    },
+    {
+      "path": "docs/planning/规划总检报告.md",
+      "bytes": 4938,
+      "sha256": "c666d7bd3c4e7b9a4c6bbcb3169b007759e0b90ec4dfccf64ae441321481d8fb"
+    },
+    {
+      "path": "docs/planning/质量与复核方案.md",
+      "bytes": 26808,
+      "sha256": "cd3b7eefefaf2c8806bceebaeaa5d059be65677f3f382be1139b9863982a0a86"
+    },
+    {
+      "path": "docs/reviews/B00/acceptance.json",
+      "bytes": 862,
+      "sha256": "260c0c29895532f69306df7f2c39c61bd9b4a70cd324002f361c7d11b0657c02"
+    },
+    {
+      "path": "docs/reviews/B01/README.md",
+      "bytes": 3290,
+      "sha256": "dd4692ce7379103b1cfd14be72508411e0ab2836d5dd14e4edb4ea98dfa396ad"
+    },
+    {
+      "path": "docs/reviews/B01/ui-self-check.md",
+      "bytes": 3087,
+      "sha256": "7341af63d1e6e4d8448fc7bf37ca325dc98da90330cc9f4db78ec316bea926ac"
+    },
+    {
+      "path": "docs/reviews/B01/verification.json",
+      "bytes": 14509,
+      "sha256": "2f4c9ca07864f37f5b36fa289bd6bdb454f5d946d3b25d69888f7a0d32746875"
+    },
+    {
+      "path": "docs/skill改造说明.md",
+      "bytes": 3537,
+      "sha256": "61088f12d9600d369af721d258c13bdf60c270e77c7935c7c13df37a1688d2f9"
+    },
+    {
+      "path": "docs/ux/README.md",
+      "bytes": 6279,
+      "sha256": "ee9e25a24fe2eaae93c3da4211c6ffc53981dd1ad697527d3f46c627241f8b01"
+    },
+    {
+      "path": "docs/ux/screen-contracts.json",
+      "bytes": 124110,
+      "sha256": "efeb9a967305185f3521824b9f1ee9875c2e1521312923683355993ba9803c88"
+    },
+    {
+      "path": "docs/ux/流程与状态.md",
+      "bytes": 16016,
+      "sha256": "371a6dc1bfeaa0dfb6302947ad77ce6da8f5ce5192311124360813200b9df7f9"
+    },
+    {
+      "path": "docs/ux/页面与组件契约.md",
+      "bytes": 19024,
+      "sha256": "0c89d06dedeed3ec74cc01c21d3c05a696a815437954342324b3786b16f58096"
+    },
+    {
+      "path": "docs/于の食谱 UX.md",
+      "bytes": 8352,
+      "sha256": "f7d6c913776c3ab318c130313503635c81080be1ebc84b336e66b2de002d7b4e"
+    },
+    {
+      "path": "docs/于の食谱-完整方案.md",
+      "bytes": 12071,
+      "sha256": "02fe4c7d13230052541b57894f9ec1dd7eab85e81f5ac785a6a13490ad86c073"
+    },
+    {
+      "path": "docs/任务清单.md",
+      "bytes": 8689,
+      "sha256": "5688041e94b756b1a56e38da6f662d5145cf08028a324a240876003a60117a02"
+    },
+    {
+      "path": "docs/审阅与调整记录-2026-10-28.md",
+      "bytes": 6326,
+      "sha256": "8a30aecaaa8d81fa3baef87629b3ce607b32dcf48f482f63d7ca124b5d9f20ba"
+    },
+    {
+      "path": "docs/开发前检查与待确认.md",
+      "bytes": 10843,
+      "sha256": "19b4a0e73c97243a67415810ec4c0f63891fbd5ad165db4e6c2364a561579d8a"
+    },
+    {
+      "path": "docs/接口与字段清单.md",
+      "bytes": 12750,
+      "sha256": "98c7bb5fcb675d2dad8ab41c8b4ad4c8662131226d608c25afbcfc4fdeed8a20"
+    },
+    {
+      "path": "docs/问题复盘与防复发.md",
+      "bytes": 29191,
+      "sha256": "8079f71c45c62a9aa5dd56e4cb9304df938c99b9fc354e7f98d6e9630c695462"
+    },
+    {
+      "path": "docs/附录A-视觉与动效设计.md",
+      "bytes": 4445,
+      "sha256": "ece852d5d5ccc2623fc15e886f4756d053b391f66d12a2990b3ca3204cdddd02"
+    },
+    {
+      "path": "schemas/catalog.schema.json",
+      "bytes": 4716,
+      "sha256": "ab771aa7d292cd93162e75937aa5236899765d6c1f1da211e6658db632d86bf3"
+    },
+    {
+      "path": "schemas/common.schema.json",
+      "bytes": 5672,
+      "sha256": "5928ccd6e2274714b04d68a0ef51d7126feca34e6b406967a0cfe56826aa1253"
+    },
+    {
+      "path": "schemas/goal.schema.json",
+      "bytes": 4502,
+      "sha256": "e830ac24fa42956aa04860874896e7023ade235a216f2d5673a66d70dae89c30"
+    },
+    {
+      "path": "schemas/ingredient.schema.json",
+      "bytes": 1785,
+      "sha256": "42e350e70d31d1d94c28a8498bf29351d20b7746568d8e9dc0674561f585a94c"
+    },
+    {
+      "path": "schemas/meal.schema.json",
+      "bytes": 14225,
+      "sha256": "eb60e28f836771a0f9afcdb9fd8cf44c0c8cc78c619a5cadba192cb57db5b2f6"
+    },
+    {
+      "path": "schemas/recipe.schema.json",
+      "bytes": 8149,
+      "sha256": "50166a3fc3d147a83011c910d1c76f54b02ff0661bfe16a38e43ae4c53701511"
+    },
+    {
+      "path": "schemas/sync.schema.json",
+      "bytes": 701,
+      "sha256": "163804da75162e83d5f1d401bceff21b633cd4d208743235490971c9a176dfed"
+    },
+    {
+      "path": "schemas/transfer.schema.json",
+      "bytes": 2282,
+      "sha256": "798dc7aaafedb8b6adcd692f2e6e64c37a7537f4227e10d29fd92f9d8bef537b"
+    },
+    {
+      "path": "scripts/check_recipe_preflight.py",
+      "bytes": 7903,
+      "sha256": "b7c01ece4376aa4545e467a3cf5e6bf67aa45ef2dcac3cfdf5154620778a5b7a"
+    },
+    {
+      "path": "tests/test_contract_deps/requirements.txt",
+      "bytes": 318,
+      "sha256": "6ee6efda0635dcbc7cfa1d4cebe6566d4b33008924b1fe89a087f9920342b367"
+    },
+    {
+      "path": "tests/test_contract_samples.json",
+      "bytes": 2590,
+      "sha256": "2f6a59d4228cf53c32e26b8f476c80eb5ac57c2dbe3d1c0d52dd17baebf7627a"
+    },
+    {
+      "path": "tests/test_contract_schema.py",
+      "bytes": 27549,
+      "sha256": "f07179f6616cee364ae8179ab740858122d3df2769e8e7ee516700d948703e71"
+    }
+  ]
+}

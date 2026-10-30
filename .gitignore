@@ -33,6 +33,7 @@ token.txt
 
 # === 本项目 ===
 # 一次性测试缓存
+.agent-tmp/
 cache/*
 !cache/.gitkeep
 

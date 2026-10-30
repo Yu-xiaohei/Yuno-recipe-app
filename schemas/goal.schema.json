@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/goal.schema.json",
+  "title": "User goal profile and stable meal slots",
+  "$comment": "B01 candidate. Empty goal maps mean unconfigured; no recommended target values are supplied. Cross-field bounds, unique IDs and allocation sums require semantic validation.",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "id", "revision", "updatedAt", "rulesVersion", "dailyGoals", "mealSlots"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "goalProfile" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" },
+    "updatedAt": { "$ref": "common.schema.json#/$defs/dateTime" },
+    "rulesVersion": { "const": "goal-status-v1" },
+    "dailyGoals": { "$ref": "#/$defs/goalMap" },
+    "mealSlots": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/mealSlot" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "targetGoal": {
+      "type": "object",
+      "required": ["mode", "unit", "target"],
+      "properties": {
+        "mode": { "const": "target" },
+        "unit": { "enum": ["g", "mg", "kcal"] },
+        "target": { "$ref": "common.schema.json#/$defs/positiveNumber" },
+        "warningFraction": { "const": 0.1, "default": 0.1 }
+      },
+      "additionalProperties": false
+    },
+    "rangeGoal": {
+      "type": "object",
+      "required": ["mode", "unit", "lower", "upper"],
+      "properties": {
+        "mode": { "const": "range" },
+        "unit": { "enum": ["g", "mg", "kcal"] },
+        "lower": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "upper": { "$ref": "common.schema.json#/$defs/positiveNumber" },
+        "warningFraction": { "const": 0.1, "default": 0.1 }
+      },
+      "additionalProperties": false,
+      "description": "Semantic validation must additionally enforce lower < upper."
+    },
+    "maxGoal": {
+      "type": "object",
+      "required": ["mode", "unit", "upper"],
+      "properties": {
+        "mode": { "const": "max" },
+        "unit": { "enum": ["g", "mg", "kcal"] },
+        "upper": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "warningFraction": { "const": 0.1, "default": 0.1 }
+      },
+      "additionalProperties": false,
+      "description": "upper=0 is allowed; actual=0 meets the limit and any positive actual exceeds it without division by zero."
+    },
+    "nutrientGoal": {
+      "oneOf": [
+        { "$ref": "#/$defs/targetGoal" },
+        { "$ref": "#/$defs/rangeGoal" },
+        { "$ref": "#/$defs/maxGoal" }
+      ]
+    },
+    "gramGoal": {
+      "allOf": [
+        { "$ref": "#/$defs/nutrientGoal" },
+        { "properties": { "unit": { "const": "g" } } }
+      ]
+    },
+    "milligramGoal": {
+      "allOf": [
+        { "$ref": "#/$defs/nutrientGoal" },
+        { "properties": { "unit": { "const": "mg" } } }
+      ]
+    },
+    "energyGoal": {
+      "allOf": [
+        { "$ref": "#/$defs/nutrientGoal" },
+        { "properties": { "unit": { "const": "kcal" } } }
+      ]
+    },
+    "goalMap": {
+      "type": "object",
+      "properties": {
+        "weight": { "$ref": "#/$defs/gramGoal" },
+        "energy": { "$ref": "#/$defs/energyGoal" },
+        "carb": { "$ref": "#/$defs/gramGoal" },
+        "protein": { "$ref": "#/$defs/gramGoal" },
+        "fat": { "$ref": "#/$defs/gramGoal" },
+        "vitaminC": { "$ref": "#/$defs/milligramGoal" },
+        "fiber": { "$ref": "#/$defs/gramGoal" },
+        "sodium": { "$ref": "#/$defs/milligramGoal" }
+      },
+      "additionalProperties": false,
+      "description": "An absent key is unconfigured at daily scope, or inherits its allocation at meal override scope. null is not a valid configured goal."
+    },
+    "mealSlot": {
+      "type": "object",
+      "required": ["id", "name", "order", "enabled", "allocationWeight"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "order": { "type": "integer", "minimum": 0 },
+        "enabled": { "type": "boolean" },
+        "allocationWeight": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "mealGoals": { "$ref": "#/$defs/goalMap" }
+      },
+      "additionalProperties": false,
+      "description": "Renaming, reordering or disabling preserves id and historical snapshots. mealGoals contains explicit per-nutrient manual overrides."
+    }
+  }
+}

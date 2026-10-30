@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "batch": "B01",
+  "candidate": "B01-candidate-7",
+  "generatedAt": "2026-10-30T12:48:24+08:00",
+  "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+  "status": "handoff_after_acceptance",
+  "hashPolicy": "SHA-256 of exact working-tree bytes; all bound files must also match staged Git blobs. Manifest excludes itself. Original accepted candidate-7 bytes are archived separately; current handoff includes acceptance administration and its state-gate test update.",
+  "reviewedManifest": "docs/reviews/B01/reviewed-candidate-7-manifest.json",
+  "reviewedManifestSha256": "25037cf3e91b747cdf4a02ab14d77209a34e23bb31c21bd5268b58a82ce17bb2",
+  "fileCount": 58,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 761,
+      "sha256": "6fc4b97bd2be059416c909ea323d55f7ea7113e66ab4d39cb72c805e68e790c5"
+    },
+    {
+      "path": ".github/workflows/catalog-integrity.yml",
+      "bytes": 1207,
+      "sha256": "e79f388b44da617b0ff677492e79b52be277c61af07d6d001c4083eb2b0c66ea"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 530,
+      "sha256": "148efa1ee2717901323ff8953b5e8845b13b149a8ec805301fd405233d4c226f"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 11032,
+      "sha256": "64cbbb88765bdb4f7e38dd91f04c455afb6941af5a6fb3ae7407de7b29c35fc9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3785,
+      "sha256": "e01de15eb039a1d9bddd3259741b51e583cf924199615ed9706a95d138a3e32d"
+    },
+    {
+      "path": "config/catalog-publication.json",
+      "bytes": 95,
+      "sha256": "b39aa7cd8fe15ff751e1674f8c4f789fc2dbe66f579258a583cd323018eedda5"
+    },
+    {
+      "path": "config/development-baseline.json",
+      "bytes": 8365,
+      "sha256": "c6ca6daaf2996b3853683ebf48b803ae76b2a270c796d72f30c710ee9e50d32b"
+    },
+    {
+      "path": "config/project-plan.json",
+      "bytes": 73646,
+      "sha256": "d77de89ea17a5c870da62d514b576345b28ab8a229709be67e36c9a5b4acbef1"
+    },
+    {
+      "path": "data/public/README.md",
+      "bytes": 619,
+      "sha256": "8d4aa6b0b48ab1aeae73d936b0e498113eb8f8c3450006e085d3d985075ce9b3"
+    },
+    {
+      "path": "data/public/catalog.json",
+      "bytes": 117,
+      "sha256": "bb92cbca72718a2d6c42d04f2a2706ea2155d7d2986d41cf9414a2e3879adb58"
+    },
+    {
+      "path": "docs/UI设计稿需求.md",
+      "bytes": 8562,
+      "sha256": "07fb8cdf9e46b7404e7a5050516134b816c4cb8fff0b6a08335c0c37e14557ac"
+    },
+    {
+      "path": "docs/agent-files.md",
+      "bytes": 3145,
+      "sha256": "a74b98b458966515ca29897d3191bb42d730e63d34b1b57275c0faffcd472ddf"
+    },
+    {
+      "path": "docs/contracts/catalog-data.md",
+      "bytes": 9884,
+      "sha256": "283f0895e044fd8cd74b04f13756b1d26ab0e1acee9463d9c5286dc2c26d57f9"
+    },
+    {
+      "path": "docs/contracts/goal-transfer-policy.md",
+      "bytes": 9943,
+      "sha256": "f1319029c53262b732dac5d900c777f36fb8eb9b22da0013fa35def2e778e117"
+    },
+    {
+      "path": "docs/contracts/module-ownership.md",
+      "bytes": 2154,
+      "sha256": "8c772d7661936eb08d12f4795e70055a120581e7c9f201ddd35214e3046c36d9"
+    },
+    {
+      "path": "docs/contracts/quantity-policy.md",
+      "bytes": 9089,
+      "sha256": "8547f97ae05bd2e9d8f7fcf48233ee2f70915401a899c0d9db035f4b7287443f"
+    },
+    {
+      "path": "docs/contracts/repositories.md",
+      "bytes": 10940,
+      "sha256": "7783c38469b72ed89ad066aa247747667380a88bb01cb80b3ad8fb78dd04e729"
+    },
+    {
+      "path": "docs/contracts/sync-policy.md",
+      "bytes": 9051,
+      "sha256": "cc0364c85f22ed4a65862e578b40ba258fbeafcce2b70631f7140acebd13d98d"
+    },
+    {
+      "path": "docs/contracts/ui-baseline.md",
+      "bytes": 16691,
+      "sha256": "48ccd8bc65825f2fbb624219e28a219f0a5689a1c70509ba66ee42e834974800"
+    },
+    {
+      "path": "docs/log.md",
+      "bytes": 7717,
+      "sha256": "d3f8dbefd41b55546abac35c522ff4ccf6fbc2e001dd2a06fb3217e957653285"
+    },
+    {
+      "path": "docs/planning/P0-P3实施计划.md",
+      "bytes": 7207,
+      "sha256": "5866c08c044e9291c4d53fb780693d4ef7100e6367c9274af0713e43a4677303"
+    },
+    {
+      "path": "docs/planning/命名与决策登记.md",
+      "bytes": 5510,
+      "sha256": "38c71a7a7ced665c9faf6f2e99a052634977e9e9d45c09b8587c0ea69986ee9c"
+    },
+    {
+      "path": "docs/planning/规划总检报告.md",
+      "bytes": 4897,
+      "sha256": "37c54371472fdefb844ba1cef1817ab7246ca3fb7452a7471482bfdb3320a338"
+    },
+    {
+      "path": "docs/planning/质量与复核方案.md",
+      "bytes": 26595,
+      "sha256": "d537f3d752f5fef123a48b2dded9b9ba32c13feb404cf28e1f8613fdd2c5fac9"
+    },
+    {
+      "path": "docs/reviews/B00/acceptance.json",
+      "bytes": 862,
+      "sha256": "260c0c29895532f69306df7f2c39c61bd9b4a70cd324002f361c7d11b0657c02"
+    },
+    {
+      "path": "docs/reviews/B01/README.md",
+      "bytes": 1115,
+      "sha256": "00057fb424a05e3ef1ca185da3535741d329b415981ae36f96d24b5cbd5e1524"
+    },
+    {
+      "path": "docs/reviews/B01/acceptance.json",
+      "bytes": 1529,
+      "sha256": "5eef60bb85f02be9e748ece796be3ff9a97bf1526750102e7a9bc6187ed37cc4"
+    },
+    {
+      "path": "docs/reviews/B01/git-sync-plan.md",
+      "bytes": 2015,
+      "sha256": "cc9ac175a85a152fd6ac167d956c7dde85212c552eaf980fa5413884a3495da8"
+    },
+    {
+      "path": "docs/reviews/B01/reviewed-candidate-6-manifest.json",
+      "bytes": 8728,
+      "sha256": "87f339e682be8fd393dcf1f026a257dc3aa9bd5abfcd1a58aebc861b190f73c0"
+    },
+    {
+      "path": "docs/reviews/B01/reviewed-candidate-7-manifest.json",
+      "bytes": 9785,
+      "sha256": "25037cf3e91b747cdf4a02ab14d77209a34e23bb31c21bd5268b58a82ce17bb2"
+    },
+    {
+      "path": "docs/reviews/B01/ui-self-check.md",
+      "bytes": 3087,
+      "sha256": "7341af63d1e6e4d8448fc7bf37ca325dc98da90330cc9f4db78ec316bea926ac"
+    },
+    {
+      "path": "docs/reviews/B01/verification.json",
+      "bytes": 10167,
+      "sha256": "4e7f7f8cf27a5698d1bedebbb77cd86e7bf51323994f46e99a61e3d369e9bd0d"
+    },
+    {
+      "path": "docs/ux/README.md",
+      "bytes": 6220,
+      "sha256": "49e70a92b308dc773a2dfda83041250380e949da6e6b974a41c0dc5443fb292e"
+    },
+    {
+      "path": "docs/ux/screen-contracts.json",
+      "bytes": 120679,
+      "sha256": "ef38ac91c24b4c744e9227e8a0aeac31d64ddbea78fcf4fc7c6867232f317cbc"
+    },
+    {
+      "path": "docs/ux/流程与状态.md",
+      "bytes": 15776,
+      "sha256": "a9e4dd08d9f65b18d8c0cb34def71a5ecd29e2707182f72c6d75b2586135137a"
+    },
+    {
+      "path": "docs/ux/页面与组件契约.md",
+      "bytes": 19024,
+      "sha256": "0c89d06dedeed3ec74cc01c21d3c05a696a815437954342324b3786b16f58096"
+    },
+    {
+      "path": "docs/于の食谱 UX.md",
+      "bytes": 8277,
+      "sha256": "3d3f8d8ebea473b479e6851ec198af733778667e81243b2e40f439180f644a4d"
+    },
+    {
+      "path": "docs/于の食谱-完整方案.md",
+      "bytes": 11970,
+      "sha256": "40a889fe4d8e89e74211944b7fd98b636c88020a30e743cec6f919c17a709ec3"
+    },
+    {
+      "path": "docs/任务清单.md",
+      "bytes": 8598,
+      "sha256": "28021f4203db3de520317bcc0d68331589d68942bb85bf702bfb403c27a97483"
+    },
+    {
+      "path": "docs/公共食谱哈希与上传校验.md",
+      "bytes": 5960,
+      "sha256": "9a65cca5a1d4ff3291d222c3e41b08574136738095a2ab43b9b47a960c5aef5c"
+    },
+    {
+      "path": "docs/审阅与调整记录-2026-10-28.md",
+      "bytes": 6266,
+      "sha256": "4405d5577b871c2f1936e1873c8ec18a429d67079c0c01cf8555cabe8cc117e5"
+    },
+    {
+      "path": "docs/开发前检查与待确认.md",
+      "bytes": 10843,
+      "sha256": "19b4a0e73c97243a67415810ec4c0f63891fbd5ad165db4e6c2364a561579d8a"
+    },
+    {
+      "path": "docs/接口与字段清单.md",
+      "bytes": 12631,
+      "sha256": "7d5f5cc427e549079c91d4163875dab9fa90ab0e003429d814b0ff271dbd88ab"
+    },
+    {
+      "path": "docs/问题复盘与防复发.md",
+      "bytes": 33270,
+      "sha256": "b58b1e5e65d50a5e03256ee29279ae9a78d225b39bfba6d2b86588d5b6a94d1c"
+    },
+    {
+      "path": "schemas/catalog.schema.json",
+      "bytes": 4716,
+      "sha256": "ab771aa7d292cd93162e75937aa5236899765d6c1f1da211e6658db632d86bf3"
+    },
+    {
+      "path": "schemas/common.schema.json",
+      "bytes": 5672,
+      "sha256": "5928ccd6e2274714b04d68a0ef51d7126feca34e6b406967a0cfe56826aa1253"
+    },
+    {
+      "path": "schemas/goal.schema.json",
+      "bytes": 4502,
+      "sha256": "e830ac24fa42956aa04860874896e7023ade235a216f2d5673a66d70dae89c30"
+    },
+    {
+      "path": "schemas/ingredient.schema.json",
+      "bytes": 1785,
+      "sha256": "42e350e70d31d1d94c28a8498bf29351d20b7746568d8e9dc0674561f585a94c"
+    },
+    {
+      "path": "schemas/meal.schema.json",
+      "bytes": 13681,
+      "sha256": "05ba3378e4bcc850fad7f91eaf7d59f010b4514f6e3bd588ffad626437ff42fb"
+    },
+    {
+      "path": "schemas/recipe.schema.json",
+      "bytes": 8149,
+      "sha256": "50166a3fc3d147a83011c910d1c76f54b02ff0661bfe16a38e43ae4c53701511"
+    },
+    {
+      "path": "schemas/sync.schema.json",
+      "bytes": 701,
+      "sha256": "163804da75162e83d5f1d401bceff21b633cd4d208743235490971c9a176dfed"
+    },
+    {
+      "path": "schemas/transfer.schema.json",
+      "bytes": 2282,
+      "sha256": "798dc7aaafedb8b6adcd692f2e6e64c37a7537f4227e10d29fd92f9d8bef537b"
+    },
+    {
+      "path": "scripts/catalog_integrity.py",
+      "bytes": 17917,
+      "sha256": "6c56f4d2bfbc53a5160891dba35eeecd6c149b55886e54256f93ea2aafc62dab"
+    },
+    {
+      "path": "scripts/check_recipe_preflight.py",
+      "bytes": 7903,
+      "sha256": "b7c01ece4376aa4545e467a3cf5e6bf67aa45ef2dcac3cfdf5154620778a5b7a"
+    },
+    {
+      "path": "tests/test_catalog_integrity.py",
+      "bytes": 20399,
+      "sha256": "6207c16a361e211ec19af1adc522c2b1006b1212cb3b66034700b7307ac55153"
+    },
+    {
+      "path": "tests/test_contract_deps/requirements.txt",
+      "bytes": 318,
+      "sha256": "6ee6efda0635dcbc7cfa1d4cebe6566d4b33008924b1fe89a087f9920342b367"
+    },
+    {
+      "path": "tests/test_contract_samples.json",
+      "bytes": 2590,
+      "sha256": "2f6a59d4228cf53c32e26b8f476c80eb5ac57c2dbe3d1c0d52dd17baebf7627a"
+    },
+    {
+      "path": "tests/test_contract_schema.py",
+      "bytes": 28244,
+      "sha256": "16382971baf54ab4ab62ca69eac16003df1e35b2e8b6bba59bedff0c6e1bc915"
+    }
+  ]
+}

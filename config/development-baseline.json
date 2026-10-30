@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedDate": "2026-10-28",
+  "updatedDate": "2026-10-30",
   "status": "requirements-and-preflight-only",
   "canonicalWorkspace": "F:/Yuno-Develop/YUNO-recipe-app",
   "application": {
@@ -31,7 +31,11 @@
     "minSdkLocked": null,
     "compileSdkLocked": null,
     "targetSdkLocked": null,
-    "requiredCompatibilityApis": [31, 32, 33],
+    "requiredCompatibilityApis": [
+      31,
+      32,
+      33
+    ],
     "observed094AarMinCompileSdk": 37,
     "userTestDevice": {
       "manufacturer": "vivo",
@@ -48,29 +52,241 @@
       "configuredBaseUrl": null,
       "privateMealUpload": false,
       "publisherCredentialsInApk": false,
-      "repositoryMirrors": ["GitHub", "Gitee"]
+      "repositoryMirrors": [
+        "GitHub",
+        "Gitee"
+      ]
     },
     "privateMealSync": {
       "protocol": "WebDAV",
       "priorityProvider": "123云盘",
       "localSaveFirst": true,
-      "preserveHistoricalSnapshots": true,
       "preserveConflictCopies": true,
       "conditionalWriteSupportVerified": false,
-      "directOssSyncInVersion1": false
+      "directOssSyncInVersion1": false,
+      "preserveGoalAndMealSlotSnapshots": true,
+      "recipeSnapshotPolicy": "follow-automatic-recipe-and-ingredient-update; retain-withdrawn-last-snapshot"
     },
     "recipeAdjustment": "bounded-healthWeight-redistribution",
-    "goalModes": ["target", "range", "max"],
+    "mealEntryMinimumWeightGrams": 1,
+    "invalidDraftWeightRange": "0 <= weight < 1",
+    "libraryIdentity": {
+      "key": [
+        "originNamespace",
+        "libraryEntryId"
+      ],
+      "contentHashAlgorithm": "SHA-256-exact-source-file-bytes",
+      "mergeLibraryRecordsByNameOrHash": false,
+      "identicalHashRecordsRemainIndependent": true,
+      "repeatSameLibraryRecordInMeal": "aggregate-xN",
+      "updatePolicy": "replace-current-library-definition",
+      "updatePropagationToExistingMeals": "automatic-replace-source-and-recalculate",
+      "updatePropagationToEditingDrafts": "automatic-replace-source-and-recalculate"
+    },
+    "goalModes": [
+      "target",
+      "range",
+      "max"
+    ],
     "unlockMealSupported": true,
     "customMealSlots": true,
-    "jsonImportExport": true
+    "jsonImportExport": {
+      "mealBackup": {
+        "publicVersion1": true,
+        "embeddedSnapshotsCreateLibraryItems": false
+      },
+      "libraryImport": {
+        "publicVersion1": false,
+        "developerModeOnly": true,
+        "guardPreviewAndCommit": true,
+        "deepLinkBypass": false,
+        "deletionAllowed": false,
+        "implemented": false
+      }
+    },
+    "recipeAutoUpdate": {
+      "mode": "automatic",
+      "sourceKinds": [
+        "recipe",
+        "ingredient"
+      ],
+      "targets": [
+        "saved_meals",
+        "editing_drafts"
+      ],
+      "requiresPerMealConfirmation": false,
+      "includeLockedMeals": true,
+      "preserveLockState": true,
+      "preserveSourceCounts": true,
+      "preserveGoalAndMealSlotSnapshots": true,
+      "retainBrowsableOldRecipeVersions": false,
+      "failurePolicy": "keep-last-consistent-state-and-retry",
+      "weightRebasePolicy": "preserve-current-accepted-actual-weight",
+      "invalidOrUnreachablePolicy": "auto-clamp-only-for-source-update-valid-bounds; no-fabricated-success",
+      "revisionAndOutboxRequired": true,
+      "implemented": false,
+      "discardPreviousRequestedWeightIntent": true,
+      "draftUnacceptedPreviewPolicy": "preserve-edit-state-do-not-consume-or-auto-save",
+      "quantityExceptionPolicy": "clamp-to-verified-effective-bounds; empty-or-failed-solution-keeps-last-consistent-state",
+      "ingredientCalculation": "preserve-accepted-actual-weight-and-linearly-recalculate-per100",
+      "confirmedDate": "2026-10-30"
+    },
+    "publicDeletionReferences": {
+      "retainInSavedMealsAndDrafts": true,
+      "persistEntryWithdrawalEvidence": true,
+      "detailsTopBanner": true,
+      "bannerCopy": "部分食谱已删除，已保留原有数据",
+      "implemented": false
+    },
+    "mealAllocationPresets": {
+      "figmaFileKey": "gdAAv31ho4RNFgANaMOJl0",
+      "checkedDate": "2026-10-30",
+      "verification": "live-text-and-menu-screenshot; read-only",
+      "defaultMealCount": 3,
+      "defaultWeights": [
+        2,
+        4,
+        4
+      ],
+      "defaultValueNodeId": "438:2483",
+      "customSupported": true,
+      "dailyNutrientDefaults": null,
+      "byCount": {
+        "2": {
+          "nodeId": "438:3046",
+          "weights": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              6,
+              4
+            ]
+          ]
+        },
+        "3": {
+          "nodeId": "438:3021",
+          "weights": [
+            [
+              2,
+              4,
+              4
+            ],
+            [
+              3,
+              4,
+              3
+            ],
+            [
+              2,
+              5,
+              3
+            ],
+            [
+              3,
+              3,
+              4
+            ],
+            [
+              4,
+              4,
+              2
+            ]
+          ]
+        },
+        "4": {
+          "nodeId": "438:2971",
+          "weights": [
+            [
+              2,
+              3,
+              3,
+              2
+            ],
+            [
+              2,
+              4,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              1,
+              3
+            ],
+            [
+              4,
+              1,
+              4,
+              1
+            ]
+          ]
+        },
+        "5": {
+          "nodeId": "438:2996",
+          "weights": [
+            [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      },
+      "singleMealWeights": [
+        1
+      ],
+      "presetListIsMealCountLimit": false
+    }
   },
   "distribution": {
     "artifact": "APK",
-    "channels": ["GitHub", "Gitee"],
+    "channels": [
+      "GitHub",
+      "Gitee"
+    ],
     "githubRepository": "https://github.com/Yu-xiaohei/Yuno-recipe-app",
     "giteeRepository": "https://gitee.com/Yu_xiaohei/yuno-recipe-app",
     "releaseSigningReady": false,
     "licenseDecision": "preserve-existing-license-and-review-before-public-release"
+  },
+  "publicCatalogIntegrity": {
+    "tool": "scripts/catalog_integrity.py",
+    "plan": "config/catalog-publication.json",
+    "publicationRoot": "data/public",
+    "catalog": "data/public/catalog.json",
+    "algorithm": "SHA-256",
+    "input": "exact-original-file-bytes",
+    "encoding": "UTF-8; BOM and newlines participate in digest",
+    "hashLocation": "catalog entry contentHash; never self-embedded",
+    "identity": "originNamespace + libraryEntryId; hash never deduplicates",
+    "commands": {
+      "build": "python scripts/catalog_integrity.py build --baseline-ref HEAD",
+      "verify": "python scripts/catalog_integrity.py verify --baseline-ref HEAD",
+      "preCommit": "python scripts/catalog_integrity.py verify --git-mode staged --baseline-ref HEAD",
+      "postCommit": "python scripts/catalog_integrity.py verify --git-mode head --baseline-ref HEAD^"
+    },
+    "cloudCI": "configured-not-run",
+    "appDownloader": "not-implemented",
+    "publicSource": "empty-bootstrap-not-deployed",
+    "giteeCI": "not-configured"
   }
 }

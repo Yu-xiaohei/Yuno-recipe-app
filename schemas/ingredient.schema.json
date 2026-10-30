@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/ingredient.schema.json",
+  "title": "Independent ingredient definition",
+  "$comment": "B01 candidate. per100 basis and initial portion are separate fields, even though both are 100 g in v1.",
+  "type": "object",
+  "required": ["schemaVersion", "profile", "kind", "id", "revision", "name", "foodState", "nutritionBasisWeight", "defaultPortionWeight", "per100", "sourceRef", "license", "tags", "summary", "image", "publishedAt", "notes"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "profile": { "const": "canonical-v1" },
+    "kind": { "const": "ingredient" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" },
+    "name": { "$ref": "common.schema.json#/$defs/text" },
+    "foodState": { "$ref": "common.schema.json#/$defs/foodState" },
+    "nutritionBasisWeight": { "const": 100 },
+    "defaultPortionWeight": {
+      "const": 100,
+      "description": "Explicit v1 initial addition portion confirmed by the user. Does not follow automatically from nutritionBasisWeight."
+    },
+    "per100": { "$ref": "common.schema.json#/$defs/nutrients" },
+    "sourceRef": { "$ref": "common.schema.json#/$defs/sourceRef" },
+    "license": { "$ref": "common.schema.json#/$defs/license" },
+    "tags": { "$ref": "common.schema.json#/$defs/stringList" },
+    "summary": { "type": "string" },
+    "image": {
+      "oneOf": [
+        { "$ref": "common.schema.json#/$defs/safeRelativePath" },
+        { "type": "null" }
+      ]
+    },
+    "publishedAt": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/transfer.schema.json",
+  "title": "Import recognition envelope and strict meal export",
+  "$comment": "B01 candidate. Root validation recognizes an envelope only; every raw record still needs schema, semantic and conflict validation before preview/commit. Read at most 10 MiB before parsing, reject duplicate keys/non-finite numbers, and cap combined records plus goalProfiles at 10000.",
+  "oneOf": [
+    { "$ref": "#/$defs/mealBackup" },
+    { "$ref": "#/$defs/libraryImport" }
+  ],
+  "$defs": {
+    "rawRecords": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": true,
+      "description": "Keep malformed records intact for individual error reasons. An envelope pass never means its records may be persisted."
+    },
+    "mealBackup": {
+      "type": "object",
+      "required": ["schemaVersion", "kind", "exportedAt", "records"],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "kind": { "const": "mealBackup" },
+        "exportedAt": { "$ref": "common.schema.json#/$defs/dateTime" },
+        "records": { "$ref": "#/$defs/rawRecords" },
+        "goalProfiles": { "$ref": "#/$defs/rawRecords" }
+      },
+      "additionalProperties": false
+    },
+    "libraryImport": {
+      "type": "object",
+      "required": ["schemaVersion", "kind", "records"],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "kind": { "const": "libraryImport" },
+        "exportedAt": { "$ref": "common.schema.json#/$defs/dateTime" },
+        "records": { "$ref": "#/$defs/rawRecords" }
+      },
+      "additionalProperties": false
+    },
+    "validatedMealBackup": {
+      "allOf": [
+        { "$ref": "#/$defs/mealBackup" },
+        {
+          "properties": {
+            "records": {
+              "type": "array",
+              "items": { "$ref": "meal.schema.json" }
+            },
+            "goalProfiles": {
+              "type": "array",
+              "items": { "$ref": "goal.schema.json" }
+            }
+          }
+        }
+      ],
+      "description": "Strict structural export profile. Export also requires semantic validation, whitelisted serialization and secret exclusion; drafts are never exported."
+    }
+  }
+}

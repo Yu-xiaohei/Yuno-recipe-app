@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/recipe.schema.json",
+  "title": "Recipe v2 compatibility and canonical publication contract",
+  "$comment": "The root accepts two explicit profiles for import recognition. Only #/$defs/canonical may be used by a public catalog. Legacy acceptance is not publication approval.",
+  "oneOf": [
+    { "$ref": "#/$defs/canonical" },
+    { "$ref": "#/$defs/legacy" }
+  ],
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": ["itemId", "name", "weight", "foodState", "category", "per100", "sourceRef", "healthWeight", "locked"],
+      "properties": {
+        "itemId": { "$ref": "common.schema.json#/$defs/id" },
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "weight": { "$ref": "common.schema.json#/$defs/positiveNumber" },
+        "foodState": { "$ref": "common.schema.json#/$defs/foodState" },
+        "category": { "type": ["string", "null"], "minLength": 1 },
+        "per100": { "$ref": "common.schema.json#/$defs/nutrients" },
+        "sourceRef": { "$ref": "common.schema.json#/$defs/sourceRef" },
+        "healthWeight": { "$ref": "common.schema.json#/$defs/healthWeight" },
+        "locked": { "type": "boolean", "default": false },
+        "minWeight": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "maxWeight": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" }
+      },
+      "additionalProperties": false,
+      "description": "Weights and bounds refer to the same source measurement state. Sum, order of bounds and locked feasibility require semantic validation."
+    },
+    "macroRatio": {
+      "type": ["object", "null"],
+      "required": ["carbPct", "proteinPct", "fatPct"],
+      "properties": {
+        "carbPct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "proteinPct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "fatPct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 }
+      },
+      "additionalProperties": false
+    },
+    "targets": {
+      "type": "object",
+      "properties": {
+        "energyMax": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "energyBest": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "weightMax": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "weightBest": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+        "energyOk": { "type": "boolean" },
+        "weightOk": { "type": "boolean" },
+        "energyBestOk": { "type": "boolean" },
+        "weightBestOk": { "type": "boolean" },
+        "warning": { "type": "string" },
+        "doseStatus": { "$ref": "common.schema.json#/$defs/text" },
+        "energyRange": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "weightRange": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/nonNegativeNumber" },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "additionalProperties": false,
+      "description": "Legacy recipe preparation references only; never defaults for a user's personal daily goals."
+    },
+    "canonical": {
+      "type": "object",
+      "required": ["schemaVersion", "profile", "kind", "id", "revision", "name", "serving", "dishType", "tags", "summary", "image", "publishedAt", "includesStaple", "items", "totals", "notes", "sources", "license"],
+      "properties": {
+        "schemaVersion": { "const": 2 },
+        "profile": { "const": "canonical-v1" },
+        "kind": { "const": "recipe" },
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "revision": { "$ref": "common.schema.json#/$defs/revision" },
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "serving": { "$ref": "common.schema.json#/$defs/positiveNumber" },
+        "dishType": { "$ref": "common.schema.json#/$defs/text" },
+        "tags": { "$ref": "common.schema.json#/$defs/stringList" },
+        "summary": { "type": "string" },
+        "image": {
+          "oneOf": [
+            { "$ref": "common.schema.json#/$defs/safeRelativePath" },
+            { "type": "null" }
+          ]
+        },
+        "publishedAt": { "$ref": "common.schema.json#/$defs/timestamp" },
+        "includesStaple": { "enum": [true, false, "unknown"] },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/item" },
+          "minItems": 1
+        },
+        "totals": { "$ref": "common.schema.json#/$defs/totals" },
+        "macroRatio": { "$ref": "#/$defs/macroRatio" },
+        "targets": { "$ref": "#/$defs/targets" },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/sourceRef" },
+          "minItems": 1
+        },
+        "license": { "$ref": "common.schema.json#/$defs/license" },
+        "generatedAt": {
+          "oneOf": [
+            { "$ref": "common.schema.json#/$defs/timestamp" },
+            { "type": "null" }
+          ]
+        },
+        "generatedBy": { "type": ["string", "null"] },
+        "user": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "legacyItem": {
+      "type": "object",
+      "required": ["name", "weight", "per100", "healthWeight"],
+      "properties": {
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "weight": { "$ref": "common.schema.json#/$defs/positiveNumber" },
+        "energy": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "carb": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "protein": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "fat": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "vitaminC": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "fiber": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "sodium": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "source": { "$ref": "common.schema.json#/$defs/text" },
+        "per100": { "$ref": "common.schema.json#/$defs/nutrients" },
+        "healthWeight": { "$ref": "common.schema.json#/$defs/healthWeight" },
+        "locked": { "type": "boolean", "default": false }
+      },
+      "additionalProperties": false
+    },
+    "legacy": {
+      "type": "object",
+      "required": ["schemaVersion", "id", "name", "type", "serving", "totals", "items"],
+      "properties": {
+        "schemaVersion": { "const": 2 },
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "type": { "enum": ["dish", "soup"] },
+        "serving": { "$ref": "common.schema.json#/$defs/positiveNumber" },
+        "standard": { "$ref": "common.schema.json#/$defs/text" },
+        "totals": { "$ref": "common.schema.json#/$defs/totals" },
+        "targets": { "$ref": "#/$defs/targets" },
+        "macroRatio": { "$ref": "#/$defs/macroRatio" },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/legacyItem" },
+          "minItems": 1
+        },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "url"],
+            "properties": {
+              "name": { "$ref": "common.schema.json#/$defs/text" },
+              "url": { "type": "string", "format": "uri" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "generatedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})?$",
+          "description": "Timezone-less legacy values are preserved as source metadata, never silently reinterpreted as local or UTC."
+        },
+        "generatedBy": { "type": "string" },
+        "user": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

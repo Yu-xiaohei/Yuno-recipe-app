@@ -108,8 +108,10 @@ def check(source: Path):
         if len(files) > 1:
             identical = len({entry["sha256"] for entry in files}) == 1
             duplicate_ids.append(dict(id=rid, identical=identical, files=files))
-            flag("warning" if identical else "error", "duplicate_id", ", ".join(entry["file"] for entry in files),
-                 dict(id=rid, identical=identical))
+            # Definition IDs and file hashes are audit facts, not library identity.
+            # Keep every record, including byte-identical files.
+            flag("warning", "duplicate_id", ", ".join(entry["file"] for entry in files),
+                 dict(id=rid, identical=identical, action="audit_only_keep_independent"))
     if not records:
         flag("error", "no_recipes", str(source), "no readable recipe records")
     return dict(source=str(source), filesFound=len(list(source.glob("*.json"))),
@@ -118,7 +120,8 @@ def check(source: Path):
                 warningCount=sum(f["level"] == "warning" for f in findings),
                 duplicateIds=duplicate_ids, records=records, findings=findings,
                 limits=["Structural and arithmetic checks only; nutrition provenance, licensing, food state and naming require review.",
-                        "Original files are read only; no migration or automatic correction performed."])
+                        "Original files are read only; no migration or automatic correction performed.",
+                        "Every source file remains independent; equal names, definition IDs or hashes never authorize deduplication. uniqueIds counts definition IDs only."])
 
 
 def main():

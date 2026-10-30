@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/catalog.schema.json",
+  "title": "Mixed public recipe and ingredient catalog",
+  "$comment": "B01 candidate 2. libraryEntryId identifies one independent catalog record; equal names, definition IDs or byte hashes do not merge records. Only explicit entry-scoped delete operations remove public records.",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "revision", "generatedAt", "entries"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "catalog" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" },
+    "generatedAt": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/recipeUpsert" },
+          { "$ref": "#/$defs/ingredientUpsert" },
+          { "$ref": "#/$defs/deletion" }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "recipeSummary": {
+      "type": "object",
+      "required": ["name", "weight", "energy", "dishType", "tags", "image", "includesStaple", "publishedAt"],
+      "properties": {
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "weight": { "$ref": "common.schema.json#/$defs/positiveNumber" },
+        "energy": { "$ref": "common.schema.json#/$defs/nutrientValue" },
+        "dishType": { "$ref": "common.schema.json#/$defs/text" },
+        "tags": { "$ref": "common.schema.json#/$defs/stringList" },
+        "image": {
+          "oneOf": [
+            { "$ref": "common.schema.json#/$defs/safeRelativePath" },
+            { "type": "null" }
+          ]
+        },
+        "includesStaple": { "enum": [true, false, "unknown"] },
+        "publishedAt": { "$ref": "common.schema.json#/$defs/timestamp" }
+      },
+      "additionalProperties": false
+    },
+    "ingredientSummary": {
+      "type": "object",
+      "required": ["name", "foodState", "defaultPortionWeight", "per100", "tags", "image", "publishedAt"],
+      "properties": {
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "foodState": { "$ref": "common.schema.json#/$defs/foodState" },
+        "defaultPortionWeight": { "const": 100 },
+        "per100": { "$ref": "common.schema.json#/$defs/nutrients" },
+        "tags": { "$ref": "common.schema.json#/$defs/stringList" },
+        "image": {
+          "oneOf": [
+            { "$ref": "common.schema.json#/$defs/safeRelativePath" },
+            { "type": "null" }
+          ]
+        },
+        "publishedAt": { "$ref": "common.schema.json#/$defs/timestamp" }
+      },
+      "additionalProperties": false
+    },
+    "recipeUpsert": {
+      "type": "object",
+      "required": ["operation", "libraryEntryId", "kind", "id", "revision", "contentHash", "path", "summary"],
+      "properties": {
+        "operation": { "const": "upsert" },
+        "libraryEntryId": { "$ref": "common.schema.json#/$defs/id" },
+        "kind": { "const": "recipe" },
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "revision": { "$ref": "common.schema.json#/$defs/revision" },
+        "contentHash": { "$ref": "common.schema.json#/$defs/contentHash" },
+        "path": { "$ref": "common.schema.json#/$defs/safeRelativePath" },
+        "summary": { "$ref": "#/$defs/recipeSummary" }
+      },
+      "additionalProperties": false
+    },
+    "ingredientUpsert": {
+      "type": "object",
+      "required": ["operation", "libraryEntryId", "kind", "id", "revision", "contentHash", "path", "summary"],
+      "properties": {
+        "operation": { "const": "upsert" },
+        "libraryEntryId": { "$ref": "common.schema.json#/$defs/id" },
+        "kind": { "const": "ingredient" },
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "revision": { "$ref": "common.schema.json#/$defs/revision" },
+        "contentHash": { "$ref": "common.schema.json#/$defs/contentHash" },
+        "path": { "$ref": "common.schema.json#/$defs/safeRelativePath" },
+        "summary": { "$ref": "#/$defs/ingredientSummary" }
+      },
+      "additionalProperties": false
+    },
+    "deletion": {
+      "type": "object",
+      "required": ["operation", "libraryEntryId", "kind", "id", "revision", "deletedAt"],
+      "properties": {
+        "operation": { "const": "delete" },
+        "libraryEntryId": { "$ref": "common.schema.json#/$defs/id" },
+        "kind": { "enum": ["recipe", "ingredient"] },
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "revision": { "$ref": "common.schema.json#/$defs/revision" },
+        "deletedAt": { "$ref": "common.schema.json#/$defs/timestamp" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

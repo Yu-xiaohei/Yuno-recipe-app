@@ -1,0 +1,23 @@
+{
+  "batch": "B00",
+  "candidate": "B00-candidate-8",
+  "status": "accepted",
+  "acceptedDate": "2026-10-28",
+  "userStatement": "B00 通过复合，批准开始P0工程",
+  "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+  "baselineFiles": [
+    {
+      "path": "config/project-plan.json",
+      "sha256": "0ce930285d645752436591c2d0f081a996147084bad0b598029801bcbc036d9e"
+    },
+    {
+      "path": "docs/ux/screen-contracts.json",
+      "sha256": "714014bf89ed892b56a4b0c26e0cb45b94e0a01a1622aa2794276d684698957f"
+    },
+    {
+      "path": "docs/planning/规划总检报告.md",
+      "sha256": "e5256109484edf3e79f3f250c8974747303ab6da7e21ec1e3b358720aae8eafa"
+    }
+  ],
+  "scope": "接受规划与UX交接并授权P0；不是Android运行通过或公开推送、发布授权。后续变更形成新的候选，不覆盖此接受记录。"
+}

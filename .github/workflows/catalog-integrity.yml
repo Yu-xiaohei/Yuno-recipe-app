@@ -1,0 +1,41 @@
+name: 公共食谱哈希检查
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: 哈希与契约检查
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2025]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    env:
+      PYTHONUTF8: "1"
+      BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before || 'HEAD^' }}
+    steps:
+      - name: 读取仓库
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: 准备 Python
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: "3.14.2"
+      - name: 安装固定检查依赖
+        run: python -m pip install -r tests/test_contract_deps/requirements.txt
+      - name: 运行测试
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+      - name: 核验已提交的原始字节
+        shell: bash
+        run: python scripts/catalog_integrity.py verify --git-mode head --baseline-ref "$BASE_REF"

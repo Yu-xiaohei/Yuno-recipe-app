@@ -1,9 +1,16 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-28",
+  "date": "2026-10-30",
   "kind": "project-work-breakdown-and-gated-agent-plan",
-  "scope": "本轮仅规划与UX交接；尚未授权实施P0或发布",
-  "candidate": "B00-candidate-8",
+  "scope": "B01-candidate-7已人工接受；本轮仅记录通过状态及Git第一次确认，后续批次仍等待2026-10-31及新开工指令，实际提交/推送等待第二次确认",
+  "candidate": "B01-candidate-7",
+  "executionAuthorization": {
+    "phase": "P0",
+    "date": "2026-10-28",
+    "userStatement": "B00 通过复合，批准开始P0工程",
+    "acceptedPlanningCandidate": "B00-candidate-8",
+    "publicPushOrReleaseAuthorized": false
+  },
   "maxConcurrentAgentsIncludingManager": 4,
   "developmentProgressPercent": 0,
   "statusEnums": [
@@ -74,13 +81,17 @@
         "F10",
         "F11"
       ],
-      "status": "human_review",
+      "status": "accepted",
       "checks": {
         "self": "pass",
         "manager": "pass",
-        "human": "not_run"
+        "human": "pass"
       },
-      "humanAcceptance": null
+      "humanAcceptance": {
+        "candidate": "B00-candidate-8",
+        "date": "2026-10-28",
+        "evidence": "docs/reviews/B00/acceptance.json"
+      }
     },
     {
       "id": "B01",
@@ -106,13 +117,20 @@
         "F04",
         "F05"
       ],
-      "status": "planned",
+      "status": "accepted",
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
-      "humanAcceptance": null
+      "humanAcceptance": {
+        "candidate": "B01-candidate-7",
+        "date": "2026-10-30",
+        "evidence": "docs/reviews/B01/acceptance.json"
+      },
+      "reviewEvidence": "docs/reviews/B01/verification.json",
+      "pendingHumanDecisionIds": [],
+      "partialAcceptanceEvidence": "docs/reviews/B01/acceptance.json"
     },
     {
       "id": "B02",
@@ -501,14 +519,15 @@
         "docs/ux/"
       ],
       "acceptance": "图文与机器screen ID对应，正常/失败/取消/离线覆盖且未决行为有门控",
-      "status": "human_review",
+      "status": "accepted",
       "legacyRefs": [],
       "decisionIds": [],
       "checks": {
         "self": "pass",
         "manager": "pass",
-        "human": "not_run"
+        "human": "pass"
       },
+      "humanAcceptanceEvidence": "docs/reviews/B00/acceptance.json",
       "handoffRequired": true
     },
     {
@@ -523,14 +542,15 @@
         "docs/planning/P0-P3实施计划.md"
       ],
       "acceptance": "任务唯一、依赖无环、批次人工关卡和职责可执行",
-      "status": "human_review",
+      "status": "accepted",
       "legacyRefs": [],
       "decisionIds": [],
       "checks": {
         "self": "pass",
         "manager": "pass",
-        "human": "not_run"
+        "human": "pass"
       },
+      "humanAcceptanceEvidence": "docs/reviews/B00/acceptance.json",
       "handoffRequired": true
     },
     {
@@ -544,14 +564,15 @@
         "docs/planning/质量与复核方案.md"
       ],
       "acceptance": "自检/总检/人工职责、退回、证据失效与4槽容量明确",
-      "status": "human_review",
+      "status": "accepted",
       "legacyRefs": [],
       "decisionIds": [],
       "checks": {
         "self": "pass",
         "manager": "pass",
-        "human": "not_run"
+        "human": "pass"
       },
+      "humanAcceptanceEvidence": "docs/reviews/B00/acceptance.json",
       "handoffRequired": true
     },
     {
@@ -570,14 +591,15 @@
         "docs/planning/规划总检报告.md"
       ],
       "acceptance": "无未处置阻断问题，候选清单和人工入口固定",
-      "status": "human_review",
+      "status": "accepted",
       "legacyRefs": [],
       "decisionIds": [],
       "checks": {
         "self": "pass",
         "manager": "pass",
-        "human": "not_run"
+        "human": "pass"
       },
+      "humanAcceptanceEvidence": "docs/reviews/B00/acceptance.json",
       "handoffRequired": true
     },
     {
@@ -590,19 +612,21 @@
       "outputs": [
         "docs/contracts/quantity-policy.md"
       ],
-      "acceptance": "记录已确认固定±100g、0–9g红框可滑块修正、所有条目至少10g才可保存；只对未决原始份量来源与必要identity产品语义逐项询问，不重复询问已确认规则",
-      "status": "planned",
+      "acceptance": "库记录以(originNamespace,libraryEntryId)独立识别；必须核验SHA-256，不能按名称、正文ID或hash合并库记录。只有重复加入同一库记录才在配餐聚合xN；独立记录即使hash相同也分别显示、分别加入。数量/仓储/路由契约一致；1g有效，[0,1)g仅无效草稿；公共Recipe更新核验通过后，自动替换该库记录及已保存/正在编辑配餐中的对应配方并重新计算营养，无需逐份确认，不保留可浏览旧版；更新失败保留上一致状态并重试。D13已确认更新后保留当前已接受的实际总重，以新版配方重算；D14已确认越界自动调整至新版有效上下限，技术失败保留上一致状态",
+      "status": "accepted",
       "legacyRefs": [
         "T2.2",
         "T2.3"
       ],
       "decisionIds": [
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
       "handoffRequired": true
     },
@@ -614,12 +638,14 @@
       "title": "定义Recipe/Ingredient与混合库索引",
       "dependsOn": [],
       "outputs": [
+        "schemas/common.schema.json",
         "schemas/recipe.schema.json",
         "schemas/ingredient.schema.json",
-        "schemas/catalog.schema.json"
+        "schemas/catalog.schema.json",
+        "docs/contracts/catalog-data.md"
       ],
       "acceptance": "明确类型判别、每100g/foodState/source/null、版本与旧schema兼容",
-      "status": "planned",
+      "status": "accepted",
       "legacyRefs": [
         "T0.2",
         "T3.2"
@@ -628,9 +654,9 @@
         "D05"
       ],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
       "handoffRequired": true
     },
@@ -648,8 +674,8 @@
         "schemas/meal.schema.json",
         "docs/contracts/quantity-policy.md"
       ],
-      "acceptance": "单日期餐次唯一；count/原始单份/调整总量/锁定/冲突副本可恢复",
-      "status": "planned",
+      "acceptance": "单日期餐次唯一；count/原始单份/调整总量/锁定/冲突副本可恢复；公共Recipe自动替换保存记录/草稿且重算，保持锁定/目标/餐次；D13保留实际总重已确认，D14已确认越界自动调整至新版有效上下限，技术失败保留上一致状态",
+      "status": "accepted",
       "legacyRefs": [
         "T0.2",
         "T1.5",
@@ -658,12 +684,14 @@
       "decisionIds": [
         "D03",
         "D04",
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
       "handoffRequired": true
     },
@@ -680,21 +708,28 @@
       "outputs": [
         "schemas/goal.schema.json",
         "schemas/transfer.schema.json",
+        "schemas/sync.schema.json",
+        "docs/contracts/goal-transfer-policy.md",
         "docs/contracts/sync-policy.md"
       ],
       "acceptance": "三类目标、导入类型、revision/ETag/tombstone与凭据排除明确",
-      "status": "planned",
+      "status": "accepted",
       "legacyRefs": [
         "T0.2",
         "T2.1",
         "T3.1",
         "T3.5"
       ],
-      "decisionIds": [],
+      "decisionIds": [
+        "D15",
+        "D16",
+        "D17",
+        "D18"
+      ],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
       "handoffRequired": true
     },
@@ -714,16 +749,16 @@
         "docs/contracts/module-ownership.md"
       ],
       "acceptance": "接口输入输出、并发事务、异常和唯一性写入边界可供多角色独立实现",
-      "status": "planned",
+      "status": "accepted",
       "legacyRefs": [
         "T1.1",
         "T1.5"
       ],
       "decisionIds": [],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
       "handoffRequired": true
     },
@@ -739,7 +774,7 @@
         "docs/contracts/ui-baseline.md"
       ],
       "acceptance": "统一字体家族已由用户确认使用 MiSans；记录字体文件、分发许可、语义字重和缺字回退的工程核验项；新用户可见名称逐项确认，不把角色名当上游API",
-      "status": "planned",
+      "status": "accepted",
       "legacyRefs": [
         "T4.2",
         "T4.4"
@@ -749,9 +784,9 @@
         "D11"
       ],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
       "handoffRequired": true
     },
@@ -773,13 +808,17 @@
         "docs/reviews/B01/"
       ],
       "acceptance": "所有实现所需关键决定已答，版本/hash绑定，不将缺失资料当已通过",
-      "status": "planned",
+      "status": "accepted",
       "legacyRefs": [],
-      "decisionIds": [],
+      "decisionIds": [
+        "D12",
+        "D13",
+        "D14"
+      ],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
-        "human": "not_run"
+        "self": "pass",
+        "manager": "pass",
+        "human": "pass"
       },
       "handoffRequired": true
     },
@@ -949,7 +988,7 @@
       "batch": "B03",
       "phase": "P0",
       "ownerRole": "DATA",
-      "title": "参考数据盘点去重与来源审核",
+      "title": "参考数据逐文件hash盘点、重复审计与来源审核",
       "dependsOn": [
         "P0-07"
       ],
@@ -957,7 +996,7 @@
         "data/curated/",
         "reports/data/"
       ],
-      "acceptance": "原件不改；11ID去重有diff；生熟和来源不能编造，未核实条目隔离",
+      "acceptance": "原件不改；13文件逐字节hash与11正文ID分组盘点，所有独立记录保留；不能按名称/正文ID/hash自动删重；生熟与来源未核实隔离",
       "status": "planned",
       "legacyRefs": [
         "T0.1",
@@ -1019,7 +1058,9 @@
       ],
       "decisionIds": [
         "D04",
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
         "self": "not_run",
@@ -1104,7 +1145,9 @@
       "decisionIds": [
         "D03",
         "D04",
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
         "self": "not_run",
@@ -1178,7 +1221,7 @@
       "outputs": [
         "core/data/local/"
       ],
-      "acceptance": "唯一日期+餐次及重复保存幂等；损坏/失败可回滚，不重算历史",
+      "acceptance": "唯一日期+餐次及重复保存幂等；损坏/失败可回滚，目标/餐次不追溯变更；Recipe自动维护生成新revision/outbox且无部分写入",
       "status": "planned",
       "legacyRefs": [
         "T1.5"
@@ -1547,7 +1590,7 @@
       "outputs": [
         "feature/meal/editor/"
       ],
-      "acceptance": "同identity合并xN，完整保留单份/总量，食材与食谱类型不混",
+      "acceptance": "仅重复加入同一独立库记录合并xN，不同记录同hash仍分开，完整保留单份/总量，食材与食谱类型不混",
       "status": "planned",
       "legacyRefs": [
         "T1.4"
@@ -1555,7 +1598,9 @@
       "decisionIds": [
         "D04",
         "D05",
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
         "self": "not_run",
@@ -1576,14 +1621,16 @@
       "outputs": [
         "feature/meal/editor/"
       ],
-      "acceptance": "首版不提供直接输入；锚点为原始单份乘当前份数且范围不累加；0–9g红框无效并允许滑块修正，保存时定位阻止提交；所有条目至少10g才满足重量有效条件，总量不再乘N",
+      "acceptance": "首版不提供直接输入；锚点为原始单份乘当前份数且范围不累加；0≤重量<1g红框无效并允许滑块修正，保存时定位阻止提交；所有条目至少1g才满足重量有效条件，总量不再乘N",
       "status": "planned",
       "legacyRefs": [
         "T2.2"
       ],
       "decisionIds": [
         "D04",
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
         "self": "not_run",
@@ -1604,7 +1651,7 @@
       "outputs": [
         "feature/meal/editor/"
       ],
-      "acceptance": "实际/目标/状态可读；不可达不假报命中；任一条目0–9g均红框且定位阻止保存，不能被另一有效条目绕过；修正至至少10g后重新校验",
+      "acceptance": "实际/目标/状态可读；不可达不假报命中；任一条目0≤重量<1g均红框且定位阻止保存，不能被另一有效条目绕过；修正至至少1g后重新校验",
       "status": "planned",
       "legacyRefs": [
         "T2.3",
@@ -1612,7 +1659,9 @@
         "T4.3"
       ],
       "decisionIds": [
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
         "self": "not_run",
@@ -1640,7 +1689,9 @@
       ],
       "decisionIds": [
         "D04",
-        "D12"
+        "D12",
+        "D13",
+        "D14"
       ],
       "checks": {
         "self": "not_run",
@@ -1686,14 +1737,17 @@
       "outputs": [
         "feature/meal/history/"
       ],
-      "acceptance": "快照冻结、来源版本明确，删除确认/tombstone 预留；首版不提供复制/移动配餐，后续版本再扩展",
+      "acceptance": "单revision内快照与结果一致；Recipe自动替换重算，目标/餐次快照保留、来源版本明确，删除确认/tombstone 预留；首版不提供复制/移动配餐，后续版本再扩展；Recipe/Ingredient更新及上下限自动调整，公共下架私人条目保留并持久化状态/详情顶部横幅",
       "status": "planned",
       "legacyRefs": [
         "T1.5",
         "T2.5"
       ],
       "decisionIds": [
-        "D06"
+        "D06",
+        "D14",
+        "D15",
+        "D16"
       ],
       "checks": {
         "self": "not_run",
@@ -1715,7 +1769,7 @@
         "tests/meal/",
         "docs/reviews/B06/"
       ],
-      "acceptance": "锁定/不可达/count/杀进程/日期唯一案例齐全；覆盖0g、1g、9g、10g、有效无效混合条目、滑块修正与保存阻止",
+      "acceptance": "锁定/不可达/count/杀进程/日期唯一案例齐全；覆盖0/0.1/0.9/0.999g无效与1/9/10g有效、有效无效混合条目、滑块修正与保存阻止",
       "status": "planned",
       "legacyRefs": [],
       "decisionIds": [],
@@ -1760,14 +1814,14 @@
       "batch": "B07",
       "phase": "P1",
       "ownerRole": "QA",
-      "title": "回归离线保存重启和历史不变",
+      "title": "回归离线保存重启和Recipe自动更新一致性",
       "dependsOn": [
         "P1-22"
       ],
       "outputs": [
         "tests/integration/"
       ],
-      "acceptance": "断网全流程、食谱/目标版本变化不改变旧记录、失败无部分落库",
+      "acceptance": "断网全流程可用；取得并核验新版Recipe后自动替换保存配餐/草稿并重算；目标/餐次仍保留，失败无部分落库，锁定不解锁，D13边界有证据",
       "status": "planned",
       "legacyRefs": [
         "T1.5"
@@ -1866,14 +1920,15 @@
       "outputs": [
         "feature/goals/"
       ],
-      "acceptance": "默认创建早餐、午餐、晚餐三餐；用户可增删/改名，重命名 ID 不变、停用不删历史",
+      "acceptance": "默认创建早餐、午餐、晚餐三餐；用户可增删/改名，重命名 ID 不变、停用不删历史；Figma两/三/四/五餐预设及自定义逐项一致，默认三餐2:4:4，不覆盖单餐手动目标/历史",
       "status": "planned",
       "legacyRefs": [
         "T2.1",
         "T2.5"
       ],
       "decisionIds": [
-        "D07"
+        "D07",
+        "D18"
       ],
       "checks": {
         "self": "not_run",
@@ -1969,12 +2024,14 @@
       "outputs": [
         "feature/transfer/"
       ],
-      "acceptance": "Recipe/Ingredient/mealBackup版本识别；不要求全部存储权限",
+      "acceptance": "Recipe/Ingredient/mealBackup版本识别；不要求全部存储权限；普通用户仅mealBackup，libraryImport仅开发者测试且导入后暂不可删；文件/深链/预览/提交不可绕过",
       "status": "planned",
       "legacyRefs": [
         "T3.1"
       ],
-      "decisionIds": [],
+      "decisionIds": [
+        "D17"
+      ],
       "checks": {
         "self": "not_run",
         "manager": "not_run",
@@ -1994,13 +2051,14 @@
       "outputs": [
         "feature/transfer/"
       ],
-      "acceptance": "预览显示数量/日期/重复/错误；无效条目按原因列出并不导入，有效记录可原子提交；10 条中 2 错误只导入 8 条；取消零写入，任一提交失败回滚",
+      "acceptance": "预览显示数量/日期/重复/错误；无效条目按原因列出并不导入，有效记录可原子提交；10 条中 2 错误只导入 8 条；取消零写入，任一提交失败回滚；普通用户仅mealBackup，libraryImport仅开发者测试且导入后暂不可删；文件/深链/预览/提交不可绕过",
       "status": "planned",
       "legacyRefs": [
         "T3.1"
       ],
       "decisionIds": [
-        "D08"
+        "D08",
+        "D17"
       ],
       "checks": {
         "self": "not_run",
@@ -2021,12 +2079,14 @@
       "outputs": [
         "feature/transfer/"
       ],
-      "acceptance": "同ID不同版本/同日餐唯一/count冲突明示，失败回滚，未知高版本拒绝",
+      "acceptance": "同独立库身份冲突需处理、不同库身份同hash不判重/同日餐唯一/count冲突明示，失败回滚，未知高版本拒绝；普通用户仅mealBackup，libraryImport仅开发者测试且导入后暂不可删；文件/深链/预览/提交不可绕过",
       "status": "planned",
       "legacyRefs": [
         "T3.1"
       ],
-      "decisionIds": [],
+      "decisionIds": [
+        "D17"
+      ],
       "checks": {
         "self": "not_run",
         "manager": "not_run",
@@ -2046,12 +2106,14 @@
       "outputs": [
         "feature/transfer/"
       ],
-      "acceptance": "快照/数量/目标完整，JSON不含WebDAV/token/私钥",
+      "acceptance": "快照/数量/目标完整，JSON不含WebDAV/token/私钥；普通用户仅mealBackup，libraryImport仅开发者测试且导入后暂不可删；文件/深链/预览/提交不可绕过",
       "status": "planned",
       "legacyRefs": [
         "T3.1"
       ],
-      "decisionIds": [],
+      "decisionIds": [
+        "D17"
+      ],
       "checks": {
         "self": "not_run",
         "manager": "not_run",
@@ -2073,10 +2135,12 @@
         "tests/transfer/",
         "docs/reviews/B09/"
       ],
-      "acceptance": "往返值一致，超限/损坏/IO中断/重复提交不丢本地记录",
+      "acceptance": "往返值一致，超限/损坏/IO中断/重复提交不丢本地记录；普通用户仅mealBackup，libraryImport仅开发者测试且导入后暂不可删；文件/深链/预览/提交不可绕过",
       "status": "planned",
       "legacyRefs": [],
-      "decisionIds": [],
+      "decisionIds": [
+        "D17"
+      ],
       "checks": {
         "self": "not_run",
         "manager": "not_run",
@@ -2097,12 +2161,16 @@
         "scripts/publish_catalog.py",
         "docs/public-data/"
       ],
-      "acceptance": "Recipe/Ingredient同构索引、相对图路径、hash/revision、本地预演无密钥",
+      "acceptance": "Recipe/Ingredient同构索引、相对图路径、hash/revision、本地预演无密钥；Recipe/Ingredient更新及上下限自动调整，公共下架私人条目保留并持久化状态/详情顶部横幅",
       "status": "planned",
       "legacyRefs": [
         "T3.2"
       ],
-      "decisionIds": [],
+      "decisionIds": [
+        "D14",
+        "D15",
+        "D16"
+      ],
       "checks": {
         "self": "not_run",
         "manager": "not_run",
@@ -2122,13 +2190,17 @@
       "outputs": [
         "feature/publicdata/"
       ],
-      "acceptance": "暂存校验后提交、单项失败旧版保留，404未部署不影响离线",
+      "acceptance": "暂存校验后提交、单项失败旧版保留，404未部署不影响离线；按库身份分页维护关联配餐及草稿、重算营养、幂等恢复；库/配餐各自应用版本不虚报完成；Recipe/Ingredient更新及上下限自动调整，公共下架私人条目保留并持久化状态/详情顶部横幅",
       "status": "planned",
       "legacyRefs": [
         "T3.2",
         "T3.3"
       ],
-      "decisionIds": [],
+      "decisionIds": [
+        "D14",
+        "D15",
+        "D16"
+      ],
       "checks": {
         "self": "not_run",
         "manager": "not_run",
@@ -2200,12 +2272,16 @@
       "outputs": [
         "docs/reviews/B10/"
       ],
-      "acceptance": "对应阶段才索取公开地址；本地HTTP故障注入+真实公开源访问，未部署不标通过",
+      "acceptance": "对应阶段才索取公开地址；本地HTTP故障注入+真实公开源访问，未部署不标通过；Recipe/Ingredient更新及上下限自动调整，公共下架私人条目保留并持久化状态/详情顶部横幅",
       "status": "planned",
       "legacyRefs": [
         "T3.6"
       ],
-      "decisionIds": [],
+      "decisionIds": [
+        "D14",
+        "D15",
+        "D16"
+      ],
       "checks": {
         "self": "not_run",
         "manager": "not_run",
@@ -2277,7 +2353,7 @@
       "outputs": [
         "feature/sync/"
       ],
-      "acceptance": "重试幂等、断网/杀进程可恢复，本地成功与云同步成功分别显示",
+      "acceptance": "重试幂等、断网/杀进程可恢复，本地成功与云同步成功分别显示；自动Recipe维护写新revision与不可变outbox，不能就地修改旧待发载荷",
       "status": "planned",
       "legacyRefs": [
         "T3.4"
@@ -2353,7 +2429,7 @@
         "tests/sync/",
         "docs/reviews/B11/"
       ],
-      "acceptance": "401/403/404/超时/损坏/并发/删除后旧端上线无数据丢失；实际能力有证据",
+      "acceptance": "401/403/404/超时/损坏/并发/删除后旧端上线无数据丢失；实际能力有证据；双端自动Recipe更新与私人编辑竞争按完整候选保留冲突，不因公共版本新而抹掉私人改动",
       "status": "planned",
       "legacyRefs": [
         "T3.6"
@@ -2739,22 +2815,33 @@
     }
   ],
   "managerReview": {
-    "status": "pass",
-    "candidate": "B00-candidate-8",
-    "checkedAt": "2026-10-28",
+    "status": "pass-contract-and-publication-tool-checks",
+    "candidate": "B01-candidate-7",
+    "checkedAt": "2026-10-30",
+    "scope": "B01实现/契约候选已人工接受；本次仅交接状态和验收记录同步，Git仍待第二次确认，不推进后续批次",
     "evidence": [
-      "用户已确认统一字体家族为MiSans；字体文件、许可、字重和缺字回退保留为P0工程核验项",
-      "UX与机器台账已同步0–9g红框无效、可用滑块修正、所有条目至少10g才满足保存重量条件；S09/S12/M02路径均保留编辑态并在保存或保存后离开时定位阻止",
-      "固定±100g锚点冻结为原始单份×当前份数，份数变化不以实际量重锚；300g×2案例与100g×1的0/1/9/10g边界分离",
-      "公共Recipe来源100g基准、Ingredient每100g营养单位和配餐10g保存门槛已分离",
-      "15批次/85任务、30页面/152状态/74验收、11流程/33角色；ID、引用、依赖无环、本地链接、UTF-8及控制字符检查通过",
-      "已同步用户新决定：Figma 筛选选项、历史 5 行显示与设备清理、JSON 部分导入、配餐与食谱删除同步语义、食谱云端权威"
+      "docs/reviews/B00/acceptance.json保留B00-candidate-8明确接受与原Git基线hash；规划接受不计App实现进度",
+      "docs/reviews/B01/verification.json记录29项结构与工具回归、离线引用、旧13份JSON识别及未运行边界",
+      "docs/reviews/B01/candidate-manifest.json绑定八份Schema、七份契约及相应UX/任务/测试文件",
+      "独立只读审查与总负责人核对已处置零权重非法派生、主接口漂移、weight与energy范围及冲突确认时机",
+      "独立食材默认100g已按原用户回答同步；固定锚点、逐份扣原始量、0≤重量<1g草稿与≥1g正式记录分离",
+      "15批次/85任务、30页面/153状态/79未执行验收、11流程/33角色/19项决定引用；ID引用、依赖无环、链接和UTF-8检查通过",
+      "用户2026-10-29确认库记录独立、hash核验与1g下限；28项结构/预检回归通过，子Agent发现的历史断言、旧ID去重及跨库删除定位已闭环",
+      "candidate-5按集中答复整合D14-D18；主负责人29项1.133秒通过，新增下架证据结构回归；Figma实时文字/截图核对，子Agent只读G2最终pass，示例deletedAt及Ingredient恢复措辞闭环",
+      "candidate-6固定横幅文字逐字核对及D19关闭检查通过；12份Schema/测试/预检输入hash未变，继承candidate-5的29项回归；49份UTF-8、14份JSON、71处本地链接及Git空白检查通过，子Agent只读G2通过",
+      "candidate-7总负责人51项16.084秒通过；新增22项发布字节/Git/资源边界回归；子Agent只读G2通过，旧Git blob先验大小及目录放大限制已闭环"
     ],
     "limitations": [
-      "Mermaid尚未渲染",
-      "Android/Miuix API、vivo Android 12、OSS、123 WebDAV、APK与公开发布未验证",
-      "字体文件/许可/字重/缺字回退、identity与独立食材原始份量来源仍待P0工程与契约设计；B00用户人工复核尚未完成",
-      "用户已确认的导入与清除同步语义尚未在 Android/123 WebDAV 真机上验证"
+      "B01已人工接受；51项测试和独立G2通过，仅本地工具/契约；Git公开同步第二次确认尚未取得",
+      "Schema不替代算术、原始hash/快照一致性、迁移、事务、并发、真实导入或同步测试",
+      "Mermaid尚未渲染，79项UX验收均not-run；Android工程、API31/32/33安装冷启动、vivo设备、OSS、WebDAV和APK尚未验证",
+      "Miuix固定源码入口已核查，仍未构建接入；MiSans字体文件/具体条款/字重/缺字回退待B02",
+      "本批仅工作树改动，未提交、推送或发布；B02/B03及后续批次保持planned"
     ]
+  },
+  "nextBatchStart": {
+    "notBefore": "2026-10-31",
+    "requiresNewUserInstruction": true,
+    "automaticStart": false
   }
 }

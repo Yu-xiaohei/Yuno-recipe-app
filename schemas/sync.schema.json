@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yuno-recipe.invalid/schemas/sync.schema.json",
+  "title": "Private meal synchronization envelope",
+  "$comment": "B01 candidate. Only private meal records and their tombstones are synchronized. Global goal profiles, public catalogs, credentials, queue state and server settings are excluded. Byte hashes belong to transport/local metadata, outside the hashed file.",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "payload"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "syncEnvelope" },
+    "payload": { "$ref": "meal.schema.json" }
+  },
+  "additionalProperties": false
+}
