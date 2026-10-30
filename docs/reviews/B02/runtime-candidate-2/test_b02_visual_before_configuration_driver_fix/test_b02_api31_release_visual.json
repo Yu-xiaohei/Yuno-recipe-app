@@ -1,0 +1,53 @@
+{
+  "candidate": "B02-candidate-2",
+  "api": 31,
+  "variant": "release",
+  "apkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+  "installedApkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+  "status": "fail",
+  "rows": [
+    {
+      "night": "no",
+      "fontScale": "1.0",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "light_scale1_0"
+    },
+    {
+      "night": "no",
+      "fontScale": "1.3",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "light_scale1_3"
+    },
+    {
+      "night": "no",
+      "fontScale": "2.0",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "light_scale2_0"
+    }
+  ],
+  "failure": "AssertionError: cold activity start returns Status: ok",
+  "restored": {
+    "fontScale": "1.0",
+    "night": "no"
+  },
+  "limitations": [
+    "Only representative initial viewports; not every scroll position or modal state.",
+    "No automated claim about clipping, contrast, accessibility, or visual equality.",
+    "Synthetic offline fixtures; no Chinese IME or physical-device coverage."
+  ]
+}

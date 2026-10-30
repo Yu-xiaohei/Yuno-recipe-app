@@ -1,0 +1,4 @@
+Coil 3.6.3
+Copyright 2026 Coil Contributors
+Apache License 2.0
+Local image/SVG loading only; no networking module.

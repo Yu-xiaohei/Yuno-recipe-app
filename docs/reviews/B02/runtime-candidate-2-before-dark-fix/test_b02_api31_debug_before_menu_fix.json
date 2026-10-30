@@ -1,0 +1,34 @@
+{
+  "candidate": "B02-candidate-2",
+  "status": "fail",
+  "serial": "emulator-5554",
+  "api": 31,
+  "variant": "debug",
+  "package": "com.yunobase.recipe.prototype.debug",
+  "apkSha256": "2de6022860a8903e93617d4916b6f3b95267efe87bea854f3aeac5ea1abb8dbe",
+  "checks": [
+    "target is an emulator",
+    "only the isolated prototype package is allowed",
+    "device SDK equals 31",
+    "device boot completed",
+    "APK installs successfully",
+    "cold activity start returns Status: ok",
+    "all three existing tab labels are visible",
+    "Figma home structure and representative recipe are present",
+    "prototype process remains alive",
+    "expected material branch is clear",
+    "MiSans font build is running",
+    "thumbnail decoding stays bounded instead of decoding full-resolution originals",
+    "local SVG and thumbnail loading has no reported error",
+    "prototype process remains alive",
+    "scrolling does not crash"
+  ],
+  "failure": "AssertionError: Missing visible node: b02_category_menu",
+  "transientUiDumpRetries": [],
+  "limitations": [
+    "Synthetic offline prototype, not recipe/meal functionality.",
+    "MiSans original VF and license packaged; rare-glyph fallback remains manual.",
+    "ASCII keyboard only; Chinese IME composition remains a separate manual check.",
+    "No physical vivo device or broad GPU/performance certification."
+  ]
+}

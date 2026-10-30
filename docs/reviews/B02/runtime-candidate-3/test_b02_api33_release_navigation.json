@@ -1,0 +1,823 @@
+{
+  "candidate": "B02-candidate-3",
+  "status": "pass",
+  "scope": "navigation-geometry-and-selection-only-not-visual-acceptance",
+  "api": 33,
+  "serial": "emulator-5558",
+  "avdName": "tmp_b02_api33_20261030_135000",
+  "variant": "release",
+  "package": "com.yunobase.recipe.prototype",
+  "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "installedApkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "tolerancesPx": {
+    "cellWidthSpread": 1.0,
+    "horizontalCenter": 1.0,
+    "groupVerticalCenter": 1.5
+  },
+  "checks": [
+    "emulator reports one explicit AVD name",
+    "AVD belongs to this B02 task and API: tmp_b02_api33_20261030_135000",
+    "device SDK equals 33",
+    "device boot completed",
+    "installed APK actual SHA-256 equals the supplied APK",
+    "font scale 1.0 is applied",
+    "cold activity start returns Status: ok",
+    "prototype process remains alive",
+    "scale 1.0, selected tab 0: only the actual tapped tab is selected",
+    "scale 1.0, selected tab 0: three cell widths differ by at most 1px; actual=[205.0, 204.0, 204.0]",
+    "scale 1.0, selected tab 0: tab 0: icon horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 0: tab 0: label horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 0: tab 0: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 0: tab 0: content stays within its cell",
+    "scale 1.0, selected tab 0: tab 1: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 0: tab 1: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 0: tab 1: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 0: tab 1: content stays within its cell",
+    "scale 1.0, selected tab 0: tab 2: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 0: tab 2: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 0: tab 2: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 0: tab 2: content stays within its cell",
+    "scale 1.0, selected tab 0: process has no fatal exception",
+    "prototype process remains alive",
+    "scale 1.0, selected tab 1: only the actual tapped tab is selected",
+    "scale 1.0, selected tab 1: three cell widths differ by at most 1px; actual=[205.0, 204.0, 204.0]",
+    "scale 1.0, selected tab 1: tab 0: icon horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 1: tab 0: label horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 1: tab 0: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 1: tab 0: content stays within its cell",
+    "scale 1.0, selected tab 1: tab 1: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 1: tab 1: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 1: tab 1: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 1: tab 1: content stays within its cell",
+    "scale 1.0, selected tab 1: tab 2: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 1: tab 2: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 1: tab 2: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 1: tab 2: content stays within its cell",
+    "scale 1.0, selected tab 1: process has no fatal exception",
+    "prototype process remains alive",
+    "scale 1.0, selected tab 2: only the actual tapped tab is selected",
+    "scale 1.0, selected tab 2: three cell widths differ by at most 1px; actual=[205.0, 204.0, 204.0]",
+    "scale 1.0, selected tab 2: tab 0: icon horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 2: tab 0: label horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 2: tab 0: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 2: tab 0: content stays within its cell",
+    "scale 1.0, selected tab 2: tab 1: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 2: tab 1: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 2: tab 1: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 2: tab 1: content stays within its cell",
+    "scale 1.0, selected tab 2: tab 2: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 1.0, selected tab 2: tab 2: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 1.0, selected tab 2: tab 2: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 1.0, selected tab 2: tab 2: content stays within its cell",
+    "scale 1.0, selected tab 2: process has no fatal exception",
+    "font scale 2.0 is applied",
+    "cold activity start returns Status: ok",
+    "prototype process remains alive",
+    "scale 2.0, selected tab 0: only the actual tapped tab is selected",
+    "scale 2.0, selected tab 0: three cell widths differ by at most 1px; actual=[205.0, 204.0, 204.0]",
+    "scale 2.0, selected tab 0: tab 0: icon horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 0: tab 0: label horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 0: tab 0: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 0: tab 0: content stays within its cell",
+    "scale 2.0, selected tab 0: tab 1: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 0: tab 1: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 0: tab 1: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 0: tab 1: content stays within its cell",
+    "scale 2.0, selected tab 0: tab 2: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 0: tab 2: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 0: tab 2: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 0: tab 2: content stays within its cell",
+    "scale 2.0, selected tab 0: process has no fatal exception",
+    "prototype process remains alive",
+    "scale 2.0, selected tab 1: only the actual tapped tab is selected",
+    "scale 2.0, selected tab 1: three cell widths differ by at most 1px; actual=[205.0, 204.0, 204.0]",
+    "scale 2.0, selected tab 1: tab 0: icon horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 1: tab 0: label horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 1: tab 0: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 1: tab 0: content stays within its cell",
+    "scale 2.0, selected tab 1: tab 1: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 1: tab 1: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 1: tab 1: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 1: tab 1: content stays within its cell",
+    "scale 2.0, selected tab 1: tab 2: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 1: tab 2: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 1: tab 2: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 1: tab 2: content stays within its cell",
+    "scale 2.0, selected tab 1: process has no fatal exception",
+    "prototype process remains alive",
+    "scale 2.0, selected tab 2: only the actual tapped tab is selected",
+    "scale 2.0, selected tab 2: three cell widths differ by at most 1px; actual=[205.0, 204.0, 204.0]",
+    "scale 2.0, selected tab 2: tab 0: icon horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 2: tab 0: label horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 2: tab 0: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 2: tab 0: content stays within its cell",
+    "scale 2.0, selected tab 2: tab 1: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 2: tab 1: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 2: tab 1: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 2: tab 1: content stays within its cell",
+    "scale 2.0, selected tab 2: tab 2: icon horizontal center error <= 1.0px; actual=0.5",
+    "scale 2.0, selected tab 2: tab 2: label horizontal center error <= 1.0px; actual=0.0",
+    "scale 2.0, selected tab 2: tab 2: icon/label group vertical center error <= 1.5px; actual=0.0",
+    "scale 2.0, selected tab 2: tab 2: content stays within its cell",
+    "scale 2.0, selected tab 2: process has no fatal exception",
+    "installed APK remains the same after geometry checks",
+    "input APK bytes remain unchanged during geometry checks"
+  ],
+  "rows": [
+    {
+      "fontScale": "1.0",
+      "selectedTarget": 0,
+      "night": "no",
+      "uiSnapshot": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab0.xml",
+      "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab0_layout.txt",
+      "screenshot": {
+        "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab0.png",
+        "sha256": "2010ce44ce58b6862da67ab3d305fe7e9be36761de2e25ff53fe85b9ce4172d3"
+      },
+      "status": "pass",
+      "selected": {
+        "0": true,
+        "1": false,
+        "2": false
+      },
+      "lastLayoutCallbacks": [
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2072.0; right=407.0; bottom=2203.0",
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2085.0; right=336.0; bottom=2148.0",
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=label; index=0; left=274.0; top=2148.0; right=336.0; bottom=2190.0",
+        "10-30 14:35:31.336  6272  6272 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2072.0; right=643.0; bottom=2203.0",
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2085.0; right=573.0; bottom=2148.0",
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=label; index=1; left=510.0; top=2148.0; right=572.0; bottom=2190.0",
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2072.0; right=879.0; bottom=2203.0",
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2085.0; right=809.0; bottom=2148.0",
+        "10-30 14:35:31.337  6272  6272 I YunoB02 : nav-geometry; part=label; index=2; left=746.0; top=2148.0; right=808.0; bottom=2190.0"
+      ],
+      "geometry": {
+        "cellWidthsPx": [
+          205.0,
+          204.0,
+          204.0
+        ],
+        "cellWidthSpreadPx": 1.0,
+        "items": [
+          {
+            "index": 0,
+            "cell": [
+              202.0,
+              2072.0,
+              407.0,
+              2203.0
+            ],
+            "icon": [
+              273.0,
+              2085.0,
+              336.0,
+              2148.0
+            ],
+            "label": [
+              274.0,
+              2148.0,
+              336.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.0,
+            "labelHorizontalErrorPx": 0.5,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 1,
+            "cell": [
+              439.0,
+              2072.0,
+              643.0,
+              2203.0
+            ],
+            "icon": [
+              510.0,
+              2085.0,
+              573.0,
+              2148.0
+            ],
+            "label": [
+              510.0,
+              2148.0,
+              572.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 2,
+            "cell": [
+              675.0,
+              2072.0,
+              879.0,
+              2203.0
+            ],
+            "icon": [
+              746.0,
+              2085.0,
+              809.0,
+              2148.0
+            ],
+            "label": [
+              746.0,
+              2148.0,
+              808.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          }
+        ]
+      }
+    },
+    {
+      "fontScale": "1.0",
+      "selectedTarget": 1,
+      "night": "no",
+      "uiSnapshot": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab1.xml",
+      "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab1_layout.txt",
+      "screenshot": {
+        "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab1.png",
+        "sha256": "3dd82284f7e1ad861571e991a6bf497ca04a4fd0b177fe1a5cc57fc396cba80c"
+      },
+      "status": "pass",
+      "selected": {
+        "0": false,
+        "1": true,
+        "2": false
+      },
+      "lastLayoutCallbacks": [
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2072.0; right=407.0; bottom=2203.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2085.0; right=336.0; bottom=2148.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=label; index=0; left=274.0; top=2148.0; right=336.0; bottom=2190.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2072.0; right=643.0; bottom=2203.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2085.0; right=573.0; bottom=2148.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=label; index=1; left=510.0; top=2148.0; right=572.0; bottom=2190.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2072.0; right=879.0; bottom=2203.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2085.0; right=809.0; bottom=2148.0",
+        "10-30 14:35:36.966  6272  6272 I YunoB02 : nav-geometry; part=label; index=2; left=746.0; top=2148.0; right=808.0; bottom=2190.0"
+      ],
+      "geometry": {
+        "cellWidthsPx": [
+          205.0,
+          204.0,
+          204.0
+        ],
+        "cellWidthSpreadPx": 1.0,
+        "items": [
+          {
+            "index": 0,
+            "cell": [
+              202.0,
+              2072.0,
+              407.0,
+              2203.0
+            ],
+            "icon": [
+              273.0,
+              2085.0,
+              336.0,
+              2148.0
+            ],
+            "label": [
+              274.0,
+              2148.0,
+              336.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.0,
+            "labelHorizontalErrorPx": 0.5,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 1,
+            "cell": [
+              439.0,
+              2072.0,
+              643.0,
+              2203.0
+            ],
+            "icon": [
+              510.0,
+              2085.0,
+              573.0,
+              2148.0
+            ],
+            "label": [
+              510.0,
+              2148.0,
+              572.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 2,
+            "cell": [
+              675.0,
+              2072.0,
+              879.0,
+              2203.0
+            ],
+            "icon": [
+              746.0,
+              2085.0,
+              809.0,
+              2148.0
+            ],
+            "label": [
+              746.0,
+              2148.0,
+              808.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          }
+        ]
+      }
+    },
+    {
+      "fontScale": "1.0",
+      "selectedTarget": 2,
+      "night": "no",
+      "uiSnapshot": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab2.xml",
+      "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab2_layout.txt",
+      "screenshot": {
+        "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab2.png",
+        "sha256": "c0dd939e20539dd7c01b4e6d7d9254e2cb8ec896ce96f37b86b40c66235d4ddf"
+      },
+      "status": "pass",
+      "selected": {
+        "0": false,
+        "1": false,
+        "2": true
+      },
+      "lastLayoutCallbacks": [
+        "10-30 14:35:42.911  6272  6272 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2072.0; right=407.0; bottom=2203.0",
+        "10-30 14:35:42.911  6272  6272 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2085.0; right=336.0; bottom=2148.0",
+        "10-30 14:35:42.911  6272  6272 I YunoB02 : nav-geometry; part=label; index=0; left=274.0; top=2148.0; right=336.0; bottom=2190.0",
+        "10-30 14:35:42.911  6272  6272 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2072.0; right=643.0; bottom=2203.0",
+        "10-30 14:35:42.911  6272  6272 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2085.0; right=573.0; bottom=2148.0",
+        "10-30 14:35:42.911  6272  6272 I YunoB02 : nav-geometry; part=label; index=1; left=510.0; top=2148.0; right=572.0; bottom=2190.0",
+        "10-30 14:35:42.912  6272  6272 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2072.0; right=879.0; bottom=2203.0",
+        "10-30 14:35:42.912  6272  6272 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2085.0; right=809.0; bottom=2148.0",
+        "10-30 14:35:42.912  6272  6272 I YunoB02 : nav-geometry; part=label; index=2; left=746.0; top=2148.0; right=808.0; bottom=2190.0"
+      ],
+      "geometry": {
+        "cellWidthsPx": [
+          205.0,
+          204.0,
+          204.0
+        ],
+        "cellWidthSpreadPx": 1.0,
+        "items": [
+          {
+            "index": 0,
+            "cell": [
+              202.0,
+              2072.0,
+              407.0,
+              2203.0
+            ],
+            "icon": [
+              273.0,
+              2085.0,
+              336.0,
+              2148.0
+            ],
+            "label": [
+              274.0,
+              2148.0,
+              336.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.0,
+            "labelHorizontalErrorPx": 0.5,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 1,
+            "cell": [
+              439.0,
+              2072.0,
+              643.0,
+              2203.0
+            ],
+            "icon": [
+              510.0,
+              2085.0,
+              573.0,
+              2148.0
+            ],
+            "label": [
+              510.0,
+              2148.0,
+              572.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 2,
+            "cell": [
+              675.0,
+              2072.0,
+              879.0,
+              2203.0
+            ],
+            "icon": [
+              746.0,
+              2085.0,
+              809.0,
+              2148.0
+            ],
+            "label": [
+              746.0,
+              2148.0,
+              808.0,
+              2190.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          }
+        ]
+      }
+    },
+    {
+      "fontScale": "2.0",
+      "selectedTarget": 0,
+      "night": "no",
+      "uiSnapshot": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab0.xml",
+      "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab0_layout.txt",
+      "screenshot": {
+        "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab0.png",
+        "sha256": "dfcd5a90256f615f53fcc03a87d945fe199b69c90554a23f6cf9a79b07cb2f71"
+      },
+      "status": "pass",
+      "selected": {
+        "0": true,
+        "1": false,
+        "2": false
+      },
+      "lastLayoutCallbacks": [
+        "10-30 14:35:54.842  6570  6570 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2033.0; right=407.0; bottom=2206.0",
+        "10-30 14:35:54.843  6570  6570 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2046.0; right=336.0; bottom=2109.0",
+        "10-30 14:35:54.843  6570  6570 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2109.0; right=368.0; bottom=2193.0",
+        "10-30 14:35:54.841  6570  6570 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2033.0; right=643.0; bottom=2206.0",
+        "10-30 14:35:54.841  6570  6570 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2046.0; right=573.0; bottom=2109.0",
+        "10-30 14:35:54.841  6570  6570 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2109.0; right=604.0; bottom=2193.0",
+        "10-30 14:35:54.841  6570  6570 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2033.0; right=879.0; bottom=2206.0",
+        "10-30 14:35:54.842  6570  6570 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2046.0; right=809.0; bottom=2109.0",
+        "10-30 14:35:54.842  6570  6570 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2109.0; right=840.0; bottom=2193.0"
+      ],
+      "geometry": {
+        "cellWidthsPx": [
+          205.0,
+          204.0,
+          204.0
+        ],
+        "cellWidthSpreadPx": 1.0,
+        "items": [
+          {
+            "index": 0,
+            "cell": [
+              202.0,
+              2033.0,
+              407.0,
+              2206.0
+            ],
+            "icon": [
+              273.0,
+              2046.0,
+              336.0,
+              2109.0
+            ],
+            "label": [
+              242.0,
+              2109.0,
+              368.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.0,
+            "labelHorizontalErrorPx": 0.5,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 1,
+            "cell": [
+              439.0,
+              2033.0,
+              643.0,
+              2206.0
+            ],
+            "icon": [
+              510.0,
+              2046.0,
+              573.0,
+              2109.0
+            ],
+            "label": [
+              478.0,
+              2109.0,
+              604.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 2,
+            "cell": [
+              675.0,
+              2033.0,
+              879.0,
+              2206.0
+            ],
+            "icon": [
+              746.0,
+              2046.0,
+              809.0,
+              2109.0
+            ],
+            "label": [
+              714.0,
+              2109.0,
+              840.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          }
+        ]
+      }
+    },
+    {
+      "fontScale": "2.0",
+      "selectedTarget": 1,
+      "night": "no",
+      "uiSnapshot": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab1.xml",
+      "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab1_layout.txt",
+      "screenshot": {
+        "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab1.png",
+        "sha256": "f3fccfede519a2a2fd0bdda620226121c39cbe46d21d7813984a305bd09f731a"
+      },
+      "status": "pass",
+      "selected": {
+        "0": false,
+        "1": true,
+        "2": false
+      },
+      "lastLayoutCallbacks": [
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2033.0; right=407.0; bottom=2206.0",
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2046.0; right=336.0; bottom=2109.0",
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2109.0; right=368.0; bottom=2193.0",
+        "10-30 14:36:00.954  6570  6570 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2033.0; right=643.0; bottom=2206.0",
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2046.0; right=573.0; bottom=2109.0",
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2109.0; right=604.0; bottom=2193.0",
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2033.0; right=879.0; bottom=2206.0",
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2046.0; right=809.0; bottom=2109.0",
+        "10-30 14:36:00.955  6570  6570 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2109.0; right=840.0; bottom=2193.0"
+      ],
+      "geometry": {
+        "cellWidthsPx": [
+          205.0,
+          204.0,
+          204.0
+        ],
+        "cellWidthSpreadPx": 1.0,
+        "items": [
+          {
+            "index": 0,
+            "cell": [
+              202.0,
+              2033.0,
+              407.0,
+              2206.0
+            ],
+            "icon": [
+              273.0,
+              2046.0,
+              336.0,
+              2109.0
+            ],
+            "label": [
+              242.0,
+              2109.0,
+              368.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.0,
+            "labelHorizontalErrorPx": 0.5,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 1,
+            "cell": [
+              439.0,
+              2033.0,
+              643.0,
+              2206.0
+            ],
+            "icon": [
+              510.0,
+              2046.0,
+              573.0,
+              2109.0
+            ],
+            "label": [
+              478.0,
+              2109.0,
+              604.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 2,
+            "cell": [
+              675.0,
+              2033.0,
+              879.0,
+              2206.0
+            ],
+            "icon": [
+              746.0,
+              2046.0,
+              809.0,
+              2109.0
+            ],
+            "label": [
+              714.0,
+              2109.0,
+              840.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          }
+        ]
+      }
+    },
+    {
+      "fontScale": "2.0",
+      "selectedTarget": 2,
+      "night": "no",
+      "uiSnapshot": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab2.xml",
+      "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab2_layout.txt",
+      "screenshot": {
+        "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab2.png",
+        "sha256": "2ba10f15a567da18234e35b50e7a9798aefe437daa669051195021573d61da3a"
+      },
+      "status": "pass",
+      "selected": {
+        "0": false,
+        "1": false,
+        "2": true
+      },
+      "lastLayoutCallbacks": [
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2033.0; right=407.0; bottom=2206.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2046.0; right=336.0; bottom=2109.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2109.0; right=368.0; bottom=2193.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2033.0; right=643.0; bottom=2206.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2046.0; right=573.0; bottom=2109.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2109.0; right=604.0; bottom=2193.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2033.0; right=879.0; bottom=2206.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2046.0; right=809.0; bottom=2109.0",
+        "10-30 14:36:07.273  6570  6570 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2109.0; right=840.0; bottom=2193.0"
+      ],
+      "geometry": {
+        "cellWidthsPx": [
+          205.0,
+          204.0,
+          204.0
+        ],
+        "cellWidthSpreadPx": 1.0,
+        "items": [
+          {
+            "index": 0,
+            "cell": [
+              202.0,
+              2033.0,
+              407.0,
+              2206.0
+            ],
+            "icon": [
+              273.0,
+              2046.0,
+              336.0,
+              2109.0
+            ],
+            "label": [
+              242.0,
+              2109.0,
+              368.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.0,
+            "labelHorizontalErrorPx": 0.5,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 1,
+            "cell": [
+              439.0,
+              2033.0,
+              643.0,
+              2206.0
+            ],
+            "icon": [
+              510.0,
+              2046.0,
+              573.0,
+              2109.0
+            ],
+            "label": [
+              478.0,
+              2109.0,
+              604.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          },
+          {
+            "index": 2,
+            "cell": [
+              675.0,
+              2033.0,
+              879.0,
+              2206.0
+            ],
+            "icon": [
+              746.0,
+              2046.0,
+              809.0,
+              2109.0
+            ],
+            "label": [
+              714.0,
+              2109.0,
+              840.0,
+              2193.0
+            ],
+            "iconHorizontalErrorPx": 0.5,
+            "labelHorizontalErrorPx": 0.0,
+            "groupVerticalErrorPx": 0.0,
+            "contentWithinCell": true
+          }
+        ]
+      }
+    }
+  ],
+  "failure": null,
+  "transientUiDumpRetries": [],
+  "originalPreferences": {
+    "fontScale": "1.0",
+    "night": "no"
+  },
+  "restoredPreferences": {
+    "fontScale": "1.0",
+    "night": "no"
+  },
+  "restoreErrors": [],
+  "limitations": [
+    "Real layout callbacks and actual taps; not screenshot pixel equality.",
+    "Current night preference, font scales 1.0/2.0 and three tabs only.",
+    "No physical vivo, Chinese IME, broad GPU or complete accessibility approval.",
+    "No installation or package replacement; the supplied APK must already be installed."
+  ]
+}

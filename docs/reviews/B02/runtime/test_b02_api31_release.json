@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "serial": "emulator-5554",
+  "api": 31,
+  "variant": "release",
+  "package": "com.yunobase.recipe.prototype",
+  "apkSha256": "715c14cf7b9ebae8f499fcc9a7bb136a652a65a969de8217a0f33ee6b3e16719",
+  "checks": [
+    "target is an emulator",
+    "only the isolated prototype package is allowed",
+    "device SDK equals 31",
+    "device boot completed",
+    "APK installs successfully",
+    "cold activity start returns Status: ok",
+    "all three existing tab labels are visible",
+    "prototype process remains alive",
+    "expected material branch is clear",
+    "prototype process remains alive",
+    "scrolling does not crash",
+    "slider changes the displayed aggregate weight",
+    "lock disables weight interaction",
+    "locked slider gesture does not alter weight",
+    "scrolled list retains visible fixture cards",
+    "prototype process remains alive",
+    "uncommitted Latin IME composition does not submit a query",
+    "prototype process remains alive",
+    "explicit committed search submits the fixture query",
+    "back closes expanded search and restores navigation",
+    "explicit cancel closes expanded search and restores navigation",
+    "prototype process remains alive",
+    "reduced motion retains a readable clear branch",
+    "prototype process remains alive",
+    "no fatal exception in the prototype process"
+  ],
+  "failure": null,
+  "transientUiDumpRetries": [],
+  "limitations": [
+    "Synthetic offline prototype, not recipe/meal functionality.",
+    "System placeholder font; MiSans permission/resources not yet accepted.",
+    "ASCII keyboard only; Chinese IME composition remains a separate manual check.",
+    "No physical vivo device or broad GPU/performance certification."
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "batch": "B02",
+  "candidate": "B02-candidate-1",
+  "checkedAt": "2026-10-30T14:26:48+08:00",
+  "status": "partial-verification-not-batch-acceptance",
+  "baseCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "authorization": "docs/reviews/B02/start.json",
+  "gates": {
+    "G1": "incomplete-batch; implemented-subset-pass",
+    "G2": "incomplete-batch; implemented-subset-pass",
+    "G3": "not_run"
+  },
+  "environment": {
+    "os": "Windows",
+    "timezone": "Asia/Shanghai",
+    "jdk": "Temurin 21.0.9+10; process-only",
+    "gradle": "9.7.1",
+    "agp": "9.4.1",
+    "kotlin": "2.4.20",
+    "composeMultiplatform": "1.12.0",
+    "activityCompose": "1.13.0",
+    "miuix": "0.9.4",
+    "miuixCommit": "39c40f99844227b853f0049a0933b1f3ae6c00ba",
+    "prototypeSdk": {
+      "min": 31,
+      "compile": 37,
+      "target": 37,
+      "buildTools": "37.0.0"
+    },
+    "avd": "dedicated AOSP x86_64 API31/32/33; Pixel6 1080x2400; WHPX; host GPU",
+    "sdkPackages": [
+      {
+        "package": "platforms/android-37.0",
+        "sourcePropertiesSha256": "fa89029fc0cee414cb5e44a37cd3033771217eeecb5086577bb6d9b1b03b5b5f",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK Platform 17",
+          "Pkg.UserSrc=false",
+          "Platform.Version=17",
+          "Platform.CodeName=",
+          "Pkg.Revision=2",
+          "AndroidVersion.ApiLevel=37.0",
+          "AndroidVersion.CodeName=",
+          "AndroidVersion.ExtensionLevel=22",
+          "AndroidVersion.IsBaseSdk=true",
+          "AndroidVersion.PreviewSdkInt=0",
+          "AndroidVersion.BetaVersion=",
+          "Layoutlib.Api=15",
+          "Layoutlib.Revision=1",
+          "Platform.MinToolsRev=22"
+        ]
+      },
+      {
+        "package": "build-tools/37.0.0",
+        "sourcePropertiesSha256": "fbd87c8567afbc6dc78e140097fcde234f4a61fa7065e85081d43e442ccd3d24",
+        "sourceProperties": [
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=37.0.0"
+        ]
+      },
+      {
+        "package": "system-images/android-31/default/x86_64",
+        "sourcePropertiesSha256": "df7aad3e6bba94fc964fb919ed88a082e3f828fc2981fcf33b466dbfa0da5922",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK System Image",
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=3",
+          "Pkg.Dependencies=emulator#31.2.7",
+          "AndroidVersion.ApiLevel=31",
+          "SystemImage.Abi=x86_64",
+          "SystemImage.GpuSupport=true",
+          "SystemImage.TagId=default",
+          "SystemImage.TagDisplay=Default Android System Image"
+        ]
+      },
+      {
+        "package": "system-images/android-32/default/x86_64",
+        "sourcePropertiesSha256": "618845f337ead73883c8c98c9927220bfcf64df49a3d4c2da72358607c19031d",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK System Image",
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=2",
+          "Pkg.Dependencies=emulator#29.1.11",
+          "AndroidVersion.ApiLevel=32",
+          "SystemImage.Abi=x86_64",
+          "SystemImage.GpuSupport=true",
+          "SystemImage.TagId=default",
+          "SystemImage.TagDisplay=Default Android System Image"
+        ]
+      },
+      {
+        "package": "system-images/android-33/default/x86_64",
+        "sourcePropertiesSha256": "f03462436135f3be2a1d89ad01d3b4fc411c79bb08a154a0ade5d4d1c16c1863",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK System Image",
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=2",
+          "Pkg.Dependencies=emulator#29.1.11",
+          "AndroidVersion.ApiLevel=33",
+          "AndroidVersion.ExtensionLevel=${PLATFORM_SDK_EXTENSION_VERSION}",
+          "AndroidVersion.IsBaseSdk=${PLATFORM_IS_BASE_SDK}",
+          "SystemImage.Abi=x86_64",
+          "SystemImage.GpuSupport=true",
+          "SystemImage.TagId=default",
+          "SystemImage.TagDisplay=Default Android System Image"
+        ]
+      }
+    ]
+  },
+  "build": {
+    "status": "pass",
+    "command": "./scripts/android_gradle.ps1 :app:assembleDebug :app:assembleRelease :app:lintDebug :app:lintRelease --dependency-verification=strict --no-daemon --console=plain",
+    "log": ".agent-tmp/b02_toolchain/tmp_b02_gradle_semantics_20261030_141000.log",
+    "result": "BUILD SUCCESSFUL; 101 actionable tasks",
+    "dependencyArtifactCount": 629,
+    "lintPerVariant": {
+      "errors": 0,
+      "warnings": 7,
+      "warningScope": "6 fixed-version upgrade suggestions and 1 final app icon pending"
+    },
+    "lintSuppressionOrBaselineAdded": false
+  },
+  "regression": {
+    "fullSuite": {
+      "status": "pass",
+      "tests": 51,
+      "command": "./.venv/Scripts/python.exe -m unittest discover -s tests -p test_*.py -v",
+      "seconds": 57.783,
+      "log": ".agent-tmp/b02_toolchain/tmp_b02_contract_tests_20261030_135900.log"
+    },
+    "finalAffectedContractSuite": {
+      "status": "pass",
+      "tests": 29,
+      "seconds": 1.19,
+      "command": "./.venv/Scripts/python.exe -m unittest discover -s tests -p test_contract_schema.py -v",
+      "log": ".agent-tmp/b02_toolchain/tmp_b02_contract_final_20261030_142307.log"
+    },
+    "deviceDriverSyntax": "py_compile pass; no automatic device calls on unittest discovery",
+    "finalStateGateSuite": {
+      "status": "pass",
+      "tests": 29,
+      "seconds": 1.314,
+      "command": "./.venv/Scripts/python.exe -m unittest discover -s tests -p test_contract_schema.py -v",
+      "log": ".agent-tmp/b02_toolchain/tmp_b02_contract_gate_20261030_143350.log"
+    }
+  },
+  "deviceCommandTemplate": "./.venv/Scripts/python.exe tests/test_android_smoke.py --adb <adb.exe> --serial <dedicated-emulator> --api <31|32|33> --apk <same-variant-apk> --package <isolated-package> --variant <debug|release> --output-dir docs/reviews/B02/runtime",
+  "deviceResults": [
+    {
+      "api": 31,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 25,
+      "report": "docs/reviews/B02/runtime/test_b02_api31_debug.json",
+      "reportSha256": "eab35432b918a1bb1097c73a5df7a357a55af26322bac7487b415a46ddf1cf2a",
+      "transientUiDumpRetryCount": 0,
+      "apkSha256": "38dfa8dd470329dc2b179d126b41b5a714f8f8930126e9d56d8865859c9e814e"
+    },
+    {
+      "api": 31,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 25,
+      "report": "docs/reviews/B02/runtime/test_b02_api31_release.json",
+      "reportSha256": "a1a2fd4bf6972c366eca261588f5dd787d86e57cdd2dc5658c4ef3123b731b51",
+      "transientUiDumpRetryCount": 0,
+      "apkSha256": "715c14cf7b9ebae8f499fcc9a7bb136a652a65a969de8217a0f33ee6b3e16719"
+    },
+    {
+      "api": 32,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 25,
+      "report": "docs/reviews/B02/runtime/test_b02_api32_debug.json",
+      "reportSha256": "211ecf6a4777ca791da4a8f4cb9c684c8f9955dcd5fe7059ef093accac4dc8ee",
+      "transientUiDumpRetryCount": 0,
+      "apkSha256": "38dfa8dd470329dc2b179d126b41b5a714f8f8930126e9d56d8865859c9e814e"
+    },
+    {
+      "api": 32,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 25,
+      "report": "docs/reviews/B02/runtime/test_b02_api32_release.json",
+      "reportSha256": "9c032356a5df8f99052f96599c91e19620695f76eecbd99fb1609b7ac53a8067",
+      "transientUiDumpRetryCount": 0,
+      "apkSha256": "715c14cf7b9ebae8f499fcc9a7bb136a652a65a969de8217a0f33ee6b3e16719"
+    },
+    {
+      "api": 33,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 33,
+      "report": "docs/reviews/B02/runtime/test_b02_api33_debug.json",
+      "reportSha256": "002be9e4c064d632aecd3dcb83d550edd9e68e4023ea8c7406a38c51a89d117a",
+      "transientUiDumpRetryCount": 0,
+      "apkSha256": "38dfa8dd470329dc2b179d126b41b5a714f8f8930126e9d56d8865859c9e814e"
+    },
+    {
+      "api": 33,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 33,
+      "report": "docs/reviews/B02/runtime/test_b02_api33_release.json",
+      "reportSha256": "494567d786473d9cf29687dabfe21baee7e3330a8ff29e92b387df364cd66a60",
+      "transientUiDumpRetryCount": 0,
+      "apkSha256": "715c14cf7b9ebae8f499fcc9a7bb136a652a65a969de8217a0f33ee6b3e16719"
+    }
+  ],
+  "checkRecordCount": 166,
+  "checkCountMeaning": "166 assertion records including repeated process-alive assertions; not 166 independent business tests",
+  "apkArtifacts": [
+    {
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "variant": "debug",
+      "bytes": 27530862,
+      "sha256": "38dfa8dd470329dc2b179d126b41b5a714f8f8930126e9d56d8865859c9e814e",
+      "signing": "local-debug-key-not-production",
+      "gitTracked": false,
+      "miuixLicenseSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "app/build/outputs/apk/release/app-release.apk",
+      "variant": "release",
+      "bytes": 2708253,
+      "sha256": "715c14cf7b9ebae8f499fcc9a7bb136a652a65a969de8217a0f33ee6b3e16719",
+      "signing": "local-debug-key-not-production",
+      "gitTracked": false,
+      "miuixLicenseSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "review": {
+    "executor": "root + b02_prototype_ui",
+    "independentReviewer": "b02_independent_review; read-only",
+    "manager": "root",
+    "implementedScopeResult": "no unresolved S0/S1 in implemented prototype scope",
+    "r8": "EnhancedMaterial, EnhancedMaterialKt, LensKt names retained; API31/32 R8 runtime passes",
+    "manifest": "both merged manifests min31/target37; no INTERNET; allowBackup=false; no blur initializer",
+    "visuallyInspected": [
+      "API31 release weight_locked",
+      "API33 release home",
+      "API33 release scrolled",
+      "API33 release draw_fault_fallback"
+    ],
+    "snapshotManifest": "docs/reviews/B02/candidate-manifest.json",
+    "report": "docs/reviews/B02/review.md",
+    "binaryGitAttributes": "PNG text/diff/merge unset; filtered and unfiltered blob both 51bfcf43cadc6143a81ef23bcf3d209abc82c352",
+    "preservedB01ManifestSha256": {
+      "candidate-manifest.json": "a4e421b65593c804966b11d26de216c82e65f6c6dafbe48bbc5b89aa0f07d6f9",
+      "reviewed-candidate-7-manifest.json": "25037cf3e91b747cdf4a02ab14d77209a34e23bb31c21bd5268b58a82ce17bb2",
+      "reviewed-candidate-6-manifest.json": "87f339e682be8fd393dcf1f026a257dc3aa9bd5abfcd1a58aebc861b190f73c0"
+    },
+    "snapshotReview": "independent reviewer matched 106 file hashes, six reports and two APKs; root then appended only final test metadata and rebound verification hash"
+  },
+  "notCompleted": [
+    "MiSans download permission/resources/license package/weight/coverage/attribution/display",
+    "vivo model/vendor OS and physical-device installation",
+    "Chinese IME and full dark/fontScale 1.0/1.3/2.0 matrix",
+    "wide GPU/performance, rotation and large-screen validation",
+    "real recipe/meal calculation/persistence/navigation/OSS/WebDAV/product APK release",
+    "whole-batch G1/G2 and human G3"
+  ],
+  "knownLimits": [
+    "Kotlin fully-supported matrix does not fully cover fixed AGP9.4.1/Gradle9.7.1; actual build evidence only",
+    "fault injection covers two managed exception boundaries, not every native or GPU failure",
+    "system SansSerif is a temporary centralized font placeholder",
+    "release variant uses local debug signing solely for R8 compatibility",
+    "Gitee paused at prior HTTP429; no new remote action"
+  ],
+  "rollback": "Uninstall only isolated prototype packages from task AVD; compare listed source snapshot before reverting own B02 files. Do not reset user changes or delete B01 evidence. SDK/AVD retained under ignored tmp_ directories.",
+  "sideEffects": {
+    "newCommit": false,
+    "push": false,
+    "release": false,
+    "cloudWrites": false,
+    "userSourceChanged": false,
+    "globalJavaChanged": false,
+    "ownedEmulators": "all three task AVD names matched before emu kill; adb devices -l then confirmed no devices"
+  },
+  "staticChecks": {
+    "status": "pass",
+    "utf8TextFiles": 64,
+    "jsonFiles": 18,
+    "xmlFiles": 7,
+    "pngFiles": 41,
+    "localMarkdownLinks": 41,
+    "pythonAst": "pass",
+    "gitDiffCheck": "pass",
+    "newFileWhitespace": "pass",
+    "b01ArchiveHashes": "unchanged",
+    "referenceData": "unchanged",
+    "wrapperJarAndDistributionHash": "match verified official values",
+    "stagedFiles": 0,
+    "headUnchanged": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a"
+  }
+}

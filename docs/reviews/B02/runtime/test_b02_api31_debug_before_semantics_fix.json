@@ -1,0 +1,29 @@
+{
+  "status": "fail",
+  "serial": "emulator-5554",
+  "api": 31,
+  "variant": "debug",
+  "package": "com.yunobase.recipe.prototype.debug",
+  "apkSha256": "8709979ae0e4668954dc58dc9b0c0cb442687ae21fd0e5c647dfbbb045baf99c",
+  "checks": [
+    "target is an emulator",
+    "only the isolated prototype package is allowed",
+    "device SDK equals 31",
+    "device boot completed",
+    "APK installs successfully",
+    "cold activity start returns Status: ok",
+    "all three existing tab labels are visible",
+    "prototype process remains alive",
+    "expected material branch is clear",
+    "prototype process remains alive",
+    "scrolling does not crash",
+    "slider changes the displayed aggregate weight"
+  ],
+  "failure": "AssertionError: lock disables weight interaction",
+  "limitations": [
+    "Synthetic offline prototype, not recipe/meal functionality.",
+    "System placeholder font; MiSans permission/resources not yet accepted.",
+    "ASCII keyboard only; Chinese IME composition remains a separate manual check.",
+    "No physical vivo device or broad GPU/performance certification."
+  ]
+}

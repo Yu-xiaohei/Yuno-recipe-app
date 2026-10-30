@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "candidate": "B02-candidate-3",
+  "fileKey": "gdAAv31ho4RNFgANaMOJl0",
+  "checkedAt": "2026-10-30T23:05:21+08:00",
+  "svgAssets": [
+    {
+      "resource": "app/src/main/assets/figma/brand_logo.svg",
+      "nodeId": "81:249",
+      "width": "44",
+      "height": "44",
+      "viewBox": "0 0 44 44",
+      "sha256": "40eeccafe9f911ae3c389e267dd0e7bd8e015dfef735a94fb182ae4a0a0d8e51",
+      "renderDp": [
+        44.0,
+        44.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/wordmark_o.svg",
+      "nodeId": "115:349",
+      "width": "11.0689",
+      "height": "10.9859",
+      "viewBox": "0 0 11.0689 10.9859",
+      "sha256": "d2b92a4197a94547590132462a196180b4cc2fa9b3ce71db2182db7a2e567832",
+      "renderDp": [
+        11.0689,
+        10.9859
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/wordmark_un.svg",
+      "nodeId": "115:351",
+      "width": "19.7056",
+      "height": "10.9983",
+      "viewBox": "0 0 19.7056 10.9983",
+      "sha256": "a02237dac5a8562ffda7826e4363d49f24fd2802bedb23e50638723ff6f8bb8e",
+      "renderDp": [
+        19.7056,
+        10.9983
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/wordmark_y.svg",
+      "nodeId": "115:353",
+      "width": "11.0595",
+      "height": "10.9797",
+      "viewBox": "0 0 11.0595 10.9797",
+      "sha256": "38a84d87e5dc4b48aedc1a7c12f44687a6bbb3935a9e57f04ae27ac812845069",
+      "renderDp": [
+        11.0595,
+        10.9797
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/wordmark_recipe.svg",
+      "nodeId": "115:355",
+      "width": "45.2362",
+      "height": "10.9811",
+      "viewBox": "0 0 45.2362 10.9811",
+      "sha256": "9b65a53c0baa0aa380435cb69aad5cc592f5d7a3631f1d2844259b8233cf0f4e",
+      "renderDp": [
+        45.2362,
+        10.9811
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/nav_meals.svg",
+      "nodeId": "118:386",
+      "width": "24",
+      "height": "24",
+      "viewBox": "0 0 24 24",
+      "sha256": "29e78df1290043222300c01096879e0455aa4e9fb9534f05fd1465864b46bafc",
+      "renderDp": [
+        24.0,
+        24.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "Miuix semantic foreground; original SVG file unchanged"
+    },
+    {
+      "resource": "app/src/main/assets/figma/nav_recipes.svg",
+      "nodeId": "118:394",
+      "width": "24",
+      "height": "24",
+      "viewBox": "0 0 24 24",
+      "sha256": "df9b46d59ffe29b9141ff8cad13387d7733f4cb92fe2d9f3edd34b9dc7c61027",
+      "renderDp": [
+        24.0,
+        24.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "Miuix semantic foreground; original SVG file unchanged"
+    },
+    {
+      "resource": "app/src/main/assets/figma/nav_settings.svg",
+      "nodeId": "118:401",
+      "width": "24",
+      "height": "24",
+      "viewBox": "0 0 24 24",
+      "sha256": "63a94710c5f9f70bec83bb219540aa7d3f5b29ddb5bdf8e1b488f8d7aecd5c30",
+      "renderDp": [
+        24.0,
+        24.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "Miuix semantic foreground; original SVG file unchanged"
+    },
+    {
+      "resource": "app/src/main/assets/figma/search.svg",
+      "nodeId": "118:332",
+      "width": "18",
+      "height": "18",
+      "viewBox": "0 0 18 18",
+      "sha256": "0c915dc176c9375b48918078d5947e9eb846151028e9519d6d9a7673f7910d4a",
+      "renderDp": [
+        18.0,
+        18.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "Miuix semantic foreground; original SVG file unchanged"
+    },
+    {
+      "resource": "app/src/main/assets/figma/filter_arrow.svg",
+      "nodeId": "278:620",
+      "width": "24",
+      "height": "24",
+      "viewBox": "0 0 24 24",
+      "sha256": "6f97cc6a6abedfd86793a13317ca06f4a462b0718dceee54f0ec984512336c5a",
+      "renderDp": [
+        24.0,
+        24.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "Miuix semantic foreground; original SVG file unchanged"
+    },
+    {
+      "resource": "app/src/main/assets/figma/chevron.svg",
+      "nodeId": "298:215",
+      "width": "10",
+      "height": "24",
+      "viewBox": "0 0 10 24",
+      "sha256": "975c09f180034961d4a5a4bed484b6f74163bc111223ae2552b2f7fe02a83e55",
+      "renderDp": [
+        10.0,
+        24.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "Miuix semantic foreground; original SVG file unchanged"
+    },
+    {
+      "resource": "app/src/main/assets/figma/calendar.svg",
+      "nodeId": "328:187",
+      "width": "23",
+      "height": "23",
+      "viewBox": "0 0 23 23",
+      "sha256": "c35c1b8ca8d51ce8b2220ff5a6d545f672ce611f44bd6cb620aeedf32314289f",
+      "renderDp": [
+        23.0,
+        23.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "Miuix semantic foreground; original SVG file unchanged"
+    },
+    {
+      "resource": "app/src/main/assets/figma/energy.svg",
+      "nodeId": "312:190",
+      "width": "40",
+      "height": "40",
+      "viewBox": "0 0 40 40",
+      "sha256": "c35e52e79cbd2e2be2007665f15778a6476231a0dfd754bc4378a3c108cacfa8",
+      "renderDp": [
+        40.0,
+        40.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/weight.svg",
+      "nodeId": "312:193",
+      "width": "40",
+      "height": "40",
+      "viewBox": "0 0 40 40",
+      "sha256": "db7394cb613d25fcee1a031c54a5411354e39968518aa1e3087c137b7262dc8b",
+      "renderDp": [
+        40.0,
+        40.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/protein.svg",
+      "nodeId": "182:137",
+      "width": "14",
+      "height": "14",
+      "viewBox": "0 0 14 14",
+      "sha256": "5d2bd0286dbf35bd0ce8d85ce7b5c5f39cd10303b1d4d417bae8431d31063e6e",
+      "renderDp": [
+        14.0,
+        14.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/carbs.svg",
+      "nodeId": "179:150",
+      "width": "14",
+      "height": "14",
+      "viewBox": "0 0 14 14",
+      "sha256": "3fd0ce3930dbeb68366de819d77e11c4247a66dd981ce4e6db30df687a99e19a",
+      "renderDp": [
+        14.0,
+        14.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    },
+    {
+      "resource": "app/src/main/assets/figma/fat.svg",
+      "nodeId": "179:144",
+      "width": "14",
+      "height": "14",
+      "sha256": "9037cef239890cdf9a4ea0c1f09d5afedba8389ec9bd5a8172957f2f3c07e098",
+      "renderDp": [
+        14.0,
+        14.0
+      ],
+      "originalBytesModified": false,
+      "loader": "FigmaAsset / local Coil SvgDecoder",
+      "tint": "none"
+    }
+  ],
+  "photoAssets": [
+    {
+      "resource": "app/src/main/res/drawable-nodpi/figma_recipe_apple.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        4000,
+        4000
+      ],
+      "sha256": "9e3b7287f354ed674f06f100bf0658ea5e2a9c391cd5dcf19dba6597c8737148",
+      "source": "Figma 81:131 original image fill; recipe slot apple",
+      "callSite": "PrototypeApp.kt RecipeCard",
+      "renderDp": [
+        78,
+        78
+      ],
+      "decodeRequestPx": [
+        256,
+        256
+      ],
+      "originalBytesModified": false
+    },
+    {
+      "resource": "app/src/main/res/drawable-nodpi/figma_recipe_cabbage.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        4080,
+        3072
+      ],
+      "sha256": "1d27a13a0b5467fb457f98582a6e09d72476aeb4cf7063520570a0d0bbe90682",
+      "source": "Figma 81:131 original image fill; recipe slot cabbage",
+      "callSite": "PrototypeApp.kt RecipeCard",
+      "renderDp": [
+        78,
+        78
+      ],
+      "decodeRequestPx": [
+        256,
+        256
+      ],
+      "originalBytesModified": false
+    },
+    {
+      "resource": "app/src/main/res/drawable-nodpi/figma_recipe_eggplant.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        1690,
+        1278
+      ],
+      "sha256": "83a0d703a5b2dbb982d1a7cf42fac5bfdb4e45ce52e365ed302eaa805da404b6",
+      "source": "Figma 81:131 original image fill; recipe slot eggplant",
+      "callSite": "PrototypeApp.kt RecipeCard",
+      "renderDp": [
+        78,
+        78
+      ],
+      "decodeRequestPx": [
+        256,
+        256
+      ],
+      "originalBytesModified": false
+    },
+    {
+      "resource": "app/src/main/res/drawable-nodpi/figma_recipe_placeholder.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "d6304ff549c73ff53b0447e89028004f49b8fcff62a1d7f292cda9b0b198463a",
+      "source": "Figma 81:131 original image fill; recipe slot placeholder",
+      "callSite": "PrototypeApp.kt RecipeCard",
+      "renderDp": [
+        78,
+        78
+      ],
+      "decodeRequestPx": [
+        256,
+        256
+      ],
+      "originalBytesModified": false
+    },
+    {
+      "resource": "app/src/main/res/drawable-nodpi/figma_recipe_tomato.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        640,
+        480
+      ],
+      "sha256": "bc6c83bad68a59404fe03492cdb700d8711078411eee1a039c482ef4ab1964f0",
+      "source": "Figma 81:131 original image fill; recipe slot tomato",
+      "callSite": "PrototypeApp.kt RecipeCard",
+      "renderDp": [
+        78,
+        78
+      ],
+      "decodeRequestPx": [
+        256,
+        256
+      ],
+      "originalBytesModified": false
+    }
+  ],
+  "wordmark": {
+    "dp": [
+      49,
+      34
+    ],
+    "source": "81:230",
+    "geometry": "four SVG originals at Figma offsets; see BrandWordmark"
+  },
+  "note": "SVG originals used unchanged through local Coil SvgDecoder. PNG node exports have opaque backgrounds and are not valid tint masks; original photos decoded with a bounded request.",
+  "rejectedOpaquePngExports": ".agent-tmp/b02_revision/tmp_b02_opaque_exports_20261030_153000/"
+}

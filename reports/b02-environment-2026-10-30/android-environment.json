@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-30T13:26:08.7225607+08:00",
+  "projectRoot": "F:\\Yuno-Develop\\YUNO-recipe-app",
+  "project": {
+    "gitInitialized": true,
+    "gradleWrapperPresent": false,
+    "androidManifestPresent": false
+  },
+  "java": {
+    "effectiveHome": "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.29.7-hotspot\\",
+    "executable": "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.29.7-hotspot\\bin\\java.exe",
+    "version": [
+      "openjdk version \"11.0.29\" 2025-10-21",
+      "OpenJDK Runtime Environment Temurin-11.0.29+7 (build 11.0.29+7)",
+      "OpenJDK 64-Bit Server VM Temurin-11.0.29+7 (build 11.0.29+7, mixed mode)"
+    ],
+    "probeExitCode": 0,
+    "installedHomes": [
+      "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.29.7-hotspot",
+      "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.17.10-hotspot",
+      "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.9.10-hotspot",
+      "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.1.8-hotspot",
+      "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.472.8-hotspot"
+    ]
+  },
+  "androidStudio": [
+    {
+      "path": "D:/Program Files (x86)/Android Studio",
+      "version": "AI-253.30387.90.2532.14935130",
+      "buildNumber": "253.30387.90.2532.14935130"
+    },
+    {
+      "path": "F:/Program Files (x86)/Android Studio",
+      "version": "dev build",
+      "buildNumber": "223.8836.35.2231.__BUILD_NUMBER__"
+    }
+  ],
+  "sdk": {
+    "path": "C:\\Users\\yu_xi\\AppData\\Local\\Android\\Sdk",
+    "platforms": [
+      "android-35",
+      "android-36.1"
+    ],
+    "buildTools": [
+      "34.0.0",
+      "36.0.0",
+      "36.1.0"
+    ],
+    "systemImages": [
+      "android-36.1"
+    ],
+    "commandLineToolsPresent": false,
+    "sdk37Present": false,
+    "androidHomeConfigured": false,
+    "androidSdkRootConfigured": false
+  },
+  "cachedGradleExecutables": [
+    "C:\\Users\\yu_xi\\.gradle\\wrapper\\dists\\gradle-9.3.1-bin\\23ovyewtku6u96viwx3xl3oks\\gradle-9.3.1\\bin\\gradle.bat"
+  ],
+  "adbVersion": [
+    "Android Debug Bridge version 1.0.41",
+    "Version 37.0.0-14910828",
+    "Installed as C:\\Users\\yu_xi\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "Running on Windows 10.0.26300"
+  ],
+  "avds": [
+    "Medium_Phone_API_36.1"
+  ],
+  "limits": [
+    "Read-only environment inventory; no downloads or environment changes.",
+    "No APK build, device connection, emulator boot, signing or installation test performed.",
+    "Cached Gradle inventory does not prove compatibility with the selected dependency versions."
+  ]
+}

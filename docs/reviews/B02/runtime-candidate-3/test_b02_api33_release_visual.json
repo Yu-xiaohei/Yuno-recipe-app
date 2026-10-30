@@ -1,0 +1,86 @@
+{
+  "candidate": "B02-candidate-3",
+  "api": 33,
+  "variant": "release",
+  "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "installedApkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "status": "captured-pending-human-inspection",
+  "rows": [
+    {
+      "night": "no",
+      "fontScale": "1.0",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "light_scale1_0"
+    },
+    {
+      "night": "no",
+      "fontScale": "1.3",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "light_scale1_3"
+    },
+    {
+      "night": "no",
+      "fontScale": "2.0",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "light_scale2_0"
+    },
+    {
+      "night": "yes",
+      "fontScale": "1.0",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "dark_scale1_0"
+    },
+    {
+      "night": "yes",
+      "fontScale": "1.3",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "dark_scale1_3"
+    },
+    {
+      "night": "yes",
+      "fontScale": "2.0",
+      "capture": "complete",
+      "screens": [
+        "home",
+        "meals",
+        "settings"
+      ],
+      "prefix": "dark_scale2_0"
+    }
+  ],
+  "failure": null,
+  "restored": {
+    "fontScale": "1.0",
+    "night": "no"
+  },
+  "limitations": [
+    "Only representative initial viewports; not every scroll position or modal state.",
+    "No automated claim about clipping, contrast, accessibility, or visual equality.",
+    "Synthetic offline fixtures; no Chinese IME or physical-device coverage."
+  ]
+}

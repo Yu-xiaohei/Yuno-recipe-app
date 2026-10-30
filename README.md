@@ -2,7 +2,9 @@
 
 面向公众的 Android 食谱与配餐应用，使用 Kotlin、Jetpack Compose 和 Miuix。由 AI Agent 完成设计与开发，首版 App 不接入 AI。
 
-**当前阶段：B01共享契约及发布哈希工具补充已人工通过，Git同步等待第二次确认。后续批次最早2026-10-31且等待新开工指令；尚无Android工程、APK或真机兼容结论。**
+**当前阶段：2026-10-31已按用户要求收工，停止功能开发，准备Git归档同步。B02-candidate-3玻璃／底栏修订已完成已实现范围G1/G2；vivo安装问题、Android17新效果及整批人工验收仍未完成，B03未开始。**
+
+本次[收工总结](docs/reviews/B02/收工总结-2026-10-31.md)和[Git同步计划](docs/reviews/B02/git-sync-plan.json)记录当前范围；实际推送等待双次确认。[B01执行结果](docs/reviews/B01/git-sync-result.json)是2026-10-30的历史快照，原接受与审阅字节保持不变，不将后续同步反写成旧快照成功。
 
 当前数据规则：库记录独立，不按名称、正文ID或SHA-256自动去重；仅配餐重复加入同一库记录聚合xN。配餐条目最低有效总重1g，低于1g保留红框无效草稿并阻止保存；100g来源/营养口径和±100g滑块不变。
 
@@ -16,6 +18,7 @@
 - [UI 设计要求](docs/UI设计稿需求.md)、[视觉与动效](docs/附录A-视觉与动效设计.md)、[Miuix 基线](docs/Miuix-UI与液态玻璃基线.md)。
 - [UX 与 UI 开发交接](docs/ux/README.md)、[P0～P3 实施计划](docs/planning/P0-P3实施计划.md)、[项目规则](AGENTS.md)、[机器任务计划](config/project-plan.json)。
 - [B01 契约与验证入口](docs/reviews/B01/README.md)、[数据契约](docs/contracts/catalog-data.md)、[仓储契约](docs/contracts/repositories.md)、[测试索引](docs/agent-files.md)。
+- [B02 原型与实际证据](docs/reviews/B02/README.md)、[Android 构建复现](docs/build.md)；当前 APK 只作离线合成数据兼容检查。
 - [公共食谱哈希与上传校验](docs/公共食谱哈希与上传校验.md)：发布计划、原始字节SHA-256生成、Git暂存/HEAD核验及CI入口。
 - [Figma](https://www.figma.com/design/gdAAv31ho4RNFgANaMOJl0/)；[Miuix 示例](https://compose-miuix-ui.github.io/miuix-jsCanvas/)；[Miuix 仓库](https://github.com/compose-miuix-ui/miuix)。
 

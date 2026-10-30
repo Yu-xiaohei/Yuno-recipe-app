@@ -631,7 +631,22 @@ class ContractTests(unittest.TestCase):
         else:
             self.assertIsNone(b01["humanAcceptance"])
             self.assertNotEqual("pass", b01["checks"]["human"])
-        self.assertEqual("planned", plan["batches"][2]["status"])
+        # Starting a new batch requires an explicit, scoped user instruction.
+        # Do not freeze legitimate later work to the previous batch's planning state.
+        by_batch = {batch["id"]: batch for batch in plan["batches"]}
+        for batch in plan["batches"][2:]:
+            if batch["status"] == "planned":
+                continue
+            authorization = batch["executionAuthorization"]
+            record = read_json(ROOT / authorization["evidence"])
+            self.assertEqual(batch["id"], record["batch"])
+            self.assertEqual(batch["phase"], record["phase"])
+            self.assertTrue(record["allowImplementation"])
+            self.assertTrue(record["userStatement"].strip())
+            self.assertEqual(authorization["userStatement"], record["userStatement"])
+            self.assertFalse(record["allowPushOrRelease"])
+            for dependency in batch["dependsOn"]:
+                self.assertEqual("accepted", by_batch[dependency]["status"])
 
     def test_b00_acceptance_hashes_match_the_recorded_git_baseline(self):
         acceptance = read_json(ROOT / "docs/reviews/B00/acceptance.json")

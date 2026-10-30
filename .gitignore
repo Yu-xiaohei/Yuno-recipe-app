@@ -9,6 +9,7 @@ gen/
 out/
 build/
 .gradle/
+.kotlin/
 local.properties
 .cxx/
 *.hprof

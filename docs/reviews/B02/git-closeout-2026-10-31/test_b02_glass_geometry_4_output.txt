@@ -1,0 +1,9 @@
+test_changed_icon_contract_is_rejected (test_android_glass_geometry.GlassGeometryTests.test_changed_icon_contract_is_rejected) ... ok
+test_full_surface_contains_labels_below_clipped_semantics (test_android_glass_geometry.GlassGeometryTests.test_full_surface_contains_labels_below_clipped_semantics) ... ok
+test_inconsistent_layout_or_nonfinite_coordinates_are_rejected (test_android_glass_geometry.GlassGeometryTests.test_inconsistent_layout_or_nonfinite_coordinates_are_rejected) ... ok
+test_json_keys_and_large_text_height_remain_supported (test_android_glass_geometry.GlassGeometryTests.test_json_keys_and_large_text_height_remain_supported) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

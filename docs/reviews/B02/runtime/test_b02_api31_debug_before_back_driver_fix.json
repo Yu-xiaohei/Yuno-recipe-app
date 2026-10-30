@@ -1,0 +1,36 @@
+{
+  "status": "fail",
+  "serial": "emulator-5554",
+  "api": 31,
+  "variant": "debug",
+  "package": "com.yunobase.recipe.prototype.debug",
+  "apkSha256": "38dfa8dd470329dc2b179d126b41b5a714f8f8930126e9d56d8865859c9e814e",
+  "checks": [
+    "target is an emulator",
+    "only the isolated prototype package is allowed",
+    "device SDK equals 31",
+    "device boot completed",
+    "APK installs successfully",
+    "cold activity start returns Status: ok",
+    "all three existing tab labels are visible",
+    "prototype process remains alive",
+    "expected material branch is clear",
+    "prototype process remains alive",
+    "scrolling does not crash",
+    "slider changes the displayed aggregate weight",
+    "lock disables weight interaction",
+    "locked slider gesture does not alter weight",
+    "scrolled list retains visible fixture cards",
+    "prototype process remains alive",
+    "uncommitted Latin IME composition does not submit a query",
+    "prototype process remains alive",
+    "explicit committed search submits the fixture query"
+  ],
+  "failure": "CalledProcessError: Command '['C:/Users/yu_xi/AppData/Local/Android/Sdk/platform-tools/adb.exe', '-s', 'emulator-5554', 'shell', 'uiautomator', 'dump', '--compressed', '/data/local/tmp/tmp_b02_smoke_20261030_140536.xml']' returned non-zero exit status 1.",
+  "limitations": [
+    "Synthetic offline prototype, not recipe/meal functionality.",
+    "System placeholder font; MiSans permission/resources not yet accepted.",
+    "ASCII keyboard only; Chinese IME composition remains a separate manual check.",
+    "No physical vivo device or broad GPU/performance certification."
+  ]
+}

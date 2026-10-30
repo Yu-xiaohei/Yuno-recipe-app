@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "batch": "B01",
+  "candidate": "B01-candidate-7",
+  "recordedAt": "2026-10-30T13:19:00+08:00",
+  "status": "partially_completed_gitee_service_http_429_blocked",
+  "localRecordStatus": "uncommitted_not_pushed",
+  "localCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "commitSubject": "完善B01共享契约与公共食谱哈希校验",
+  "baselineCommit": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+  "committedFiles": 59,
+  "sourceSnapshot": {
+    "manifest": "docs/reviews/B01/candidate-manifest.json",
+    "manifestSha256": "a4e421b65593c804966b11d26de216c82e65f6c6dafbe48bbc5b89aa0f07d6f9",
+    "readBytesFromCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+    "note": "原提交前预览及接受证据保持不变；后续执行记录不属于该固定文件快照。"
+  },
+  "confirmations": [
+    {
+      "sequence": 1,
+      "date": "2026-10-30",
+      "userStatement": "接受哈希补充方案，并按上述范围提交、同步两个远端"
+    },
+    {
+      "sequence": 2,
+      "date": "2026-10-30",
+      "userStatement": "执行上述提交与双远端同步"
+    }
+  ],
+  "operation": {
+    "branch": "main",
+    "mode": "normal_fast_forward",
+    "forced": false,
+    "historyRewritten": false,
+    "furtherPushesStoppedAfterGiteeFailure": true,
+    "downstreamBatchesStarted": false
+  },
+  "github": {
+    "status": "verified_success",
+    "remoteMain": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+    "clientPushStatus": "timed_out_after_55_seconds",
+    "gitReadback": "match",
+    "officialApiReadback": "match",
+    "independentPublicCheckout": {
+      "result": "pass",
+      "manifestBoundHashes": 58,
+      "headCatalogIntegrity": "pass",
+      "catalogEntries": 0,
+      "temporaryPath": ".agent-tmp/b01_sync/tmp_b01_sync_github_checkout_20261030_130033",
+      "cleanupStatus": "automatic_approval_policy_rejected_preserved_and_indexed"
+    },
+    "actions": {
+      "runId": 41005753842,
+      "workflow": "公共食谱哈希检查",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "platform": "windows-2025",
+          "conclusion": "success"
+        },
+        {
+          "platform": "ubuntu-24.04",
+          "conclusion": "success"
+        }
+      ]
+    }
+  },
+  "gitee": {
+    "status": "blocked_service_http_429",
+    "pushReturnCode": 128,
+    "remoteMain": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+    "serverReason": "Pending queue overflowed, please try again later",
+    "httpStatus": 429,
+    "officialApiReadback": "old_baseline_unchanged",
+    "lastCheckedAt": "2026-10-30T13:18:51+08:00",
+    "credentialUpdateReported": {
+      "date": "2026-10-30",
+      "userStatement": "已更新",
+      "verification": "not_verified_service_http_429",
+      "agentReadOrChangedCredentials": false
+    },
+    "previousAuthenticationFailure": {
+      "pushReturnCode": 128,
+      "serverReason": "Incorrect username or password (access token)",
+      "cause": "具体过期、撤销或权限原因未核实；用户已报告更新，不能以旧错误认定新凭据无效。"
+    },
+    "retryPolicy": "服务端429后短暂等待并只做有限尝试；普通推送及回读仍受阻后停止，不更换代理、绕过限制或连续重试。"
+  },
+  "issueRecords": [
+    "ISSUE-20261030-21",
+    "ISSUE-20261030-22",
+    "ISSUE-20261030-23"
+  ],
+  "nextAction": "等待Gitee Git服务恢复后，先回读两端及本地状态，再通过安全凭据管理器核验并继续既有双次确认的同步范围。当前不因429要求再次更换凭据，不自动重试或开启后续批次。",
+  "notRun": [
+    "Gitee成功推送及独立检出",
+    "本地执行结果记录的追加提交与云端同步",
+    "Android工程、APK、真机兼容、OSS或WebDAV接入",
+    "B02及后续批次"
+  ]
+}

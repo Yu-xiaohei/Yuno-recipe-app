@@ -1,0 +1,96 @@
+"""Reanalyse preserved B02 PNGs offline. Never operates a device or rewrites inputs."""
+
+from datetime import datetime
+import hashlib
+import json
+from pathlib import Path
+import sys
+from zoneinfo import ZoneInfo
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "tests"))
+from test_android_glass import compare_images, surface_geometry
+from test_android_navigation import parse_geometry
+from PIL import Image, ImageChops
+import PIL
+
+
+def digest(path):
+    return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+
+
+capture_path = "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass.json"
+output = ROOT / "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_reanalysis.json"
+if output.exists():
+    raise FileExistsError("Preserve existing reanalysis; choose a new explicit output for another run.")
+source = ".agent-tmp/b02_glass/tmp_b02_navigation_source_20261030_182000.kt"
+assert digest(source) == "463fb003a7f2402d0067321189d5e51224c8a10fdf8edbd089d65b0c98a72f30"
+capture = json.loads((ROOT / capture_path).read_text(encoding="utf-8"))
+assert capture["candidate"] == "B02-candidate-3" and capture["status"] == "pass"
+assert capture["api"] == 33 and capture["variant"] == "release"
+assert capture["apkSha256"] == capture["installedApkSha256"]
+assert not capture["restoreErrors"] and len(capture["rows"]) == 2
+rows, checks = [], ["pinned upstream layout source SHA-256 matches"]
+for row in capture["rows"]:
+    captured = row["captures"]
+    assert captured["refractive"]["rectangles"] == captured["blur_only"]["rectangles"]
+    assert captured["refractive"]["bounds"] == captured["blur_only"]["bounds"]
+    assert captured["refractive"]["calibrationBounds"] == captured["blur_only"]["calibrationBounds"]
+    for mode in ("refractive", "blur_only"):
+        item = captured[mode]
+        assert digest(item["path"]) == item["sha256"]
+        geometry, _ = parse_geometry((ROOT / item["log"]).read_text(encoding="utf-8"))
+        assert {str(key): list(value.items()) for key, value in geometry.items()} == {
+            key: [(part, tuple(bounds)) for part, bounds in value.items()]
+            for key, value in item["rectangles"].items()
+        }
+    surface = surface_geometry(captured["refractive"]["rectangles"])
+    semantic = captured["refractive"]["bounds"]
+    assert all(abs(surface["bounds"][index] - semantic[index]) <= 1 for index in (0, 1, 2))
+    checks.append(f"{row['night']}: original PNG hashes and nine original layout logs agree")
+    calibration = captured["refractive"]["calibrationBounds"]
+    reference = (calibration[0] + 10, calibration[1] + 20,
+                 calibration[2] - 10, surface["bounds"][1] - 40)
+    assert reference[3] > reference[1]
+    with Image.open(ROOT / captured["refractive"]["path"]) as full, \
+            Image.open(ROOT / captured["blur_only"]["path"]) as flat:
+        assert ImageChops.difference(full.convert("RGB").crop(reference),
+                                     flat.convert("RGB").crop(reference)).getbbox() is None
+    checks.append(f"{row['night']}: background reference outside glass is byte-identical")
+    metrics = compare_images(ROOT / captured["refractive"]["path"],
+                             ROOT / captured["blur_only"]["path"],
+                             surface["bounds"], captured["refractive"]["rectangles"])
+    assert metrics["renderedRefractionDetected"]
+    checks.append(f"{row['night']}: full-layout-derived surface passes unchanged refraction thresholds")
+    rows.append({
+        "night": row["night"], "surfaceGeometry": surface,
+        "historicalClippedSemanticBounds": semantic,
+        "referenceBounds": reference, "pixelComparison": metrics,
+        "inputs": [{"mode": mode, "path": item["path"], "sha256": digest(item["path"]),
+                    "layoutLog": item["log"], "layoutLogSha256": digest(item["log"])}
+                   for mode, item in captured.items()],
+    })
+report = {
+    "candidate": capture["candidate"], "api": capture["api"], "variant": capture["variant"],
+    "status": "pass", "kind": "offline-reanalysis-of-original-captures-not-new-device-run",
+    "checkedAt": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds"),
+    "apkSha256": capture["apkSha256"], "installedApkSha256": capture["installedApkSha256"],
+    "apkBindingSource": "original device report; not newly measured",
+    "originalCaptureReport": capture_path, "originalCaptureReportSha256": digest(capture_path),
+    "originalDeviceCheckRecordCount": len(capture["checks"]),
+    "supersedes": "Only the original clipped-ROI pixel metrics; original bytes remain unchanged.",
+    "pillowVersion": PIL.__version__, "checks": checks, "rows": rows, "restoreErrors": [],
+    "sources": [{"path": path, "sha256": digest(path)} for path in (
+        source, "app/src/main/java/com/yunobase/recipe/PrototypeApp.kt",
+        "tests/test_android_glass.py", "tests/test_android_glass_geometry.py",
+        Path(__file__).relative_to(ROOT).as_posix(),
+    )],
+    "limitations": [
+        "Surface bounds are derived from actual layout and pinned source, not an optical contour measurement.",
+        "The rounded rim mask is a reproducible sampling region; it does not measure every lens pixel.",
+        "No new device capture, physical Android17 acceptance, brand equivalence or performance result.",
+    ],
+}
+output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"report": output.relative_to(ROOT).as_posix(),
+                  "metrics": [row["pixelComparison"] for row in rows]}))

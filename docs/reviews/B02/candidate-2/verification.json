@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "batch": "B02",
+  "candidate": "B02-candidate-2",
+  "checkedAt": "2026-10-30T17:35:11+08:00",
+  "status": "partial-verification-not-batch-acceptance",
+  "baseCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "authorization": "docs/reviews/B02/start.json",
+  "gates": {
+    "G1": "incomplete-batch; implemented-subset-pass",
+    "G2": "incomplete-batch; implemented-subset-pass",
+    "G3": "not_run"
+  },
+  "environment": {
+    "os": "Windows",
+    "timezone": "Asia/Shanghai",
+    "jdk": "Temurin 21.0.9+10; process-only",
+    "gradle": "9.7.1",
+    "agp": "9.4.1",
+    "kotlin": "2.4.20",
+    "composeMultiplatform": "1.12.0",
+    "activityCompose": "1.13.0",
+    "miuix": "0.9.4",
+    "miuixCommit": "39c40f99844227b853f0049a0933b1f3ae6c00ba",
+    "prototypeSdk": {
+      "min": 31,
+      "compile": 37,
+      "target": 37,
+      "buildTools": "37.0.0"
+    },
+    "avd": "dedicated AOSP x86_64 API31/32/33; Pixel6 1080x2400; WHPX; host GPU",
+    "sdkPackages": [
+      {
+        "package": "platforms/android-37.0",
+        "sourcePropertiesSha256": "fa89029fc0cee414cb5e44a37cd3033771217eeecb5086577bb6d9b1b03b5b5f",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK Platform 17",
+          "Pkg.UserSrc=false",
+          "Platform.Version=17",
+          "Platform.CodeName=",
+          "Pkg.Revision=2",
+          "AndroidVersion.ApiLevel=37.0",
+          "AndroidVersion.CodeName=",
+          "AndroidVersion.ExtensionLevel=22",
+          "AndroidVersion.IsBaseSdk=true",
+          "AndroidVersion.PreviewSdkInt=0",
+          "AndroidVersion.BetaVersion=",
+          "Layoutlib.Api=15",
+          "Layoutlib.Revision=1",
+          "Platform.MinToolsRev=22"
+        ]
+      },
+      {
+        "package": "build-tools/37.0.0",
+        "sourcePropertiesSha256": "fbd87c8567afbc6dc78e140097fcde234f4a61fa7065e85081d43e442ccd3d24",
+        "sourceProperties": [
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=37.0.0"
+        ]
+      },
+      {
+        "package": "system-images/android-31/default/x86_64",
+        "sourcePropertiesSha256": "df7aad3e6bba94fc964fb919ed88a082e3f828fc2981fcf33b466dbfa0da5922",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK System Image",
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=3",
+          "Pkg.Dependencies=emulator#31.2.7",
+          "AndroidVersion.ApiLevel=31",
+          "SystemImage.Abi=x86_64",
+          "SystemImage.GpuSupport=true",
+          "SystemImage.TagId=default",
+          "SystemImage.TagDisplay=Default Android System Image"
+        ]
+      },
+      {
+        "package": "system-images/android-32/default/x86_64",
+        "sourcePropertiesSha256": "618845f337ead73883c8c98c9927220bfcf64df49a3d4c2da72358607c19031d",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK System Image",
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=2",
+          "Pkg.Dependencies=emulator#29.1.11",
+          "AndroidVersion.ApiLevel=32",
+          "SystemImage.Abi=x86_64",
+          "SystemImage.GpuSupport=true",
+          "SystemImage.TagId=default",
+          "SystemImage.TagDisplay=Default Android System Image"
+        ]
+      },
+      {
+        "package": "system-images/android-33/default/x86_64",
+        "sourcePropertiesSha256": "f03462436135f3be2a1d89ad01d3b4fc411c79bb08a154a0ade5d4d1c16c1863",
+        "sourceProperties": [
+          "Pkg.Desc=Android SDK System Image",
+          "Pkg.UserSrc=false",
+          "Pkg.Revision=2",
+          "Pkg.Dependencies=emulator#29.1.11",
+          "AndroidVersion.ApiLevel=33",
+          "AndroidVersion.ExtensionLevel=${PLATFORM_SDK_EXTENSION_VERSION}",
+          "AndroidVersion.IsBaseSdk=${PLATFORM_IS_BASE_SDK}",
+          "SystemImage.Abi=x86_64",
+          "SystemImage.GpuSupport=true",
+          "SystemImage.TagId=default",
+          "SystemImage.TagDisplay=Default Android System Image"
+        ]
+      }
+    ]
+  },
+  "build": {
+    "status": "pass",
+    "command": "./scripts/android_gradle.ps1 :app:assembleDebug :app:assembleRelease :app:lintDebug :app:lintRelease --dependency-verification=strict --no-daemon --console=plain",
+    "log": ".agent-tmp/b02_toolchain/tmp_b02_gradle_darkfix_20261030_165000.log",
+    "result": "BUILD SUCCESSFUL in 2m 25s",
+    "dependencyArtifactCount": 671,
+    "lintPerVariant": {
+      "debug": {
+        "errors": 0,
+        "warnings": 7,
+        "ids": {
+          "AndroidGradlePluginVersion": 2,
+          "NewerVersionAvailable": 4,
+          "MissingApplicationIcon": 1
+        }
+      },
+      "release": {
+        "errors": 0,
+        "warnings": 7,
+        "ids": {
+          "AndroidGradlePluginVersion": 2,
+          "NewerVersionAvailable": 4,
+          "MissingApplicationIcon": 1
+        }
+      }
+    },
+    "lintSuppressionOrBaselineAdded": false,
+    "newDependency": {
+      "coil": "3.6.3; local compose/svg only; Apache-2.0",
+      "necessaryAlignments": {
+        "profileinstaller": "1.4.0 -> 1.4.1",
+        "coroutines-android": "1.9.0 -> 1.10.2"
+      },
+      "networkModuleAdded": false
+    }
+  },
+  "regression": {
+    "fullSuite": {
+      "status": "pass",
+      "tests": 51,
+      "log": ".agent-tmp/b02_toolchain/tmp_b02_regression_candidate2_20261030_170000.log",
+      "seconds": 21.896
+    },
+    "deviceDriverSyntax": "AST parse pass; scripts do not automatically operate a device on unittest discovery",
+    "finalAffectedContractSuite": {
+      "status": "pass",
+      "tests": 29,
+      "seconds": 1.36,
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_contract_schema.py -v",
+      "log": ".agent-tmp/b02_toolchain/tmp_b02_contract_final_20261030_173259.log",
+      "logSha256": "3d40c44d4eeb1a8d3caf6d68aeab97cdca4460cf41bb8ea243c960e70857bc90"
+    }
+  },
+  "deviceCommandTemplate": "./.venv/Scripts/python.exe tests/test_android_smoke.py --adb <adb.exe> --serial <dedicated-emulator> --api <31|32|33> --apk <same-variant-apk> --package <isolated-package> --variant <debug|release> --output-dir docs/reviews/B02/runtime-candidate-2",
+  "deviceResults": [
+    {
+      "api": 31,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_debug.json",
+      "reportSha256": "3d95d36dbffc515c19330573a577682e3f4ff60f06be8038187161412e4cdacf",
+      "apkSha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 31,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release.json",
+      "reportSha256": "1bfaed99b283441f41d1cff4b9d9bf8813e89c4095368505e6be229c0e28bdeb",
+      "apkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 32,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api32_debug.json",
+      "reportSha256": "8ef4ae32aa2b1a436f01ffe298b394e263cb79248b43b690a7b1d5247506bd4b",
+      "apkSha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 32,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api32_release.json",
+      "reportSha256": "283735fe192c61c964f4c4d5d3b0c674b785e7d6b36a49beffd094e10c6c6d5e",
+      "apkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 33,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 45,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_debug.json",
+      "reportSha256": "9a588f24b8c0ceb7c6598150fe9dc2ee4ce028df2526e4fad893321175f71fed",
+      "apkSha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 33,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 45,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release.json",
+      "reportSha256": "23553c5050ec899a07de7c74ad9be9287db9002727b49d705a6f984e452233da",
+      "apkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "transientUiDumpRetryCount": 0
+    }
+  ],
+  "checkRecordCount": 238,
+  "checkCountMeaning": "Assertion records include repeated process-alive assertions, not independent business tests.",
+  "apkArtifacts": [
+    {
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "variant": "debug",
+      "bytes": 52624711,
+      "sha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "signing": "local-debug-key-not-production",
+      "gitTracked": false,
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/font/misans_vf.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17
+    },
+    {
+      "path": "app/build/outputs/apk/release/app-release.apk",
+      "variant": "release",
+      "bytes": 26186856,
+      "sha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "signing": "local-debug-key-not-production",
+      "gitTracked": false,
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/9A.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17
+    }
+  ],
+  "review": {
+    "executor": "root; b02_font_audit read-only resource audit",
+    "independentReviewer": "b02_independent_review; final read-only 64/64 and six-report/two-APK audit pass",
+    "manager": "root",
+    "implementedScopeResult": "G1 executor and G2 manager/independent checks pass for implemented scope; not whole-batch acceptance",
+    "r8": "EnhancedMaterial, EnhancedMaterialKt, LensKt names retained; API31/32 R8 runtime passes",
+    "manifest": "both merged manifests min31/target37; no INTERNET; allowBackup=false; no blur initializer",
+    "visuallyInspected": [
+      "API31 debug home",
+      "additional final captures recorded separately"
+    ],
+    "snapshotManifest": "docs/reviews/B02/candidate-manifest.json",
+    "report": "docs/reviews/B02/review.md",
+    "binaryGitAttributes": {
+      "app/src/main/res/font/misans_vf.ttf": {
+        "gitBlobId": "07a1ea59cebcd6469b129e59e2b6b7ec06ddde4c",
+        "filteredEqualsUnfiltered": true
+      },
+      "third_party/misans/MiSans_Fonts_License.pdf": {
+        "gitBlobId": "1fe2a6fb53f35da55fe3bf93b14ce2f37bbc2c53",
+        "filteredEqualsUnfiltered": true
+      },
+      "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_home.png": {
+        "gitBlobId": "2e930db01026998a8c5ee0dbfccff4628202790a",
+        "filteredEqualsUnfiltered": true
+      }
+    },
+    "preservedB01ManifestSha256": {
+      "candidate-manifest.json": "a4e421b65593c804966b11d26de216c82e65f6c6dafbe48bbc5b89aa0f07d6f9",
+      "reviewed-candidate-7-manifest.json": "25037cf3e91b747cdf4a02ab14d77209a34e23bb31c21bd5268b58a82ce17bb2",
+      "reviewed-candidate-6-manifest.json": "87f339e682be8fd393dcf1f026a257dc3aa9bd5abfcd1a58aebc861b190f73c0"
+    },
+    "snapshotReview": "64/64 implementation/input hashes match; six device reports, two installed-APK-bound visual reports and both APKs independently matched. Final administrative conclusions excluded from source snapshot.",
+    "uiAlignment": "docs/reviews/B02/ui-alignment.md",
+    "manifestSha256": "d6f32b030ed04d9e2c8172c90653de9ef27084de90a77998db1b25ab70235062",
+    "independentVisualInspection": [
+      "test_b02_api33_release_visual_dark_scale1_0_home.png",
+      "test_b02_api31_release_visual_dark_scale2_0_meals.png",
+      "test_b02_api33_release_visual_dark_scale2_0_settings.png"
+    ]
+  },
+  "notCompleted": [
+    "vivo model/vendor OS and physical-device installation",
+    "Chinese IME composition and every-state dark/large-font matrix",
+    "rare glyph fallback, TalkBack, wide GPU/performance, rotation and large screens",
+    "real recipe/meal calculation/persistence/full navigation/OSS/WebDAV/product APK release",
+    "whole-batch G1/G2 and human G3"
+  ],
+  "knownLimits": [
+    "Kotlin fully-supported matrix does not fully cover fixed AGP9.4.1/Gradle9.7.1; actual build evidence only",
+    "fault injection covers two managed exception boundaries, not every native or GPU failure",
+    "release variant uses local debug signing solely for R8 compatibility",
+    "Gitee paused at prior HTTP429; no new remote action",
+    "local license readable copy has CRLF; separate LF-normalized hash recorded; official PDF/font unchanged"
+  ],
+  "rollback": "Uninstall only isolated prototype packages from task AVD; compare listed source snapshot before reverting own B02 files. Do not reset user changes or delete B01 evidence. SDK/AVD retained under ignored tmp_ directories.",
+  "sideEffects": {
+    "newCommit": false,
+    "push": false,
+    "release": false,
+    "cloudWrites": false,
+    "userSourceChanged": false,
+    "globalJavaChanged": false,
+    "ownedEmulators": "All three task AVDs stopped; API32 stopped after its smoke runs, API31/33 stopped after final visual captures. SDK/AVD files retained.",
+    "finalEmulatorShutdown": {
+      "report": ".agent-tmp/b02_toolchain/tmp_b02_emulator_shutdown_20261030_173328.json",
+      "reportSha256": "93c22acca3cb8ea061c6a65a451c9b933f6a942ae173fc4feee9dcb9fa900013",
+      "api31And33NamesVerified": true,
+      "fontAndNightPreferencesRestored": true,
+      "finalAdbDeviceCount": 0,
+      "finalAdbDevicesOutput": "List of devices attached"
+    }
+  },
+  "historicalEvidence": {
+    "candidate1": "docs/reviews/B02/candidate-1/",
+    "oldRuntime": "docs/reviews/B02/runtime/",
+    "candidate2BeforeDarkFix": "docs/reviews/B02/runtime-candidate-2-before-dark-fix/",
+    "old166ChecksApplyToCurrentCandidate": false,
+    "failedCandidate2Reports": []
+  },
+  "representativeVisualCapture": {
+    "variant": "release",
+    "reports": [
+      {
+        "api": 31,
+        "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual.json",
+        "reportSha256": "abd20aff11e4f33e4fd196728e3d5cffe2113b3bcd71ea1d73d3b7a899b5b5b0",
+        "captureStatus": "captured-pending-human-inspection",
+        "rawScreenshotCount": 18,
+        "installedApkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6"
+      },
+      {
+        "api": 33,
+        "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual.json",
+        "reportSha256": "c1b5b8e7239517a2e8b91bb5366994be211c56957932e3d93a5ee5ebe1e83cae",
+        "captureStatus": "captured-pending-human-inspection",
+        "rawScreenshotCount": 18,
+        "installedApkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6"
+      }
+    ],
+    "rawScreenshotCount": 36,
+    "notWholeStateMatrix": true,
+    "notHumanG3": true,
+    "rootVisuallyInspected": [
+      "test_b02_api31_release_visual_light_scale1_3_home.png",
+      "test_b02_api33_release_visual_light_scale1_3_meals.png",
+      "test_b02_api33_release_visual_dark_scale1_0_home.png",
+      "test_b02_api31_release_visual_dark_scale2_0_meals.png",
+      "test_b02_api33_release_visual_dark_scale2_0_settings.png"
+    ],
+    "inspectionResult": "Listed viewports: cards distinguish from background, original assets render, large-font summaries/filters wrap without overlap. Disabled future settings intentionally use disabled colors; no full contrast/TalkBack approval.",
+    "priorDriverFailure": "test_b02_visual_before_configuration_driver_fix/ retains two failed capture reports; exact original system failure cause unknown. Pre-stop/readback driver then captured all 36 without unconditional retries.",
+    "screenshotHashes": [
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale1_0_home.png",
+        "sha256": "718ad0fd7fdc488c24a82b0a9f4cf0a764bef150710c0acee2285ffde3fd2be6",
+        "bytes": 557636
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale1_0_meals.png",
+        "sha256": "5d20fade71a42d3948f0154525eb27f10b9d823e0089d0a4e93ab858ec5e3f72",
+        "bytes": 181896
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale1_0_settings.png",
+        "sha256": "c585451fba4bfacf61899512afad5077cf492f96c67cf8d2da4925031c7a2b7b",
+        "bytes": 175876
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale1_3_home.png",
+        "sha256": "94abcac2d698c31dbf3d680b7d2ca8bb50e1bcaad41f6e9226dc49379c2a9561",
+        "bytes": 599660
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale1_3_meals.png",
+        "sha256": "a92a7503faeac4895b32968b9190bdadbd8b08e426725cb44903a94b85bd2202",
+        "bytes": 206105
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale1_3_settings.png",
+        "sha256": "389b692ea1343d857067415c8d7ea06fa10171575712bda2249c370fce8f6e9c",
+        "bytes": 187344
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale2_0_home.png",
+        "sha256": "a88d4a156c09ca6b2fce8dea0ef6cc059aa6bb096e9c44dc4b9093685b82d12a",
+        "bytes": 417115
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale2_0_meals.png",
+        "sha256": "a44e1acdac4a88710353481dc1bf6a1bba175b128ab3ab0a8b417c5f06d2fd70",
+        "bytes": 233073
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_dark_scale2_0_settings.png",
+        "sha256": "faa2f3a8a9ea7d9d6ea210a3703a538f8c4083712e5f125954df81949438c3af",
+        "bytes": 204961
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale1_0_home.png",
+        "sha256": "5ca60be304d7836d3b92d40dc216da244a9bb21204596ba2a73b485b089de529",
+        "bytes": 544915
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale1_0_meals.png",
+        "sha256": "44b57b2e8766f3fb2ff73804ad068a18493693ab61e870ddfc1ac4a2616bacd2",
+        "bytes": 180993
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale1_0_settings.png",
+        "sha256": "80d8d969bdcb99f0008dd36a74ff4b51bb975139dafa4ac2b6482b8d58b67694",
+        "bytes": 164064
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale1_3_home.png",
+        "sha256": "a32f264d79879a24fc740b1a9071dde8bb7e98179b46459c8b1c955d9321748e",
+        "bytes": 578242
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale1_3_meals.png",
+        "sha256": "82edff010280bcfc0b203fc79e80de936a78ab8ab75df2485e1378123df6a2a6",
+        "bytes": 206480
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale1_3_settings.png",
+        "sha256": "536de5b1af96e22495649d2d9a407a3dc5f54adfbd944b3f35f0e939f3253173",
+        "bytes": 178505
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale2_0_home.png",
+        "sha256": "4184d1da4a159bc77445c6f8e45317d5caa76b1db682545e4afa433418c81c17",
+        "bytes": 397813
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale2_0_meals.png",
+        "sha256": "ded5993639abae10a735b8f70f370b2e6b25aede4516d8b77c8eac85bf6b7bd2",
+        "bytes": 227972
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual_light_scale2_0_settings.png",
+        "sha256": "854e008d7a3f3db4beec5992c867dc2c76a3b631eab8f3cd59429e2e769c8442",
+        "bytes": 196047
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale1_0_home.png",
+        "sha256": "3764927cb87bd6d8dc969fda8d735b2168815b841cc880ece5ffb265c36054a1",
+        "bytes": 570784
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale1_0_meals.png",
+        "sha256": "c112c21b64612d128a7646bfd56bdd17e86e80f4e8523a4e318319898e9c51db",
+        "bytes": 183077
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale1_0_settings.png",
+        "sha256": "7af30798c21b390f8386b45675ca74145980ed82a370003a2c9cb38d2ce2c2c9",
+        "bytes": 179107
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale1_3_home.png",
+        "sha256": "0f4ef36f8718264263ed1b25fe8639ae878225328e281fd20b4e5dd31b895da8",
+        "bytes": 596329
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale1_3_meals.png",
+        "sha256": "f688bc11429873fb6cf9b5749daba13c4f4698590db31b83a6e5de16443848f3",
+        "bytes": 207061
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale1_3_settings.png",
+        "sha256": "0414f9f69981cb8e4c57122d1e38ef9faeaef49d2eee2178fc03e176f47442bb",
+        "bytes": 180861
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale2_0_home.png",
+        "sha256": "d8bc5cdfe100dcd9b03a6000c955bc892a6b9e3599d3304b23a6502afe4a6f15",
+        "bytes": 421534
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale2_0_meals.png",
+        "sha256": "dd30e66dbd4295aef5362f6eceba82d153c570ebf644c64acc1c66e25bb743d9",
+        "bytes": 234568
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_dark_scale2_0_settings.png",
+        "sha256": "855bf15bcb55a6960449034798ab598a206a23c32b27924ca1858c6a54ab1321",
+        "bytes": 208561
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale1_0_home.png",
+        "sha256": "4f017c990ba76fea9458ea12306af11347ebbcb3fb0bb8717e37c62fb00295c1",
+        "bytes": 546490
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale1_0_meals.png",
+        "sha256": "8c4b8b24e14190d7644c2e60fd52e9a886e1e979d40112cb13915c1b564cea0e",
+        "bytes": 180814
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale1_0_settings.png",
+        "sha256": "8e79aec584c014842a341fb58e80dd501707ce862977be0202892cfbadef11a1",
+        "bytes": 163841
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale1_3_home.png",
+        "sha256": "42ec3c72c673f3e8014e45ac55b5dbda858e5de649f07e124f61c88c6e651f79",
+        "bytes": 571176
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale1_3_meals.png",
+        "sha256": "cbd7ca6cb9ecf68e72b2d68d75e3c0fd962cd258c20fd50075353a29fb2f3022",
+        "bytes": 205965
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale1_3_settings.png",
+        "sha256": "1cbe86f6ee43fb909b2d618b4a5dee1bb77fe4f225b9c2356bdda1348f53776a",
+        "bytes": 170690
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale2_0_home.png",
+        "sha256": "450fe8a8a7771ee69b032b3bf9bd84ee48b568c2133f437b15a6055be9a3253b",
+        "bytes": 392473
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale2_0_meals.png",
+        "sha256": "3f3150a161099d86406c77ca630163e92e3eaa7c47ca67c5e9dc732c181cfaee",
+        "bytes": 225607
+      },
+      {
+        "path": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual_light_scale2_0_settings.png",
+        "sha256": "aace221568362c0a6b36fc887e4c7d5f5c92fade3ed2c927e10425c4734d4aed",
+        "bytes": 192504
+      }
+    ]
+  },
+  "staticChecks": {
+    "status": "pass",
+    "utf8TextFiles": 92,
+    "jsonFiles": 44,
+    "xmlFiles": 6,
+    "pngFiles": 267,
+    "localMarkdownLinks": 51,
+    "pythonAst": "pass",
+    "gitDiffCheck": "pass",
+    "b01ArchiveHashes": "unchanged",
+    "referenceData": "unchanged in Git",
+    "stagedFiles": 0,
+    "headUnchanged": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+    "manifestStillMatches": true,
+    "historicalMarkdownLinkContext": "candidate-1 archive kept byte-identical; its relative links retain original directory context and are excluded from current-location link checks"
+  }
+}

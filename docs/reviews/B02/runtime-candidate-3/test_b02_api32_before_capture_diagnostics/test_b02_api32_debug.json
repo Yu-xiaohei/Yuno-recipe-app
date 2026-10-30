@@ -1,0 +1,39 @@
+{
+  "candidate": "B02-candidate-3",
+  "status": "fail",
+  "serial": "emulator-5556",
+  "api": 32,
+  "variant": "debug",
+  "package": "com.yunobase.recipe.prototype.debug",
+  "apkSha256": "43d42b6b544763db0c52ae5b80f910de9de3e2f0c529346bf61369bb4a48db5a",
+  "checks": [
+    "target is an emulator",
+    "only the isolated prototype package is allowed",
+    "device SDK equals 32",
+    "device boot completed",
+    "APK installs successfully",
+    "installed APK bytes match the tested artifact",
+    "cold activity start returns Status: ok",
+    "all three existing tab labels are visible",
+    "Figma home structure and representative recipe are present",
+    "prototype process remains alive",
+    "expected material branch is clear",
+    "MiSans font build is running",
+    "thumbnail decoding stays bounded instead of decoding full-resolution originals",
+    "local SVG and thumbnail loading has no reported error",
+    "prototype process remains alive",
+    "scrolling does not crash",
+    "filter 0 opens its actual Miuix option list",
+    "back dismisses filter 0",
+    "filter 1 opens its actual Miuix option list",
+    "back dismisses filter 1"
+  ],
+  "failure": "CalledProcessError: Command '['C:\\\\Users\\\\yu_xi\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'emulator-5556', 'shell', 'cat', '/data/local/tmp/tmp_b02_smoke_20261030_223705.xml']' returned non-zero exit status 1.",
+  "transientUiDumpRetries": [],
+  "limitations": [
+    "Synthetic offline prototype, not recipe/meal functionality.",
+    "MiSans original VF and license packaged; rare-glyph fallback remains manual.",
+    "ASCII keyboard only; Chinese IME composition remains a separate manual check.",
+    "No physical vivo device or broad GPU/performance certification."
+  ]
+}

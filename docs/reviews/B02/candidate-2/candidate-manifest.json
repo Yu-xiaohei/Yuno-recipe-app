@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 1,
+  "batch": "B02",
+  "candidate": "B02-candidate-2",
+  "kind": "frozen-implementation-and-inputs-not-human-accepted",
+  "baseCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "generatedAt": "2026-10-30T17:17:19+08:00",
+  "scope": "Implementation, build/test inputs, third-party originals, frozen resource audits and SDK baseline. Mutable administrative gate docs excluded; device reports separately hashed.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1175,
+      "sha256": "dbd0ae588030cdaed07b6a290e50b7be7a25db528fb6dc71e412d16323fd8c4b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 539,
+      "sha256": "b60ccaba07373c10aa6b333b23eeffbfd89dbd452eb24959f854dd254cffae21"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "bytes": 1751,
+      "sha256": "f3b2ecbcc6f855ac01ea703ccf95d9312134285cd4aa5339956a8dd760ebc7c7"
+    },
+    {
+      "path": "app/gradle.lockfile",
+      "bytes": 60289,
+      "sha256": "20cb2d3fd090d0daa2738cd85fc78e2aed38ffbce65bcce8fe7581f7f5a96ac6"
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "bytes": 270,
+      "sha256": "8d100e0b610d5830685de721d68a4077d7048793dc0069e54710e713051c432f"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "bytes": 1043,
+      "sha256": "a7ad4831891d95204e510e7617f81e646c3cce0a1e18e0928e1dbedbde71c173"
+    },
+    {
+      "path": "app/src/main/assets/figma/brand_logo.svg",
+      "bytes": 4916,
+      "sha256": "40eeccafe9f911ae3c389e267dd0e7bd8e015dfef735a94fb182ae4a0a0d8e51"
+    },
+    {
+      "path": "app/src/main/assets/figma/calendar.svg",
+      "bytes": 1661,
+      "sha256": "c35c1b8ca8d51ce8b2220ff5a6d545f672ce611f44bd6cb620aeedf32314289f"
+    },
+    {
+      "path": "app/src/main/assets/figma/carbs.svg",
+      "bytes": 1515,
+      "sha256": "3fd0ce3930dbeb68366de819d77e11c4247a66dd981ce4e6db30df687a99e19a"
+    },
+    {
+      "path": "app/src/main/assets/figma/chevron.svg",
+      "bytes": 404,
+      "sha256": "975c09f180034961d4a5a4bed484b6f74163bc111223ae2552b2f7fe02a83e55"
+    },
+    {
+      "path": "app/src/main/assets/figma/energy.svg",
+      "bytes": 1111,
+      "sha256": "c35e52e79cbd2e2be2007665f15778a6476231a0dfd754bc4378a3c108cacfa8"
+    },
+    {
+      "path": "app/src/main/assets/figma/fat.svg",
+      "bytes": 627,
+      "sha256": "9037cef239890cdf9a4ea0c1f09d5afedba8389ec9bd5a8172957f2f3c07e098"
+    },
+    {
+      "path": "app/src/main/assets/figma/filter_arrow.svg",
+      "bytes": 599,
+      "sha256": "6f97cc6a6abedfd86793a13317ca06f4a462b0718dceee54f0ec984512336c5a"
+    },
+    {
+      "path": "app/src/main/assets/figma/nav_meals.svg",
+      "bytes": 1583,
+      "sha256": "29e78df1290043222300c01096879e0455aa4e9fb9534f05fd1465864b46bafc"
+    },
+    {
+      "path": "app/src/main/assets/figma/nav_recipes.svg",
+      "bytes": 1411,
+      "sha256": "df9b46d59ffe29b9141ff8cad13387d7733f4cb92fe2d9f3edd34b9dc7c61027"
+    },
+    {
+      "path": "app/src/main/assets/figma/nav_settings.svg",
+      "bytes": 1050,
+      "sha256": "63a94710c5f9f70bec83bb219540aa7d3f5b29ddb5bdf8e1b488f8d7aecd5c30"
+    },
+    {
+      "path": "app/src/main/assets/figma/protein.svg",
+      "bytes": 1497,
+      "sha256": "5d2bd0286dbf35bd0ce8d85ce7b5c5f39cd10303b1d4d417bae8431d31063e6e"
+    },
+    {
+      "path": "app/src/main/assets/figma/search.svg",
+      "bytes": 663,
+      "sha256": "0c915dc176c9375b48918078d5947e9eb846151028e9519d6d9a7673f7910d4a"
+    },
+    {
+      "path": "app/src/main/assets/figma/weight.svg",
+      "bytes": 858,
+      "sha256": "db7394cb613d25fcee1a031c54a5411354e39968518aa1e3087c137b7262dc8b"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_o.svg",
+      "bytes": 1288,
+      "sha256": "d2b92a4197a94547590132462a196180b4cc2fa9b3ce71db2182db7a2e567832"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_recipe.svg",
+      "bytes": 1779,
+      "sha256": "9b65a53c0baa0aa380435cb69aad5cc592f5d7a3631f1d2844259b8233cf0f4e"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_un.svg",
+      "bytes": 4305,
+      "sha256": "a02237dac5a8562ffda7826e4363d49f24fd2802bedb23e50638723ff6f8bb8e"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_y.svg",
+      "bytes": 577,
+      "sha256": "38a84d87e5dc4b48aedc1a7c12f44687a6bbb3935a9e57f04ae27ac812845069"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/MainActivity.kt",
+      "bytes": 3315,
+      "sha256": "433de0ac090c3c1787c00e26f7a91643c9b39c978eab09c3f7e1aaad4ff3fc50"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/PrototypeApp.kt",
+      "bytes": 25095,
+      "sha256": "b773042e46ef4e8c0380736d51d4000cdf4aae222c90cca18db6d9c58d3b688b"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/compat/EnhancedMaterial.kt",
+      "bytes": 5243,
+      "sha256": "dbdb79092af11f39c50ca37a3a4f98055e527adec343acf22083c51fddafb71a"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/compat/Lens.kt",
+      "bytes": 8132,
+      "sha256": "105b568601259f8effcf8531b92d247877804b3ba54c00a7aa7ab778c0dc89bb"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/FigmaAsset.kt",
+      "bytes": 1737,
+      "sha256": "d841cb7f26d4ab9e78e8c00e2a747b90510807aca2e28ce5be3f7d3369161580"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/PrototypeOverviewPages.kt",
+      "bytes": 9537,
+      "sha256": "e685f3de6f8c7af954d1e025f41c184fb123473d8b092070e3c4d62b4b076474"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/PrototypeTheme.kt",
+      "bytes": 3018,
+      "sha256": "bf77583b6fc87b18eb67354ba22406173d31b77694bc927c9a18b2f0b33a48ff"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_apple.jpg",
+      "bytes": 4905681,
+      "sha256": "9e3b7287f354ed674f06f100bf0658ea5e2a9c391cd5dcf19dba6597c8737148"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_cabbage.jpg",
+      "bytes": 3221247,
+      "sha256": "1d27a13a0b5467fb457f98582a6e09d72476aeb4cf7063520570a0d0bbe90682"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_eggplant.jpg",
+      "bytes": 369949,
+      "sha256": "83a0d703a5b2dbb982d1a7cf42fac5bfdb4e45ce52e365ed302eaa805da404b6"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_placeholder.jpg",
+      "bytes": 20932,
+      "sha256": "d6304ff549c73ff53b0447e89028004f49b8fcff62a1d7f292cda9b0b198463a"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_tomato.jpg",
+      "bytes": 153407,
+      "sha256": "bc6c83bad68a59404fe03492cdb700d8711078411eee1a039c482ef4ab1964f0"
+    },
+    {
+      "path": "app/src/main/res/font/misans_vf.ttf",
+      "bytes": 20093424,
+      "sha256": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+    },
+    {
+      "path": "app/src/main/res/values-night/styles.xml",
+      "bytes": 407,
+      "sha256": "132e127939e8068d32692ebee5db29011652d4a73c93a46df336fb26626343af"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "bytes": 1120,
+      "sha256": "60548e650ffcf24246531bb5514714bbdf709e72be027c3acf3ac20384697935"
+    },
+    {
+      "path": "app/src/main/res/values/styles.xml",
+      "bytes": 412,
+      "sha256": "d2813b31ad0694981c038d894641ac82b6b6c70582368c5f8318b76439995a3a"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "bytes": 1050,
+      "sha256": "cb029b35db0e976c087100424e16e14a6256b46962398887520e51508c3b5842"
+    },
+    {
+      "path": "build.gradle.kts",
+      "bytes": 513,
+      "sha256": "2b5a177cead87fb5fde00a1dcbac94a2fdab4fcc8ee8d0b9efa58fa4a8e27ce9"
+    },
+    {
+      "path": "config/development-baseline.json",
+      "bytes": 9937,
+      "sha256": "f0c24aa0b2d26f124e582d66c5ce3f1a2e776fe7ddad03fb66c07d69e0d82991"
+    },
+    {
+      "path": "docs/reviews/B02/figma-assets.json",
+      "bytes": 11324,
+      "sha256": "8d9348270b7ed9711800c1eb5a3119074ee5319f2a3f7834553e32ba88cd37d6"
+    },
+    {
+      "path": "docs/reviews/B02/font-assets.json",
+      "bytes": 34592,
+      "sha256": "2f8302b5351b900eec3ec834b357d3485e9388205119114d61292fd0612c4917"
+    },
+    {
+      "path": "docs/reviews/B02/ui-alignment.md",
+      "bytes": 2326,
+      "sha256": "5eccc4db58c676a6e74a6b1ce7845512e39f0183d7fddf743bfa9856c84bca4f"
+    },
+    {
+      "path": "gradle.properties",
+      "bytes": 152,
+      "sha256": "a9cf3bdf36b254a61c327eb8a344ea7204c6943e93377edee28ba59ae16cc8fd"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "bytes": 997,
+      "sha256": "281090870d37aa65bdda75a1c94cb3bd0944a52b55015d2e9b34d73932f86a3c"
+    },
+    {
+      "path": "gradle/verification-metadata.xml",
+      "bytes": 181662,
+      "sha256": "27f31c89c0b36ca1023208492556a5868941c5684f9a7775c3259ba694e23804"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 47505,
+      "sha256": "7a9ce74cff467ca1bf60a4fcd9f05185acceda4d0f382434d393e17864262c5d"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 339,
+      "sha256": "45b09518a2f0ea326bc776066e735b94527d2a94002e3b27621c32cdaee7e3ce"
+    },
+    {
+      "path": "gradlew",
+      "bytes": 8678,
+      "sha256": "e01b5c97892572c82405c02b96a3382379100e7d825ce7c48883d95c26928750"
+    },
+    {
+      "path": "gradlew.bat",
+      "bytes": 2788,
+      "sha256": "4e193538b4ddccbee0c05d6383731b647945c146d16d8fe243b4ff716867896f"
+    },
+    {
+      "path": "scripts/android_gradle.ps1",
+      "bytes": 852,
+      "sha256": "0f8912666cc0d48de2f5aa863dc7788bba5c5bda692e74e2986dfd9dfbb82c12"
+    },
+    {
+      "path": "settings-gradle.lockfile",
+      "bytes": 267,
+      "sha256": "5e2d075903b5cd264613e7538c7c51b1484fe2ed489d4ead3e6b4ba0cf3911c4"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "bytes": 335,
+      "sha256": "f881e0bad48a3d2c7b1436ef1fcfebd54c7dac99b4bbcd2f6bfeffe3354cbb28"
+    },
+    {
+      "path": "tests/test_android_smoke.py",
+      "bytes": 15840,
+      "sha256": "ea6a8ac7d188be3d6b1d07831d579e7c6f3ae012e7dc3f3495e1bf1a531ea2d4"
+    },
+    {
+      "path": "tests/test_android_visual.py",
+      "bytes": 5308,
+      "sha256": "b87e4efa76d44542a6f8cb6bd10956d447e00e84a7c66858ce319fedd183de8b"
+    },
+    {
+      "path": "third_party/coil/LICENSE.txt",
+      "bytes": 11347,
+      "sha256": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893"
+    },
+    {
+      "path": "third_party/coil/NOTICE.txt",
+      "bytes": 119,
+      "sha256": "834bb291c6e0ff42eebdbb28e9d908192dc6e4788a0dfabd9ebcd333c428401d"
+    },
+    {
+      "path": "third_party/misans/COPYRIGHT.txt",
+      "bytes": 85,
+      "sha256": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752"
+    },
+    {
+      "path": "third_party/misans/LICENSE_readable.txt",
+      "bytes": 9856,
+      "sha256": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414"
+    },
+    {
+      "path": "third_party/misans/MiSans_Fonts_License.pdf",
+      "bytes": 79535,
+      "sha256": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86"
+    },
+    {
+      "path": "third_party/miuix/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "third_party/miuix/README.md",
+      "bytes": 618,
+      "sha256": "339b858eec43a253b6918acae5d6a466f2a298d6078971953919f3a93c5f7176"
+    }
+  ],
+  "deviceReports": [
+    {
+      "api": 31,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_debug.json",
+      "reportSha256": "3d95d36dbffc515c19330573a577682e3f4ff60f06be8038187161412e4cdacf",
+      "apkSha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 31,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release.json",
+      "reportSha256": "1bfaed99b283441f41d1cff4b9d9bf8813e89c4095368505e6be229c0e28bdeb",
+      "apkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 32,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api32_debug.json",
+      "reportSha256": "8ef4ae32aa2b1a436f01ffe298b394e263cb79248b43b690a7b1d5247506bd4b",
+      "apkSha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 32,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 37,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api32_release.json",
+      "reportSha256": "283735fe192c61c964f4c4d5d3b0c674b785e7d6b36a49beffd094e10c6c6d5e",
+      "apkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 33,
+      "variant": "debug",
+      "status": "pass",
+      "checkRecordCount": 45,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_debug.json",
+      "reportSha256": "9a588f24b8c0ceb7c6598150fe9dc2ee4ce028df2526e4fad893321175f71fed",
+      "apkSha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "api": 33,
+      "variant": "release",
+      "status": "pass",
+      "checkRecordCount": 45,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release.json",
+      "reportSha256": "23553c5050ec899a07de7c74ad9be9287db9002727b49d705a6f984e452233da",
+      "apkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "transientUiDumpRetryCount": 0
+    }
+  ],
+  "visualReports": [
+    {
+      "api": 31,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api31_release_visual.json",
+      "reportSha256": "abd20aff11e4f33e4fd196728e3d5cffe2113b3bcd71ea1d73d3b7a899b5b5b0",
+      "captureStatus": "captured-pending-human-inspection",
+      "rawScreenshotCount": 18,
+      "installedApkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6"
+    },
+    {
+      "api": 33,
+      "report": "docs/reviews/B02/runtime-candidate-2/test_b02_api33_release_visual.json",
+      "reportSha256": "c1b5b8e7239517a2e8b91bb5366994be211c56957932e3d93a5ee5ebe1e83cae",
+      "captureStatus": "captured-pending-human-inspection",
+      "rawScreenshotCount": 18,
+      "installedApkSha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6"
+    }
+  ],
+  "apkArtifacts": [
+    {
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "variant": "debug",
+      "bytes": 52624711,
+      "sha256": "5b566581a93d43e7c4b055fa9a7eb443aac2e4cb04b4894b972336de4706ae78",
+      "signing": "local-debug-key-not-production",
+      "gitTracked": false,
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/font/misans_vf.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17
+    },
+    {
+      "path": "app/build/outputs/apk/release/app-release.apk",
+      "variant": "release",
+      "bytes": 26186856,
+      "sha256": "098cebdcd0fa01b45c24dcca813f19cdc4b479527052dc0afffc8838f70518b6",
+      "signing": "local-debug-key-not-production",
+      "gitTracked": false,
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/9A.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17
+    }
+  ],
+  "excluded": [
+    "ignored SDK/AVD/build outputs except recorded APK hashes",
+    "verification.json/review.md/current gate records",
+    "historical candidate reports/screenshots"
+  ]
+}

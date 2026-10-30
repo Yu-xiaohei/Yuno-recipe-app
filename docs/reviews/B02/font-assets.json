@@ -1,0 +1,1224 @@
+{
+  "schemaVersion": 1,
+  "batch": "B02",
+  "checkedAt": "2026-10-30T23:05:21+08:00",
+  "status": "original-vf-integrated; runtime-evidence-in-verification",
+  "familySelectedByUser": "MiSans",
+  "userConfirmedAttribution": "本应用使用 MiSans 字体",
+  "package": {
+    "officialUrl": "https://hyperos.mi.com/font-download/MiSans.zip",
+    "localPath": ".agent-tmp/b02_font/tmp_b02_misans_package_20261030_144447.zip",
+    "byteLength": 227880072,
+    "sha256": "b6aa1fc827035922612df8edf36e5609bca1c5441e25cd57572204569b7b81d9",
+    "licenseIncludedInArchive": false,
+    "licenseEntries": [],
+    "fontBinaryModified": false,
+    "globallyInstalled": false
+  },
+  "license": {
+    "officialUrl": "https://hyperos.mi.com/font-download/MiSans字体知识产权许可协议.pdf",
+    "localPath": "third_party/misans/MiSans_Fonts_License.pdf",
+    "byteLength": 79535,
+    "sha256": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+    "pageCount": 4,
+    "pdfCreationMetadata": "D:20231019121731Z00'00'",
+    "licenseVersionDate": null,
+    "versionDateNote": "No explicit agreement version/effective date in the document; PDF metadata is not an agreement version.",
+    "reviewMethod": "pypdf extraction plus visual inspection of all four pdftoppm PNG pages",
+    "webSummaryMatchesFullPdf": false,
+    "managerReviewRequired": false,
+    "additionalClausesComparedWithWebSummary": [
+      {
+        "page": 2,
+        "section": "2 condition 4",
+        "shortExcerpt": "保留版权声明和本协议",
+        "meaning": "Every font copy must retain the copyright notice and full agreement."
+      },
+      {
+        "page": 2,
+        "section": "2 condition 5",
+        "shortExcerpt": "不可",
+        "meaning": "Illegal use is prohibited."
+      },
+      {
+        "page": 2,
+        "section": "3",
+        "meaning": "Licensor retains intellectual property and trade-secret rights; no other rights granted."
+      },
+      {
+        "page": 3,
+        "section": "4.1-4.3",
+        "shortExcerpt": "所有责任和风险",
+        "meaning": "As-is/no warranties, liability exclusion, user assumes risks and relevant service/repair/rectification costs."
+      },
+      {
+        "page": 3,
+        "section": "5",
+        "meaning": "Violations may result in termination, withdrawal of permission, and legal responsibility."
+      },
+      {
+        "page": 4,
+        "section": "6",
+        "meaning": "PRC law applies and disputes may be brought in Beijing Haidian District People's Court."
+      },
+      {
+        "page": 4,
+        "section": "7.1",
+        "meaning": "The full agreement supersedes prior representations, publicity and license agreements."
+      }
+    ],
+    "feeFinding": "Royalty-free authorization; do not describe as free of all costs because section 4.3 contains service/repair/rectification cost responsibility.",
+    "renderedReviewArtifacts": [
+      ".agent-tmp/b02_font/tmp_b02_misans_license_20261030_144725-1.png",
+      ".agent-tmp/b02_font/tmp_b02_misans_license_20261030_144725-2.png",
+      ".agent-tmp/b02_font/tmp_b02_misans_license_20261030_144725-3.png",
+      ".agent-tmp/b02_font/tmp_b02_misans_license_20261030_144725-4.png"
+    ],
+    "managerReview": "Root read all four pages in full; original integration and attribution were explicitly authorized by user. Full agreement and original copyright retained with the APK. No font adaptation, subsetting or standalone distribution.",
+    "readableCopy": {
+      "path": "third_party/misans/LICENSE_readable.txt",
+      "worktreeSha256": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+      "normalizedLfSha256": "cc4a59f158bbf8382539750e1e9e88322fc0c6ec0d0902469755f2959a0e6804",
+      "officialPdfUnchanged": true
+    }
+  },
+  "coverage": {
+    "method": "Read original SFNT name/OS2/fvar/cmap format4+12 tables in ZIP memory using Python standard library; glyph index zero counts as missing.",
+    "coreCorpus": "于の食谱 香菇木耳时蔬饭 配餐 食材 设置 搜索 热量 重量 分类 全部 删除 保存 取消 确定 本应用使用 MiSans 字体 g mg kcal ± × ≤ ≥ 0123456789 . , % () : - ā á ǎ à ō ó ǒ ò ē é ě è ī í ǐ ì ū ú ǔ ù ǖ ǘ ǚ ǜ ü 于の食谱 配餐 食谱 设置 搜索 请输入至少两个字或字符 分类 全部分类 热菜 主食 重量 锁定配餐 取消 确定 减弱动画",
+    "coreCharacterCount": 112,
+    "applicationStringSources": [
+      "app/src/main/res/values/strings.xml"
+    ],
+    "doesNotProve": [
+      "Android Compose font loading or chosen weight mapping",
+      "visual fallback for rare characters and emoji",
+      "font scaling, IME, and device-rendered glyph appearance"
+    ]
+  },
+  "fonts": [
+    {
+      "archivePath": "MiSans/ttf/MiSans-Light.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Light.ttf",
+      "byteLength": 8235972,
+      "sha256": "5c306154f81ca5888cd517c16493a9ecc7561deb0b7b449d59fc61e8b41021f0",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Light"
+        ],
+        "2": [
+          "Light",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Light"
+        ],
+        "4": [
+          "MiSans Light"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Light"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Light"
+        ]
+      },
+      "weightClass": 250,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Medium.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Medium.ttf",
+      "byteLength": 8103840,
+      "sha256": "b03e98374e971594b0b7a9706d0704241f76e1b88556cdda79c5039ef8a638d1",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Medium"
+        ],
+        "2": [
+          "Medium",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Medium"
+        ],
+        "4": [
+          "MiSans Medium"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Medium"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Medium"
+        ]
+      },
+      "weightClass": 380,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Regular.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Regular.ttf",
+      "byteLength": 8122324,
+      "sha256": "9c120f0a849bc0aa5048daae2a3c0f6eecd828b5b33fce682a9622833f5feea6",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Regular"
+        ],
+        "4": [
+          "MiSans"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Regular"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ]
+      },
+      "weightClass": 330,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Demibold.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Demibold.ttf",
+      "byteLength": 8066052,
+      "sha256": "209bc982dda59dc05f6dda1c6145b91dea8fd24a28f903fe7f009313b06dc8e3",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Demibold"
+        ],
+        "2": [
+          "Demibold",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Demibold"
+        ],
+        "4": [
+          "MiSans Demibold"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Demibold"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Demibold"
+        ]
+      },
+      "weightClass": 450,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Heavy.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Heavy.ttf",
+      "byteLength": 7980296,
+      "sha256": "7e44da09901d804c32be8770cf6ae37e68f63868d6757e1554a26e6ca589aa48",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Heavy"
+        ],
+        "2": [
+          "Heavy",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Heavy"
+        ],
+        "4": [
+          "MiSans Heavy"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Heavy"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Heavy"
+        ]
+      },
+      "weightClass": 700,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Bold.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Bold.ttf",
+      "byteLength": 8009316,
+      "sha256": "d0c1d327952ed935e86fb78a97a6c182b44f2c2b08777326786b1f8b26d1fe1e",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans"
+        ],
+        "2": [
+          "Bold"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Bold"
+        ],
+        "4": [
+          "MiSans Bold"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Bold"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ]
+      },
+      "weightClass": 630,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Thin.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Thin.ttf",
+      "byteLength": 8316712,
+      "sha256": "d2fd126697ad941ab33977de3ec6bfba3324c1d9c52f7f4105b665630bec0cbe",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Thin"
+        ],
+        "2": [
+          "Thin",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Thin"
+        ],
+        "4": [
+          "MiSans Thin"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Thin"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Thin"
+        ]
+      },
+      "weightClass": 150,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Semibold.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Semibold.ttf",
+      "byteLength": 8034980,
+      "sha256": "77c23f31ae124867778344970155a0c8d34a89897dedaab81aeee82ff00a4ce6",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Semibold"
+        ],
+        "2": [
+          "Semibold",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Semibold"
+        ],
+        "4": [
+          "MiSans Semibold"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Semibold"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Semibold"
+        ]
+      },
+      "weightClass": 520,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-ExtraLight.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-ExtraLight.ttf",
+      "byteLength": 8283984,
+      "sha256": "319cfec6bb7ba04603ce68af95fbbe0dcdbbf415c26ec66bfd000c354cb51e5b",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans ExtraLight"
+        ],
+        "2": [
+          "ExtraLight",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-ExtraLight"
+        ],
+        "4": [
+          "MiSans ExtraLight"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-ExtraLight"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "ExtraLight"
+        ]
+      },
+      "weightClass": 200,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/ttf/MiSans-Normal.ttf",
+      "readableArchivePath": "MiSans/ttf/MiSans-Normal.ttf",
+      "byteLength": 8201144,
+      "sha256": "13c51014d607517fcc8389a1ac68a0b53926e46bd4946462f47e7c0161fe629a",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Normal"
+        ],
+        "2": [
+          "Normal",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Normal"
+        ],
+        "4": [
+          "MiSans Normal"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Normal"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Normal"
+        ]
+      },
+      "weightClass": 305,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Heavy.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Heavy.otf",
+      "byteLength": 6677020,
+      "sha256": "6be4fe9fd5fcfbf766e90b0936b44b731893a3836376a77d964673f398b7131c",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Heavy"
+        ],
+        "2": [
+          "Heavy",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Heavy"
+        ],
+        "4": [
+          "MiSans Heavy"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Heavy"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Heavy"
+        ]
+      },
+      "weightClass": 700,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Demibold.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Demibold.otf",
+      "byteLength": 6527920,
+      "sha256": "63bfd7731ea4ab343023230fe4fa010734fad7af12c5f9eaad2146a5dd2628ea",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Demibold"
+        ],
+        "2": [
+          "Demibold",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Demibold"
+        ],
+        "4": [
+          "MiSans Demibold"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Demibold"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Demibold"
+        ]
+      },
+      "weightClass": 450,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Light.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Light.otf",
+      "byteLength": 6641704,
+      "sha256": "c7d993d02f537675344fa07c59b086ac49ccd83fad58cfa266a7e4eac5d9d688",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Light"
+        ],
+        "2": [
+          "Light",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Light"
+        ],
+        "4": [
+          "MiSans Light"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Light"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Light"
+        ]
+      },
+      "weightClass": 250,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Regular.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Regular.otf",
+      "byteLength": 6569336,
+      "sha256": "8e9caa6f34f27c6baad1ecf0058cc13e1801efff698bc23e6e0b095d9a9ed9cb",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Regular"
+        ],
+        "4": [
+          "MiSans"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Regular"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ]
+      },
+      "weightClass": 330,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Medium.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Medium.otf",
+      "byteLength": 6550784,
+      "sha256": "f9239c75fa0a661b788916250c6d4ad0d52d8a643f1ce2a9142f6588d4d2cb64",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Medium"
+        ],
+        "2": [
+          "Medium",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Medium"
+        ],
+        "4": [
+          "MiSans Medium"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Medium"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Medium"
+        ]
+      },
+      "weightClass": 380,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Normal.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Normal.otf",
+      "byteLength": 6591956,
+      "sha256": "5f26d7c9df5e1b5dbc953075da6ca6a36d4d3fb5b9a25cf92075831a888dbefc",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Normal"
+        ],
+        "2": [
+          "Normal",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Normal"
+        ],
+        "4": [
+          "MiSans Normal"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Normal"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Normal"
+        ]
+      },
+      "weightClass": 305,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Semibold.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Semibold.otf",
+      "byteLength": 6530232,
+      "sha256": "8a194c3e7f6813f73a2c68988bf77483296268416fb0c1d0870338a0b23b8c9a",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Semibold"
+        ],
+        "2": [
+          "Semibold",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Semibold"
+        ],
+        "4": [
+          "MiSans Semibold"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Semibold"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Semibold"
+        ]
+      },
+      "weightClass": 520,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Thin.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Thin.otf",
+      "byteLength": 6735536,
+      "sha256": "49663ab33dab3208dfbec94b2ed480f709a191bd9c69fcac19f3133d538f0ef9",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans Thin"
+        ],
+        "2": [
+          "Thin",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Thin"
+        ],
+        "4": [
+          "MiSans Thin"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Thin"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "Thin"
+        ]
+      },
+      "weightClass": 150,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-ExtraLight.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-ExtraLight.otf",
+      "byteLength": 6695144,
+      "sha256": "1d56a5b094ebbc0a92a2179897fa47239e2bad97b18aeb92f8967ca86cf26e6b",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans",
+          "MiSans ExtraLight"
+        ],
+        "2": [
+          "ExtraLight",
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-ExtraLight"
+        ],
+        "4": [
+          "MiSans ExtraLight"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-ExtraLight"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "16": [
+          "MiSans"
+        ],
+        "17": [
+          "ExtraLight"
+        ]
+      },
+      "weightClass": 200,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/otf/MiSans-Bold.otf",
+      "readableArchivePath": "MiSans/otf/MiSans-Bold.otf",
+      "byteLength": 6643592,
+      "sha256": "575d0481f579785fab27754a337ad77118a17ba3353210ed84c8af4e96e86247",
+      "sfntFlavor": "OpenType-CFF",
+      "nameTable": {
+        "1": [
+          "MiSans"
+        ],
+        "2": [
+          "Bold"
+        ],
+        "3": [
+          "4.009;HNYI;MiSans-Bold"
+        ],
+        "4": [
+          "MiSans Bold"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSans-Bold"
+        ],
+        "8": [
+          "Hanyi Fonts",
+          "汉仪字库"
+        ],
+        "9": [
+          "Beijing Xiaomi Mobile Software Co.,Ltd & Hanyi Fonts",
+          "北京小米移动软件有限公司，汉仪字库"
+        ],
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ]
+      },
+      "weightClass": 630,
+      "embeddingFsType": 8,
+      "glyphCount": 29758,
+      "variationAxes": [],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": false
+    },
+    {
+      "archivePath": "MiSans/σÅ»σÅÿσ¡ùΣ╜ô/MiSansVF.ttf",
+      "readableArchivePath": "MiSans/可变字体/MiSansVF.ttf",
+      "byteLength": 20093424,
+      "sha256": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79",
+      "sfntFlavor": "TrueType",
+      "nameTable": {
+        "0": [
+          "Copyright © 2020-2025 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved."
+        ],
+        "1": [
+          "MiSans VF"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "3": [
+          "4.009;HNYI;MiSansVF"
+        ],
+        "4": [
+          "MiSans VF"
+        ],
+        "5": [
+          "Version 4.009"
+        ],
+        "6": [
+          "MiSansVF"
+        ],
+        "8": [
+          "Hanyi Fonts"
+        ]
+      },
+      "weightClass": 400,
+      "embeddingFsType": 8,
+      "glyphCount": 29773,
+      "variationAxes": [
+        {
+          "tag": "wght",
+          "min": 150.0,
+          "default": 330.0,
+          "max": 700.0
+        }
+      ],
+      "coreCharacterCount": 112,
+      "missingCoreCharacters": [],
+      "copiedToApp": true,
+      "resourcePath": "app/src/main/res/font/misans_vf.ttf"
+    }
+  ],
+  "targetThemeWeightClasses": [
+    400,
+    500,
+    600,
+    700
+  ],
+  "observedStaticWeightClasses": [
+    150,
+    200,
+    250,
+    305,
+    330,
+    380,
+    450,
+    520,
+    630,
+    700
+  ],
+  "weightMappingNote": "Official static style names do not use usual CSS hundred values: Regular=330, Medium=380, Demibold=450, Semibold=520, Bold=630, Heavy=700. Do not silently relabel as 400/500/600/700. VF exposes wght 150..700 and can represent explicit theme weights without generating or rewriting font binaries; actual Compose/Android axis behavior still requires runtime verification.",
+  "applicationIntegration": {
+    "fontsCopiedToRes": true,
+    "themeChanged": true,
+    "fontLicensePackagedInApk": true,
+    "androidRuntimeVerified": true,
+    "weightMapping": {
+      "400": 330,
+      "500": 380,
+      "600": 520,
+      "700": 630
+    },
+    "weightMappingNote": "Compose semantic weight -> explicit original VF wght axis, matching Regular/Medium/Semibold/Bold; not OS2 static class relabeling.",
+    "runtimeEvidence": "docs/reviews/B02/verification.json; candidate-3 six same-APK variant/API runs"
+  },
+  "reproductionScript": ".agent-tmp/b02_font/tmp_b02_misans_metadata_20261030_145010.py",
+  "currentVisibleTextCoverage": {
+    "reviewer": "b02_font_audit; root integrated results",
+    "appKotlinXmlAndChineseDates": 292,
+    "appAndLicenseAndCopyrightUnion": 530,
+    "missingCodePoints": [],
+    "scope": "Conservative string/attribute superset, including internal logs/IDs; not all languages.",
+    "licenseReadableRepairs": {
+      "U+2EA0-to-U+6C11": 3,
+      "U+2EC4-to-U+897F": 1,
+      "U+2EDB-to-U+98CE": 1
+    },
+    "reconstruction": "NFKC(original PDF extraction) plus the five typographic code-point repairs; no agreement content added or removed."
+  },
+  "candidate": "B02-candidate-3"
+}

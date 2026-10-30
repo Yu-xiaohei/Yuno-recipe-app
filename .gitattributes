@@ -9,8 +9,34 @@
 /schemas/** text eol=lf
 /scripts/** text eol=lf
 /tests/** text eol=lf
+/gradlew text eol=lf
+/gradlew.bat text eol=crlf
+/*.gradle.kts text eol=lf
+/*.properties text eol=lf
+/*-gradle.lockfile text eol=lf
+/gradle/** text eol=lf
+/gradle/wrapper/gradle-wrapper.jar binary
+/app/** text eol=lf
+/third_party/** text eol=lf
+# Preserve binary UI evidence and future packaged font bytes.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ttf binary
+*.otf binary
+*.woff2 binary
+*.pdf binary
 # Preserve the exact previously reviewed Windows manifest bytes.
 /docs/reviews/B01/reviewed-candidate-6-manifest.json -text -filter -ident -working-tree-encoding whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # Public payload/plan bytes are the hash input. Disable automatic transformations.
 /data/public/** -text -filter -ident -working-tree-encoding
 /config/catalog-publication.json -text -filter -ident -working-tree-encoding
+# Keep the reviewed B02 input/evidence bytes reproducible after Git checkout.
+# The pre-closeout attributes are archived alongside the original candidate manifest.
+/docs/reviews/B02/** -text -filter -ident -working-tree-encoding whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/config/development-baseline.json -text -filter -ident -working-tree-encoding whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/app/src/main/java/com/yunobase/recipe/PrototypeApp.kt -text -filter -ident -working-tree-encoding whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/gradle/verification-metadata.xml -text -filter -ident -working-tree-encoding whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/gradlew.bat -text -filter -ident -working-tree-encoding whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/third_party/** -text -filter -ident -working-tree-encoding whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

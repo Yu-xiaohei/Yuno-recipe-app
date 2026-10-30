@@ -1,0 +1,22 @@
+--------- beginning of main
+10-30 14:34:59.363  5862  5862 I YunoB02 : prototype-created; font=MiSans-VF-4.009
+10-30 14:34:59.402  5862  5862 I YunoB02 : glass-pipeline; refraction=false; blurDp=2; lensDp=20
+10-30 14:34:59.588  5862  5862 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2171.0; right=407.0; bottom=2302.0
+10-30 14:34:59.588  5862  5862 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2184.0; right=336.0; bottom=2247.0
+10-30 14:34:59.589  5862  5862 I YunoB02 : nav-geometry; part=label; index=0; left=274.0; top=2247.0; right=336.0; bottom=2289.0
+10-30 14:34:59.589  5862  5862 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2171.0; right=643.0; bottom=2302.0
+10-30 14:34:59.589  5862  5862 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2184.0; right=573.0; bottom=2247.0
+10-30 14:34:59.589  5862  5862 I YunoB02 : nav-geometry; part=label; index=1; left=510.0; top=2247.0; right=572.0; bottom=2289.0
+10-30 14:34:59.589  5862  5862 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2171.0; right=879.0; bottom=2302.0
+10-30 14:34:59.589  5862  5862 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2184.0; right=809.0; bottom=2247.0
+10-30 14:34:59.590  5862  5862 I YunoB02 : nav-geometry; part=label; index=2; left=746.0; top=2247.0; right=808.0; bottom=2289.0
+10-30 14:34:59.815  5862  5862 I YunoB02 : material=enhanced; api=33
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2072.0; right=407.0; bottom=2203.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2085.0; right=336.0; bottom=2148.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=label; index=0; left=274.0; top=2148.0; right=336.0; bottom=2190.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2072.0; right=643.0; bottom=2203.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2085.0; right=573.0; bottom=2148.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=label; index=1; left=510.0; top=2148.0; right=572.0; bottom=2190.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2072.0; right=879.0; bottom=2203.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2085.0; right=809.0; bottom=2148.0
+10-30 14:34:59.820  5862  5862 I YunoB02 : nav-geometry; part=label; index=2; left=746.0; top=2148.0; right=808.0; bottom=2190.0

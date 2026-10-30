@@ -1,0 +1,159 @@
+{
+  "candidate": "B02-candidate-3",
+  "api": 33,
+  "variant": "release",
+  "status": "pass",
+  "kind": "offline-reanalysis-of-original-captures-not-new-device-run",
+  "checkedAt": "2026-10-30T23:03:04+08:00",
+  "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "installedApkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "apkBindingSource": "original device report; not newly measured",
+  "originalCaptureReport": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass.json",
+  "originalCaptureReportSha256": "2d13f0514474c1c0f13a18b89c772a4d9bce1183639a473e0a8756f749ae932d",
+  "originalDeviceCheckRecordCount": 37,
+  "supersedes": "Only the original clipped-ROI pixel metrics; original bytes remain unchanged.",
+  "pillowVersion": "12.3.0",
+  "checks": [
+    "pinned upstream layout source SHA-256 matches",
+    "no: original PNG hashes and nine original layout logs agree",
+    "no: background reference outside glass is byte-identical",
+    "no: full-layout-derived surface passes unchanged refraction thresholds",
+    "yes: original PNG hashes and nine original layout logs agree",
+    "yes: background reference outside glass is byte-identical",
+    "yes: full-layout-derived surface passes unchanged refraction thresholds"
+  ],
+  "rows": [
+    {
+      "night": "no",
+      "surfaceGeometry": {
+        "bounds": [
+          170,
+          2069,
+          911,
+          2206
+        ],
+        "densityFrom24dpIcon": 2.625,
+        "horizontalPaddingPx": 32,
+        "minimumHeightPx": 137,
+        "method": "pinned Miuix 0.9.4: cell union + 12dp horizontal padding; centered max(cell height,52dp)",
+        "limitations": "Derived layout bounds for the pinned source; not an independent optical contour measurement."
+      },
+      "historicalClippedSemanticBounds": [
+        170,
+        2069,
+        911,
+        2146
+      ],
+      "referenceBounds": [
+        10,
+        148,
+        1070,
+        2029
+      ],
+      "pixelComparison": {
+        "edgePixels": 28894,
+        "changedEdgeFractionThreshold8": 0.19367342700906762,
+        "meanEdgeDifference": 10.215857963591057,
+        "thresholdFraction": 0.1,
+        "thresholdMean": 4.0,
+        "renderedRefractionDetected": true
+      },
+      "inputs": [
+        {
+          "mode": "refractive",
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_refractive.png",
+          "sha256": "2a67496b34d66fe3e63d15a1f2cfec0120d52e954dc9561e96c2dff7d7e8bd95",
+          "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_refractive_log.txt",
+          "layoutLogSha256": "1a5d8122bcb8be23de2fc85d697b2b96440f977cdfb8164a513bc457e9cf8bef"
+        },
+        {
+          "mode": "blur_only",
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_blur_only.png",
+          "sha256": "a6ee94df2553d648e65fbf5b578185d02956c34bb7e1aaa38aea9adf3fd657d0",
+          "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_blur_only_log.txt",
+          "layoutLogSha256": "d1341adcea9324172956fbd16da9b65223cb1772391ebab68526153d62ac74b6"
+        }
+      ]
+    },
+    {
+      "night": "yes",
+      "surfaceGeometry": {
+        "bounds": [
+          170,
+          2069,
+          911,
+          2206
+        ],
+        "densityFrom24dpIcon": 2.625,
+        "horizontalPaddingPx": 32,
+        "minimumHeightPx": 137,
+        "method": "pinned Miuix 0.9.4: cell union + 12dp horizontal padding; centered max(cell height,52dp)",
+        "limitations": "Derived layout bounds for the pinned source; not an independent optical contour measurement."
+      },
+      "historicalClippedSemanticBounds": [
+        170,
+        2069,
+        911,
+        2146
+      ],
+      "referenceBounds": [
+        10,
+        148,
+        1070,
+        2029
+      ],
+      "pixelComparison": {
+        "edgePixels": 28894,
+        "changedEdgeFractionThreshold8": 0.19519623451235552,
+        "meanEdgeDifference": 9.725237073440853,
+        "thresholdFraction": 0.1,
+        "thresholdMean": 4.0,
+        "renderedRefractionDetected": true
+      },
+      "inputs": [
+        {
+          "mode": "refractive",
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_refractive.png",
+          "sha256": "63916ef0329c9b5d4f6f34b9d534a36970950105edfbf5049b28d595be2a08db",
+          "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_refractive_log.txt",
+          "layoutLogSha256": "883590f92e8f0c0438f61c8b1ab4c3725f18b505f343f42cae7647951bf953de"
+        },
+        {
+          "mode": "blur_only",
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_blur_only.png",
+          "sha256": "0609d1d1553a9cda19e703bb7f8c1af9f8aeb56e1c81b357361cbb0b6136eb22",
+          "layoutLog": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_blur_only_log.txt",
+          "layoutLogSha256": "73206be3426e2067929b51b78cf17b4f13d8154db11de0639a1b65856a19be35"
+        }
+      ]
+    }
+  ],
+  "restoreErrors": [],
+  "sources": [
+    {
+      "path": ".agent-tmp/b02_glass/tmp_b02_navigation_source_20261030_182000.kt",
+      "sha256": "463fb003a7f2402d0067321189d5e51224c8a10fdf8edbd089d65b0c98a72f30"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/PrototypeApp.kt",
+      "sha256": "af3a5b3ef2df3926425cae3640f9cb298eb2ba314a8561a81798948be03a67b8"
+    },
+    {
+      "path": "tests/test_android_glass.py",
+      "sha256": "ca9384c940acba7d343cf4cba9ffc6640870124f3cece8a28d1a02c5a2a2b4f3"
+    },
+    {
+      "path": "tests/test_android_glass_geometry.py",
+      "sha256": "f70bfe236b2aba00a0de7934cd7fae03af87300ef27e51540d762cdf0b3f8ce7"
+    },
+    {
+      "path": ".agent-tmp/b02_glass/tmp_b02_glass_reanalysis_20261030_230000.py",
+      "sha256": "473b6df6a5ac14b766c2e77fad44bc4bb0f50cc83537c24448394ccb1134fdee"
+    }
+  ],
+  "limitations": [
+    "Surface bounds are derived from actual layout and pinned source, not an optical contour measurement.",
+    "The rounded rim mask is a reproducible sampling region; it does not measure every lens pixel.",
+    "No new device capture, physical Android17 acceptance, brand equivalence or performance result."
+  ]
+}

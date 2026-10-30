@@ -1,0 +1,36 @@
+{
+  "kind": "byte-identical-read-only-evidence-copies",
+  "clientDate": "2026-10-31",
+  "entries": [
+    {
+      "originalPath": ".agent-tmp/b02_glass/tmp_b02_gradle_final_candidate3_20261030_185000.log",
+      "archivePath": "docs/reviews/B02/git-closeout-2026-10-31/test_b02_build_output.txt",
+      "bytes": 6132,
+      "sha256": "49b721158f35ae48e792d7e8f47eeaf6626f633c9be858a22bcc71ff00a3ac61"
+    },
+    {
+      "originalPath": ".agent-tmp/b02_glass/tmp_b02_regression_resumed_20261030_190000.log",
+      "archivePath": "docs/reviews/B02/git-closeout-2026-10-31/test_b02_regression_51_output.txt",
+      "bytes": 8524,
+      "sha256": "d8cff10f39465566ea1818335145d277db76478a4d999016258dcd9b564cd6b2"
+    },
+    {
+      "originalPath": ".agent-tmp/b02_glass/tmp_b02_glass_geometry_tests_20261030_230000.log",
+      "archivePath": "docs/reviews/B02/git-closeout-2026-10-31/test_b02_glass_geometry_4_output.txt",
+      "bytes": 759,
+      "sha256": "6ed849e32c7331e5ff0f1d5562eaa4c67c2a3391231142fe5d0f70a51e0e337f"
+    },
+    {
+      "originalPath": ".agent-tmp/b02_glass/tmp_b02_navigation_source_20261030_182000.kt",
+      "archivePath": "docs/reviews/B02/git-closeout-2026-10-31/test_b02_navigation_reference.kt",
+      "bytes": 23239,
+      "sha256": "463fb003a7f2402d0067321189d5e51224c8a10fdf8edbd089d65b0c98a72f30"
+    },
+    {
+      "originalPath": ".agent-tmp/b02_glass/tmp_b02_glass_reanalysis_20261030_230000.py",
+      "archivePath": "docs/reviews/B02/git-closeout-2026-10-31/test_b02_glass_reanalysis_method.txt",
+      "bytes": 5603,
+      "sha256": "473b6df6a5ac14b766c2e77fad44bc4bb0f50cc83537c24448394ccb1134fdee"
+    }
+  ]
+}

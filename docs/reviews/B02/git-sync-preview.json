@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "clientDate": "2026-10-31",
+  "kind": "staged-closeout-preview-not-a-commit-or-sync-result",
+  "status": "second-confirmed-authorized-execution-pending",
+  "baseCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "branch": "main",
+  "commitSubject": "保存B02原型与玻璃修订并整理收工交接",
+  "sourceManifest": {
+    "path": "docs/reviews/B02/git-source-manifest.json",
+    "sha256": "bc5c8103ada33bc5580bede34595d9905cc474302756b8a7a2d3c1e98166f207",
+    "payloadSha256": "ad5dcf0905f6bd686cdd74911a619658f4381300992246c67b545ada85e0d1c9",
+    "payloadFiles": 714,
+    "payloadBytes": 165709777,
+    "reviewedStagedBindings": 206,
+    "unchangedLocalApksExcluded": 2
+  },
+  "checkoutVerification": {
+    "exportPath": ".agent-tmp/b02_sync/tmp_b02_stage_checkout_20261031_000000",
+    "verifiedPayloadFiles": 714,
+    "controlledCommand": "git -c core.autocrlf=false checkout-index --force --all --prefix=<task-owned-absolute-tmp-export>/",
+    "controlledExportAllPayloadBytesAndHashesMatch": true,
+    "defaultHostCoreAutocrlf": "true",
+    "defaultHostNonCandidatePureCrlfConversions": [
+      {
+        "path": "LICENSE",
+        "exportBytes": 1847,
+        "indexBytes": 1798,
+        "defaultExportSha256": "4483a269734817982e47053edfcfa4eb19f82cfcc07990607306a63f942d3ba8",
+        "indexSha256": "bd0ac162ed554935a04c4e13a995f46a682af904767a0493179f1b67f720bbc3",
+        "crlfOnly": true
+      },
+      {
+        "path": "TASKS.md",
+        "exportBytes": 279,
+        "indexBytes": 274,
+        "defaultExportSha256": "79b4448d8e689482c99a1323a8081f355b82fde6e5f11aeba3e8a16fb79d5b11",
+        "indexSha256": "eb03efbaefcaf4a9683df6c26b27939e6a90db49e2e5a8bf2a9301037429aed2",
+        "crlfOnly": true
+      },
+      {
+        "path": "assets/branding/logo.svg",
+        "exportBytes": 4794,
+        "indexBytes": 4779,
+        "defaultExportSha256": "72e06a8aa10f9515d22f4c878e47eba51b0ddcdebbd0265af561ec3ef118d93c",
+        "indexSha256": "91a5c036add377c8f680538a0c463c741fca7662fdb74356555761f58156c916",
+        "crlfOnly": true
+      },
+      {
+        "path": "assets/branding/wordmark-white.svg",
+        "exportBytes": 4877,
+        "indexBytes": 4848,
+        "defaultExportSha256": "b03f0ec2b536f7ac3ac8400621bf2bc167c59ffbdff3944b070316262760b15c",
+        "indexSha256": "828f65742112333306dedac6134161459792522aba49e9201eb12cc71d10323e",
+        "crlfOnly": true
+      },
+      {
+        "path": "assets/branding/wordmark.svg",
+        "exportBytes": 4883,
+        "indexBytes": 4854,
+        "defaultExportSha256": "746ff94b618db4f535a39c49a4e2deb86d777478989b2d7514221561b65e3248",
+        "indexSha256": "d7e6154af1f0ef4c1278fda899d721f71efb3b04fc86ef85b6dc7be7250a974e",
+        "crlfOnly": true
+      },
+      {
+        "path": "assets/icons/recipe.svg",
+        "exportBytes": 1097,
+        "indexBytes": 1059,
+        "defaultExportSha256": "5f81e31145c52957a1f842f3955320e79dbd5b183fc66ffd390dea3f6e1f3863",
+        "indexSha256": "349c0e73bd5485867ae6af49ce0d4cc9d4f1517fe523297187784f54d270cb24",
+        "crlfOnly": true
+      },
+      {
+        "path": "assets/icons/upload-to-cloud.svg",
+        "exportBytes": 1029,
+        "indexBytes": 1002,
+        "defaultExportSha256": "0059a03a4fd00267af6ac4ba0af28afebbffaf52078657a598e8eaf7e184701c",
+        "indexSha256": "c216a2aa335f1ea06cfe30b1a2dbf38744d0306c63cf355bf2b143ae195a8751",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/README.md",
+        "exportBytes": 969,
+        "indexBytes": 959,
+        "defaultExportSha256": "a1344c1f29a2c2932450f00e1119172412d06f4598541a040bd97877882618fe",
+        "indexSha256": "5e9de66ec8afabeb66b95cdafc0a9febe777f0e1f3252fdded0aeb22086eef50",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/dan-chaofan.json",
+        "exportBytes": 5483,
+        "indexBytes": 5237,
+        "defaultExportSha256": "9d3790854d3f4d6222e3cede8b74d81e45a6c72f664ca8cf492b23e7b2b79d2f",
+        "indexSha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/mo-yu-zi-cai-tang.json",
+        "exportBytes": 3361,
+        "indexBytes": 3205,
+        "defaultExportSha256": "bbb3b9241fce4752dd78aaece8843dcdb68f1be9dfed127eeb8f18a3a2f8c2c6",
+        "indexSha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/冬瓜茄子面卤.json",
+        "exportBytes": 7746,
+        "indexBytes": 7415,
+        "defaultExportSha256": "ad628626c8752ef83448df461d0289654dcd5af0ce9ec59463dfd4c55c50418c",
+        "indexSha256": "7ed2c40bc9485af150e24a1d7a470b569a5eaab31193d8fe90247139e293aab6",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/凉拌芹菜.json",
+        "exportBytes": 4109,
+        "indexBytes": 3925,
+        "defaultExportSha256": "c8827ebddcf006948ebdd99c189cc44460b5f10cdd0420b0bd07082c5770b820",
+        "indexSha256": "65a3fe6c7a6a02a90ba024a86a93a7cf5668b02d661b13cb2cee4cfec1b26643",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/大闸蟹配清炒小包菜.json",
+        "exportBytes": 7925,
+        "indexBytes": 7574,
+        "defaultExportSha256": "5449a2aa77c16b4844de2ad186c6c2fd91fb819c9e63d33976454b8b8659c3e3",
+        "indexSha256": "7d1bd3a24aa0c007bcf33eaa03d8c37a42aa32d982a1b017dd176ee13792c446",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/慢炖老鸭汤.json",
+        "exportBytes": 4926,
+        "indexBytes": 4709,
+        "defaultExportSha256": "b4649514a76d61858ec3b18d65d7172c3075f0de1e5c5016be090de1c68f323e",
+        "indexSha256": "2cdcebb342345b2922fd0bb6c43fefa6b7e59f6da26bac840472a2aa30266af0",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/清炒小包菜.json",
+        "exportBytes": 7377,
+        "indexBytes": 7049,
+        "defaultExportSha256": "68838982e05d5a5dd892852f2350f3d9d6ed3d5e3a324b2a82de6c0d43d26825",
+        "indexSha256": "8ce2d128688ede1d85e19910275151f1cb88dbcc0ccc541ebe8e81cb10fb0e7e",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/炒芹菜配熏鸡.json",
+        "exportBytes": 7740,
+        "indexBytes": 7413,
+        "defaultExportSha256": "72835de9a67d81d728e07542972089d6d17dff87f9aa9fa92c17097aac0a112f",
+        "indexSha256": "91447a40fac09c3d3d34dee65166fb91c4713c6d33b90cb9da49dce07681d76d",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/纯肉炒芹菜.json",
+        "exportBytes": 7031,
+        "indexBytes": 6730,
+        "defaultExportSha256": "6c126fb9f103fd58aa769230e0606ea93be865fa84c8a0b7ea795dceaa6297a2",
+        "indexSha256": "c3af460496ee0b3cc615ed86f2cfa917fb141a2438810b6922e1b72438e2b17e",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/蛋炒饭.json",
+        "exportBytes": 5483,
+        "indexBytes": 5237,
+        "defaultExportSha256": "9d3790854d3f4d6222e3cede8b74d81e45a6c72f664ca8cf492b23e7b2b79d2f",
+        "indexSha256": "ba3a1e4cd7948a5f8c7d889e766e69b70b4a754a9adb108cc8fe2453ab7d1952",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/西红柿鸡蛋面卤.json",
+        "exportBytes": 8130,
+        "indexBytes": 7795,
+        "defaultExportSha256": "4cd9586a9d76f4dd1bc853a5478be00c49ac6bfbd3caa4e330a28820d5ea7848",
+        "indexSha256": "670844639a0ad7cc051697a37ab9345bf92530eba99fc4dd1be9bcc1151ea5c4",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/香菇木耳时蔬饭.json",
+        "exportBytes": 7252,
+        "indexBytes": 6927,
+        "defaultExportSha256": "42bbd174a7529eadccd809db7a2a22fb29476e364bbf6a056bf3cbbc40920a31",
+        "indexSha256": "b887af20c5119bac547377cc140be73f988920c4c04b75ff712ebd23dd202a8c",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/recipes/魔芋紫菜汤.json",
+        "exportBytes": 3361,
+        "indexBytes": 3205,
+        "defaultExportSha256": "bbb3b9241fce4752dd78aaece8843dcdb68f1be9dfed127eeb8f18a3a2f8c2c6",
+        "indexSha256": "967bd8315bb952e0b67d6cee7474c33e604f4763f72f27d5ea5499b7c4f09482",
+        "crlfOnly": true
+      },
+      {
+        "path": "data/reference/香菇木耳时蔬饭.md",
+        "exportBytes": 4012,
+        "indexBytes": 3948,
+        "defaultExportSha256": "dd1a7816585c465a7f2c62fda5d1a211396a0d5701d6dfa1ca5bd771f1c8d89a",
+        "indexSha256": "85d44de42be89bd25126f58cfbcca43913d396c785ebe993adeb1f27435f3e2b",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/b02-environment-2026-10-30/android-environment.json",
+        "exportBytes": 2593,
+        "indexBytes": 2519,
+        "defaultExportSha256": "62ef20f25bb53b5f152c8d60deebe404fdebabda6bbfa484fc5bb7a78ac9b1a5",
+        "indexSha256": "b280b87941ab56efb92d09503646d562d6d47a6cefa987de9aad64284590e222",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/preflight-2026-10-28/android-environment.json",
+        "exportBytes": 3946,
+        "indexBytes": 3872,
+        "defaultExportSha256": "b613c89b6eee60db7d7c3f52ab4242344d1072aed1df87ad96b1193e4a2f3736",
+        "indexSha256": "ff2d911a8005886875f6d184eb71c2047c2a079fc4106818a30caa8a2b32a609",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/preflight-2026-10-28/consolidation.json",
+        "exportBytes": 11816,
+        "indexBytes": 11580,
+        "defaultExportSha256": "3b16b049832237afceeb523de687ccfe9a4a4add0df4dcc08c6e30237ca034ce",
+        "indexSha256": "bf31e5e1ec1666cdde8efe45ce4a1405ffcae67bc6a361d0607425f4bcd074fe",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/preflight-2026-10-28/figma-readiness.json",
+        "exportBytes": 1107,
+        "indexBytes": 1080,
+        "defaultExportSha256": "e8d85603904ddcc041fb59af2c66bd4062ab549b4fd303e2662251803be7a032",
+        "indexSha256": "d0ef38fffefce426ab7d8e674d5fc930a7a1c9732d2231ba1076cffbf950ad9d",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/preflight-2026-10-28/miuix-artifacts.json",
+        "exportBytes": 1773,
+        "indexBytes": 1754,
+        "defaultExportSha256": "1228d6cd86f459528c62a18b8697db8acaec4ac9af1236ad4d3a00734db840ca",
+        "indexSha256": "f4ae76dbda1ad8e4d70d60fdbdb6a367a9d3f7fea98efe2fa0db5e31b754d2e1",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/preflight-2026-10-28/public-source-check.json",
+        "exportBytes": 482,
+        "indexBytes": 466,
+        "defaultExportSha256": "be2f3042e1c328542a56f6cdfb0b6a06c2d6d42e118f7cfc034ebff18d51a181",
+        "indexSha256": "f3924f19f67c08da3934cb9bde3f57394214afaef99248114e31c5f8537fcb1a",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/preflight-2026-10-28/recipe-audit.json",
+        "exportBytes": 26323,
+        "indexBytes": 25194,
+        "defaultExportSha256": "1561b369033ccd8d08886a49089326ba71faae2ce466844744a87bfa54eb1e86",
+        "indexSha256": "f12ba02692368e97ccd3072341f3c6fb34bfc6139576d9c37057cd179ed32455",
+        "crlfOnly": true
+      },
+      {
+        "path": "reports/preflight-2026-10-28/verification.json",
+        "exportBytes": 896,
+        "indexBytes": 866,
+        "defaultExportSha256": "3d358090e3c18f9cb39fa1d2b51098ddcc734d6f173b95ade22162ec308cd80f",
+        "indexSha256": "c7b8278e6b193ba358fe39917c4e6d2f65d64884e9c07d84eacfb62ac7ab8ec7",
+        "crlfOnly": true
+      }
+    ],
+    "defaultHostFrozen206BindingsUnchanged": true,
+    "globalConfigurationChanged": false,
+    "noApplicationOrDeviceRun": true
+  },
+  "checks": {
+    "allReviewedStagedBytesMatch": true,
+    "originalCandidateManifestUnchanged": true,
+    "fiveEvidenceCopiesMatch": true,
+    "localApksUnchangedAndExcluded": true,
+    "knownCredentialPatternsAbsent": true,
+    "jsonAndUtf8": true,
+    "rawCachedWhitespaceCheckExitCode": 2,
+    "retainedOriginalWhitespaceExceptions": 19,
+    "strictEditableSourceWhitespaceCheck": true,
+    "rawWhitespaceDiagnosticsLosslesslyArchived": true,
+    "bothObservedRemotesAreAncestors": true,
+    "noStagedDeletes": true,
+    "noIgnoredArtifacts": true
+  },
+  "whitespaceDetails": "docs/reviews/B02/git-closeout-2026-10-31/test_b02_staged_whitespace.json",
+  "fullIndexReceiptLocalPath": ".agent-tmp/b02_sync/tmp_b02_final_index_20261031_000000.json",
+  "administrativeRecordPolicy": "These three records are excluded only from the nonrecursive payload hash; their actual staged blobs and the complete index tree are bound by the local final-index receipt.",
+  "confirmations": {
+    "required": 2,
+    "first": {
+      "userMessage": "确认",
+      "localDate": "2026-10-31",
+      "recordedAtLocal": "2026-10-31T01:42:29",
+      "timezone": "Asia/Shanghai",
+      "meaning": "第一次确认具体提交与双远端main普通推送范围；仍等待执行前第二次确认",
+      "reviewedStagedTree": "7f2defcc8ec10e5172095ac91a677b975e98970a",
+      "payloadSha256": "ad5dcf0905f6bd686cdd74911a619658f4381300992246c67b545ada85e0d1c9",
+      "commitSubject": "保存B02原型与玻璃修订并整理收工交接"
+    },
+    "second": {
+      "userMessage": "确认 并在本次操作完成后 关闭我的电脑计算机",
+      "localDate": "2026-10-31",
+      "recordedAtLocal": "2026-10-31T01:46:40",
+      "timezone": "Asia/Shanghai",
+      "meaning": "执行前第二次明确确认，沿用原提交／双远端main普通推送范围；另授权操作结束后关闭本机",
+      "reviewedStagedTree": "42f8a6620062c387d64648459987d7de711db254",
+      "payloadSha256": "ad5dcf0905f6bd686cdd74911a619658f4381300992246c67b545ada85e0d1c9",
+      "commitSubject": "保存B02原型与玻璃修订并整理收工交接"
+    },
+    "executionAllowed": true,
+    "basis": "AGENTS.md 第8节：具体方案/范围第一次确认，备份/diff后执行前第二次确认"
+  },
+  "notExecuted": [
+    "local commit",
+    "push",
+    "release",
+    "cloud data write"
+  ],
+  "limits": [
+    "Local tests do not resolve vivo12 parse cause or Android17 visual acceptance.",
+    "Raw full whitespace check retains read-only original findings; only editable-source strict check passes.",
+    "Known credential patterns only; scan is not an exhaustive proof.",
+    "Default Windows host autocrlf transforms 30 noncandidate files; controlled raw export passes, not a fresh-clone Windows build or baseline audit.",
+    "Remote read success does not verify push authorization.",
+    "G1/G2 cover implemented subset; entire B02 and G3 remain incomplete."
+  ]
+}

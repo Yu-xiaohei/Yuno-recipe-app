@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "updatedDate": "2026-10-30",
-  "status": "requirements-and-preflight-only",
+  "status": "b02-prototype-partially-verified-not-human-accepted",
   "canonicalWorkspace": "F:/Yuno-Develop/YUNO-recipe-app",
   "application": {
     "name": "于の食谱",
@@ -19,12 +19,20 @@
     "interactiveReference": "https://compose-miuix-ui.github.io/miuix-jsCanvas/",
     "auditedMainCommit": "bb7bde3109605b4c98065b53030ba429c39baea9",
     "auditedRelease": "0.9.4",
-    "dependencyVersionLocked": false,
+    "dependencyVersionLocked": true,
     "android12Material": "clear-simplified-surface-with-miuix-motion",
     "enhancedShaderMinApi": 33,
     "packagingPreference": "single-apk-with-runtime-material-selection",
     "packagingFallback": "separate-compatible-and-enhanced-apks-after-validation-failure",
-    "runtimeValidationComplete": false
+    "runtimeValidationComplete": false,
+    "implementationCommit": "39c40f99844227b853f0049a0933b1f3ae6c00ba",
+    "runtimeValidationEvidence": "docs/reviews/B02/verification.json",
+    "font": {
+      "family": "MiSans",
+      "variant": "VF 4.009 original",
+      "evidence": "docs/reviews/B02/font-assets.json",
+      "allGlyphFallbackVerified": false
+    }
   },
   "android": {
     "legacyMinSdkCandidate": 29,
@@ -43,6 +51,27 @@
       "model": null,
       "vendorOsVersion": null,
       "tested": false
+    },
+    "prototype": {
+      "batch": "B02",
+      "candidate": "B02-candidate-3",
+      "minSdk": 31,
+      "compileSdk": 37,
+      "targetSdk": 37,
+      "buildTools": "37.0.0",
+      "debugApplicationId": "com.yunobase.recipe.prototype.debug",
+      "r8ApplicationId": "com.yunobase.recipe.prototype",
+      "signing": "local-debug-key-only-not-for-distribution",
+      "emulatorApisPassed": [
+        31,
+        32,
+        33
+      ],
+      "runtimeEvidenceStatus": "six-current-apk-emulator-runs-pass; physical-device-acceptance-pending",
+      "vivoInstallIssue": "package-parse-failure-reported; exact-cause-unconfirmed",
+      "android17VisualRetest": "pending-user-device",
+      "vivoTested": false,
+      "productSdkBaselineHumanAccepted": false
     }
   },
   "data": {
@@ -284,9 +313,22 @@
       "preCommit": "python scripts/catalog_integrity.py verify --git-mode staged --baseline-ref HEAD",
       "postCommit": "python scripts/catalog_integrity.py verify --git-mode head --baseline-ref HEAD^"
     },
-    "cloudCI": "configured-not-run",
+    "cloudCI": "github-windows-and-linux-pass-at-4fe2ee5; see B01 git-sync-result",
     "appDownloader": "not-implemented",
     "publicSource": "empty-bootstrap-not-deployed",
     "giteeCI": "not-configured"
+  },
+  "toolchain": {
+    "jdk": "21",
+    "gradle": "9.7.1",
+    "agp": "9.4.1",
+    "kotlin": "2.4.20",
+    "composeMultiplatform": "1.12.0",
+    "activityCompose": "1.13.0",
+    "miuix": "0.9.4",
+    "dependencyVerification": "SHA-256-strict-build",
+    "evidence": "docs/build.md",
+    "humanAccepted": false,
+    "coil": "3.6.3"
   }
 }

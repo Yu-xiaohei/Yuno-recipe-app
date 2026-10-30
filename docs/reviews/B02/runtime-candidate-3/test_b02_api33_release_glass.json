@@ -1,0 +1,402 @@
+{
+  "candidate": "B02-candidate-3",
+  "api": 33,
+  "variant": "release",
+  "status": "pass",
+  "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "installedApkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+  "pillowVersion": "12.3.0",
+  "checks": [
+    "task-owned B02 AVD name matches the selected API",
+    "actual device API matches",
+    "installed APK bytes match the supplied artifact",
+    "no: night preference applied",
+    "no: font scale applied",
+    "no/refractive: calibration cold start; Starting: Intent { cmp=com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity (has extras) }\r\nStatus: ok\r\nLaunchState: COLD\r\nActivity: com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity\r\nTotalTime: 729\r\nWaitTime: 732\r\nComplete",
+    "prototype process remains alive",
+    "no/refractive: enhanced pipeline remains active without a fallback",
+    "no/refractive: actual effects callback confirms requested mode",
+    "no: night preference applied",
+    "no: font scale applied",
+    "no/blur_only: calibration cold start; Starting: Intent { cmp=com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity (has extras) }\r\nStatus: ok\r\nLaunchState: COLD\r\nActivity: com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity\r\nTotalTime: 600\r\nWaitTime: 602\r\nComplete",
+    "prototype process remains alive",
+    "no/blur_only: enhanced pipeline remains active without a fallback",
+    "no/blur_only: actual effects callback confirms requested mode",
+    "no: both modes use the exact same navigation viewport",
+    "no: all nine control rectangles and calibration bounds remain unchanged",
+    "no: unobstructed background reference is available",
+    "no: calibration pixels outside glass are byte-identical",
+    "no: rendered edge refraction differs from blur-only; metrics={'edgePixels': 14520, 'changedEdgeFractionThreshold8': 0.12851239669421488, 'meanEdgeDifference': 5.3038567493112945, 'thresholdFraction': 0.1, 'thresholdMean': 4.0, 'renderedRefractionDetected': True}",
+    "yes: night preference applied",
+    "yes: font scale applied",
+    "yes/refractive: calibration cold start; Starting: Intent { cmp=com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity (has extras) }\r\nStatus: ok\r\nLaunchState: COLD\r\nActivity: com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity\r\nTotalTime: 660\r\nWaitTime: 663\r\nComplete",
+    "prototype process remains alive",
+    "yes/refractive: enhanced pipeline remains active without a fallback",
+    "yes/refractive: actual effects callback confirms requested mode",
+    "yes: night preference applied",
+    "yes: font scale applied",
+    "yes/blur_only: calibration cold start; Starting: Intent { cmp=com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity (has extras) }\r\nStatus: ok\r\nLaunchState: COLD\r\nActivity: com.yunobase.recipe.prototype/com.yunobase.recipe.MainActivity\r\nTotalTime: 628\r\nWaitTime: 629\r\nComplete",
+    "prototype process remains alive",
+    "yes/blur_only: enhanced pipeline remains active without a fallback",
+    "yes/blur_only: actual effects callback confirms requested mode",
+    "yes: both modes use the exact same navigation viewport",
+    "yes: all nine control rectangles and calibration bounds remain unchanged",
+    "yes: unobstructed background reference is available",
+    "yes: calibration pixels outside glass are byte-identical",
+    "yes: rendered edge refraction differs from blur-only; metrics={'edgePixels': 14520, 'changedEdgeFractionThreshold8': 0.15241046831955923, 'meanEdgeDifference': 5.688980716253443, 'thresholdFraction': 0.1, 'thresholdMean': 4.0, 'renderedRefractionDetected': True}"
+  ],
+  "rows": [
+    {
+      "night": "no",
+      "captures": {
+        "refractive": {
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_refractive.png",
+          "sha256": "2a67496b34d66fe3e63d15a1f2cfec0120d52e954dc9561e96c2dff7d7e8bd95",
+          "bounds": [
+            170,
+            2069,
+            911,
+            2146
+          ],
+          "rectangles": {
+            "0": {
+              "cell": [
+                202.0,
+                2072.0,
+                407.0,
+                2203.0
+              ],
+              "icon": [
+                273.0,
+                2085.0,
+                336.0,
+                2148.0
+              ],
+              "label": [
+                274.0,
+                2148.0,
+                336.0,
+                2190.0
+              ]
+            },
+            "1": {
+              "cell": [
+                439.0,
+                2072.0,
+                643.0,
+                2203.0
+              ],
+              "icon": [
+                510.0,
+                2085.0,
+                573.0,
+                2148.0
+              ],
+              "label": [
+                510.0,
+                2148.0,
+                572.0,
+                2190.0
+              ]
+            },
+            "2": {
+              "cell": [
+                675.0,
+                2072.0,
+                879.0,
+                2203.0
+              ],
+              "icon": [
+                746.0,
+                2085.0,
+                809.0,
+                2148.0
+              ],
+              "label": [
+                746.0,
+                2148.0,
+                808.0,
+                2190.0
+              ]
+            }
+          },
+          "calibrationBounds": [
+            0,
+            128,
+            1080,
+            2146
+          ],
+          "log": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_refractive_log.txt"
+        },
+        "blur_only": {
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_blur_only.png",
+          "sha256": "a6ee94df2553d648e65fbf5b578185d02956c34bb7e1aaa38aea9adf3fd657d0",
+          "bounds": [
+            170,
+            2069,
+            911,
+            2146
+          ],
+          "rectangles": {
+            "0": {
+              "cell": [
+                202.0,
+                2072.0,
+                407.0,
+                2203.0
+              ],
+              "icon": [
+                273.0,
+                2085.0,
+                336.0,
+                2148.0
+              ],
+              "label": [
+                274.0,
+                2148.0,
+                336.0,
+                2190.0
+              ]
+            },
+            "1": {
+              "cell": [
+                439.0,
+                2072.0,
+                643.0,
+                2203.0
+              ],
+              "icon": [
+                510.0,
+                2085.0,
+                573.0,
+                2148.0
+              ],
+              "label": [
+                510.0,
+                2148.0,
+                572.0,
+                2190.0
+              ]
+            },
+            "2": {
+              "cell": [
+                675.0,
+                2072.0,
+                879.0,
+                2203.0
+              ],
+              "icon": [
+                746.0,
+                2085.0,
+                809.0,
+                2148.0
+              ],
+              "label": [
+                746.0,
+                2148.0,
+                808.0,
+                2190.0
+              ]
+            }
+          },
+          "calibrationBounds": [
+            0,
+            128,
+            1080,
+            2146
+          ],
+          "log": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_blur_only_log.txt"
+        }
+      },
+      "pixelComparison": {
+        "edgePixels": 14520,
+        "changedEdgeFractionThreshold8": 0.12851239669421488,
+        "meanEdgeDifference": 5.3038567493112945,
+        "thresholdFraction": 0.1,
+        "thresholdMean": 4.0,
+        "renderedRefractionDetected": true
+      }
+    },
+    {
+      "night": "yes",
+      "captures": {
+        "refractive": {
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_refractive.png",
+          "sha256": "63916ef0329c9b5d4f6f34b9d534a36970950105edfbf5049b28d595be2a08db",
+          "bounds": [
+            170,
+            2069,
+            911,
+            2146
+          ],
+          "rectangles": {
+            "0": {
+              "cell": [
+                202.0,
+                2072.0,
+                407.0,
+                2203.0
+              ],
+              "icon": [
+                273.0,
+                2085.0,
+                336.0,
+                2148.0
+              ],
+              "label": [
+                274.0,
+                2148.0,
+                336.0,
+                2190.0
+              ]
+            },
+            "1": {
+              "cell": [
+                439.0,
+                2072.0,
+                643.0,
+                2203.0
+              ],
+              "icon": [
+                510.0,
+                2085.0,
+                573.0,
+                2148.0
+              ],
+              "label": [
+                510.0,
+                2148.0,
+                572.0,
+                2190.0
+              ]
+            },
+            "2": {
+              "cell": [
+                675.0,
+                2072.0,
+                879.0,
+                2203.0
+              ],
+              "icon": [
+                746.0,
+                2085.0,
+                809.0,
+                2148.0
+              ],
+              "label": [
+                746.0,
+                2148.0,
+                808.0,
+                2190.0
+              ]
+            }
+          },
+          "calibrationBounds": [
+            0,
+            128,
+            1080,
+            2146
+          ],
+          "log": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_refractive_log.txt"
+        },
+        "blur_only": {
+          "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_blur_only.png",
+          "sha256": "0609d1d1553a9cda19e703bb7f8c1af9f8aeb56e1c81b357361cbb0b6136eb22",
+          "bounds": [
+            170,
+            2069,
+            911,
+            2146
+          ],
+          "rectangles": {
+            "0": {
+              "cell": [
+                202.0,
+                2072.0,
+                407.0,
+                2203.0
+              ],
+              "icon": [
+                273.0,
+                2085.0,
+                336.0,
+                2148.0
+              ],
+              "label": [
+                274.0,
+                2148.0,
+                336.0,
+                2190.0
+              ]
+            },
+            "1": {
+              "cell": [
+                439.0,
+                2072.0,
+                643.0,
+                2203.0
+              ],
+              "icon": [
+                510.0,
+                2085.0,
+                573.0,
+                2148.0
+              ],
+              "label": [
+                510.0,
+                2148.0,
+                572.0,
+                2190.0
+              ]
+            },
+            "2": {
+              "cell": [
+                675.0,
+                2072.0,
+                879.0,
+                2203.0
+              ],
+              "icon": [
+                746.0,
+                2085.0,
+                809.0,
+                2148.0
+              ],
+              "label": [
+                746.0,
+                2148.0,
+                808.0,
+                2190.0
+              ]
+            }
+          },
+          "calibrationBounds": [
+            0,
+            128,
+            1080,
+            2146
+          ],
+          "log": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_blur_only_log.txt"
+        }
+      },
+      "pixelComparison": {
+        "edgePixels": 14520,
+        "changedEdgeFractionThreshold8": 0.15241046831955923,
+        "meanEdgeDifference": 5.688980716253443,
+        "thresholdFraction": 0.1,
+        "thresholdMean": 4.0,
+        "renderedRefractionDetected": true
+      }
+    }
+  ],
+  "failure": null,
+  "restoreErrors": [],
+  "restoredPreferences": {
+    "font": "1.0",
+    "night": "no"
+  },
+  "limitations": [
+    "Controlled high-contrast fixture proves rendered refraction; not a brand-equivalence test.",
+    "No physical-device, GPU performance or complete accessibility acceptance."
+  ]
+}

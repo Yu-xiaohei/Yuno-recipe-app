@@ -1,0 +1,58 @@
+{
+  "candidate": "B02-candidate-3",
+  "status": "pass",
+  "devices": [
+    {
+      "api": 31,
+      "serial": "emulator-5554",
+      "avdName": "tmp_b02_api31_20261030_135000",
+      "expectedPreferences": {
+        "fontScale": "1.0",
+        "night": "no"
+      },
+      "actualPreferences": {
+        "fontScale": "1.0",
+        "night": "no"
+      },
+      "restoreReadback": "pass",
+      "shutdownOutput": "OK: killing emulator, bye bye\r\r\nOK"
+    },
+    {
+      "api": 33,
+      "serial": "emulator-5558",
+      "avdName": "tmp_b02_api33_20261030_135000",
+      "expectedPreferences": {
+        "fontScale": "1.0",
+        "night": "no"
+      },
+      "actualPreferences": {
+        "fontScale": "1.0",
+        "night": "no"
+      },
+      "restoreReadback": "pass",
+      "shutdownOutput": "OK: killing emulator, bye bye\r\r\nOK"
+    },
+    {
+      "api": 32,
+      "serial": "emulator-5556",
+      "avdName": "tmp_b02_api32_20261030_135000",
+      "expectedPreferences": {
+        "fontScale": "null",
+        "night": "no"
+      },
+      "actualPreferences": {
+        "fontScale": "null",
+        "night": "no"
+      },
+      "restoreReadback": "pass in pre-shutdown assertions; no post-shutdown device read",
+      "shutdownCommandExitCode": 0,
+      "shutdownOutput": null,
+      "rawShutdownOutputRetained": false,
+      "collectionLimitation": "Original collector asserted final empty list too early and did not persist this row; reconstructed from the executed pre-shutdown assertions, not a new measurement."
+    }
+  ],
+  "checkedAt": "2026-10-30T22:49:44+08:00",
+  "initialShutdownCompletionCheck": "failed; API32 still listed two seconds after successful kill request",
+  "finalAdbDevicesOutput": "List of devices attached",
+  "finalAttachedDeviceCount": 0
+}

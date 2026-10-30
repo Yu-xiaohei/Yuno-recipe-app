@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "kind": "project-work-breakdown-and-gated-agent-plan",
-  "scope": "B01-candidate-7已人工接受；本轮仅记录通过状态及Git第一次确认，后续批次仍等待2026-10-31及新开工指令，实际提交/推送等待第二次确认",
-  "candidate": "B01-candidate-7",
+  "scope": "用户2026-10-31要求收工和Git同步；停止功能开发，只整理B02交接/备份/预览。远端推送需按项目第8节双次确认；B03及后续不启动。",
+  "candidate": "B02-candidate-3",
   "executionAuthorization": {
     "phase": "P0",
     "date": "2026-10-28",
@@ -152,13 +152,19 @@
         "F01",
         "F10"
       ],
-      "status": "planned",
+      "status": "in_progress",
       "checks": {
         "self": "not_run",
         "manager": "not_run",
         "human": "not_run"
       },
-      "humanAcceptance": null
+      "humanAcceptance": null,
+      "executionAuthorization": {
+        "date": "2026-10-30",
+        "userStatement": "那行吧 先开始下一步工作",
+        "evidence": "docs/reviews/B02/start.json"
+      },
+      "reviewEvidence": "docs/reviews/B02/verification.json"
     },
     {
       "id": "B03",
@@ -837,18 +843,19 @@
         "settings.gradle.kts"
       ],
       "acceptance": "保留当前文件/旧仓库；Wrapper可复现，远端/应用身份核对，不自动推送",
-      "status": "planned",
+      "status": "human_review",
       "legacyRefs": [
         "P0.1",
         "T1.1"
       ],
       "decisionIds": [],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
+        "self": "pass",
+        "manager": "pass",
         "human": "not_run"
       },
-      "handoffRequired": true
+      "handoffRequired": true,
+      "reviewEvidence": "docs/reviews/B02/verification.json"
     },
     {
       "id": "P0-09",
@@ -864,18 +871,19 @@
         "docs/build.md"
       ],
       "acceptance": "按实际AAR核验compile/min/target/JDK/AGP/Kotlin，完成最小构建",
-      "status": "planned",
+      "status": "human_review",
       "legacyRefs": [
         "P0.2",
         "T1.1"
       ],
       "decisionIds": [],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
+        "self": "pass",
+        "manager": "pass",
         "human": "not_run"
       },
-      "handoffRequired": true
+      "handoffRequired": true,
+      "reviewEvidence": "docs/reviews/B02/verification.json"
     },
     {
       "id": "P0-10",
@@ -891,18 +899,19 @@
         "docs/reviews/B02/material-baseline.md"
       ],
       "acceptance": "导航/搜索/菜单/弹层/滑块及真实滚动背景在低版本基础路径运行",
-      "status": "planned",
+      "status": "human_review",
       "legacyRefs": [
         "T1.1a",
         "T4.5"
       ],
       "decisionIds": [],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
+        "self": "pass",
+        "manager": "pass",
         "human": "not_run"
       },
-      "handoffRequired": true
+      "handoffRequired": true,
+      "reviewEvidence": "docs/reviews/B02/verification.json"
     },
     {
       "id": "P0-11",
@@ -918,18 +927,19 @@
         "docs/reviews/B02/api-audit.md"
       ],
       "acceptance": "源码/传递依赖/Manifest/Lint/类初始化核查；不能仅overrideLibrary宣称支持",
-      "status": "planned",
+      "status": "human_review",
       "legacyRefs": [
         "P0.3",
         "T1.1a"
       ],
       "decisionIds": [],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
+        "self": "pass",
+        "manager": "pass",
         "human": "not_run"
       },
-      "handoffRequired": true
+      "handoffRequired": true,
+      "reviewEvidence": "docs/reviews/B02/verification.json"
     },
     {
       "id": "P0-12",
@@ -944,18 +954,19 @@
         "docs/reviews/B02/device-matrix.md"
       ],
       "acceptance": "同一候选APK安装冷启动与材质分支有证据；失败执行已批准拆包后备",
-      "status": "planned",
+      "status": "human_review",
       "legacyRefs": [
         "P0.3",
         "T1.1a"
       ],
       "decisionIds": [],
       "checks": {
-        "self": "not_run",
-        "manager": "not_run",
+        "self": "pass",
+        "manager": "pass",
         "human": "not_run"
       },
-      "handoffRequired": true
+      "handoffRequired": true,
+      "reviewEvidence": "docs/reviews/B02/verification.json"
     },
     {
       "id": "P0-13",
@@ -970,7 +981,7 @@
         "docs/reviews/B02/"
       ],
       "acceptance": "相应环节补型号并真机安装；不以模拟器替代实际体验，G3通过后冻结",
-      "status": "planned",
+      "status": "in_progress",
       "legacyRefs": [
         "P0.4",
         "T4.6"
@@ -981,7 +992,8 @@
         "manager": "not_run",
         "human": "not_run"
       },
-      "handoffRequired": true
+      "handoffRequired": true,
+      "reviewEvidence": "docs/reviews/B02/device-matrix.md"
     },
     {
       "id": "P0-14",
@@ -2818,7 +2830,7 @@
     "status": "pass-contract-and-publication-tool-checks",
     "candidate": "B01-candidate-7",
     "checkedAt": "2026-10-30",
-    "scope": "B01实现/契约候选已人工接受；本次仅交接状态和验收记录同步，Git仍待第二次确认，不推进后续批次",
+    "scope": "B01实现/契约候选已人工接受；Git双次确认完成，GitHub已同步，Gitee服务HTTP429阻塞，新凭据待验证；本次仅记录执行结果，不推进后续批次",
     "evidence": [
       "docs/reviews/B00/acceptance.json保留B00-candidate-8明确接受与原Git基线hash；规划接受不计App实现进度",
       "docs/reviews/B01/verification.json记录29项结构与工具回归、离线引用、旧13份JSON识别及未运行边界",
@@ -2832,7 +2844,7 @@
       "candidate-7总负责人51项16.084秒通过；新增22项发布字节/Git/资源边界回归；子Agent只读G2通过，旧Git blob先验大小及目录放大限制已闭环"
     ],
     "limitations": [
-      "B01已人工接受；51项测试和独立G2通过，仅本地工具/契约；Git公开同步第二次确认尚未取得",
+      "B01已人工接受；51项本地测试及独立G2通过，GitHub Windows/Linux CI与独立检出通过；Gitee服务HTTP429阻塞，不代表Android或云服务运行通过",
       "Schema不替代算术、原始hash/快照一致性、迁移、事务、并发、真实导入或同步测试",
       "Mermaid尚未渲染，79项UX验收均not-run；Android工程、API31/32/33安装冷启动、vivo设备、OSS、WebDAV和APK尚未验证",
       "Miuix固定源码入口已核查，仍未构建接入；MiSans字体文件/具体条款/字重/缺字回退待B02",
@@ -2840,8 +2852,38 @@
     ]
   },
   "nextBatchStart": {
-    "notBefore": "2026-10-31",
+    "batch": "B03",
+    "notBefore": null,
     "requiresNewUserInstruction": true,
-    "automaticStart": false
+    "automaticStart": false,
+    "note": "本次仅授权B02；此前2026-10-31等待限制由2026-10-30新开工指令替代"
+  },
+  "currentBatchReview": {
+    "batch": "B02",
+    "candidate": "B02-candidate-3",
+    "status": "in_progress",
+    "evidence": "docs/reviews/B02/verification.json",
+    "completedScope": "candidate-3两包构建、两种Lint、51项既有回归及另4项新纯回归、六组API31/32/33运行、R8导航几何、原始玻璃A/B及完整布局离线重算、36代表截图；已实现范围G1/G2通过，整批及用户G3未完成；旧候选及失败原件保留",
+    "remainingScope": "vivo12解析失败准确原因与安装；Android17真机新效果；中文IME、完整状态矩阵、罕见字/性能及整批G1/G2、用户G3",
+    "priorManagerReviewIsHistorical": true,
+    "pushedOrReleased": false,
+    "implementedScopeChecks": {
+      "self": "pass",
+      "manager": "pass",
+      "human": "not_run"
+    },
+    "reviewReport": "docs/reviews/B02/review.md",
+    "userFeedback": [
+      "vivo Android12 package parse failure; exact cause pending device evidence",
+      "Android17 observed frosted blur instead of intended refractive appearance",
+      "selected navigation capsule and icon centers differ"
+    ],
+    "pausedAt": "2026-10-30T18:51:57+08:00",
+    "pauseReason": "用户要求暂时先停、总结收工并同步Git；仅授权交接和同步准备，实际推送待双次确认",
+    "resumeReason": "2026-10-30 用户明确继续；先完成candidate-3运行回归与评审，不开始B03或Git/云操作。",
+    "workPaused": true,
+    "pausedAtDate": "2026-10-31",
+    "closeoutEvidence": "docs/reviews/B02/收工总结-2026-10-31.md",
+    "syncPlan": "docs/reviews/B02/git-sync-plan.json"
   }
 }

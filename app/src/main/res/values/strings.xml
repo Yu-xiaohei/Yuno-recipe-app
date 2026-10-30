@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">于の食谱</string>
+    <string name="tab_meals">配餐</string>
+    <string name="tab_recipes">食谱</string>
+    <string name="tab_settings">设置</string>
+    <string name="search">搜索</string>
+    <string name="search_minimum">请输入至少两个字或字符</string>
+    <string name="category_all">全部分类</string>
+    <string name="weight">重量</string>
+    <string name="lock_meal">锁定配餐</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="reduce_motion">减弱动画</string>
+    <string name="search_placeholder">搜索食材、食谱名称或拼音</string>
+    <string name="weight_all">全部重量</string>
+    <string name="energy_all">全部热量</string>
+    <string name="licenses">开源与许可</string>
+    <string name="font_attribution">本应用使用 MiSans 字体</string>
+    <string name="today_meals">今日配餐</string>
+    <string name="edit_meal">编辑配餐</string>
+    <string name="back">返回</string>
+</resources>

@@ -1,0 +1,1318 @@
+{
+  "schemaVersion": 1,
+  "batch": "B02",
+  "candidate": "B02-candidate-3",
+  "kind": "frozen-implementation-and-inputs-not-human-accepted",
+  "baseCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "generatedAt": "2026-10-30T23:05:21+08:00",
+  "scope": "Current implementation, frozen resource audits, current reports and original PNGs. Administrative gate summaries excluded.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1175,
+      "sha256": "dbd0ae588030cdaed07b6a290e50b7be7a25db528fb6dc71e412d16323fd8c4b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 539,
+      "sha256": "b60ccaba07373c10aa6b333b23eeffbfd89dbd452eb24959f854dd254cffae21"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "bytes": 1751,
+      "sha256": "d136ebc781de23023e7585a0a40d97e666534efa1db3b842ca0ce54ac69870ac"
+    },
+    {
+      "path": "app/gradle.lockfile",
+      "bytes": 60289,
+      "sha256": "20cb2d3fd090d0daa2738cd85fc78e2aed38ffbce65bcce8fe7581f7f5a96ac6"
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "bytes": 270,
+      "sha256": "8d100e0b610d5830685de721d68a4077d7048793dc0069e54710e713051c432f"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "bytes": 1043,
+      "sha256": "a7ad4831891d95204e510e7617f81e646c3cce0a1e18e0928e1dbedbde71c173"
+    },
+    {
+      "path": "app/src/main/assets/figma/brand_logo.svg",
+      "bytes": 4916,
+      "sha256": "40eeccafe9f911ae3c389e267dd0e7bd8e015dfef735a94fb182ae4a0a0d8e51"
+    },
+    {
+      "path": "app/src/main/assets/figma/calendar.svg",
+      "bytes": 1661,
+      "sha256": "c35c1b8ca8d51ce8b2220ff5a6d545f672ce611f44bd6cb620aeedf32314289f"
+    },
+    {
+      "path": "app/src/main/assets/figma/carbs.svg",
+      "bytes": 1515,
+      "sha256": "3fd0ce3930dbeb68366de819d77e11c4247a66dd981ce4e6db30df687a99e19a"
+    },
+    {
+      "path": "app/src/main/assets/figma/chevron.svg",
+      "bytes": 404,
+      "sha256": "975c09f180034961d4a5a4bed484b6f74163bc111223ae2552b2f7fe02a83e55"
+    },
+    {
+      "path": "app/src/main/assets/figma/energy.svg",
+      "bytes": 1111,
+      "sha256": "c35e52e79cbd2e2be2007665f15778a6476231a0dfd754bc4378a3c108cacfa8"
+    },
+    {
+      "path": "app/src/main/assets/figma/fat.svg",
+      "bytes": 627,
+      "sha256": "9037cef239890cdf9a4ea0c1f09d5afedba8389ec9bd5a8172957f2f3c07e098"
+    },
+    {
+      "path": "app/src/main/assets/figma/filter_arrow.svg",
+      "bytes": 599,
+      "sha256": "6f97cc6a6abedfd86793a13317ca06f4a462b0718dceee54f0ec984512336c5a"
+    },
+    {
+      "path": "app/src/main/assets/figma/nav_meals.svg",
+      "bytes": 1583,
+      "sha256": "29e78df1290043222300c01096879e0455aa4e9fb9534f05fd1465864b46bafc"
+    },
+    {
+      "path": "app/src/main/assets/figma/nav_recipes.svg",
+      "bytes": 1411,
+      "sha256": "df9b46d59ffe29b9141ff8cad13387d7733f4cb92fe2d9f3edd34b9dc7c61027"
+    },
+    {
+      "path": "app/src/main/assets/figma/nav_settings.svg",
+      "bytes": 1050,
+      "sha256": "63a94710c5f9f70bec83bb219540aa7d3f5b29ddb5bdf8e1b488f8d7aecd5c30"
+    },
+    {
+      "path": "app/src/main/assets/figma/protein.svg",
+      "bytes": 1497,
+      "sha256": "5d2bd0286dbf35bd0ce8d85ce7b5c5f39cd10303b1d4d417bae8431d31063e6e"
+    },
+    {
+      "path": "app/src/main/assets/figma/search.svg",
+      "bytes": 663,
+      "sha256": "0c915dc176c9375b48918078d5947e9eb846151028e9519d6d9a7673f7910d4a"
+    },
+    {
+      "path": "app/src/main/assets/figma/weight.svg",
+      "bytes": 858,
+      "sha256": "db7394cb613d25fcee1a031c54a5411354e39968518aa1e3087c137b7262dc8b"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_o.svg",
+      "bytes": 1288,
+      "sha256": "d2b92a4197a94547590132462a196180b4cc2fa9b3ce71db2182db7a2e567832"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_recipe.svg",
+      "bytes": 1779,
+      "sha256": "9b65a53c0baa0aa380435cb69aad5cc592f5d7a3631f1d2844259b8233cf0f4e"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_un.svg",
+      "bytes": 4305,
+      "sha256": "a02237dac5a8562ffda7826e4363d49f24fd2802bedb23e50638723ff6f8bb8e"
+    },
+    {
+      "path": "app/src/main/assets/figma/wordmark_y.svg",
+      "bytes": 577,
+      "sha256": "38a84d87e5dc4b48aedc1a7c12f44687a6bbb3935a9e57f04ae27ac812845069"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/MainActivity.kt",
+      "bytes": 3507,
+      "sha256": "26fa4e93e6b418a1ca305284ddc7c22a6401e8d85013a9c3ef32f8cc37baaf31"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/PrototypeApp.kt",
+      "bytes": 27224,
+      "sha256": "af3a5b3ef2df3926425cae3640f9cb298eb2ba314a8561a81798948be03a67b8"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/compat/EnhancedMaterial.kt",
+      "bytes": 7218,
+      "sha256": "0d6b5014ae21a405318880e385150896d4936cfa89e2a75f20474a64c5d240a7"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/compat/Lens.kt",
+      "bytes": 8132,
+      "sha256": "105b568601259f8effcf8531b92d247877804b3ba54c00a7aa7ab778c0dc89bb"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/FigmaAsset.kt",
+      "bytes": 1737,
+      "sha256": "d841cb7f26d4ab9e78e8c00e2a747b90510807aca2e28ce5be3f7d3369161580"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/PrototypeOverviewPages.kt",
+      "bytes": 9537,
+      "sha256": "e685f3de6f8c7af954d1e025f41c184fb123473d8b092070e3c4d62b4b076474"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/PrototypeTheme.kt",
+      "bytes": 3018,
+      "sha256": "bf77583b6fc87b18eb67354ba22406173d31b77694bc927c9a18b2f0b33a48ff"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_apple.jpg",
+      "bytes": 4905681,
+      "sha256": "9e3b7287f354ed674f06f100bf0658ea5e2a9c391cd5dcf19dba6597c8737148"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_cabbage.jpg",
+      "bytes": 3221247,
+      "sha256": "1d27a13a0b5467fb457f98582a6e09d72476aeb4cf7063520570a0d0bbe90682"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_eggplant.jpg",
+      "bytes": 369949,
+      "sha256": "83a0d703a5b2dbb982d1a7cf42fac5bfdb4e45ce52e365ed302eaa805da404b6"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_placeholder.jpg",
+      "bytes": 20932,
+      "sha256": "d6304ff549c73ff53b0447e89028004f49b8fcff62a1d7f292cda9b0b198463a"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/figma_recipe_tomato.jpg",
+      "bytes": 153407,
+      "sha256": "bc6c83bad68a59404fe03492cdb700d8711078411eee1a039c482ef4ab1964f0"
+    },
+    {
+      "path": "app/src/main/res/font/misans_vf.ttf",
+      "bytes": 20093424,
+      "sha256": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+    },
+    {
+      "path": "app/src/main/res/values-night/styles.xml",
+      "bytes": 407,
+      "sha256": "132e127939e8068d32692ebee5db29011652d4a73c93a46df336fb26626343af"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "bytes": 1120,
+      "sha256": "60548e650ffcf24246531bb5514714bbdf709e72be027c3acf3ac20384697935"
+    },
+    {
+      "path": "app/src/main/res/values/styles.xml",
+      "bytes": 412,
+      "sha256": "d2813b31ad0694981c038d894641ac82b6b6c70582368c5f8318b76439995a3a"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "bytes": 1050,
+      "sha256": "cb029b35db0e976c087100424e16e14a6256b46962398887520e51508c3b5842"
+    },
+    {
+      "path": "build.gradle.kts",
+      "bytes": 513,
+      "sha256": "2b5a177cead87fb5fde00a1dcbac94a2fdab4fcc8ee8d0b9efa58fa4a8e27ce9"
+    },
+    {
+      "path": "config/development-baseline.json",
+      "bytes": 10184,
+      "sha256": "b2b331149247a0d93120414895074801ae930abd1e574eebe46d067fb985dfe2"
+    },
+    {
+      "path": "docs/reviews/B02/api-audit.md",
+      "bytes": 3279,
+      "sha256": "d4345b8a2012210ae90f687df330b12d4f9f3aedc96b020c046f5c72043d3576"
+    },
+    {
+      "path": "docs/reviews/B02/figma-assets.json",
+      "bytes": 11324,
+      "sha256": "1d7b068d9007f8a8dc5d9d786511d3e47c5061b6b236f26113e9571ea9731955"
+    },
+    {
+      "path": "docs/reviews/B02/font-assets.json",
+      "bytes": 34639,
+      "sha256": "4a11366a032b0cf5f928cec39f276823a932dc7e7c993221bab4992ef8ced890"
+    },
+    {
+      "path": "docs/reviews/B02/material-baseline.md",
+      "bytes": 3936,
+      "sha256": "b43ce528aa5e117e6f5e460a6c4328768ffd1d901cae662dbc0b59b5584fd515"
+    },
+    {
+      "path": "docs/reviews/B02/ui-alignment.md",
+      "bytes": 2470,
+      "sha256": "07fb18776755c290dcc96d1a9e431b883a42673a39d47dcfb213062814fc4abd"
+    },
+    {
+      "path": "gradle.properties",
+      "bytes": 152,
+      "sha256": "a9cf3bdf36b254a61c327eb8a344ea7204c6943e93377edee28ba59ae16cc8fd"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "bytes": 997,
+      "sha256": "281090870d37aa65bdda75a1c94cb3bd0944a52b55015d2e9b34d73932f86a3c"
+    },
+    {
+      "path": "gradle/verification-metadata.xml",
+      "bytes": 181662,
+      "sha256": "27f31c89c0b36ca1023208492556a5868941c5684f9a7775c3259ba694e23804"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 47505,
+      "sha256": "7a9ce74cff467ca1bf60a4fcd9f05185acceda4d0f382434d393e17864262c5d"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 339,
+      "sha256": "45b09518a2f0ea326bc776066e735b94527d2a94002e3b27621c32cdaee7e3ce"
+    },
+    {
+      "path": "gradlew",
+      "bytes": 8678,
+      "sha256": "e01b5c97892572c82405c02b96a3382379100e7d825ce7c48883d95c26928750"
+    },
+    {
+      "path": "gradlew.bat",
+      "bytes": 2788,
+      "sha256": "4e193538b4ddccbee0c05d6383731b647945c146d16d8fe243b4ff716867896f"
+    },
+    {
+      "path": "scripts/android_gradle.ps1",
+      "bytes": 852,
+      "sha256": "0f8912666cc0d48de2f5aa863dc7788bba5c5bda692e74e2986dfd9dfbb82c12"
+    },
+    {
+      "path": "settings-gradle.lockfile",
+      "bytes": 267,
+      "sha256": "5e2d075903b5cd264613e7538c7c51b1484fe2ed489d4ead3e6b4ba0cf3911c4"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "bytes": 335,
+      "sha256": "f881e0bad48a3d2c7b1436ef1fcfebd54c7dac99b4bbcd2f6bfeffe3354cbb28"
+    },
+    {
+      "path": "tests/test_android_deps/requirements.txt",
+      "bytes": 15,
+      "sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35"
+    },
+    {
+      "path": "tests/test_android_glass.py",
+      "bytes": 14675,
+      "sha256": "ca9384c940acba7d343cf4cba9ffc6640870124f3cece8a28d1a02c5a2a2b4f3"
+    },
+    {
+      "path": "tests/test_android_glass_geometry.py",
+      "bytes": 2257,
+      "sha256": "f70bfe236b2aba00a0de7934cd7fae03af87300ef27e51540d762cdf0b3f8ce7"
+    },
+    {
+      "path": "tests/test_android_navigation.py",
+      "bytes": 15622,
+      "sha256": "333888beef884458c9e1b2cd840116ce07ab96ed72644c113966a518ac2bb09d"
+    },
+    {
+      "path": "tests/test_android_smoke.py",
+      "bytes": 17150,
+      "sha256": "2aeb6b8c3f016418f7c1fc2df78954996e1bf8a4ca2b8d49620e2b6efb1c0ce0"
+    },
+    {
+      "path": "tests/test_android_visual.py",
+      "bytes": 5375,
+      "sha256": "f970078601a6cc601dde7747a0b2d134350dc733417d8d90ea383ea26de2d713"
+    },
+    {
+      "path": "third_party/coil/LICENSE.txt",
+      "bytes": 11347,
+      "sha256": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893"
+    },
+    {
+      "path": "third_party/coil/NOTICE.txt",
+      "bytes": 119,
+      "sha256": "834bb291c6e0ff42eebdbb28e9d908192dc6e4788a0dfabd9ebcd333c428401d"
+    },
+    {
+      "path": "third_party/misans/COPYRIGHT.txt",
+      "bytes": 85,
+      "sha256": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752"
+    },
+    {
+      "path": "third_party/misans/LICENSE_readable.txt",
+      "bytes": 9856,
+      "sha256": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414"
+    },
+    {
+      "path": "third_party/misans/MiSans_Fonts_License.pdf",
+      "bytes": 79535,
+      "sha256": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86"
+    },
+    {
+      "path": "third_party/miuix/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "third_party/miuix/README.md",
+      "bytes": 618,
+      "sha256": "339b858eec43a253b6918acae5d6a466f2a298d6078971953919f3a93c5f7176"
+    }
+  ],
+  "deviceReports": [
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug.json",
+      "reportSha256": "4196297cf4b508e8338126c03c84df0e764839c2c00e7b4e848d87785a184cc5",
+      "status": "pass",
+      "api": 31,
+      "variant": "debug",
+      "apkSha256": "43d42b6b544763db0c52ae5b80f910de9de3e2f0c529346bf61369bb4a48db5a",
+      "checkRecordCount": 38,
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release.json",
+      "reportSha256": "5331d84770b0de689c3a58315db38d4e9dbd0f9e7d67e2e50130b8dab44d6613",
+      "status": "pass",
+      "api": 31,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 38,
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug.json",
+      "reportSha256": "145e29e88495a13cb85470a185740896142599be9ccade86154d3a690d9d4eb3",
+      "status": "pass",
+      "api": 32,
+      "variant": "debug",
+      "apkSha256": "43d42b6b544763db0c52ae5b80f910de9de3e2f0c529346bf61369bb4a48db5a",
+      "checkRecordCount": 38,
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release.json",
+      "reportSha256": "7d215f60533ece49e6e39a26de637634020f673e570d3ce1b8820381b3cffe4a",
+      "status": "pass",
+      "api": 32,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 38,
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug.json",
+      "reportSha256": "1b0f30f310af062a2fa759c6bdacad0925a2770d85b678b2e1e4827f6055f4cb",
+      "status": "pass",
+      "api": 33,
+      "variant": "debug",
+      "apkSha256": "43d42b6b544763db0c52ae5b80f910de9de3e2f0c529346bf61369bb4a48db5a",
+      "checkRecordCount": 47,
+      "transientUiDumpRetryCount": 0
+    },
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release.json",
+      "reportSha256": "53f7e8e087fcf224ff17e440f8293b5a50ea83dd44a83976e026cd92700e759b",
+      "status": "pass",
+      "api": 33,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 47,
+      "transientUiDumpRetryCount": 0
+    }
+  ],
+  "navigationReports": [
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation.json",
+      "reportSha256": "ffce1432f6d1874e476585aefb37b56aca682ee15a66f048594681b84d62dab7",
+      "status": "pass",
+      "api": 31,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 107,
+      "transientUiDumpRetryCount": 0,
+      "maxIconHorizontalErrorPx": 0.5,
+      "maxLabelHorizontalErrorPx": 0.5,
+      "maxGroupVerticalErrorPx": 0.0
+    },
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation.json",
+      "reportSha256": "76eda6de702ea0f5740e94a848f9ab84d5216baf061ed4e48688dc92215410ba",
+      "status": "pass",
+      "api": 33,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 107,
+      "transientUiDumpRetryCount": 0,
+      "maxIconHorizontalErrorPx": 0.5,
+      "maxLabelHorizontalErrorPx": 0.5,
+      "maxGroupVerticalErrorPx": 0.0
+    }
+  ],
+  "glassReports": [
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_reanalysis.json",
+      "reportSha256": "93948090eab8e1cc65e9f55cf5d705d43cd7e16d8382e30c0fc84171947268d3",
+      "status": "pass",
+      "api": 33,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 7,
+      "transientUiDumpRetryCount": 0,
+      "kind": "offline-reanalysis-of-original-captures-not-new-device-run",
+      "originalCaptureReport": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass.json",
+      "originalCaptureReportSha256": "2d13f0514474c1c0f13a18b89c772a4d9bce1183639a473e0a8756f749ae932d",
+      "pixelComparisons": [
+        {
+          "edgePixels": 28894,
+          "changedEdgeFractionThreshold8": 0.19367342700906762,
+          "meanEdgeDifference": 10.215857963591057,
+          "thresholdFraction": 0.1,
+          "thresholdMean": 4.0,
+          "renderedRefractionDetected": true
+        },
+        {
+          "edgePixels": 28894,
+          "changedEdgeFractionThreshold8": 0.19519623451235552,
+          "meanEdgeDifference": 9.725237073440853,
+          "thresholdFraction": 0.1,
+          "thresholdMean": 4.0,
+          "renderedRefractionDetected": true
+        }
+      ]
+    }
+  ],
+  "visualReports": [
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual.json",
+      "reportSha256": "83ba2bb3813b5ca9b234182ee77205c47236afe7cf87548d94811ee544e02d52",
+      "status": "captured-pending-human-inspection",
+      "api": 31,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 0,
+      "transientUiDumpRetryCount": 0,
+      "rawScreenshotCount": 18
+    },
+    {
+      "report": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual.json",
+      "reportSha256": "56b8f3e736812b368d5f25cda1ac400b2503f579d64ae2f8b9452f012a52f644",
+      "status": "captured-pending-human-inspection",
+      "api": 33,
+      "variant": "release",
+      "apkSha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "checkRecordCount": 0,
+      "transientUiDumpRetryCount": 0,
+      "rawScreenshotCount": 18
+    }
+  ],
+  "allRuntimeReports": [
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug.json",
+      "sha256": "4196297cf4b508e8338126c03c84df0e764839c2c00e7b4e848d87785a184cc5"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release.json",
+      "sha256": "5331d84770b0de689c3a58315db38d4e9dbd0f9e7d67e2e50130b8dab44d6613"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation.json",
+      "sha256": "ffce1432f6d1874e476585aefb37b56aca682ee15a66f048594681b84d62dab7"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual.json",
+      "sha256": "83ba2bb3813b5ca9b234182ee77205c47236afe7cf87548d94811ee544e02d52"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug.json",
+      "sha256": "145e29e88495a13cb85470a185740896142599be9ccade86154d3a690d9d4eb3"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release.json",
+      "sha256": "7d215f60533ece49e6e39a26de637634020f673e570d3ce1b8820381b3cffe4a"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug.json",
+      "sha256": "1b0f30f310af062a2fa759c6bdacad0925a2770d85b678b2e1e4827f6055f4cb"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release.json",
+      "sha256": "53f7e8e087fcf224ff17e440f8293b5a50ea83dd44a83976e026cd92700e759b"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass.json",
+      "sha256": "2d13f0514474c1c0f13a18b89c772a4d9bce1183639a473e0a8756f749ae932d"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_reanalysis.json",
+      "sha256": "93948090eab8e1cc65e9f55cf5d705d43cd7e16d8382e30c0fc84171947268d3"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation.json",
+      "sha256": "76eda6de702ea0f5740e94a848f9ab84d5216baf061ed4e48688dc92215410ba"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual.json",
+      "sha256": "56b8f3e736812b368d5f25cda1ac400b2503f579d64ae2f8b9452f012a52f644"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_apk_audit.json",
+      "sha256": "ccc402a8800c9747fd2f370f6830f437a34f3c33f80e76419d7fbcd08f363af4"
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_device_environment.json",
+      "sha256": "918a0593ca5d21f4c7e35389b17d59d2274c85b3546c751e0b8c55a1ac60e862"
+    }
+  ],
+  "screenshotHashes": [
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_dialog.png",
+      "sha256": "23150bba17e72f482684eb8b014d571522fda7091817f47aea8c9d76c058844d",
+      "bytes": 377265
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_home.png",
+      "sha256": "c406552ec126a2a4c2ed77414983066b2399d5151bb1bf69825ddd10ea0c67bd",
+      "bytes": 544685
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_keyboard.png",
+      "sha256": "58ec7f920bdd014f4fa5d09d37d38c72ce0546bbb7cd4e11278f6f30a2481e1c",
+      "bytes": 369733
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_licenses.png",
+      "sha256": "433700aedc014b2d03d38a7aa235aabad50d0409183df84312c2689978ebe7f6",
+      "bytes": 402907
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_meals.png",
+      "sha256": "ded82a2e446b3b5fb62b5f4bb117592c7213a43b3489205d9c8d7c6d39fcbc32",
+      "bytes": 180533
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_menu_0.png",
+      "sha256": "2a9130e3017664b84f09ece0438829dc72d3590f6979b99afaa8fdfb939e21e3",
+      "bytes": 283637
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_menu_1.png",
+      "sha256": "ecc99f35b2044e4e4296b7775b4753d5d6cd58987a8ab8463ac3b0a3349b3d9c",
+      "bytes": 492045
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_menu_2.png",
+      "sha256": "2c5a64118838f88ad81fd66bbec61d7a78eb334fa912a129a0367592e7ea742e",
+      "bytes": 514395
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_scrolled.png",
+      "sha256": "5870172828ddfc3b9d8d24461ce0f458d4da2aee68ad9062b83f7f6ec240d7c2",
+      "bytes": 541323
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_settings.png",
+      "sha256": "8d42009dc239038b90384ca55269fb391041dc08e48360bc645a694694889288",
+      "bytes": 163859
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_debug_weight_locked.png",
+      "sha256": "826d5eb59a294f35d0c6f2f2d6266c6197cb5ba40805aaa3cc0fafc939793a31",
+      "bytes": 87670
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_dialog.png",
+      "sha256": "1c05a17f0c6f80c0497fa3d3f345c0a89177278268ffd499bad0c9a8856d6481",
+      "bytes": 377068
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_home.png",
+      "sha256": "cef59c6b9e4d632ae8686520a1932ef4948839ad12c8711dd5ed4ae2d470ee0e",
+      "bytes": 545181
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_keyboard.png",
+      "sha256": "a0801ca31d0b67a4e5bb66d6c88edf70919cf84e525ec3f7e9d6ba363e40b42f",
+      "bytes": 371587
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_licenses.png",
+      "sha256": "51ba3507777614489003c5b608ce986bd109d3fb24031e09dd7f3be94c24ab38",
+      "bytes": 403146
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_meals.png",
+      "sha256": "364ac5cd77f125b7f79f33e15a43a1602126f12f4f6acc1ee6cdabcb7b5ef794",
+      "bytes": 180703
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_menu_0.png",
+      "sha256": "83f4ae3a1b2483e0bc22ae6282f8092cd57085e062b250d9bb625e5677b88ea4",
+      "bytes": 284060
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_menu_1.png",
+      "sha256": "0efeaf909745fe057f7a45d28219f686a97a5c3f0389103dc50db160c886ba70",
+      "bytes": 491976
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_menu_2.png",
+      "sha256": "d79ea8a65092ad83e5d8ac8b295e15b57cd4b6414d089acff334fdd5b0cc3f79",
+      "bytes": 514446
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab0.png",
+      "sha256": "0a828477b1e474d83711638585c048d6159444c1bc0e9f24d23d4629ff93d714",
+      "bytes": 181330
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab1.png",
+      "sha256": "6a9508555e88ee86e6058a981f8c84b90fdf03df44cb3bd95e3fb273b5bbd7d1",
+      "bytes": 545615
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab2.png",
+      "sha256": "87d5a3cde07ee736fd7965a3857e2a595db9d397894a3b7798acac8f0caf4199",
+      "bytes": 164451
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab0.png",
+      "sha256": "f2e47b34ea801275f2b83f0448de4db58231d9931fb3f89b97256599bef2d290",
+      "bytes": 228856
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab1.png",
+      "sha256": "ed2da2c4fc0b04099d9546ed9b4b9b4e9dd7829cd32727028970aec4cc07e568",
+      "bytes": 399836
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab2.png",
+      "sha256": "cee2ebf36ef9ed29910724857e1ab31f54e2ef1e61edcf5a9d4bf387b1bad36b",
+      "bytes": 196616
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_scrolled.png",
+      "sha256": "6fc6ff60c2029af7c27146fb7d8bfdeb893a84070d0bb30033b3cd3c216f398b",
+      "bytes": 542499
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_settings.png",
+      "sha256": "49a609522c6f0790d3feaad6402fa8a08fb3f1c6ef42f9627ceb8afbc83f816d",
+      "bytes": 164466
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale1_0_home.png",
+      "sha256": "7d65e32ba25bd7f76df1b1161cc5ca85856d478f1ebb9e6c264ade26bb16a238",
+      "bytes": 559271
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale1_0_meals.png",
+      "sha256": "946aab8766e17c3040ca79b35744c5418e3600558a45262387fc729ea1758812",
+      "bytes": 182978
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale1_0_settings.png",
+      "sha256": "030feb3bc3d5f5ac37f77ac2a2be1c5ce689076d6c8e762a9fe5b4b8516f8915",
+      "bytes": 177230
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale1_3_home.png",
+      "sha256": "f8fb6a571c78dd2eb75795cb22f5fadafb00b3936745ae16d50b8a34bfa0fd7d",
+      "bytes": 601387
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale1_3_meals.png",
+      "sha256": "70e373b1ebd13cb295c1cda4efecd36f2c08583270c4883f7353140f767bca6a",
+      "bytes": 207095
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale1_3_settings.png",
+      "sha256": "f82f9452ce9dc5927ef5b121b7cc3aef3a17c01a1602e829d95a2cc781c92e34",
+      "bytes": 188584
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale2_0_home.png",
+      "sha256": "647c97e98519d39c63108f418775b2248c3219c86cb5c0c4174e2f43a2a997b4",
+      "bytes": 419782
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale2_0_meals.png",
+      "sha256": "4257eea9011fce0e12f6bcdd06f66ce3cceb8ff6b8ba155d2398397624700a78",
+      "bytes": 234391
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_dark_scale2_0_settings.png",
+      "sha256": "69a0012d6cdc3d80d7a0aa58ca3e4b9f8cc671a226854991417bc5015294ed4d",
+      "bytes": 205274
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale1_0_home.png",
+      "sha256": "1ba648071542ae2fb168e82837c762223691b666afef9788636c08ad2579d186",
+      "bytes": 545661
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale1_0_meals.png",
+      "sha256": "792f541e6a21c8d145ff587af612926a3a1e115edb3a9199e04394b5b0ce357b",
+      "bytes": 181380
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale1_0_settings.png",
+      "sha256": "87d5a3cde07ee736fd7965a3857e2a595db9d397894a3b7798acac8f0caf4199",
+      "bytes": 164451
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale1_3_home.png",
+      "sha256": "7cd55b414552de0b211cee06501544cb0710af667de83468b0988ad8641cca7d",
+      "bytes": 579131
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale1_3_meals.png",
+      "sha256": "3f8d3846f905adff03e26b8e2396495d8c8a311a861a2c9b5232c3f2a33c24c9",
+      "bytes": 206977
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale1_3_settings.png",
+      "sha256": "6c91681b290f00239da33e6972f6e302f70478394d76bb05cf71114b11495ee2",
+      "bytes": 179209
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale2_0_home.png",
+      "sha256": "53ac4b759787597a039d6afaad1293a7cf4c5e4e0b1f464085abb80521a979f1",
+      "bytes": 399981
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale2_0_meals.png",
+      "sha256": "86ff60f18705b735f8781539fdd2cdc9b9e9a1cb54d91f699e775c6d30ab83fc",
+      "bytes": 229114
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_visual_light_scale2_0_settings.png",
+      "sha256": "dc7042c3cf04832dc2e4e21d0b10ddd5122b3b4ae17a1da3f20c463e06394c39",
+      "bytes": 196869
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_weight_locked.png",
+      "sha256": "166a07dccbc963caabc9fa3189128b72f5ea1ce241eb8659bc85ddb344c82085",
+      "bytes": 88392
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_dialog.png",
+      "sha256": "dfcd00642a0dd2b137c16b25c965b823781f78d5850db96ecd3b30537d55c327",
+      "bytes": 376035
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_home.png",
+      "sha256": "f245c0ddc30b8b9180dcda90ae02d1172f8c102caa2cfea0e9511488365febaa",
+      "bytes": 544879
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_keyboard.png",
+      "sha256": "24c3f81644a9f4305cfc6745ebe9270f833762f1a5a50ab2acb841572c78e3fe",
+      "bytes": 371504
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_licenses.png",
+      "sha256": "f2fe39c06a679ae723209d7ca9f896850c925e5459d93dc183c29852ecfa97ce",
+      "bytes": 403330
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_meals.png",
+      "sha256": "e54f42ea2c5a3acc17fe7d8b48e1641a0b4ca91d1546de8d54ca6dbf20cf29f0",
+      "bytes": 180329
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_menu_0.png",
+      "sha256": "fc0128d815083da663a6c680b1a2caa9d49a6dd326105660635924bb938b2831",
+      "bytes": 283675
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_menu_1.png",
+      "sha256": "f9757c33d375d5ac3cfffee07bf6229bbd9f3028a94d12fe152b57e1a2020c6d",
+      "bytes": 491877
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_menu_2.png",
+      "sha256": "ee26db89513fec62d8b39ea6069c1b80a78c7984220a5811731903158d55c7e8",
+      "bytes": 514165
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_scrolled.png",
+      "sha256": "06ec4d0a3cbcb5bb20e726d252a1fb9031833aaa9b38dcc93f00d4f91e2bf158",
+      "bytes": 542207
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_settings.png",
+      "sha256": "74948767aa446df131efa04f81ed72d93db250a50b6da1c907e2ad5685d674d8",
+      "bytes": 164245
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_debug_weight_locked.png",
+      "sha256": "9801b77470ee4008a562366d23bcd6658187bff20d0c0b360ca949d54571134a",
+      "bytes": 87472
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_dialog.png",
+      "sha256": "b4890f8f1a3bdcf60d8aad7a9690d0a13053e836544bed26b77cfb37d2f2f9bf",
+      "bytes": 377080
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_home.png",
+      "sha256": "8fe9905202a8562a61930edcb53ab8846488ec01df63dc7e656413cf9a25259d",
+      "bytes": 544684
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_keyboard.png",
+      "sha256": "95ca91d9c95ca78952ffcefbc39f0b7ac91d9e30a465869df54a1b7bce2ef2fb",
+      "bytes": 371176
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_licenses.png",
+      "sha256": "576fd8e27b0d035e76303833c6eba08dc5ede3b8efd32d6a331ea9cd45456f2a",
+      "bytes": 403295
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_meals.png",
+      "sha256": "63b737af9d25306e92d6d35a6f72a82bfbf0a2e3bf6c567af6c0fdf5606bbc26",
+      "bytes": 180954
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_menu_0.png",
+      "sha256": "ee733b715c70524e87effd03fd6e7627438eb7dea18c2d4e1596664fbad9646c",
+      "bytes": 283774
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_menu_1.png",
+      "sha256": "a12cb4308aeb5c1f4654e1e0f7f90f1a76d297169b7a9dedaf8d3c285c23caa4",
+      "bytes": 491920
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_menu_2.png",
+      "sha256": "9313cec94c335a6b90d6a1b4b2096ba44cdb4b9b82fd98e34bf46e59e236a38c",
+      "bytes": 513787
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_scrolled.png",
+      "sha256": "a360112e12a13680732385e48934a2140db974565b00dbe9bf86ac0dac110692",
+      "bytes": 541809
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_settings.png",
+      "sha256": "d3c2f775cf09b2a0b1e1f9028cd281c84c813a1aa9bdeb3ec0e28ac34e95b030",
+      "bytes": 164247
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api32_release_weight_locked.png",
+      "sha256": "2ebb72cb5ffa968a71eba5a81434e4e68ba28eaa45e48e57c9b23c39f4bb49ef",
+      "bytes": 88036
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_dialog.png",
+      "sha256": "4dbcf35906ddf5aca5aa76e9e3fff331c14695c3289cc3c935f12c44718e0535",
+      "bytes": 393613
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_draw_fault_fallback.png",
+      "sha256": "8dcbbfd2cc84404c89798aa12854bed32ac548ed00ae358766fb19159954f34e",
+      "bytes": 545523
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_effect_fault_fallback.png",
+      "sha256": "8dcbbfd2cc84404c89798aa12854bed32ac548ed00ae358766fb19159954f34e",
+      "bytes": 545523
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_home.png",
+      "sha256": "c0d552b96c1d661e2cfeabe2538e57c9af662065540a8291c82f68dd2536d8ff",
+      "bytes": 548159
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_keyboard.png",
+      "sha256": "8dd7800f60b06b428e6e21289d894a5f7e2851e4b9dea8ab1683eed68568008a",
+      "bytes": 362342
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_licenses.png",
+      "sha256": "34810101e3b972d961c3b6724b1ca12079b4f010a64516415b07c458db848f5e",
+      "bytes": 398299
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_meals.png",
+      "sha256": "7bc196506e06ca9a676aef856681b0fcfd4b775701854593f33d03a5850bc24c",
+      "bytes": 183520
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_menu_0.png",
+      "sha256": "978798d536c67cbcf045ebe9b8511c2f90cb346e14ad47e002eb1659a6ee4926",
+      "bytes": 285401
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_menu_1.png",
+      "sha256": "ec31b9dac6d05b579ee3f9cfb5d28efc6e204330c31c52313f7f57e67f98a939",
+      "bytes": 494165
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_menu_2.png",
+      "sha256": "eda53b6e0b32eb5404eb804d1231a280dcc216170381f4d79dd59af1a9a57695",
+      "bytes": 516021
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_scrolled.png",
+      "sha256": "70df5006f1f1157d045a3220a5b9d26a83d25df54254cd255a302d108de04887",
+      "bytes": 544623
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_settings.png",
+      "sha256": "57001c16c89df8c13815a6ec009007bc3942e8a6a9a44fb0b86e462a209831e2",
+      "bytes": 164363
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_debug_weight_locked.png",
+      "sha256": "df5384896c40aea78ca0bac3e0d5c9f6d1f5a2a4723761bc35201b1d59e61a22",
+      "bytes": 88926
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_dialog.png",
+      "sha256": "cbfecb78dfbf2d0f61c497287449035353497b9f236f8eb2edf62c367f5e51f0",
+      "bytes": 392764
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_draw_fault_fallback.png",
+      "sha256": "a0dfa4869f7c9556cf577f1bfd5b139843ca99dc449e5e343730e8627fe3054e",
+      "bytes": 545605
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_effect_fault_fallback.png",
+      "sha256": "a0dfa4869f7c9556cf577f1bfd5b139843ca99dc449e5e343730e8627fe3054e",
+      "bytes": 545605
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_blur_only.png",
+      "sha256": "0609d1d1553a9cda19e703bb7f8c1af9f8aeb56e1c81b357361cbb0b6136eb22",
+      "bytes": 69041
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_refractive.png",
+      "sha256": "63916ef0329c9b5d4f6f34b9d534a36970950105edfbf5049b28d595be2a08db",
+      "bytes": 81859
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_blur_only.png",
+      "sha256": "a6ee94df2553d648e65fbf5b578185d02956c34bb7e1aaa38aea9adf3fd657d0",
+      "bytes": 67765
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_refractive.png",
+      "sha256": "2a67496b34d66fe3e63d15a1f2cfec0120d52e954dc9561e96c2dff7d7e8bd95",
+      "bytes": 79640
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_home.png",
+      "sha256": "ded4fb90c15004e63861a6a06637afaca2886449a7ea5d4715e779eda54b8de1",
+      "bytes": 548170
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_keyboard.png",
+      "sha256": "fc047a27b5727f5fe8da964500a352b267d9749c4eb676c5635c0d548adbbc08",
+      "bytes": 365900
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_licenses.png",
+      "sha256": "9a013366374d7170126d12a633481ee9cacf1593d365931dc16c41644811b601",
+      "bytes": 398663
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_meals.png",
+      "sha256": "28f5508ffa4b7d69fb248dc55950868ff2b7e4b0049eaeca4b141de4f50e022e",
+      "bytes": 183756
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_menu_0.png",
+      "sha256": "4add03bb0b6bb4c136dcae1d00a217bac62a74f18f50216d107304d009276fb3",
+      "bytes": 287616
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_menu_1.png",
+      "sha256": "a953e3cf68b16a4ab6be3f8887d191a7220c05e38327e017a0af0e0c01dc1f8f",
+      "bytes": 496129
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_menu_2.png",
+      "sha256": "bb327aff1ad076ce3f1ae9a347689602220d54ed63d16067ea2ecc4fe1d8969f",
+      "bytes": 519145
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab0.png",
+      "sha256": "2010ce44ce58b6862da67ab3d305fe7e9be36761de2e25ff53fe85b9ce4172d3",
+      "bytes": 184306
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab1.png",
+      "sha256": "3dd82284f7e1ad861571e991a6bf497ca04a4fd0b177fe1a5cc57fc396cba80c",
+      "bytes": 548525
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab2.png",
+      "sha256": "c0dd939e20539dd7c01b4e6d7d9254e2cb8ec896ce96f37b86b40c66235d4ddf",
+      "bytes": 165039
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab0.png",
+      "sha256": "dfcd5a90256f615f53fcc03a87d945fe199b69c90554a23f6cf9a79b07cb2f71",
+      "bytes": 241527
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab1.png",
+      "sha256": "f3fccfede519a2a2fd0bdda620226121c39cbe46d21d7813984a305bd09f731a",
+      "bytes": 406417
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab2.png",
+      "sha256": "2ba10f15a567da18234e35b50e7a9798aefe437daa669051195021573d61da3a",
+      "bytes": 211252
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_scrolled.png",
+      "sha256": "d6bbdf67243990681d810e39b3cf733590a52680ed42596ee072d7c1af6946a4",
+      "bytes": 546991
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_settings.png",
+      "sha256": "d3083a91266cbb86f52d14fb208044cb80dcc2b3ffcfded3a6e0a0022b2a7935",
+      "bytes": 165054
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale1_0_home.png",
+      "sha256": "61d1ff63c49ed76cfb7029fcafcc75aee41c47ac05ac2b59c1065626db992665",
+      "bytes": 573719
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale1_0_meals.png",
+      "sha256": "3e5ea18a120c77c733cdf2099a8ee20187d2b2852dde750661dc4a40ac074b78",
+      "bytes": 185571
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale1_0_settings.png",
+      "sha256": "a65e7756fc5c0041070f9d0fa7453bc100178ea0b60603423de082c6533a5c02",
+      "bytes": 180694
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale1_3_home.png",
+      "sha256": "46702b8851c68fc45f8c915f2b872c4df69679fb97aa9c71b0725df7f90ede64",
+      "bytes": 599386
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale1_3_meals.png",
+      "sha256": "a7b6b684bd2b8fed2e66e59eed6451eeaa5af1ed7629c0b30c3a60bfb94d90d5",
+      "bytes": 210178
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale1_3_settings.png",
+      "sha256": "a5dd836e95e295836d8d2bb2871f585e1b3caf8dae72db5402a8aa77cf6b53d9",
+      "bytes": 197158
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale2_0_home.png",
+      "sha256": "fe379da77944fd96690e7109c611eeb3cd43175618b8d8a1da7f29b91d0fd3c1",
+      "bytes": 433510
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale2_0_meals.png",
+      "sha256": "66ca7e8ac9dec398adef1e7a396edb7360343880225d4bacc42c0cec25c5e82e",
+      "bytes": 248466
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_dark_scale2_0_settings.png",
+      "sha256": "64763b807ee843d2cde28582297d5938dbbec6755e814edd7e4f288b52437acc",
+      "bytes": 227461
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale1_0_home.png",
+      "sha256": "5d5c8071651d4f3d9a66cb45e242264abcc6d2f101426cf24bd3e5e0e7cf6330",
+      "bytes": 548624
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale1_0_meals.png",
+      "sha256": "1767d68e876f8de66baefbea8193d91e362eb0d8709ed776ead61935a38cf01c",
+      "bytes": 184364
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale1_0_settings.png",
+      "sha256": "8dd3d50d5a1d26eba98bc4022bb640b9278ff353f4bdc2728860417e481124a5",
+      "bytes": 165100
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale1_3_home.png",
+      "sha256": "518e27723cea7cd2aa11eff6c5279a928d68a052db93a15f422f8bf31e8543d3",
+      "bytes": 571921
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale1_3_meals.png",
+      "sha256": "c98be11432b3be8abae4fd889e732ec7fda27fbf4d14838584f761a0a12f62bc",
+      "bytes": 208168
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale1_3_settings.png",
+      "sha256": "a2bf867bc4aff116983388d61a8466b2cbe08024505289ea41b5208719a7c680",
+      "bytes": 185327
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale2_0_home.png",
+      "sha256": "f3fccfede519a2a2fd0bdda620226121c39cbe46d21d7813984a305bd09f731a",
+      "bytes": 406417
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale2_0_meals.png",
+      "sha256": "69f93b63dee2a03afb8c84b19f182f5b318672a7e6a6da2d953e6d783baa53a4",
+      "bytes": 241022
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_visual_light_scale2_0_settings.png",
+      "sha256": "9d91fa8d310313b03a66633fd2356874af3e123fc2a71071afcdf6323e7373c1",
+      "bytes": 210556
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_weight_locked.png",
+      "sha256": "2f2acbabab34ccf3d6a59447607ca053e31326eb6bd16f9ed42e612084bc0403",
+      "bytes": 89704
+    }
+  ],
+  "apkArtifacts": [
+    {
+      "variant": "debug",
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 52506587,
+      "sha256": "43d42b6b544763db0c52ae5b80f910de9de3e2f0c529346bf61369bb4a48db5a",
+      "versionCode": 2,
+      "versionName": "0.0.2-b02",
+      "minSdk": 31,
+      "targetSdk": 37,
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "zipCrc": "pass",
+      "duplicateZipEntries": false,
+      "signing": "local-debug-key-not-production",
+      "signatureApi31": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\apksigner.bat",
+          "verify",
+          "--verbose",
+          "--print-certs",
+          "--min-sdk-version",
+          "31",
+          "--max-sdk-version",
+          "31",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\debug\\app-debug.apk"
+        ],
+        "exitCode": 0,
+        "output": "Verifies\r\nVerified using v1 scheme (JAR signing): false\r\nVerified using v2 scheme (APK Signature Scheme v2): true\r\nVerified using v3 scheme (APK Signature Scheme v3): false\r\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\r\nVerified using v3.2 scheme (APK Signature Scheme v3.2): false\r\nVerified using v4 scheme (APK Signature Scheme v4): false\r\nVerified for SourceStamp: false\r\nNumber of signers: 1\r\nV2 Signer: certificate DN: C=US, O=Android, CN=Android Debug\r\nV2 Signer: certificate SHA-256 digest: 7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46\r\nV2 Signer: certificate SHA-1 digest: 25580d569f5d6c5dfa823f7e8a7fa1f407016361\r\nV2 Signer: certificate MD5 digest: bea8a8676ea6e5dbc0113185e7f43b52\r\nV2 Signer: key algorithm: RSA\r\nV2 Signer: key size (bits): 2048\r\nV2 Signer: public key SHA-256 digest: 1d3aed1b1dad0e2e42f66009bd43d5829e4ba518a8a505ab25e7c82ee655db05\r\nV2 Signer: public key SHA-1 digest: 585609eabbbbeb91d4a3efe4cde87cf236c1b28f\r\nV2 Signer: public key MD5 digest: 186cbe338031b9c61760d42d9365c3af"
+      },
+      "zipalign16k": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\zipalign.exe",
+          "-c",
+          "-P",
+          "16",
+          "4",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\debug\\app-debug.apk"
+        ],
+        "exitCode": 0,
+        "output": ""
+      },
+      "badging": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\aapt2.exe",
+          "dump",
+          "badging",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\debug\\app-debug.apk"
+        ],
+        "exitCode": 0,
+        "output": "package: name='com.yunobase.recipe.prototype.debug' versionCode='2' versionName='0.0.2-b02' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'\r\nminSdkVersion:'31'\r\ntargetSdkVersion:'37'\r\nuses-permission: name='com.yunobase.recipe.prototype.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\r\napplication-label:'于の食谱'\r\napplication-label-af:'于の食谱'\r\napplication-label-am:'于の食谱'\r\napplication-label-ar:'于の食谱'\r\napplication-label-as:'于の食谱'\r\napplication-label-az:'于の食谱'\r\napplication-label-be:'于の食谱'\r\napplication-label-bg:'于の食谱'\r\napplication-label-bn:'于の食谱'\r\napplication-label-bs:'于の食谱'\r\napplication-label-ca:'于の食谱'\r\napplication-label-cs:'于の食谱'\r\napplication-label-da:'于の食谱'\r\napplication-label-de:'于の食谱'\r\napplication-label-el:'于の食谱'\r\napplication-label-en-AU:'于の食谱'\r\napplication-label-en-CA:'于の食谱'\r\napplication-label-en-GB:'于の食谱'\r\napplication-label-en-IN:'于の食谱'\r\napplication-label-en-XC:'于の食谱'\r\napplication-label-es:'于の食谱'\r\napplication-label-es-US:'于の食谱'\r\napplication-label-et:'于の食谱'\r\napplication-label-eu:'于の食谱'\r\napplication-label-fa:'于の食谱'\r\napplication-label-fi:'于の食谱'\r\napplication-label-fr:'于の食谱'\r\napplication-label-fr-CA:'于の食谱'\r\napplication-label-gl:'于の食谱'\r\napplication-label-gu:'于の食谱'\r\napplication-label-hi:'于の食谱'\r\napplication-label-hr:'于の食谱'\r\napplication-label-hu:'于の食谱'\r\napplication-label-hy:'于の食谱'\r\napplication-label-in:'于の食谱'\r\napplication-label-is:'于の食谱'\r\napplication-label-it:'于の食谱'\r\napplication-label-iw:'于の食谱'\r\napplication-label-ja:'于の食谱'\r\napplication-label-ka:'于の食谱'\r\napplication-label-kk:'于の食谱'\r\napplication-label-km:'于の食谱'\r\napplication-label-kn:'于の食谱'\r\napplication-label-ko:'于の食谱'\r\napplication-label-ky:'于の食谱'\r\napplication-label-lo:'于の食谱'\r\napplication-label-lt:'于の食谱'\r\napplication-label-lv:'于の食谱'\r\napplication-label-mk:'于の食谱'\r\napplication-label-ml:'于の食谱'\r\napplication-label-mn:'于の食谱'\r\napplication-label-mr:'于の食谱'\r\napplication-label-ms:'于の食谱'\r\napplication-label-my:'于の食谱'\r\napplication-label-nb:'于の食谱'\r\napplication-label-ne:'于の食谱'\r\napplication-label-nl:'于の食谱'\r\napplication-label-or:'于の食谱'\r\napplication-label-pa:'于の食谱'\r\napplication-label-pl:'于の食谱'\r\napplication-label-pt:'于の食谱'\r\napplication-label-pt-BR:'于の食谱'\r\napplication-label-pt-PT:'于の食谱'\r\napplication-label-ro:'于の食谱'\r\napplication-label-ru:'于の食谱'\r\napplication-label-si:'于の食谱'\r\napplication-label-sk:'于の食谱'\r\napplication-label-sl:'于の食谱'\r\napplication-label-sq:'于の食谱'\r\napplication-label-sr:'于の食谱'\r\napplication-label-sr-Latn:'于の食谱'\r\napplication-label-sv:'于の食谱'\r\napplication-label-sw:'于の食谱'\r\napplication-label-ta:'于の食谱'\r\napplication-label-te:'于の食谱'\r\napplication-label-th:'于の食谱'\r\napplication-label-tl:'于の食谱'\r\napplication-label-tr:'于の食谱'\r\napplication-label-uk:'于の食谱'\r\napplication-label-ur:'于の食谱'\r\napplication-label-uz:'于の食谱'\r\napplication-label-vi:'于の食谱'\r\napplication-label-zh-CN:'于の食谱'\r\napplication-label-zh-HK:'于の食谱'\r\napplication-label-zh-TW:'于の食谱'\r\napplication-label-zu:'于の食谱'\r\napplication: label='于の食谱' icon=''\r\napplication-debuggable\r\nlaunchable-activity: name='com.yunobase.recipe.MainActivity'  label='' icon=''\r\nuses-library-not-required:'androidx.window.extensions'\r\nuses-library-not-required:'androidx.window.sidecar'\r\nfeature-group: label=''\r\n  uses-feature: name='android.hardware.faketouch'\r\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\r\nmain\r\nother-receivers\r\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\r\nsupports-any-density: 'true'\r\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\r\ndensities: '160' '240' '320' '65535'\r\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'"
+      },
+      "certificateSha256": "7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46",
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/font/misans_vf.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17,
+      "gitTracked": false
+    },
+    {
+      "variant": "release",
+      "path": "app/build/outputs/apk/release/app-release.apk",
+      "bytes": 26203240,
+      "sha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "versionCode": 2,
+      "versionName": "0.0.2-b02",
+      "minSdk": 31,
+      "targetSdk": 37,
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "zipCrc": "pass",
+      "duplicateZipEntries": false,
+      "signing": "local-debug-key-not-production",
+      "signatureApi31": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\apksigner.bat",
+          "verify",
+          "--verbose",
+          "--print-certs",
+          "--min-sdk-version",
+          "31",
+          "--max-sdk-version",
+          "31",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\release\\app-release.apk"
+        ],
+        "exitCode": 0,
+        "output": "Verifies\r\nVerified using v1 scheme (JAR signing): false\r\nVerified using v2 scheme (APK Signature Scheme v2): true\r\nVerified using v3 scheme (APK Signature Scheme v3): false\r\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\r\nVerified using v3.2 scheme (APK Signature Scheme v3.2): false\r\nVerified using v4 scheme (APK Signature Scheme v4): false\r\nVerified for SourceStamp: false\r\nNumber of signers: 1\r\nV2 Signer: certificate DN: C=US, O=Android, CN=Android Debug\r\nV2 Signer: certificate SHA-256 digest: 7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46\r\nV2 Signer: certificate SHA-1 digest: 25580d569f5d6c5dfa823f7e8a7fa1f407016361\r\nV2 Signer: certificate MD5 digest: bea8a8676ea6e5dbc0113185e7f43b52\r\nV2 Signer: key algorithm: RSA\r\nV2 Signer: key size (bits): 2048\r\nV2 Signer: public key SHA-256 digest: 1d3aed1b1dad0e2e42f66009bd43d5829e4ba518a8a505ab25e7c82ee655db05\r\nV2 Signer: public key SHA-1 digest: 585609eabbbbeb91d4a3efe4cde87cf236c1b28f\r\nV2 Signer: public key MD5 digest: 186cbe338031b9c61760d42d9365c3af"
+      },
+      "zipalign16k": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\zipalign.exe",
+          "-c",
+          "-P",
+          "16",
+          "4",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\release\\app-release.apk"
+        ],
+        "exitCode": 0,
+        "output": ""
+      },
+      "badging": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\aapt2.exe",
+          "dump",
+          "badging",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\release\\app-release.apk"
+        ],
+        "exitCode": 0,
+        "output": "package: name='com.yunobase.recipe.prototype' versionCode='2' versionName='0.0.2-b02' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'\r\nminSdkVersion:'31'\r\ntargetSdkVersion:'37'\r\nuses-permission: name='com.yunobase.recipe.prototype.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\r\napplication-label:'于の食谱'\r\napplication-label-af:'于の食谱'\r\napplication-label-am:'于の食谱'\r\napplication-label-ar:'于の食谱'\r\napplication-label-as:'于の食谱'\r\napplication-label-az:'于の食谱'\r\napplication-label-be:'于の食谱'\r\napplication-label-bg:'于の食谱'\r\napplication-label-bn:'于の食谱'\r\napplication-label-bs:'于の食谱'\r\napplication-label-ca:'于の食谱'\r\napplication-label-cs:'于の食谱'\r\napplication-label-da:'于の食谱'\r\napplication-label-de:'于の食谱'\r\napplication-label-el:'于の食谱'\r\napplication-label-en-AU:'于の食谱'\r\napplication-label-en-CA:'于の食谱'\r\napplication-label-en-GB:'于の食谱'\r\napplication-label-en-IN:'于の食谱'\r\napplication-label-en-XC:'于の食谱'\r\napplication-label-es:'于の食谱'\r\napplication-label-es-US:'于の食谱'\r\napplication-label-et:'于の食谱'\r\napplication-label-eu:'于の食谱'\r\napplication-label-fa:'于の食谱'\r\napplication-label-fi:'于の食谱'\r\napplication-label-fr:'于の食谱'\r\napplication-label-fr-CA:'于の食谱'\r\napplication-label-gl:'于の食谱'\r\napplication-label-gu:'于の食谱'\r\napplication-label-hi:'于の食谱'\r\napplication-label-hr:'于の食谱'\r\napplication-label-hu:'于の食谱'\r\napplication-label-hy:'于の食谱'\r\napplication-label-in:'于の食谱'\r\napplication-label-is:'于の食谱'\r\napplication-label-it:'于の食谱'\r\napplication-label-iw:'于の食谱'\r\napplication-label-ja:'于の食谱'\r\napplication-label-ka:'于の食谱'\r\napplication-label-kk:'于の食谱'\r\napplication-label-km:'于の食谱'\r\napplication-label-kn:'于の食谱'\r\napplication-label-ko:'于の食谱'\r\napplication-label-ky:'于の食谱'\r\napplication-label-lo:'于の食谱'\r\napplication-label-lt:'于の食谱'\r\napplication-label-lv:'于の食谱'\r\napplication-label-mk:'于の食谱'\r\napplication-label-ml:'于の食谱'\r\napplication-label-mn:'于の食谱'\r\napplication-label-mr:'于の食谱'\r\napplication-label-ms:'于の食谱'\r\napplication-label-my:'于の食谱'\r\napplication-label-nb:'于の食谱'\r\napplication-label-ne:'于の食谱'\r\napplication-label-nl:'于の食谱'\r\napplication-label-or:'于の食谱'\r\napplication-label-pa:'于の食谱'\r\napplication-label-pl:'于の食谱'\r\napplication-label-pt:'于の食谱'\r\napplication-label-pt-BR:'于の食谱'\r\napplication-label-pt-PT:'于の食谱'\r\napplication-label-ro:'于の食谱'\r\napplication-label-ru:'于の食谱'\r\napplication-label-si:'于の食谱'\r\napplication-label-sk:'于の食谱'\r\napplication-label-sl:'于の食谱'\r\napplication-label-sq:'于の食谱'\r\napplication-label-sr:'于の食谱'\r\napplication-label-sr-Latn:'于の食谱'\r\napplication-label-sv:'于の食谱'\r\napplication-label-sw:'于の食谱'\r\napplication-label-ta:'于の食谱'\r\napplication-label-te:'于の食谱'\r\napplication-label-th:'于の食谱'\r\napplication-label-tl:'于の食谱'\r\napplication-label-tr:'于の食谱'\r\napplication-label-uk:'于の食谱'\r\napplication-label-ur:'于の食谱'\r\napplication-label-uz:'于の食谱'\r\napplication-label-vi:'于の食谱'\r\napplication-label-zh-CN:'于の食谱'\r\napplication-label-zh-HK:'于の食谱'\r\napplication-label-zh-TW:'于の食谱'\r\napplication-label-zu:'于の食谱'\r\napplication: label='于の食谱' icon=''\r\nlaunchable-activity: name='com.yunobase.recipe.MainActivity'  label='' icon=''\r\nuses-library-not-required:'androidx.window.extensions'\r\nuses-library-not-required:'androidx.window.sidecar'\r\nfeature-group: label=''\r\n  uses-feature: name='android.hardware.faketouch'\r\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\r\nmain\r\nother-receivers\r\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\r\nsupports-any-density: 'true'\r\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\r\ndensities: '160' '65535'\r\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'"
+      },
+      "certificateSha256": "7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46",
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/9A.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17,
+      "gitTracked": false
+    }
+  ],
+  "excluded": [
+    "ignored SDK/AVD/build outputs except recorded APKs",
+    "administrative gate records and historical evidence"
+  ]
+}

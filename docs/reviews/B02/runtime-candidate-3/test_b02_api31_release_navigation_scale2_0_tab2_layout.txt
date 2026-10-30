@@ -1,0 +1,56 @@
+--------- beginning of main
+10-30 14:35:16.365  5421  5421 I YunoB02 : prototype-created; font=MiSans-VF-4.009
+10-30 14:35:16.860  5421  5421 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2132.0; right=407.0; bottom=2305.0
+10-30 14:35:16.860  5421  5421 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2145.0; right=336.0; bottom=2208.0
+10-30 14:35:16.860  5421  5421 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2208.0; right=368.0; bottom=2292.0
+10-30 14:35:16.860  5421  5421 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2132.0; right=643.0; bottom=2305.0
+10-30 14:35:16.861  5421  5421 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2145.0; right=573.0; bottom=2208.0
+10-30 14:35:16.862  5421  5421 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2208.0; right=604.0; bottom=2292.0
+10-30 14:35:16.863  5421  5421 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2132.0; right=879.0; bottom=2305.0
+10-30 14:35:16.864  5421  5421 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2145.0; right=809.0; bottom=2208.0
+10-30 14:35:16.864  5421  5421 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2208.0; right=840.0; bottom=2292.0
+10-30 14:35:17.317  5421  5421 I YunoB02 : material=clear; api=31
+10-30 14:35:17.321  5421  5421 I YunoB02 : thumbnail-decoded; width=256; height=256
+10-30 14:35:17.321  5421  5421 I YunoB02 : thumbnail-decoded; width=256; height=256
+10-30 14:35:17.321  5421  5421 I YunoB02 : thumbnail-decoded; width=341; height=256
+10-30 14:35:17.322  5421  5421 I YunoB02 : thumbnail-decoded; width=256; height=256
+10-30 14:35:17.326  5421  5421 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2033.0; right=407.0; bottom=2206.0
+10-30 14:35:17.326  5421  5421 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2046.0; right=336.0; bottom=2109.0
+10-30 14:35:17.326  5421  5421 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2109.0; right=368.0; bottom=2193.0
+10-30 14:35:17.326  5421  5421 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2033.0; right=643.0; bottom=2206.0
+10-30 14:35:17.327  5421  5421 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2046.0; right=573.0; bottom=2109.0
+10-30 14:35:17.327  5421  5421 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2109.0; right=604.0; bottom=2193.0
+10-30 14:35:17.328  5421  5421 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2033.0; right=879.0; bottom=2206.0
+10-30 14:35:17.328  5421  5421 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2046.0; right=809.0; bottom=2109.0
+10-30 14:35:17.328  5421  5421 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2109.0; right=840.0; bottom=2193.0
+10-30 14:35:24.449  5421  5421 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2033.0; right=643.0; bottom=2206.0
+10-30 14:35:24.449  5421  5421 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2046.0; right=573.0; bottom=2109.0
+10-30 14:35:24.449  5421  5421 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2109.0; right=604.0; bottom=2193.0
+10-30 14:35:24.450  5421  5421 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2033.0; right=407.0; bottom=2206.0
+10-30 14:35:24.450  5421  5421 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2046.0; right=336.0; bottom=2109.0
+10-30 14:35:24.450  5421  5421 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2109.0; right=368.0; bottom=2193.0
+10-30 14:35:24.450  5421  5421 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2033.0; right=879.0; bottom=2206.0
+10-30 14:35:24.450  5421  5421 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2046.0; right=809.0; bottom=2109.0
+10-30 14:35:24.451  5421  5421 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2109.0; right=840.0; bottom=2193.0
+10-30 14:35:30.019  5421  5421 I YunoB02 : thumbnail-decoded; width=341; height=256
+10-30 14:35:30.023  5421  5421 I YunoB02 : thumbnail-decoded; width=256; height=256
+10-30 14:35:30.029  5421  5421 I YunoB02 : thumbnail-decoded; width=256; height=256
+10-30 14:35:30.034  5421  5421 I YunoB02 : thumbnail-decoded; width=256; height=256
+10-30 14:35:30.042  5421  5421 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2033.0; right=643.0; bottom=2206.0
+10-30 14:35:30.042  5421  5421 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2046.0; right=573.0; bottom=2109.0
+10-30 14:35:30.043  5421  5421 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2109.0; right=604.0; bottom=2193.0
+10-30 14:35:30.043  5421  5421 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2033.0; right=407.0; bottom=2206.0
+10-30 14:35:30.043  5421  5421 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2046.0; right=336.0; bottom=2109.0
+10-30 14:35:30.044  5421  5421 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2109.0; right=368.0; bottom=2193.0
+10-30 14:35:30.044  5421  5421 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2033.0; right=879.0; bottom=2206.0
+10-30 14:35:30.044  5421  5421 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2046.0; right=809.0; bottom=2109.0
+10-30 14:35:30.044  5421  5421 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2109.0; right=840.0; bottom=2193.0
+10-30 14:35:35.592  5421  5421 I YunoB02 : nav-geometry; part=cell; index=1; left=439.0; top=2033.0; right=643.0; bottom=2206.0
+10-30 14:35:35.592  5421  5421 I YunoB02 : nav-geometry; part=icon; index=1; left=510.0; top=2046.0; right=573.0; bottom=2109.0
+10-30 14:35:35.592  5421  5421 I YunoB02 : nav-geometry; part=label; index=1; left=478.0; top=2109.0; right=604.0; bottom=2193.0
+10-30 14:35:35.592  5421  5421 I YunoB02 : nav-geometry; part=cell; index=0; left=202.0; top=2033.0; right=407.0; bottom=2206.0
+10-30 14:35:35.593  5421  5421 I YunoB02 : nav-geometry; part=icon; index=0; left=273.0; top=2046.0; right=336.0; bottom=2109.0
+10-30 14:35:35.593  5421  5421 I YunoB02 : nav-geometry; part=label; index=0; left=242.0; top=2109.0; right=368.0; bottom=2193.0
+10-30 14:35:35.593  5421  5421 I YunoB02 : nav-geometry; part=cell; index=2; left=675.0; top=2033.0; right=879.0; bottom=2206.0
+10-30 14:35:35.593  5421  5421 I YunoB02 : nav-geometry; part=icon; index=2; left=746.0; top=2046.0; right=809.0; bottom=2109.0
+10-30 14:35:35.593  5421  5421 I YunoB02 : nav-geometry; part=label; index=2; left=714.0; top=2109.0; right=840.0; bottom=2193.0

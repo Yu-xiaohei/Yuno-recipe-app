@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "clientDate": "2026-10-31",
+  "kind": "local-closeout-and-sync-preview-not-execution-result",
+  "candidate": "B02-candidate-3",
+  "status": "second-confirmed-authorized-execution-pending",
+  "userRequest": "暂时先停在这里 进行总结任务 收工 上传 git 同步云端仓库",
+  "baseCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "branch": "main",
+  "commitSubject": "保存B02原型与玻璃修订并整理收工交接",
+  "proposedOperation": {
+    "localCommit": true,
+    "pushMainTo": [
+      "github",
+      "gitee"
+    ],
+    "mode": "normal-fast-forward",
+    "force": false,
+    "otherBranches": false,
+    "createReleaseOrTag": false,
+    "uploadApk": false,
+    "startNextBatch": false
+  },
+  "remotes": [
+    {
+      "name": "github",
+      "repository": "github.com/Yu-xiaohei/Yuno-recipe-app",
+      "observedMain": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+      "readStatus": "success",
+      "writeAuthorizationTested": false
+    },
+    {
+      "name": "gitee",
+      "repository": "gitee.com/Yu_xiaohei/yuno-recipe-app",
+      "observedMain": "cb2f74864618d2facd0b330bbf1f1914e382d7dc",
+      "readStatus": "success",
+      "writeAuthorizationTested": false
+    }
+  ],
+  "include": [
+    "Android工程与固定工具链/Wrapper",
+    "原始MiSans/许可/原始UI资源",
+    "正式测试/完整评审与失败证据",
+    "B01历史结果、项目状态与收工记录"
+  ],
+  "exclude": [
+    "APK/AAB与签名私钥",
+    "SDK/AVD/缓存/构建目录",
+    ".agent-tmp和本机local.properties",
+    "凭据/密码/token"
+  ],
+  "candidateEvidence": {
+    "manifest": "docs/reviews/B02/candidate-manifest.json",
+    "sha256": "a1579420c6164e555eeb4515fa82816aef81bc59c7eb99f306f34861ca75946e",
+    "unchanged": true,
+    "reviewedAttributesArchive": "docs/reviews/B02/git-closeout-2026-10-31/reviewed-gitattributes.txt",
+    "note": "原候选属性文件已归档；新增Git属性仅保护原件字节，应用和设备证据不重写。Git快照另行绑定实际暂存blob。"
+  },
+  "confirmations": {
+    "required": 2,
+    "first": {
+      "userMessage": "确认",
+      "localDate": "2026-10-31",
+      "recordedAtLocal": "2026-10-31T01:42:29",
+      "timezone": "Asia/Shanghai",
+      "meaning": "第一次确认具体提交与双远端main普通推送范围；仍等待执行前第二次确认",
+      "reviewedStagedTree": "7f2defcc8ec10e5172095ac91a677b975e98970a",
+      "payloadSha256": "ad5dcf0905f6bd686cdd74911a619658f4381300992246c67b545ada85e0d1c9",
+      "commitSubject": "保存B02原型与玻璃修订并整理收工交接"
+    },
+    "second": {
+      "userMessage": "确认 并在本次操作完成后 关闭我的电脑计算机",
+      "localDate": "2026-10-31",
+      "recordedAtLocal": "2026-10-31T01:46:40",
+      "timezone": "Asia/Shanghai",
+      "meaning": "执行前第二次明确确认，沿用原提交／双远端main普通推送范围；另授权操作结束后关闭本机",
+      "reviewedStagedTree": "42f8a6620062c387d64648459987d7de711db254",
+      "payloadSha256": "ad5dcf0905f6bd686cdd74911a619658f4381300992246c67b545ada85e0d1c9",
+      "commitSubject": "保存B02原型与玻璃修订并整理收工交接"
+    },
+    "executionAllowed": true,
+    "basis": "AGENTS.md 第8节：具体方案/范围第一次确认，备份/diff后执行前第二次确认"
+  },
+  "risks": [
+    "推送可能公开源码/原始字体与截图证据并增加仓库体积",
+    "两远端不能原子更新，可能部分成功",
+    "Gitee读取成功不保证写入凭据有效",
+    "不代表B02人工接受或正式APK发布"
+  ],
+  "recovery": {
+    "workspaceArchive": ".agent-tmp/b02_sync/tmp_b02_closeout_workspace_20261031_000000.zip",
+    "workspaceSha256": "f565f0a2fe39c2747c3502ae8d98be0b2b024722180125e3150b6b555fe49e70",
+    "gitBundle": ".agent-tmp/b02_sync/tmp_b02_closeout_refs_20261031_000000.bundle",
+    "bundleSha256": "cfed0c88735e0a01601fb2bdb55fad3efcd9b32cc79c304d8dbab4b117cb9b95",
+    "policy": "不自动reset/强推；远端出错先回读，恢复优先新增纠正提交；原备份不自动清理"
+  },
+  "expectedResult": "本地main新增中文提交，GitHub/Gitee的main均回读到同一新commit；若部分失败则如实记录，停止后续推送并保留成功端。",
+  "notExecuted": [
+    "local commit",
+    "push",
+    "release",
+    "cloud data write"
+  ],
+  "sourceSnapshot": {
+    "path": "docs/reviews/B02/git-source-manifest.json",
+    "sha256": "bc5c8103ada33bc5580bede34595d9905cc474302756b8a7a2d3c1e98166f207",
+    "payloadSha256": "ad5dcf0905f6bd686cdd74911a619658f4381300992246c67b545ada85e0d1c9",
+    "payloadFiles": 714,
+    "payloadBytes": 165709777,
+    "reviewedStagedBindings": 206,
+    "unchangedLocalApksExcluded": 2
+  },
+  "preflight": {
+    "localRegressionTests": 55,
+    "localRegressionSeconds": 16.291,
+    "catalogStagedVerification": "pass-0-current-entries",
+    "strictEditableSourceWhitespace": "pass",
+    "fullWhitespaceCheckExitCode": 2,
+    "retainedReadOnlyOriginalExceptionPaths": 19,
+    "controlledCheckoutPayloadBytesMatch": true,
+    "defaultHostCheckoutNonCandidateCrlfConversions": 30,
+    "knownCredentialPatternScan": "pass-not-exhaustive-proof",
+    "allBatchGatesComplete": false,
+    "userG3Complete": false
+  }
+}

@@ -1,0 +1,1 @@
+PASS: verify; 0 catalog entries; git=staged; byte integrity only, not nutrition/license approval

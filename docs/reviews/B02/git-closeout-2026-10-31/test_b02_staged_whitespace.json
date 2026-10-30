@@ -1,0 +1,212 @@
+{
+  "kind": "retained-read-only-original-whitespace-findings-not-source-format-pass",
+  "clientDate": "2026-10-31",
+  "rawCheckExitCode": 2,
+  "rawDiagnosticsLocalPath": ".agent-tmp/b02_sync/tmp_b02_whitespace_after_doc_format_20261031_000000.txt",
+  "rawDiagnosticsSha256": "b6875524ede532ed6618dcffb6631c4ae91fcb781d0473c56298948c472b21bf",
+  "exceptions": [
+    {
+      "path": "docs/reviews/B02/candidate-2/font-audit.md",
+      "diagnostics": {
+        "new blank line at EOF.": 1
+      },
+      "sha256": "3c3ffdff8f62f6dd8f596dbfaa090ecaa2997719e16f046d8cf92843015d9f1d",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/candidate-2/font-audit.md",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 0
+    },
+    {
+      "path": "docs/reviews/B02/git-closeout-2026-10-31/test_b02_build_output.txt",
+      "diagnostics": {
+        "trailing whitespace.": 1
+      },
+      "sha256": "49b721158f35ae48e792d7e8f47eeaf6626f633c9be858a22bcc71ff00a3ac61",
+      "basis": ".agent-tmp/b02_glass/tmp_b02_gradle_final_candidate3_20261030_185000.log",
+      "reason": "byte-identical copied original evidence",
+      "crcrlfCount": 0
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab0_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 36
+      },
+      "sha256": "cc9881a8be64128f82f5aa72a1eec3a3aefe66a60bff330710bc864113b23ae2",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab0_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 36
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab1_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 52
+      },
+      "sha256": "a2c66317f6f0233441c84a233db0c2469c639875b0d2f4081fbbaeac323f8bf5",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab1_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 52
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab2_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 61
+      },
+      "sha256": "16f0992a3a2ef4021d11fc86c16152a0aa1a164e5f8650444e6a69cf606fc8ec",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale1_0_tab2_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 61
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab0_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 33
+      },
+      "sha256": "e4a62d8ae0a49743b7ff9c1b3663b0098b5ae2cab055cd51f31705bf0ce324c4",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab0_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 33
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab1_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 46
+      },
+      "sha256": "bc519ce0c60ee03f0500c6c1bd70f0f9329aa73e36c307f898c59f8b5b5928b8",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab1_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 46
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab2_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 55
+      },
+      "sha256": "7af52c3346b6ae020050711666ee0dac0f2567cb1a2fe920bf84da344bf6b1b4",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api31_release_navigation_scale2_0_tab2_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 55
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_blur_only_log.txt",
+      "diagnostics": {
+        "trailing whitespace.": 21
+      },
+      "sha256": "73206be3426e2067929b51b78cf17b4f13d8154db11de0639a1b65856a19be35",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_blur_only_log.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 21
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_refractive_log.txt",
+      "diagnostics": {
+        "trailing whitespace.": 21
+      },
+      "sha256": "883590f92e8f0c0438f61c8b1ab4c3725f18b505f343f42cae7647951bf953de",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_dark_refractive_log.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 21
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_blur_only_log.txt",
+      "diagnostics": {
+        "trailing whitespace.": 21
+      },
+      "sha256": "d1341adcea9324172956fbd16da9b65223cb1772391ebab68526153d62ac74b6",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_blur_only_log.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 21
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_refractive_log.txt",
+      "diagnostics": {
+        "trailing whitespace.": 21
+      },
+      "sha256": "1a5d8122bcb8be23de2fc85d697b2b96440f977cdfb8164a513bc457e9cf8bef",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_glass_light_refractive_log.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 21
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab0_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 36
+      },
+      "sha256": "7f3fe5b8c0b00de1dfb1b6775161562f72141601461dafa62180cf6254fed0d0",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab0_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 36
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab1_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 51
+      },
+      "sha256": "b7640ff8387c06e5c20b25d657861b49039556156388497196f0d2811095015d",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab1_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 51
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab2_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 60
+      },
+      "sha256": "8b8013dc07670845e4cff633b223dd1613f0a305f3ec08b83cae5a6912c2693b",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale1_0_tab2_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 60
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab0_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 34
+      },
+      "sha256": "d14cbc1b1846bead25e48bd89278c8568cab12134f3b826831243c9977697b93",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab0_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 34
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab1_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 47
+      },
+      "sha256": "c41b6d7377ae81e628432033d17be796f932c07594ea5e75d4e76ebc3ab60188",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab1_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 47
+    },
+    {
+      "path": "docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab2_layout.txt",
+      "diagnostics": {
+        "trailing whitespace.": 56
+      },
+      "sha256": "afaa75b04abfbe432341d5a176270aa2afb99f6dc68728dc8ca8a82288fb0392",
+      "basis": "pre-closeout-workspace-zip:docs/reviews/B02/runtime-candidate-3/test_b02_api33_release_navigation_scale2_0_tab2_layout.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 56
+    },
+    {
+      "path": "third_party/misans/LICENSE_readable.txt",
+      "diagnostics": {
+        "trailing whitespace.": 106
+      },
+      "sha256": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+      "basis": "pre-closeout-workspace-zip:third_party/misans/LICENSE_readable.txt",
+      "reason": "unmodified pre-closeout reviewed document/original capture/license",
+      "crcrlfCount": 0
+    }
+  ],
+  "originalsRewritten": false,
+  "strictEditableSourceCheck": "pass",
+  "initialRawCheck": {
+    "rawCheckExitCode": 2,
+    "rawDiagnosticsLocalPath": ".agent-tmp/b02_sync/tmp_b02_whitespace_diagnostics_20261031_000000.txt",
+    "rawDiagnosticsSha256": "8c74b57de742936f76f1652ce7e2244c5b92f7f8f28f185ed3d92211b5d60216"
+  },
+  "initialEditableFindingFixed": {
+    "path": "docs/reviews/B02/font-audit.md",
+    "reason": "unfrozen current administrative document extra EOF blank removed; historical candidate2 unchanged",
+    "originalSha256": "94c8757f428fafb1957c57088d6ca9d6e08b6239f7a6dbc24af87dc5f354ec6c",
+    "currentSha256": "33e5e1a619b329159f7f4d7c4bb52548e3e729fabbcbde5c135dc9d77e582a0b"
+  }
+}

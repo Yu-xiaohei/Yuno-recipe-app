@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "batch": "B02",
+  "candidate": "B02-candidate-1",
+  "kind": "in-progress-candidate-snapshot-not-human-accepted",
+  "baseCommit": "4fe2ee565fea1e8e0a0cfe59c04b7cf63eb99e0a",
+  "generatedAt": "2026-10-30T14:35:53+08:00",
+  "scope": "B02 implementation, administrative handoff and retained runtime evidence; excludes ignored SDK/AVD/build outputs and pre-existing B01 sync edits",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1175,
+      "sha256": "dbd0ae588030cdaed07b6a290e50b7be7a25db528fb6dc71e412d16323fd8c4b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 539,
+      "sha256": "b60ccaba07373c10aa6b333b23eeffbfd89dbd452eb24959f854dd254cffae21"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 11628,
+      "sha256": "d051fbf31cd2a49fecc197ff72bf55c7cafcc7e986016af573a992a4b8cbdbae"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "bytes": 1599,
+      "sha256": "4d68e397ec4ec35813717c2a8a7f254de9f6d7e0c0fd9d198e91eaaaccaa5a13"
+    },
+    {
+      "path": "app/gradle.lockfile",
+      "bytes": 54471,
+      "sha256": "e738da8e474e72b68660bda317ac5c9c8ad782d965136d5325438a532a45c160"
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "bytes": 270,
+      "sha256": "8d100e0b610d5830685de721d68a4077d7048793dc0069e54710e713051c432f"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "bytes": 1043,
+      "sha256": "a7ad4831891d95204e510e7617f81e646c3cce0a1e18e0928e1dbedbde71c173"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/compat/EnhancedMaterial.kt",
+      "bytes": 5243,
+      "sha256": "dbdb79092af11f39c50ca37a3a4f98055e527adec343acf22083c51fddafb71a"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/compat/Lens.kt",
+      "bytes": 8132,
+      "sha256": "105b568601259f8effcf8531b92d247877804b3ba54c00a7aa7ab778c0dc89bb"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/PrototypeIcons.kt",
+      "bytes": 1559,
+      "sha256": "5c1b160eaecb332fbc82fbfe3a8d8b658463653d5504387a7a7c722e0af1d491"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/design/PrototypeTheme.kt",
+      "bytes": 1811,
+      "sha256": "b74c0d94392e8b2f0fe6c1327504fe7e3439822c477a64eb06011f51a024d181"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/MainActivity.kt",
+      "bytes": 3081,
+      "sha256": "a8bbe3a053a44ee06385280902f2b8d45675bc39acf36a150e045e4143cd1725"
+    },
+    {
+      "path": "app/src/main/java/com/yunobase/recipe/PrototypeApp.kt",
+      "bytes": 16114,
+      "sha256": "c6d59ffe0c95e075ed91ff2c3f59681995f58098ce7b94b91eb97c8ad0386aa0"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "bytes": 803,
+      "sha256": "7001c6e666d95aa9885df06989713430552e4667ed02120531ab916d95209021"
+    },
+    {
+      "path": "app/src/main/res/values/styles.xml",
+      "bytes": 412,
+      "sha256": "d2813b31ad0694981c038d894641ac82b6b6c70582368c5f8318b76439995a3a"
+    },
+    {
+      "path": "app/src/main/res/values-night/styles.xml",
+      "bytes": 407,
+      "sha256": "132e127939e8068d32692ebee5db29011652d4a73c93a46df336fb26626343af"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "bytes": 1050,
+      "sha256": "cb029b35db0e976c087100424e16e14a6256b46962398887520e51508c3b5842"
+    },
+    {
+      "path": "build.gradle.kts",
+      "bytes": 513,
+      "sha256": "2b5a177cead87fb5fde00a1dcbac94a2fdab4fcc8ee8d0b9efa58fa4a8e27ce9"
+    },
+    {
+      "path": "config/development-baseline.json",
+      "bytes": 9405,
+      "sha256": "91c148157eac4839b945c034f3078e1725d95f81243c79b79646f536e511d685"
+    },
+    {
+      "path": "config/project-plan.json",
+      "bytes": 75213,
+      "sha256": "2258e0e91fcc32d98f1485b4b37c24a185ad9b1d558555958807b4505779ca20"
+    },
+    {
+      "path": "docs/agent-files.md",
+      "bytes": 6071,
+      "sha256": "a5bc624c8d3531164fce264ffceaa50bd98038a2118cba6d4893a0307845e190"
+    },
+    {
+      "path": "docs/Android兼容与验证方案.md",
+      "bytes": 6056,
+      "sha256": "025e32b211af5c5b3399d0c14199adb9df943ef9934b70390bcbab5abf57cf77"
+    },
+    {
+      "path": "docs/build.md",
+      "bytes": 5191,
+      "sha256": "26d9da570741a614640916da228c6558712dfc91eed75d03db7f4794910303a5"
+    },
+    {
+      "path": "docs/log.md",
+      "bytes": 10220,
+      "sha256": "52449be54889b6294529b456253a422e66e3f6731850b214b0a57796e2d485d9"
+    },
+    {
+      "path": "docs/Miuix-UI与液态玻璃基线.md",
+      "bytes": 7750,
+      "sha256": "f569a2bcfe20f34ca7e191a87a56021cd78a90530a3d4fe6ef8659a34e18d8af"
+    },
+    {
+      "path": "docs/planning/P0-P3实施计划.md",
+      "bytes": 7693,
+      "sha256": "9d9509118df14d81ed220edc2deed437fb58889a3cce8f1c32f9ac6aa079e216"
+    },
+    {
+      "path": "docs/reviews/B02/api-audit.md",
+      "bytes": 2223,
+      "sha256": "0a10345bab5ae819555c018295860f25f61a6aada4ca50544b0eaa06ee024496"
+    },
+    {
+      "path": "docs/reviews/B02/device-matrix.md",
+      "bytes": 2055,
+      "sha256": "b760361fca6e49701949ae654062b604970f54c4544334c93de2e6fa666eeb74"
+    },
+    {
+      "path": "docs/reviews/B02/font-audit.md",
+      "bytes": 1691,
+      "sha256": "98422a6075fc7b763359514de7dba487d77483fb7c7c2cfcb6d6f30c10372868"
+    },
+    {
+      "path": "docs/reviews/B02/material-baseline.md",
+      "bytes": 1932,
+      "sha256": "402436e78a93b982303ff5c3e7843df51be33c678eaa6386d58006290bd2f319"
+    },
+    {
+      "path": "docs/reviews/B02/README.md",
+      "bytes": 1542,
+      "sha256": "6c77e7abe48511549c3418da94e3b236c6065082a15405fd27afa44cc6cd199b"
+    },
+    {
+      "path": "docs/reviews/B02/review.md",
+      "bytes": 2728,
+      "sha256": "e1a1fbff33d9daf9cc710efcc427bc90f04e22446a2f1043430b312bb99005fb"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug.json",
+      "bytes": 1786,
+      "sha256": "eab35432b918a1bb1097c73a5df7a357a55af26322bac7487b415a46ddf1cf2a"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_before_back_driver_fix.json",
+      "bytes": 1687,
+      "sha256": "a8527c373ba15e6be0305a573fe2fbe5f2c9ce5e9667c190a51ef692561297b5"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_before_ime_driver_fix.json",
+      "bytes": 1334,
+      "sha256": "d12a7e5d774223ef6bcf1379a1db5704e459ed5a634df49a69616c119fed5762"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_before_semantics_fix.json",
+      "bytes": 1130,
+      "sha256": "e4ff6e4b2ef7713e49b066c6576ec72250898260a6dc1576991f7c7cd012eec9"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_dialog.png",
+      "bytes": 118053,
+      "sha256": "b734dda0945e59e366278b1a07a1702c654409a02f130d04ad2d64a9bd94e82a"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_home.png",
+      "bytes": 122294,
+      "sha256": "c4fad7f92ba523e25c7f4622e0a959786eab8b6f542d0461a77e7d94eadcd6ba"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_keyboard.png",
+      "bytes": 140871,
+      "sha256": "65ab3aa7c0ffd234ac58401e18b51ebbe77e3be80e2d7943e74d850ea7d14d8e"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_lock_failure.png",
+      "bytes": 62372,
+      "sha256": "08278647eb2e5b245084397734d0254dc2b2a795a3f71da406c8726c93d1c4e1"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_lock_failure.xml",
+      "bytes": 10423,
+      "sha256": "fabca484b34524aee58ddc76cf0996101359e1bc6e92073bff7da771d959c61d"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_menu.png",
+      "bytes": 113109,
+      "sha256": "7f45d2759e8ad7747a1a76f4b57a10a4d3063d91320340b3ed1186d4192dc5da"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_scrolled.png",
+      "bytes": 120607,
+      "sha256": "8e22277f57d4f334918ecf7d6065a50d21be0ab5383117bd40002a9ab82bc2e9"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_debug_weight_locked.png",
+      "bytes": 63123,
+      "sha256": "320c323987b371292d673eb740f8a431f02d76d29acf895b203fd1a2a42d648a"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_release.json",
+      "bytes": 1782,
+      "sha256": "a1a2fd4bf6972c366eca261588f5dd787d86e57cdd2dc5658c4ef3123b731b51"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_release_dialog.png",
+      "bytes": 117783,
+      "sha256": "1525d3cc3e9573586eabe377fb40eba37ae6dd0cd8be0ab4aea74a1365085133"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_release_home.png",
+      "bytes": 121995,
+      "sha256": "ef794d96a85d70a437446dc015d4d7fbc1846a35c313ce058cfb5628f75d0f25"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_release_keyboard.png",
+      "bytes": 143328,
+      "sha256": "8ffe9c973ca469ffcf88a6209686c8c3e58a66588656b246e3cae2ab3b8a8b66"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_release_menu.png",
+      "bytes": 112452,
+      "sha256": "7261a1fd5762a9b12d5b0d74c8889636a59464c822c025c3b9c577dc2928611d"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_release_scrolled.png",
+      "bytes": 120460,
+      "sha256": "18dec03d7ce28c0bc6766adad0dc307f6fc084729a9318f51aedf8cb5b079656"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api31_release_weight_locked.png",
+      "bytes": 62567,
+      "sha256": "24fd3523a155245c5c816161f4f4558bb254cb5b945fb6aa748b5fc679511f7b"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug.json",
+      "bytes": 1786,
+      "sha256": "211ecf6a4777ca791da4a8f4cb9c684c8f9955dcd5fe7059ef093accac4dc8ee"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_before_back_driver_fix.json",
+      "bytes": 1487,
+      "sha256": "77eb30c929b11d5162094a5c169df28acc3f97053abc0a435d17ea612f4c9be2"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_before_ime_driver_fix.json",
+      "bytes": 1334,
+      "sha256": "ead8bffe1e18531e96da9eae2833581beee49eaa9942a52d6184738c7b8e59dd"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_dialog.png",
+      "bytes": 117682,
+      "sha256": "155e1ce721b54201e0e4d81819c73fe703fcd8716822f730d345c31c8424d3f0"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_home.png",
+      "bytes": 121552,
+      "sha256": "d4fdf7517d59f2be63424700ea94fe9f0bf5e050e3db8fa783eb02d2b1be0f20"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_keyboard.png",
+      "bytes": 142809,
+      "sha256": "92f364a8a6121a758ad0693632c3ba4b5a3ae049efedb911ef746f8f32f76244"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_menu.png",
+      "bytes": 112188,
+      "sha256": "f2d0ba13c2ae9c92c0b62897604d0a6c914af8b40993a4c6d0d11b1f5e6065fd"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_scrolled.png",
+      "bytes": 120076,
+      "sha256": "017ea4892811910e435b2049c0249aae0bb5a323125e62dceacee57686abdbc7"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_debug_weight_locked.png",
+      "bytes": 62425,
+      "sha256": "ee5e005c4d8c6fdc53adb2e13707d6d7c4a3d47380e709b943cee4158bf5c64e"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_release.json",
+      "bytes": 1782,
+      "sha256": "9c032356a5df8f99052f96599c91e19620695f76eecbd99fb1609b7ac53a8067"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_release_dialog.png",
+      "bytes": 117262,
+      "sha256": "e57458eb9758290456bb653c6d4605d10a7a2482c1de62a65fa357d3466588de"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_release_home.png",
+      "bytes": 121190,
+      "sha256": "a75eebbafe955d7d610f77df5adf2b7d757c478201a0636e9ac9c79313b92227"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_release_keyboard.png",
+      "bytes": 140916,
+      "sha256": "eaef115614e5d79ffd3e32c6a1af5170742a457f49ad7842628a1c8a6e31624f"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_release_menu.png",
+      "bytes": 112426,
+      "sha256": "2bb2aacc4958c3e1ca829b39b730c1f3836e11b53809f2b3e7f3d62cfea8e319"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_release_scrolled.png",
+      "bytes": 119603,
+      "sha256": "d546eb0d7d3498b99cddac1ac93193ce26800ae41788aac92aedfd11fa93c125"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api32_release_weight_locked.png",
+      "bytes": 61829,
+      "sha256": "ae4234d39f9e9e70a28a6f8252edbc0a5835818450107b5380c4e95c7e3dff63"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug.json",
+      "bytes": 2209,
+      "sha256": "002be9e4c064d632aecd3dcb83d550edd9e68e4023ea8c7406a38c51a89d117a"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_before_back_driver_fix.json",
+      "bytes": 1604,
+      "sha256": "f850f544c6477b1253a47c7fd695c251768fb86885b624fb38f44184e38801bb"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_before_ime_driver_fix.json",
+      "bytes": 1451,
+      "sha256": "c74206d623a2ce45ff3744602e3bf3a77b1c432f7c4d8beb2b163192c0147c3b"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_dialog.png",
+      "bytes": 107462,
+      "sha256": "ced10653225929a9c7e23ea37bbcd20276085b87d6772a61345b1e7ca63fcd58"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_draw_fault_fallback.png",
+      "bytes": 120737,
+      "sha256": "de6b4d8cd6754bc6b0771ffa1e703818e89fb047cfe8585efbac5b2a8419697c"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_effect_fault_fallback.png",
+      "bytes": 120737,
+      "sha256": "de6b4d8cd6754bc6b0771ffa1e703818e89fb047cfe8585efbac5b2a8419697c"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_home.png",
+      "bytes": 118277,
+      "sha256": "bf39e5115d2a3cf1f03a708c55315ecb8d9dc588a44190774bba548f21d60bbb"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_keyboard.png",
+      "bytes": 137412,
+      "sha256": "0a976188cd04be019d12b73c2aaf8619689223a2454b5516b883cdc5e315c33d"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_menu.png",
+      "bytes": 110897,
+      "sha256": "c8e42ebbc150294c2bed475daa6d6533d064f1aa003c443a448fa5fe1381a2b7"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_scrolled.png",
+      "bytes": 111865,
+      "sha256": "5bddfc987223a20fa536a93cda39e014db557b590bc7c17456f9023dfd04176d"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_debug_weight_locked.png",
+      "bytes": 63583,
+      "sha256": "3d1eab42fffaec9480948186b6f5f862b166b92645fd8e2d41db1beb72280db7"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release.json",
+      "bytes": 2205,
+      "sha256": "494567d786473d9cf29687dabfe21baee7e3330a8ff29e92b387df364cd66a60"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_dialog.png",
+      "bytes": 107150,
+      "sha256": "2a6400addcdc3d570a93a794845de708765eb856e564b25e588879e861ba5797"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_draw_fault_fallback.png",
+      "bytes": 121448,
+      "sha256": "b73b1abb7f0dd4705d7cd842eaf9cdf6d816f7d752e7efcfbc4db78397fabbeb"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_effect_fault_fallback.png",
+      "bytes": 121448,
+      "sha256": "b73b1abb7f0dd4705d7cd842eaf9cdf6d816f7d752e7efcfbc4db78397fabbeb"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_home.png",
+      "bytes": 117987,
+      "sha256": "a8fa4def7e47bbd2d0f01d25019caab61162abe90c4bb96032634f642ac37ace"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_keyboard.png",
+      "bytes": 137371,
+      "sha256": "3838164918417b2c3d6c4e05404e766b07226af7a047ca3f538769549876260b"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_menu.png",
+      "bytes": 110985,
+      "sha256": "f9d1eb919fc2583afd2b487ff2c33f3c0c6448489bf8ea23b00ced06197fe52c"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_scrolled.png",
+      "bytes": 111563,
+      "sha256": "4d2ae2d60c07028e2de3f538d4381a9e6c160190011bddbd25f3bc15ce5d8e67"
+    },
+    {
+      "path": "docs/reviews/B02/runtime/test_b02_api33_release_weight_locked.png",
+      "bytes": 63256,
+      "sha256": "446d3c052523c7f5b16808353d55be626123df0412d82033e3e9cd8e226d4bc9"
+    },
+    {
+      "path": "docs/reviews/B02/start.json",
+      "bytes": 1147,
+      "sha256": "e7361bcaa7c15734027c9a5eecbadeea6b0feb0811110b32b5aefe580ca71116"
+    },
+    {
+      "path": "docs/reviews/B02/verification.json",
+      "bytes": 12382,
+      "sha256": "39a18500baa5b3c340a03bcf58954533732ea5e10e89f5f3cb8d044e4c3e7304"
+    },
+    {
+      "path": "docs/问题复盘与防复发.md",
+      "bytes": 45219,
+      "sha256": "0f2ef1e2c5aa13f3c7e12094ca34abb7275bd74189eac995be1a1c94aeb63c4d"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "bytes": 826,
+      "sha256": "b08269b020292e8c6a9a27882f3ddc855e2a85dca29e76faf7f4ad4888a7bd25"
+    },
+    {
+      "path": "gradle/verification-metadata.xml",
+      "bytes": 170361,
+      "sha256": "6cded7f50b3dfb29bc6d28c29fdd6d517687c8502aadd6b7427508e8edb73507"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 47505,
+      "sha256": "7a9ce74cff467ca1bf60a4fcd9f05185acceda4d0f382434d393e17864262c5d"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 339,
+      "sha256": "45b09518a2f0ea326bc776066e735b94527d2a94002e3b27621c32cdaee7e3ce"
+    },
+    {
+      "path": "gradle.properties",
+      "bytes": 152,
+      "sha256": "a9cf3bdf36b254a61c327eb8a344ea7204c6943e93377edee28ba59ae16cc8fd"
+    },
+    {
+      "path": "gradlew",
+      "bytes": 8678,
+      "sha256": "e01b5c97892572c82405c02b96a3382379100e7d825ce7c48883d95c26928750"
+    },
+    {
+      "path": "gradlew.bat",
+      "bytes": 2788,
+      "sha256": "4e193538b4ddccbee0c05d6383731b647945c146d16d8fe243b4ff716867896f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4290,
+      "sha256": "c6d183166d4dcdd9f7880d9f6250b8f30e4174d458196ff1dfd09986a06616b1"
+    },
+    {
+      "path": "reports/b02-environment-2026-10-30/android-environment.json",
+      "bytes": 2593,
+      "sha256": "62ef20f25bb53b5f152c8d60deebe404fdebabda6bbfa484fc5bb7a78ac9b1a5"
+    },
+    {
+      "path": "scripts/android_gradle.ps1",
+      "bytes": 852,
+      "sha256": "0f8912666cc0d48de2f5aa863dc7788bba5c5bda692e74e2986dfd9dfbb82c12"
+    },
+    {
+      "path": "settings-gradle.lockfile",
+      "bytes": 267,
+      "sha256": "5e2d075903b5cd264613e7538c7c51b1484fe2ed489d4ead3e6b4ba0cf3911c4"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "bytes": 335,
+      "sha256": "f881e0bad48a3d2c7b1436ef1fcfebd54c7dac99b4bbcd2f6bfeffe3354cbb28"
+    },
+    {
+      "path": "tests/test_android_smoke.py",
+      "bytes": 12191,
+      "sha256": "2cd66e00f1dc72e57e9f3bee0a930f0bd926957d0487911155a49602921499e6"
+    },
+    {
+      "path": "tests/test_contract_schema.py",
+      "bytes": 29161,
+      "sha256": "d5e6ea247ed4db705153bfe33a2fdb639ef79cf768daf094f9ef2986b3c97dba"
+    },
+    {
+      "path": "third_party/miuix/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "third_party/miuix/README.md",
+      "bytes": 618,
+      "sha256": "339b858eec43a253b6918acae5d6a466f2a298d6078971953919f3a93c5f7176"
+    }
+  ]
+}

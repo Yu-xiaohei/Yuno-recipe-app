@@ -1,0 +1,143 @@
+{
+  "candidate": "B02-candidate-3",
+  "checkedAt": "2026-10-30T22:34:23+08:00",
+  "scope": "local-artifact-audit-not-physical-vivo-installation",
+  "status": "pass",
+  "artifacts": [
+    {
+      "variant": "debug",
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 52506587,
+      "sha256": "43d42b6b544763db0c52ae5b80f910de9de3e2f0c529346bf61369bb4a48db5a",
+      "versionCode": 2,
+      "versionName": "0.0.2-b02",
+      "minSdk": 31,
+      "targetSdk": 37,
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "zipCrc": "pass",
+      "duplicateZipEntries": false,
+      "signing": "local-debug-key-not-production",
+      "signatureApi31": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\apksigner.bat",
+          "verify",
+          "--verbose",
+          "--print-certs",
+          "--min-sdk-version",
+          "31",
+          "--max-sdk-version",
+          "31",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\debug\\app-debug.apk"
+        ],
+        "exitCode": 0,
+        "output": "Verifies\r\nVerified using v1 scheme (JAR signing): false\r\nVerified using v2 scheme (APK Signature Scheme v2): true\r\nVerified using v3 scheme (APK Signature Scheme v3): false\r\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\r\nVerified using v3.2 scheme (APK Signature Scheme v3.2): false\r\nVerified using v4 scheme (APK Signature Scheme v4): false\r\nVerified for SourceStamp: false\r\nNumber of signers: 1\r\nV2 Signer: certificate DN: C=US, O=Android, CN=Android Debug\r\nV2 Signer: certificate SHA-256 digest: 7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46\r\nV2 Signer: certificate SHA-1 digest: 25580d569f5d6c5dfa823f7e8a7fa1f407016361\r\nV2 Signer: certificate MD5 digest: bea8a8676ea6e5dbc0113185e7f43b52\r\nV2 Signer: key algorithm: RSA\r\nV2 Signer: key size (bits): 2048\r\nV2 Signer: public key SHA-256 digest: 1d3aed1b1dad0e2e42f66009bd43d5829e4ba518a8a505ab25e7c82ee655db05\r\nV2 Signer: public key SHA-1 digest: 585609eabbbbeb91d4a3efe4cde87cf236c1b28f\r\nV2 Signer: public key MD5 digest: 186cbe338031b9c61760d42d9365c3af"
+      },
+      "zipalign16k": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\zipalign.exe",
+          "-c",
+          "-P",
+          "16",
+          "4",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\debug\\app-debug.apk"
+        ],
+        "exitCode": 0,
+        "output": ""
+      },
+      "badging": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\aapt2.exe",
+          "dump",
+          "badging",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\debug\\app-debug.apk"
+        ],
+        "exitCode": 0,
+        "output": "package: name='com.yunobase.recipe.prototype.debug' versionCode='2' versionName='0.0.2-b02' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'\r\nminSdkVersion:'31'\r\ntargetSdkVersion:'37'\r\nuses-permission: name='com.yunobase.recipe.prototype.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\r\napplication-label:'于の食谱'\r\napplication-label-af:'于の食谱'\r\napplication-label-am:'于の食谱'\r\napplication-label-ar:'于の食谱'\r\napplication-label-as:'于の食谱'\r\napplication-label-az:'于の食谱'\r\napplication-label-be:'于の食谱'\r\napplication-label-bg:'于の食谱'\r\napplication-label-bn:'于の食谱'\r\napplication-label-bs:'于の食谱'\r\napplication-label-ca:'于の食谱'\r\napplication-label-cs:'于の食谱'\r\napplication-label-da:'于の食谱'\r\napplication-label-de:'于の食谱'\r\napplication-label-el:'于の食谱'\r\napplication-label-en-AU:'于の食谱'\r\napplication-label-en-CA:'于の食谱'\r\napplication-label-en-GB:'于の食谱'\r\napplication-label-en-IN:'于の食谱'\r\napplication-label-en-XC:'于の食谱'\r\napplication-label-es:'于の食谱'\r\napplication-label-es-US:'于の食谱'\r\napplication-label-et:'于の食谱'\r\napplication-label-eu:'于の食谱'\r\napplication-label-fa:'于の食谱'\r\napplication-label-fi:'于の食谱'\r\napplication-label-fr:'于の食谱'\r\napplication-label-fr-CA:'于の食谱'\r\napplication-label-gl:'于の食谱'\r\napplication-label-gu:'于の食谱'\r\napplication-label-hi:'于の食谱'\r\napplication-label-hr:'于の食谱'\r\napplication-label-hu:'于の食谱'\r\napplication-label-hy:'于の食谱'\r\napplication-label-in:'于の食谱'\r\napplication-label-is:'于の食谱'\r\napplication-label-it:'于の食谱'\r\napplication-label-iw:'于の食谱'\r\napplication-label-ja:'于の食谱'\r\napplication-label-ka:'于の食谱'\r\napplication-label-kk:'于の食谱'\r\napplication-label-km:'于の食谱'\r\napplication-label-kn:'于の食谱'\r\napplication-label-ko:'于の食谱'\r\napplication-label-ky:'于の食谱'\r\napplication-label-lo:'于の食谱'\r\napplication-label-lt:'于の食谱'\r\napplication-label-lv:'于の食谱'\r\napplication-label-mk:'于の食谱'\r\napplication-label-ml:'于の食谱'\r\napplication-label-mn:'于の食谱'\r\napplication-label-mr:'于の食谱'\r\napplication-label-ms:'于の食谱'\r\napplication-label-my:'于の食谱'\r\napplication-label-nb:'于の食谱'\r\napplication-label-ne:'于の食谱'\r\napplication-label-nl:'于の食谱'\r\napplication-label-or:'于の食谱'\r\napplication-label-pa:'于の食谱'\r\napplication-label-pl:'于の食谱'\r\napplication-label-pt:'于の食谱'\r\napplication-label-pt-BR:'于の食谱'\r\napplication-label-pt-PT:'于の食谱'\r\napplication-label-ro:'于の食谱'\r\napplication-label-ru:'于の食谱'\r\napplication-label-si:'于の食谱'\r\napplication-label-sk:'于の食谱'\r\napplication-label-sl:'于の食谱'\r\napplication-label-sq:'于の食谱'\r\napplication-label-sr:'于の食谱'\r\napplication-label-sr-Latn:'于の食谱'\r\napplication-label-sv:'于の食谱'\r\napplication-label-sw:'于の食谱'\r\napplication-label-ta:'于の食谱'\r\napplication-label-te:'于の食谱'\r\napplication-label-th:'于の食谱'\r\napplication-label-tl:'于の食谱'\r\napplication-label-tr:'于の食谱'\r\napplication-label-uk:'于の食谱'\r\napplication-label-ur:'于の食谱'\r\napplication-label-uz:'于の食谱'\r\napplication-label-vi:'于の食谱'\r\napplication-label-zh-CN:'于の食谱'\r\napplication-label-zh-HK:'于の食谱'\r\napplication-label-zh-TW:'于の食谱'\r\napplication-label-zu:'于の食谱'\r\napplication: label='于の食谱' icon=''\r\napplication-debuggable\r\nlaunchable-activity: name='com.yunobase.recipe.MainActivity'  label='' icon=''\r\nuses-library-not-required:'androidx.window.extensions'\r\nuses-library-not-required:'androidx.window.sidecar'\r\nfeature-group: label=''\r\n  uses-feature: name='android.hardware.faketouch'\r\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\r\nmain\r\nother-receivers\r\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\r\nsupports-any-density: 'true'\r\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\r\ndensities: '160' '240' '320' '65535'\r\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'"
+      },
+      "certificateSha256": "7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46",
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/font/misans_vf.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17,
+      "gitTracked": false
+    },
+    {
+      "variant": "release",
+      "path": "app/build/outputs/apk/release/app-release.apk",
+      "bytes": 26203240,
+      "sha256": "076c174e39c48cc5fd72a7a54378a5891df39f3179edb5594120e8835d7c9b7a",
+      "versionCode": 2,
+      "versionName": "0.0.2-b02",
+      "minSdk": 31,
+      "targetSdk": 37,
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "zipCrc": "pass",
+      "duplicateZipEntries": false,
+      "signing": "local-debug-key-not-production",
+      "signatureApi31": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\apksigner.bat",
+          "verify",
+          "--verbose",
+          "--print-certs",
+          "--min-sdk-version",
+          "31",
+          "--max-sdk-version",
+          "31",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\release\\app-release.apk"
+        ],
+        "exitCode": 0,
+        "output": "Verifies\r\nVerified using v1 scheme (JAR signing): false\r\nVerified using v2 scheme (APK Signature Scheme v2): true\r\nVerified using v3 scheme (APK Signature Scheme v3): false\r\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\r\nVerified using v3.2 scheme (APK Signature Scheme v3.2): false\r\nVerified using v4 scheme (APK Signature Scheme v4): false\r\nVerified for SourceStamp: false\r\nNumber of signers: 1\r\nV2 Signer: certificate DN: C=US, O=Android, CN=Android Debug\r\nV2 Signer: certificate SHA-256 digest: 7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46\r\nV2 Signer: certificate SHA-1 digest: 25580d569f5d6c5dfa823f7e8a7fa1f407016361\r\nV2 Signer: certificate MD5 digest: bea8a8676ea6e5dbc0113185e7f43b52\r\nV2 Signer: key algorithm: RSA\r\nV2 Signer: key size (bits): 2048\r\nV2 Signer: public key SHA-256 digest: 1d3aed1b1dad0e2e42f66009bd43d5829e4ba518a8a505ab25e7c82ee655db05\r\nV2 Signer: public key SHA-1 digest: 585609eabbbbeb91d4a3efe4cde87cf236c1b28f\r\nV2 Signer: public key MD5 digest: 186cbe338031b9c61760d42d9365c3af"
+      },
+      "zipalign16k": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\zipalign.exe",
+          "-c",
+          "-P",
+          "16",
+          "4",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\release\\app-release.apk"
+        ],
+        "exitCode": 0,
+        "output": ""
+      },
+      "badging": {
+        "command": [
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\.agent-tmp\\b02_toolchain\\tmp_b02_sdk_20261030_133000\\build-tools\\37.0.0\\aapt2.exe",
+          "dump",
+          "badging",
+          "F:\\Yuno-Develop\\YUNO-recipe-app\\app\\build\\outputs\\apk\\release\\app-release.apk"
+        ],
+        "exitCode": 0,
+        "output": "package: name='com.yunobase.recipe.prototype' versionCode='2' versionName='0.0.2-b02' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'\r\nminSdkVersion:'31'\r\ntargetSdkVersion:'37'\r\nuses-permission: name='com.yunobase.recipe.prototype.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\r\napplication-label:'于の食谱'\r\napplication-label-af:'于の食谱'\r\napplication-label-am:'于の食谱'\r\napplication-label-ar:'于の食谱'\r\napplication-label-as:'于の食谱'\r\napplication-label-az:'于の食谱'\r\napplication-label-be:'于の食谱'\r\napplication-label-bg:'于の食谱'\r\napplication-label-bn:'于の食谱'\r\napplication-label-bs:'于の食谱'\r\napplication-label-ca:'于の食谱'\r\napplication-label-cs:'于の食谱'\r\napplication-label-da:'于の食谱'\r\napplication-label-de:'于の食谱'\r\napplication-label-el:'于の食谱'\r\napplication-label-en-AU:'于の食谱'\r\napplication-label-en-CA:'于の食谱'\r\napplication-label-en-GB:'于の食谱'\r\napplication-label-en-IN:'于の食谱'\r\napplication-label-en-XC:'于の食谱'\r\napplication-label-es:'于の食谱'\r\napplication-label-es-US:'于の食谱'\r\napplication-label-et:'于の食谱'\r\napplication-label-eu:'于の食谱'\r\napplication-label-fa:'于の食谱'\r\napplication-label-fi:'于の食谱'\r\napplication-label-fr:'于の食谱'\r\napplication-label-fr-CA:'于の食谱'\r\napplication-label-gl:'于の食谱'\r\napplication-label-gu:'于の食谱'\r\napplication-label-hi:'于の食谱'\r\napplication-label-hr:'于の食谱'\r\napplication-label-hu:'于の食谱'\r\napplication-label-hy:'于の食谱'\r\napplication-label-in:'于の食谱'\r\napplication-label-is:'于の食谱'\r\napplication-label-it:'于の食谱'\r\napplication-label-iw:'于の食谱'\r\napplication-label-ja:'于の食谱'\r\napplication-label-ka:'于の食谱'\r\napplication-label-kk:'于の食谱'\r\napplication-label-km:'于の食谱'\r\napplication-label-kn:'于の食谱'\r\napplication-label-ko:'于の食谱'\r\napplication-label-ky:'于の食谱'\r\napplication-label-lo:'于の食谱'\r\napplication-label-lt:'于の食谱'\r\napplication-label-lv:'于の食谱'\r\napplication-label-mk:'于の食谱'\r\napplication-label-ml:'于の食谱'\r\napplication-label-mn:'于の食谱'\r\napplication-label-mr:'于の食谱'\r\napplication-label-ms:'于の食谱'\r\napplication-label-my:'于の食谱'\r\napplication-label-nb:'于の食谱'\r\napplication-label-ne:'于の食谱'\r\napplication-label-nl:'于の食谱'\r\napplication-label-or:'于の食谱'\r\napplication-label-pa:'于の食谱'\r\napplication-label-pl:'于の食谱'\r\napplication-label-pt:'于の食谱'\r\napplication-label-pt-BR:'于の食谱'\r\napplication-label-pt-PT:'于の食谱'\r\napplication-label-ro:'于の食谱'\r\napplication-label-ru:'于の食谱'\r\napplication-label-si:'于の食谱'\r\napplication-label-sk:'于の食谱'\r\napplication-label-sl:'于の食谱'\r\napplication-label-sq:'于の食谱'\r\napplication-label-sr:'于の食谱'\r\napplication-label-sr-Latn:'于の食谱'\r\napplication-label-sv:'于の食谱'\r\napplication-label-sw:'于の食谱'\r\napplication-label-ta:'于の食谱'\r\napplication-label-te:'于の食谱'\r\napplication-label-th:'于の食谱'\r\napplication-label-tl:'于の食谱'\r\napplication-label-tr:'于の食谱'\r\napplication-label-uk:'于の食谱'\r\napplication-label-ur:'于の食谱'\r\napplication-label-uz:'于の食谱'\r\napplication-label-vi:'于の食谱'\r\napplication-label-zh-CN:'于の食谱'\r\napplication-label-zh-HK:'于の食谱'\r\napplication-label-zh-TW:'于の食谱'\r\napplication-label-zu:'于の食谱'\r\napplication: label='于の食谱' icon=''\r\nlaunchable-activity: name='com.yunobase.recipe.MainActivity'  label='' icon=''\r\nuses-library-not-required:'androidx.window.extensions'\r\nuses-library-not-required:'androidx.window.sidecar'\r\nfeature-group: label=''\r\n  uses-feature: name='android.hardware.faketouch'\r\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\r\nmain\r\nother-receivers\r\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\r\nsupports-any-density: 'true'\r\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\r\ndensities: '160' '65535'\r\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'"
+      },
+      "certificateSha256": "7a36eb74e5f05e0bcf9e5867bd3a4087b48285fb68a656132ff0a7a353708d46",
+      "packagedAssetsMatchSource": {
+        "assets/miuix/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "assets/coil/LICENSE.txt": "d44a18f12b0f5a494ddc3ba0e980ae8b0936d938c611a518e80f2f1405098893",
+        "assets/misans/MiSans_Fonts_License.pdf": "4a93a27cd2bd81b3b5ecfd0a853144a876fa26938a93a68443c67d74172fcb86",
+        "assets/misans/COPYRIGHT.txt": "8287ca57b271cad1c757e6a85a3b784a04e32d1fd1df130f129b0520533e9752",
+        "assets/misans/LICENSE_readable.txt": "350cbdac00a256a8ce4cb98ec18b610b38f5868ae51b6ae73fb3effe45614414",
+        "res/9A.ttf": "0ddef90648998900175cfdca9a6f087a2544c182f130b0ad4f7e94a03a115e79"
+      },
+      "svgOriginalsMatched": 17,
+      "gitTracked": false
+    }
+  ],
+  "vivoCause": "unconfirmed; device model, received bytes and actual INSTALL_* error unavailable"
+}
